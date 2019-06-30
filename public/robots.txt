@@ -1,0 +1,1 @@
+sitemap: https://amp.kbys.tk/sitemap.xml
