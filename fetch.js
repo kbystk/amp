@@ -6,7 +6,7 @@ const main = async () => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   let res = []
-  for (const p of data.pages.slice(0, 50)) {
+  for (const p of data.pages.slice(0, 100)) {
     try {
       await page.goto(
         `https://scrapbox.io/jigsaw/${encodeURIComponent(p.title)}`
@@ -19,7 +19,8 @@ const main = async () => {
       )
       res.push({
         title: p.title,
-        html
+        html,
+        updated: p.updated
       })
       console.log(`done: ${p.title}`)
     } catch (err) {
