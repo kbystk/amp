@@ -90,6 +90,10 @@ const render = async (batch, pageCount, isFinal) => {
           ${css.toString()}
         </style>
         <title>アーカイブ | I am Electrical machine</title>
+        <link
+          rel="canonical"
+          href="https://amp.kbys.tk/page-${pageCount}.html"
+        />
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
