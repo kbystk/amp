@@ -1,0 +1,145 @@
+<!DOCTYPE html><html amp=""><head>
+        <meta charset="utf-8">
+        <script async="" src="https://cdn.ampproject.org/v0.js"></script>
+        <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <style amp-boilerplate="">
+          body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+          }
+          @-webkit-keyframes -amp-start {
+            from {
+              visibility: hidden;
+            }
+            to {
+              visibility: visible;
+            }
+          }
+          @-moz-keyframes -amp-start {
+            from {
+              visibility: hidden;
+            }
+            to {
+              visibility: visible;
+            }
+          }
+          @-ms-keyframes -amp-start {
+            from {
+              visibility: hidden;
+            }
+            to {
+              visibility: visible;
+            }
+          }
+          @-o-keyframes -amp-start {
+            from {
+              visibility: hidden;
+            }
+            to {
+              visibility: visible;
+            }
+          }
+          @keyframes -amp-start {
+            from {
+              visibility: hidden;
+            }
+            to {
+              visibility: visible;
+            }
+          }
+        </style>
+        <noscript>
+          <style amp-boilerplate>
+            body {
+              -webkit-animation: none;
+              -moz-animation: none;
+              -ms-animation: none;
+              animation: none;
+            }
+          </style>
+        </noscript>
+        <style amp-custom="">
+          .line-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.line {
+  padding-bottom: .4rem;
+}
+a {
+  color: #0469ea;
+  text-decoration: none;
+}
+.line .quote {
+  display: block;
+  font-style: italic;
+  border-left: solid 4px #a0a0a0;
+  padding-left: 4px;
+  background-color: rgba(128,128,128,0.1);
+}
+.line .code {
+  padding: 0;
+  font-size: 90%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0.04);
+}
+amp-img.contain img {
+  object-fit: contain;
+}
+.container-0-0-1 {
+  padding: 1rem;
+}
+@media (min-width: 640px) {
+  .container-0-0-1 {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+}
+.logo-0-0-2 {
+  display: flex;
+  margin-bottom: .5rem;
+  justify-content: center;
+}
+.imgContainer-0-0-3 {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+        </style>
+        <title>io.js の fs.readFileSync を S3 と組み合わせると死ぬ - dev.jgs.me | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/io.js の fs.readFileSync を S3 と組み合わせると死ぬ - dev.jgs.me">
+      </head>
+      <body>
+        <amp-analytics type="gtag" data-credentials="include">
+          <script type="application/json">
+            {
+              "vars": {
+                "gtag_id": "UA-96527600-2",
+                "config": {
+                  "UA-96527600-2": { "groups": "default" }
+                }
+              },
+              "triggers": {
+                "trackPageView": {
+                  "on": "visible",
+                  "request": "pageview"
+                }
+              }
+            }
+          </script>
+        </amp-analytics>
+        <div class="container-0-0-1">
+          <div class="logo-0-0-2">
+            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+          </div>
+          <div class="line section-0 line-title section-title" id="L5c3c04e24ade4d0000c9e401"><span class="text"><span class="c-0">i</span><span class="c-1">o</span><span class="c-2">.</span><span class="c-3">j</span><span class="c-4">s</span><span class="c-5"> </span><span class="c-6">の</span><span class="c-7"> </span><span class="c-8">f</span><span class="c-9">s</span><span class="c-10">.</span><span class="c-11">r</span><span class="c-12">e</span><span class="c-13">a</span><span class="c-14">d</span><span class="c-15">F</span><span class="c-16">i</span><span class="c-17">l</span><span class="c-18">e</span><span class="c-19">S</span><span class="c-20">y</span><span class="c-21">n</span><span class="c-22">c</span><span class="c-23"> </span><span class="c-24">を</span><span class="c-25"> </span><span class="c-26">S</span><span class="c-27">3</span><span class="c-28"> </span><span class="c-29">と</span><span class="c-30">組</span><span class="c-31">み</span><span class="c-32">合</span><span class="c-33">わ</span><span class="c-34">せ</span><span class="c-35">る</span><span class="c-36">と</span><span class="c-37">死</span><span class="c-38">ぬ</span><span class="c-39"> </span><span class="c-40">-</span><span class="c-41"> </span><span class="c-42">d</span><span class="c-43">e</span><span class="c-44">v</span><span class="c-45">.</span><span class="c-46">j</span><span class="c-47">g</span><span class="c-48">s</span><span class="c-49">.</span><span class="c-50">m</span><span class="c-51">e</span></span></div><div class="line section-0" id="L5c3c04e24ade4d0000c9e403"><span class="text"><span><span><span class="c-0">今</span><span class="c-1">日</span><span class="c-2">は</span><span class="c-3">、</span><span class="c-4">運</span><span class="c-5">用</span><span class="c-6">し</span><span class="c-7">て</span><span class="c-8">る</span><span class="c-9">簡</span><span class="c-10">単</span><span class="c-11">な</span><span class="c-12">バ</span><span class="c-13">ッ</span><span class="c-14">チ</span><span class="c-15">ス</span><span class="c-16">ク</span><span class="c-17">リ</span><span class="c-18">プ</span><span class="c-19">ト</span><span class="c-20">に</span><span class="c-21">「</span><span class="c-22">挙</span><span class="c-23">動</span><span class="c-24">が</span><span class="c-25">バ</span><span class="c-26">ギ</span><span class="c-27">ー</span><span class="c-28">な</span><span class="c-29">ん</span><span class="c-30">だ</span><span class="c-31">が</span><span class="c-32">〜</span><span class="c-33">」</span><span class="c-34">と</span><span class="c-35">問</span><span class="c-36">い</span><span class="c-37">合</span><span class="c-38">わ</span><span class="c-39">せ</span><span class="c-40">を</span><span class="c-41">も</span><span class="c-42">ら</span><span class="c-43">っ</span><span class="c-44">て</span><span class="c-45">調</span><span class="c-46">べ</span><span class="c-47">た</span><span class="c-48">。</span><span class="c-49">す</span><span class="c-50">る</span><span class="c-51">と</span><span class="c-52">、</span><span class="c-53">ど</span><span class="c-54">う</span><span class="c-55">や</span><span class="c-56">ら</span><span class="c-57"> </span></span><span><code class="code"><span class="backquote"><span class="c-58"> </span></span><span><span><span class="hljs-selector-tag"><span class="c-59">f</span><span class="c-60">s</span></span><span class="hljs-selector-class"><span class="c-61">.</span><span class="c-62">r</span><span class="c-63">e</span><span class="c-64">a</span><span class="c-65">d</span><span class="c-66">F</span><span class="c-67">i</span><span class="c-68">l</span><span class="c-69">e</span><span class="c-70">S</span><span class="c-71">y</span><span class="c-72">n</span><span class="c-73">c</span></span></span></span><span class="backquote"><span class="c-74"> </span></span></code></span><span><span class="c-75"> </span><span class="c-76">で</span><span class="c-77">こ</span><span class="c-78">ち</span><span class="c-79">ら</span><span class="c-80">が</span><span class="c-81">想</span><span class="c-82">定</span><span class="c-83">し</span><span class="c-84">て</span><span class="c-85">い</span><span class="c-86">る</span><span class="c-87">フ</span><span class="c-88">ァ</span><span class="c-89">イ</span><span class="c-90">ル</span><span class="c-91">を</span><span class="c-92">取</span><span class="c-93">得</span><span class="c-94">で</span><span class="c-95">き</span><span class="c-96">て</span><span class="c-97">い</span><span class="c-98">な</span><span class="c-99">い</span><span class="c-100">こ</span><span class="c-101">と</span><span class="c-102">が</span><span class="c-103">分</span><span class="c-104">か</span><span class="c-105">っ</span><span class="c-106">た</span><span class="c-107">。</span></span></span></span></div><div class="line section-0" id="L5c3c04e24ade4d0000c9e404"><span class="text"><span><span class="c-0"><br class="empty-char-index"></span></span></span></div><div class="line section-1 section-title" id="L5c3c04e24ade4d0000c9e405"><span class="text"><span><span><span class="c-0">ブ</span><span class="c-1">レ</span><span class="c-2">ー</span><span class="c-3">ク</span><span class="c-4">ダ</span><span class="c-5">ウ</span><span class="c-6">ン</span><span class="c-7">し</span><span class="c-8">て</span><span class="c-9">い</span><span class="c-10">く</span><span class="c-11">と</span><span class="c-12">、</span><span class="c-13">一</span><span class="c-14">定</span><span class="c-15">以</span><span class="c-16">上</span><span class="c-17">の</span><span class="c-18">サ</span><span class="c-19">イ</span><span class="c-20">ズ</span><span class="c-21">の</span><span class="c-22">フ</span><span class="c-23">ァ</span><span class="c-24">イ</span><span class="c-25">ル</span><span class="c-26">が</span><span class="c-27">途</span><span class="c-28">切</span><span class="c-29">れ</span><span class="c-30">て</span><span class="c-31">取</span><span class="c-32">得</span><span class="c-33">さ</span><span class="c-34">れ</span><span class="c-35">て</span><span class="c-36">い</span><span class="c-37">る</span><span class="c-38">こ</span><span class="c-39">と</span><span class="c-40">が</span><span class="c-41">分</span><span class="c-42">か</span><span class="c-43">っ</span><span class="c-44">た</span><span class="c-45">。</span><span class="c-46">当</span><span class="c-47">該</span><span class="c-48">フ</span><span class="c-49">ァ</span><span class="c-50">イ</span><span class="c-51">ル</span><span class="c-52">は</span><span class="c-53"> </span><span class="c-54">E</span><span class="c-55">C</span><span class="c-56">2</span><span class="c-57"> </span><span class="c-58">上</span><span class="c-59">の</span><span class="c-60">サ</span><span class="c-61">ー</span><span class="c-62">バ</span><span class="c-63">に</span><span class="c-64"> </span><span class="c-65">S</span><span class="c-66">3</span><span class="c-67"> </span><span class="c-68">を</span><span class="c-69">マ</span><span class="c-70">ウ</span><span class="c-71">ン</span><span class="c-72">ト</span><span class="c-73">し</span><span class="c-74">て</span><span class="c-75">い</span><span class="c-76">て</span><span class="c-77">、</span></span><span><code class="code"><span class="backquote"><span class="c-78"> </span></span><span><span><span class="c-79">s</span><span class="c-80">3</span><span class="c-81">f</span><span class="c-82">s</span></span></span><span class="backquote"><span class="c-83"> </span></span></code></span><span><span class="c-84"> </span><span class="c-85">経</span><span class="c-86">由</span><span class="c-87">で</span><span class="c-88">フ</span><span class="c-89">ァ</span><span class="c-90">イ</span><span class="c-91">ル</span><span class="c-92">を</span><span class="c-93">参</span><span class="c-94">照</span><span class="c-95">し</span><span class="c-96">て</span><span class="c-97">い</span><span class="c-98">た</span><span class="c-99">。</span></span></span></span></div><div class="line section-1" id="L5c3c04e24ade4d0000c9e406"><span class="text"><span><span class="c-0"><br class="empty-char-index"></span></span></span></div><div class="line section-2 section-title" id="L5c3c04e24ade4d0000c9e407"><span class="text"><span><span><span class="c-0">試</span><span class="c-1">し</span><span class="c-2">に</span><span class="c-3">そ</span><span class="c-4">の</span><span class="c-5">フ</span><span class="c-6">ァ</span><span class="c-7">イ</span><span class="c-8">ル</span><span class="c-9">を</span><span class="c-10"> </span></span><span><code class="code"><span class="backquote"><span class="c-11"> </span></span><span><span><span class="c-12">c</span><span class="c-13">p</span></span></span><span class="backquote"><span class="c-14"> </span></span></code></span><span><span class="c-15"> </span><span class="c-16">で</span><span class="c-17">ロ</span><span class="c-18">ー</span><span class="c-19">カ</span><span class="c-20">ル</span><span class="c-21">に</span><span class="c-22">コ</span><span class="c-23">ピ</span><span class="c-24">ー</span><span class="c-25">し</span><span class="c-26">て</span><span class="c-27"> </span><span class="c-28">r</span><span class="c-29">e</span><span class="c-30">a</span><span class="c-31">d</span><span class="c-32"> </span><span class="c-33">の</span><span class="c-34">権</span><span class="c-35">限</span><span class="c-36">を</span><span class="c-37">与</span><span class="c-38">え</span><span class="c-39">て</span><span class="c-40">や</span><span class="c-41">る</span><span class="c-42">と</span><span class="c-43">こ</span><span class="c-44">ち</span><span class="c-45">ら</span><span class="c-46">が</span><span class="c-47">想</span><span class="c-48">定</span><span class="c-49">し</span><span class="c-50">て</span><span class="c-51">い</span><span class="c-52">る</span><span class="c-53">通</span><span class="c-54">り</span><span class="c-55">の</span><span class="c-56">デ</span><span class="c-57">ー</span><span class="c-58">タ</span><span class="c-59">を</span><span class="c-60">取</span><span class="c-61">得</span><span class="c-62">す</span><span class="c-63">る</span><span class="c-64">こ</span><span class="c-65">と</span><span class="c-66">が</span><span class="c-67">で</span><span class="c-68">き</span><span class="c-69">た</span><span class="c-70">。</span><span class="c-71">ま</span><span class="c-72">じ</span><span class="c-73">か</span><span class="c-74">ー</span><span class="c-75">。</span><span class="c-76">。</span><span class="c-77">。</span></span></span></span></div><div class="line section-2" id="L5c3c04e24ade4d0000c9e408"><span class="text"><span><span class="c-0"><br class="empty-char-index"></span></span></span></div><div class="line section-3 section-title" id="L5c3c04e24ade4d0000c9e409"><span class="text"><span><span><span class="c-0">た</span><span class="c-1">ぶ</span><span class="c-2">ん</span><span class="c-3"> </span></span><span><code class="code"><span class="backquote"><span class="c-4"> </span></span><span><span><span class="c-5">s</span><span class="c-6">3</span><span class="c-7">f</span><span class="c-8">s</span></span></span><span class="backquote"><span class="c-9"> </span></span></code></span><span><span class="c-10"> </span><span class="c-11">の</span><span class="c-12">問</span><span class="c-13">題</span><span class="c-14">だ</span><span class="c-15">ろ</span><span class="c-16">う</span><span class="c-17">か</span><span class="c-18">ら</span><span class="c-19">深</span><span class="c-20">入</span><span class="c-21">り</span><span class="c-22">せ</span><span class="c-23">ず</span><span class="c-24">に</span></span></span></span></div><div class="line section-3" id="L5c3c04e24ade4d0000c9e40a"><span class="text"><span><span class="c-0"><br class="empty-char-index"></span></span></span></div><div class="line section-4 section-title" id="L5c3c04e24ade4d0000c9e40b"><span class="text code-block"><span class="indent-mark" style="width: 0em;"></span><span class="indent" style="margin-left: 0em;"><code class="code-start"><span class="code-block-start" title="LiveScript"><span><span class="c-0">L</span><span class="c-1">i</span><span class="c-2">v</span><span class="c-3">e</span><span class="c-4">S</span><span class="c-5">c</span><span class="c-6">r</span><span class="c-7">i</span><span class="c-8">p</span><span class="c-9">t</span></span></span></code></span></span></div><div class="line section-4" id="L5c3c04e24ade4d0000c9e40c"><span class="text code-block"><span class="indent-mark" style="width: 1.5em;"><span class="c-0"><span class="pad">	</span></span></span><span class="indent" style="margin-left: 1.5em;"><code class="code-body"><span><span><span class="c-1">.</span><span class="c-2">.</span><span class="c-3">.</span></span></span></code></span></span></div><div class="line section-4" id="L5c3c04e24ade4d0000c9e40d"><span class="text code-block"><span class="indent-mark" style="width: 1.5em;"><span class="c-0"><span class="pad">	</span></span></span><span class="indent" style="margin-left: 1.5em;"><code class="code-body"><span><span><span class="c-1">e</span><span class="c-2">x</span><span class="c-3">e</span><span class="c-4">c</span><span class="c-5">S</span><span class="c-6">y</span><span class="c-7">n</span><span class="c-8">c</span><span class="c-9"> </span><span class="c-10">"</span><span class="c-11">c</span><span class="c-12">p</span><span class="c-13"> </span><span class="c-14">#</span><span class="c-15">{</span><span class="c-16">s</span><span class="c-17">3</span><span class="c-18">P</span><span class="c-19">a</span><span class="c-20">t</span><span class="c-21">h</span><span class="c-22">}</span><span class="c-23"> </span><span class="c-24">#</span><span class="c-25">{</span><span class="c-26">t</span><span class="c-27">m</span><span class="c-28">p</span><span class="c-29">P</span><span class="c-30">a</span><span class="c-31">t</span><span class="c-32">h</span><span class="c-33">}</span><span class="c-34">"</span></span></span></code></span></span></div><div class="line section-4" id="L5c3c04e24ade4d0000c9e40e"><span class="text code-block"><span class="indent-mark" style="width: 1.5em;"><span class="c-0"><span class="pad">	</span></span></span><span class="indent" style="margin-left: 1.5em;"><code class="code-body"><span><span><span class="c-1">e</span><span class="c-2">x</span><span class="c-3">e</span><span class="c-4">c</span><span class="c-5">S</span><span class="c-6">y</span><span class="c-7">n</span><span class="c-8">c</span><span class="c-9"> </span><span class="c-10">"</span><span class="c-11">c</span><span class="c-12">h</span><span class="c-13">m</span><span class="c-14">o</span><span class="c-15">d</span><span class="c-16"> </span><span class="c-17">+</span><span class="c-18">r</span><span class="c-19"> </span><span class="c-20">#</span><span class="c-21">{</span><span class="c-22">t</span><span class="c-23">m</span><span class="c-24">p</span><span class="c-25">P</span><span class="c-26">a</span><span class="c-27">t</span><span class="c-28">h</span><span class="c-29">}</span><span class="c-30">"</span></span></span></code></span></span></div><div class="line section-4" id="L5c3c04e24ade4d0000c9e40f"><span class="text code-block"><span class="indent-mark" style="width: 1.5em;"><span class="c-0"><span class="pad">	</span></span></span><span class="indent" style="margin-left: 1.5em;"><code class="code-body"><span><span><span class="c-1">r</span><span class="c-2">e</span><span class="c-3">a</span><span class="c-4">d</span><span class="c-5">F</span><span class="c-6">i</span><span class="c-7">l</span><span class="c-8">e</span><span class="c-9">S</span><span class="c-10">y</span><span class="c-11">n</span><span class="c-12">c</span><span class="c-13"> </span><span class="c-14">t</span><span class="c-15">m</span><span class="c-16">p</span><span class="c-17">P</span><span class="c-18">a</span><span class="c-19">t</span><span class="c-20">h</span></span></span></code></span></span></div><div class="line section-4" id="L5c3c04e24ade4d0000c9e410"><span class="text code-block"><span class="indent-mark" style="width: 1.5em;"><span class="c-0"><span class="pad">	</span></span></span><span class="indent" style="margin-left: 1.5em;"><code class="code-body"><span><span><span class="c-1">.</span><span class="c-2">.</span><span class="c-3">.</span></span></span></code></span></span></div><div class="line section-4" id="L5c3c04e24ade4d0000c9e411"><span class="text"><span><span class="c-0"><br class="empty-char-index"></span></span></span></div><div class="line section-5 section-title" id="L5c3c04e24ade4d0000c9e412"><span class="text"><span><span class="c-0">と</span><span class="c-1">い</span><span class="c-2">う</span><span class="c-3">ア</span><span class="c-4">レ</span><span class="c-5">ゲ</span><span class="c-6">な</span><span class="c-7">対</span><span class="c-8">応</span><span class="c-9">に</span><span class="c-10">な</span><span class="c-11">っ</span><span class="c-12">て</span><span class="c-13">し</span><span class="c-14">ま</span><span class="c-15">っ</span><span class="c-16">た</span><span class="c-17">.</span><span class="c-18">.</span><span class="c-19">.</span><span class="c-20">。</span></span></span></div><div class="line section-5" id="L5c3c04e24ade4d0000c9e413"><span class="text"><span><span class="c-0"><br class="empty-char-index"></span></span></span></div><div class="line section-6 section-title" id="L5c3c04e24ade4d0000c9e414"><span class="text"><span><span class="deco"><span class="c-0 c-1 c-2 empty-char-index"></span><strong class="level level-1"><span class="deco-*"><span><span class="c-3">o</span><span class="c-4">r</span><span class="c-5">i</span><span class="c-6">g</span><span class="c-7">i</span><span class="c-8">n</span><span class="c-9">a</span><span class="c-10">l</span><span class="c-11">:</span><span class="c-12"> </span></span><span><a class="link" href="http://dev.jgs.me/2015/06/16/node-readfilesync-with-s3" rel="noopener noreferrer" target="_blank"><span class="c-13">h</span><span class="c-14">t</span><span class="c-15">t</span><span class="c-16">p</span><span class="c-17">:</span><span class="c-18">/</span><span class="c-19">/</span><span class="c-20">d</span><span class="c-21">e</span><span class="c-22">v</span><span class="c-23">.</span><span class="c-24">j</span><span class="c-25">g</span><span class="c-26">s</span><span class="c-27">.</span><span class="c-28">m</span><span class="c-29">e</span><span class="c-30">/</span><span class="c-31">2</span><span class="c-32">0</span><span class="c-33">1</span><span class="c-34">5</span><span class="c-35">/</span><span class="c-36">0</span><span class="c-37">6</span><span class="c-38">/</span><span class="c-39">1</span><span class="c-40">6</span><span class="c-41">/</span><span class="c-42">n</span><span class="c-43">o</span><span class="c-44">d</span><span class="c-45">e</span><span class="c-46">-</span><span class="c-47">r</span><span class="c-48">e</span><span class="c-49">a</span><span class="c-50">d</span><span class="c-51">f</span><span class="c-52">i</span><span class="c-53">l</span><span class="c-54">e</span><span class="c-55">s</span><span class="c-56">y</span><span class="c-57">n</span><span class="c-58">c</span><span class="c-59">-</span><span class="c-60">w</span><span class="c-61">i</span><span class="c-62">t</span><span class="c-63">h</span><span class="c-64">-</span><span class="c-65">s</span><span class="c-66">3</span></a></span></span></strong><span class="c-67 empty-char-index"></span></span></span></span></div><div class="line section-6" id="L5c3c04e24ade4d0000c9e415"><span class="text"><span><span><a class="page-link empty-page-link" href="https://amp.kbys.tk/f3652b749ec77f4e8a78ba129f47c4d8db3e845f.html" rel="route"><span class="c-0">#</span><span class="c-1">2</span><span class="c-2">0</span><span class="c-3">1</span><span class="c-4">5</span><span class="c-5">0</span><span class="c-6">6</span><span class="c-7">1</span><span class="c-8">6</span></a></span><span><span><span class="c-9"> </span></span><span><a class="page-link" href="https://amp.kbys.tk/786a0a9946e25cd7ddf771b79508ff21ccefa787.html" rel="route"><span class="c-10">#</span><span class="c-11">0</span><span class="c-12">6</span><span class="c-13">1</span><span class="c-14">6</span></a></span></span></span></span></div><div class="line section-6" id="L5d1b0fd14ade4d0000403020"><span class="text"><span><span class="c-0"><br class="empty-char-index"></span></span></span></div>
+        </div>
+      
+    
+  </body></html>
