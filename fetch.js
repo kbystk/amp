@@ -6,7 +6,7 @@ const main = async () => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   let res = []
-  for (const p of data.pages.slice(0, 100)) {
+  for (const p of data.pages.slice(0, 200)) {
     try {
       await page.goto(
         `https://scrapbox.io/jigsaw/${encodeURIComponent(p.title)}`

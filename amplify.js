@@ -1,67 +1,8 @@
 const { writeFileSync } = require('fs')
 const crypto = require('crypto')
 const { html } = require('lit-ntml')
-const jss = require('jss').default
-const preset = require('jss-preset-default').default
 const data = require('./data/html.json')
-
-const ga = 'UA-96527600-2'
-jss.setup(preset())
-
-const styles = {
-  '@global': {
-    '.line-title': {
-      fontSize: '1.5rem',
-      textAlign: 'center',
-      fontWeight: 'bold'
-    },
-    '.line': {
-      paddingBottom: '.4rem'
-    },
-    a: {
-      textDecoration: 'none',
-      color: '#0469ea'
-    },
-    '.line .quote': {
-      fontStyle: 'italic',
-      backgroundColor: 'rgba(128,128,128,0.1)',
-      display: 'block',
-      borderLeft: 'solid 4px #a0a0a0',
-      paddingLeft: '4px'
-    },
-    '.line .code': {
-      padding: 0,
-      fontSize: '90%',
-      backgroundColor: 'rgba(0,0,0,0.04)',
-      whiteSpace: 'pre-wrap',
-      wordWrap: 'break-word',
-      borderRadius: '4px'
-    },
-    'amp-img.contain img': {
-      objectFit: 'contain'
-    }
-  },
-  container: {
-    padding: '1rem'
-  },
-  '@media (min-width: 640px)': {
-    container: {
-      maxWidth: '640px',
-      margin: '0 auto'
-    }
-  },
-  logo: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: '.5rem'
-  },
-  imgContainer: {
-    position: 'relative',
-    width: '100%',
-    height: '30vh'
-  }
-}
-const css = jss.createStyleSheet(styles).attach()
+const { ga, css } = require('./styles')
 
 const render = async article => {
   const res = await html`
@@ -172,6 +113,11 @@ const render = async article => {
               width="40px"
               height="40px"
             ></amp-img>
+          </div>
+          <div class="${css.classes.sbLink}">
+            <a href="https://scrapbox.io/jigsaw/${article.title}">
+              スクボで読む
+            </a>
           </div>
           ${article.html
             .replace(/href="\.\/(.*?)"/gm, (_, p1) => {
