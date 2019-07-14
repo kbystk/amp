@@ -147,16 +147,23 @@ const main = async () => {
   let pageCount = 1
   let count = data.pages.length
   let batch = data.pages.slice(count - 20, count)
-  while (batch.length !== 0) {
+  while (true) {
     const linkPage = await render(batch, pageCount, count <= 20)
     writeFileSync(`./public/page-${pageCount}.html`, linkPage)
+    if (batch.length < 20) {
+      break
+    }
     pageCount += 1
     count -= 20
-    batch = data.pages.slice(count - 20, count)
+    if (count < 20) {
+      batch = data.pages.slice(0, count)
+    } else {
+      batch = data.pages.slice(count - 20, count)
+    }
   }
   writeFileSync(
     './public/index.html',
-    readFileSync(`./public/page-${pageCount - 1}.html`)
+    readFileSync(`./public/page-${pageCount}.html`)
   )
 }
 
