@@ -1,7 +1,7 @@
 const { writeFileSync, readFileSync } = require('fs')
 const crypto = require('crypto')
 const { html, htmlFragment } = require('lit-ntml')
-const data = require('./data/html.json')
+const data = require('./data/pub.json')
 const { ga, css } = require('./styles')
 
 const render = async (batch, pageCount, isFinal) => {
@@ -145,14 +145,14 @@ const render = async (batch, pageCount, isFinal) => {
 
 const main = async () => {
   let pageCount = 1
-  let count = data.length
-  let batch = data.slice(count - 20, count)
+  let count = data.pages.length
+  let batch = data.pages.slice(count - 20, count)
   while (batch.length !== 0) {
     const linkPage = await render(batch, pageCount, count <= 20)
     writeFileSync(`./public/page-${pageCount}.html`, linkPage)
     pageCount += 1
     count -= 20
-    batch = data.slice(count - 20, count)
+    batch = data.pages.slice(count - 20, count)
   }
   writeFileSync(
     './public/index.html',
