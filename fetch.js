@@ -1,26 +1,33 @@
 const { writeFileSync } = require('fs')
-const puppeteer = require('puppeteer')
+const fetch = require('isomorphic-unfetch')
 const data = require('./data/pub.json')
 
 const main = async () => {
-  const browser = await puppeteer.launch()
-  const page = await browser.newPage()
   let res = []
-  for (const p of data.pages.slice(0, 100)) {
+  for (const p of data.pages) {
     try {
-      await page.goto(
-        `https://scrapbox.io/jigsaw/${encodeURIComponent(p.title)}`
+      const r1 = await fetch(
+        `https://scrapbox.io/api/pages/jigsaw/${encodeURIComponent(
+          p.title
+        )}/text`
       )
-      await page.waitForSelector('.section-title', {
-        timeout: 1000000
-      })
-      const html = await page.evaluate(
-        () => document.getElementsByClassName('lines')[0].innerHTML
+      const txt = await r1.text()
+      const r2 = await fetch(
+        `https://scrapbox.io/api/pages/jigsaw/${encodeURIComponent(p.title)}`
       )
+      const json = await r2.json()
       res.push({
+        created: p.created,
+        id: p.id,
+        image: json.iamge,
         title: p.title,
-        html,
-        updated: p.updated
+        txt,
+        updated: p.updated,
+        relatedPages: json.relatedPages.links1hop.map(q => ({
+          id: q.id,
+          title: q.title,
+          image: q.image
+        }))
       })
       console.log(`done: ${p.title}`)
     } catch (err) {
@@ -28,7 +35,6 @@ const main = async () => {
     }
   }
   writeFileSync('./data/html.json', JSON.stringify(res))
-  await browser.close()
 }
 
 main()

@@ -1,10 +1,94 @@
 const { writeFileSync } = require('fs')
-const crypto = require('crypto')
 const { html } = require('lit-ntml')
+const parse = require('@progfay/scrapbox-parser')
 const data = require('./data/html.json')
 const { ga, css } = require('./styles')
 
+const nodeRender = async node => {
+  switch (node.type) {
+    case 'plain':
+      return node.text
+    case 'hashTag':
+      return html`
+        <a href="https://scrapbox.io/jigsaw/${node.href}">#${node.href}</a>
+      `
+    case 'link': {
+      switch (node.pathType) {
+        case 'relative':
+          return html`
+            <a
+              href="https://scrapbox.io/jigsaw/${node.href}"
+              target="_blank"
+              rel="noopener"
+            >
+              ${node.href}
+            </a>
+          `
+        case 'root':
+          return html`
+            <a
+              href="https://scrapbox.io${node.href}"
+              target="_blank"
+              rel="noopener"
+            >
+              ${node.href}
+            </a>
+          `
+        case 'absolute':
+          return html`
+            <a href="${node.href}" target="_blank" rel="noopener">
+              ${node.content ? node.content : node.href}
+            </a>
+          `
+        default: {
+          console.log(node)
+          return ''
+        }
+      }
+    }
+    case 'image':
+      return html`
+        <div class="${css.classes.imgContainer}">
+          <amp-img class="contain" layout="fill" src="${node.src}" />
+        </div>
+      `
+    case 'decoration':
+      return html`
+        <span
+          class="${css.classes.level} ${css.classes[
+            node.decos[0].replace(/\*/, 'level')
+          ]}"
+        >
+          ${node.nodes.map(nodeRender)}
+        </span>
+      `
+    default: {
+      console.log(node)
+      return ''
+    }
+  }
+}
+
+const blockRender = block => {
+  switch (block.type) {
+    case 'line': {
+      return html`
+        <div style="padding-left:${block.indent}rem;">
+          ${block.nodes.length > 0
+            ? block.nodes.map(nodeRender)
+            : html`
+                <br />
+              `}
+        </div>
+      `
+    }
+    default:
+      return ''
+  }
+}
+
 const render = async article => {
+  const obj = parse(article.txt.replace(/</g, '&lt;').replace(/>/g, '&gt;'))
   const res = await html`
     <!DOCTYPE html>
     <html amp>
@@ -119,30 +203,15 @@ const render = async article => {
               スクボで読む
             </a>
           </div>
-          ${article.html
-            .replace(/href="\.\/(.*?)"/gm, (_, p1) => {
-              let sha = crypto.createHash('sha1')
-              sha.update(p1)
-              const hash = sha.digest('hex')
-              return `href="https://amp.kbys.tk/${hash}.html"`
-            })
-            .replace(/<div class="telomere (.*?)<\/div>/gm, '')
-            .replace(
-              /<img\s(.*?)>/gm,
-              (_, p1) =>
-                `<div class="${css.classes.imgContainer}"><amp-img class="contain" layout="fill" ${p1}/></div>`
-            )
-            .replace(/type="link"/gm, '')
-            .replace(/type="hashTag"/gm, '')
-            .replace(/src="\/api/gm, 'src="https://scrapbox.io/api')}
+          <h1>${article.title}</h1>
+          <div>
+            ${obj.blocks.map(blockRender)}
+          </div>
         </div>
       </body>
     </html>
   `
-  let sha = crypto.createHash('sha1')
-  sha.update(article.title)
-  const hash = sha.digest('hex')
-  writeFileSync(`./public/${hash}.html`, res)
+  writeFileSync(`./public/${article.id}.html`, res)
 }
 
 data.map(render)
