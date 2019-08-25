@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/Karabinar の設定を外付けキーボードと元々のキーボードで使い分ける - dev.jgs.me">
@@ -192,57 +194,142 @@ amp-img.contain img {
           </div>
           <h1>Karabinar の設定を外付けキーボードと元々のキーボードで使い分ける - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          以前 Macbook Air を使っていた頃に、バックスラッシュをデリートにしたりして利便性を高めていたのだが、HHK をつなげると設定が共有されてしまって HHK のデリートが効かなくなったりした。そこで、調べてみると  はデバイスを指定するディレクティブがあるようだ。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          以前 Macbook Air を使っていた頃に、バックスラッシュをデリートにしたりして利便性を高めていたのだが、HHK をつなげると設定が共有されてしまって HHK のデリートが効かなくなったりした。そこで、調べてみると <code>private.xml</code>
+       はデバイスを指定するディレクティブがあるようだ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (xml)</code>
+          <pre><code>&lt;?xml version="1.0"?&gt;
+&lt;root&gt;
+  &lt;devicevendordef&gt;
+    &lt;vendorname&gt;APPLE&lt;/vendorname&gt;
+    &lt;vendorid&gt;0x05ac&lt;/vendorid&gt;
+  &lt;/devicevendordef&gt;
+  &lt;deviceproductdef&gt;
+    &lt;productname&gt;INTERNAL&lt;/productname&gt;
+    &lt;productid&gt;0x0273&lt;/productid&gt;
+  &lt;/deviceproductdef&gt;
+  &lt;item&gt;
+    &lt;name&gt;Backquote to Escape in Apple Keyboard only&lt;/name&gt;
+    &lt;identifier&gt;remap.backquote_to_esc_apple&lt;/identifier&gt;
+    &lt;device_only&gt;DeviceVendor::APPLE, DeviceProduct::INTERNAL&lt;/device_only&gt;
+    &lt;autogen&gt;
+      __KeyToKey__
+      KeyCode::BACKQUOTE,
+      KeyCode::ESCAPE
+    &lt;/autogen&gt;
+  &lt;/item&gt;
+&lt;/root&gt;</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          こんな感じで  と  にそれぞれ Karabinar の Event Viewer で確認した値を設定してやると  の  ディレクティブで参照できるようになる。あとはこの調子で元々オリジナルで使っていたものを  付きの  として移植してやればオッケーだった。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          こんな感じで <code>devicevendordef</code>
+       と <code>deviceproductdef</code>
+       にそれぞれ Karabinar の Event Viewer で確認した値を設定してやると <code>item</code>
+       の <code>device_only</code>
+       ディレクティブで参照できるようになる。あとはこの調子で元々オリジナルで使っていたものを <code>device_only</code>
+       付きの <code>item</code>
+       として移植してやればオッケーだった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           逆に外付けのキーボードだけで使いたい設定でも使えるとおもう。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          今まで Dropbox に  を入れてたけど gist にあげちゃうことにした。 <div class="imgContainer-0-0-3">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          今まで Dropbox に <code>private.xml</code>
+       を入れてたけど gist にあげちゃうことにした。 <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://gist.github.com/e-jigsaw/4ffd2a81623f9deab392">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2016/01/27/switch-karabinar-config" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0127">#0127</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0127
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d12.html">
+                      ネットアイドル界の老害 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e529.html">
+                      2012年私的映画ランキング - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dfd.html">
+                      インターネットへのパブリッシュ - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dc3.html">
+                      町家 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d87.html">
+                      持続可能な開発を目指す ~ ドメイン・ユースケース駆動（クリーンアーキテクチャ） + 単方向に制限した処理 + FRP - Qiita - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cdc.html">
+                      価値を届ける - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cfe.html">
+                      Apple Music について(その2) - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0a6.html">
+                      高専とは何か、そしてまた私はいかにして高専に人生を狂わされるようになったか - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dde.html">
+                      むかしのインターネット - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209de6.html">
+                      Idobata - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

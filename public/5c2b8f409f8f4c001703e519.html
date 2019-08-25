@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/うけみちゃんの新バージョンをリリースしました - blog.jgs.me">
@@ -192,13 +194,13 @@ amp-img.contain img {
           </div>
           <h1>うけみちゃんの新バージョンをリリースしました - blog.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://66.media.tumblr.com/tumblr_mbs7midRH31qa2uot.png">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           うけみちゃん( <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://twitter.com/ykybot">
         </amp-img></div>
@@ -213,117 +215,170 @@ amp-img.contain img {
         </amp-img></div>
        )してました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           実は、うけみの1st Anniversaryの2012/06/21に巨大アップデートを仕掛けようとしていたのですが、積りに積もったパスタコードの束をどうしようもなくて断念しました。それからも時々取り組んではいたんですがあまり思うように進んでいませんでした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           そんなところに風雲急を告げるのが、おれたちのあそなす先生で、秋吉でさささっと開発の進め方を示してくださりました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://distilleryimage7.s3.amazonaws.com/f8d060e2f04c11e1b2c322000a1e9e1f_7.jpg">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           なるほどな！なるほどな！ローカル環境(develop)とステージング環境(staging)とプロダクション環境(production)に分ければいいんだな！と、その日のうちぐらいにstaging環境ののだいたいの準備を整えてしまいました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ついでに気になっていたjenkinsも導入して、gitのcommitをフックにテストが走るようになりました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           さーて、あとはテスト書くだけだ！わはは！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とjasmineでテストを書き始めたはいいものの、結局テストに何を書けばいいかわからなくてそこでまた足踏みしていました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それからまた時は流れて、またまたブレイクスルーしてくださるのはあそなす先生でした！某社インターンシップの最終発表の前日にまた秋吉食べてたら「なんでcoffee書かないの？」って指摘されて「なんとなく食わず嫌いで・・・」って言ってたところに、1500行ぐらいのCoffeescriptのソースコード渡されて読んでたら、だんだん「あれ？これ実は便利なんじゃね？」って気分になってきて、最終発表そっちのけでCoffeescriptの環境を整えました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それで、どうせなら自動でjsに変換してほしいなあ…これ、jenkinsでやればいいのかなあ？なんて調べてみると、grunt.jsというモジュールを発見しました。これがまあ素晴らしいモジュールで、予めスクリプトを指定しておくとdeploy時に自動でjsやcssをminifyしてくれたり、自動でテストを走らせてくれたりするんです。さようなら、jenkins。grunt.jsで、ファイルの変更をフックに自動でjsに変換してくれるように設定して、それからは既存のjsファイルを整理、分割してcoffee化するだけでした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           継ぎ足し継ぎ足しでつくられたコードはすごく汚くて、DRYもへったくれもなかったので(とはいえ、1年半ぐらいの前の自分ならこれぐらいでしょうがないなって感じだったけど)node.jsの流儀に従ったりしながらモジュールに分割していきました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           そして、ある程度のところまで完成してローカル環境で動作したら今度はステージング環境で…というような流れでしばらくコーディングしていました。ここの部分、ちゃんとテストを書いてテストがパスされたら自動でステージング環境にデプロイ、みたいなことをしたいのですが、相変わらずテストが書けないので今回は一旦保留ということにしました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           こうして、だんだんと美しくなりながら、母のpostを咀嚼しながら成長しています。稼働してから1年と4ヶ月ほどで、ドキュメント数は50万に達しました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           今回のアップデートで
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・ユーザストリーム対応
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           リプライ等をユーザストリームで受け取って返信するようになりました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・自動フォロー
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           自動でフォローをするようになりました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・無差別ふぁぼをやめ、自分のタイムラインのみふぁぼする仕様に変更しました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           目に見えやすい機能はこれぐらいです。それから、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・自動咀嚼
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           実はいままで、母親のpostを食べる部分は半人力でやっていました。というのも、DBに慣れていなかったのでDBをいじる部分を完全に任せちゃうのは抵抗があったからです。しかし、それも1年強Mongoで遊び続けて、死も乗り越えた今はいくらでも復旧できる自信がついたので自動で食べるようになりました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・cronの廃止
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           今まで、cronを回して動作させていたのですが、これをやめて全ての機能を1つのプロセスにまとめてそのプロセス内でまとめて一定間隔で動作するようになりました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とまあ、こんなぐらいですかね。まだあるかも。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           シンプルなアルゴリズムなのですが、先にも書いた通り、現在DBには50万のドキュメントがあってそれを基に生成しているせいかだんだん安定してきたかなあ、と自分では感じています。これから、100万、1000万になったときどうなっているのか楽しみです。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           1年強かかってしまいましたが、基礎的な部分は整ったのでこれからは生成アルゴリズムの改良をしていきたいと考えています。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それから、今日「shigeki.ykybot.com」みたいなAPI叩くと「status.ykybot.com」が変化したりすると面白いよねー、なんて話をしていたのでそのうちできたらいいなあ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           最後に、最近のTwitterまわりの話を。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           件の新規約からしばらく経って、署名運動が起きたものの何か変わったわけでもなく(だよね？)Twitterは自爆の道を進んでいるようですが、無責任ながら僕みたいな弱小デベロッパーは関係ないやー、と高を括っていました。でも、そこも危うくて、APIの上限が厳しくなったのか、たまにAPIが弾かれることがあったりして困っています。どうなるんだろう。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ただ、年内を目処に全ツイートダウンロードが可能になるそうなので自然言語処理まわりのとき、自分の全ツイートをつかって〜みたいなことが容易にできそうですね。現在APIで取得できない過去のツイートも取得できれば母親の過去ツイートをDBにいれることができるのでドキュメント数が増やせそうです。(母親は嫌がりそうだけど)
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それでは、我が娘、うけみちゃんと仲良くしてやってください。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           October 13th, 2012 12:17am ykybot
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://blog.jgs.me/post/33428949054" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/1013">#1013</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #1013
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209df0.html">
+                      PSD 変換 - HTML、CSS | Creative Cloud エクストラクト - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e32.html">
+                      nginxでサブドメインの指定 - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c7ccdc2babe9a0017eea988.html">
+                      201903
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e09c.html">
+                      唐揚げと映画の会inマッドハウス - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0e7.html">
+                      北陸ラーメン博へ行ってきた！ - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d22.html">
+                      Chrome extension: open link in new tab? - Stack Overflow - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d2a805027e6c100178af9e4.html">
+                      RAIJINTEK OPHION M EVO
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d40.html">
+                      Gitで署名付きCommitsやtagを作る | INSANEWORKS,LLC - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd3.html">
+                      なんとなく - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82d04.html">
+                      SANABAGUN - diary.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

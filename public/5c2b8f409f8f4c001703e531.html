@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/Chromeで新規タブを開いた瞬間に圧倒的幸福量を得る - blog.jgs.me">
@@ -192,10 +194,10 @@ amp-img.contain img {
           </div>
           <h1>Chromeで新規タブを開いた瞬間に圧倒的幸福量を得る - blog.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           まずはこちらの動画をどうぞ！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://vimeo.com/64584224" target="_blank" rel="noopener">
               Pastblr
             </a>
@@ -207,54 +209,107 @@ amp-img.contain img {
             </a>
            .
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           出オチ感半端ないですが、また楽しいtumblrライフを送るためのツールをつくってしまいました。Chromeで新規タブを開くと、自分のtumblrの過去postが無限に表示されます。幸福だ…！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://66.media.tumblr.com/8f55852d2fba2095789ae57af68e704c/tumblr_inline_mlo8xspZlg1qz4rgp.jpg">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           よるに「それ2年前のタンブラーでみたわー」ってツイートしてる <a href="https://twitter.com/ttmtmy/status/326371232444469248" target="_blank" rel="noopener">
               新卒シロクマさん
             </a>
            がいて、ふと2年前の今日自分は何をpostしていたのかなーと気になったのでArchiveで2011 Aprilのpostを見ていたら思いのほか楽しかった。なので、フォローしてるひととかのtumblrへ行っては2年前へタイムスリップして遊んでました。そうこうしてるうちに、2年前の自分は自分っぽいけれど今の自分とは似て非なる存在だし2年前の自分をフォローしたい…！っておもいました。そういえば、Archive知らないひといるみたいなので説明しておくと、tumblogの末尾にarchiveってつけるとオフィシャルが用意してくれているArchiveページをダラ見できます。便利。見やすくていいんだけど、非同期でタイル状に読み込まれるのはあんまりスクレイピングフレンドリーじゃないからもうちょっとスクレイピングフレンドリーな構造だったらいいなー。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           最初は適当に過去の自分を取得してdashboardに放流するボットをつくろうかとおもったけど、なんかそれじゃない感あるしめんどくさいしでやめにしました。それで思い出したのが <a href="https://github.com/soh335/chrome-tumblr-tile" target="_blank" rel="noopener">
               Chrome-tumblr-tile
             </a>
            でした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とりあえずForkしたけど、よく考えてみたらAPIで日付でフィルタリングして情報を取得できないからキッチリ二年前の今日に照準を合わせられない。これはこまった。自分のtumblrをスクレイピングして適当なDBに保存してそこからAPIライクに情報出せるようにしようかともおもったけれど、仕掛けが大掛かりになりそうだったのでやめに。ここで一旦2年前の今日というコンセプトを棄てて、「Chromeで新規タブを開いたら自分の過去postが表示される」というシンプルな拡張をつくることにしました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           当初つくりたかったものからちょっと離れてしまったけれど、これはこれで幸福度高いのでよしということにしました。ソースコードは <a href="https://github.com/e-jigsaw/pastblr-for-chrome" target="_blank" rel="noopener">
               Pastblr for Chrome
             </a>
            に。jadeファイルを読むとわかるけれど、tumblubを読み込んでいるだけです。tumblubは新バージョンへの移行を控えていて、ステージングで様子を見ているのでそれを使っています。ここの部分を書き換えるだけで割となんでもできるとおもいます。tumblrのURLの部分を変更したら同様に自分の過去が見れるし、もっと単純に/archiveにしてしまってもいいかもしれないです。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Chrome拡張を作ったら、意味もなく新規タブを開くようになってしまって、しかもしばらくの間ぼんやりとした幸福に包まれた状態になってしまって生産性は落ちるけれど、生きる活力は湧いてくるようになりました(21歳男性)。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           April 23rd, 2013 12:25pm pastblr tumblr chrome
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://blog.jgs.me/post/48663591829" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0423">#0423</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0423
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d5d.html">
+                      Scalaで学ぶヘキサゴナルアーキテクチャ実践入門 // Speaker Deck - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e15.html">
+                      428〜封鎖された渋谷で〜をクリアした - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dfb.html">
+                      信念と過激派のはざまで - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d18d18b3c0b130017dc4a44.html">
+                      私は人の役に立つ仕事がしたいと思って、でも挫折した過去があるので、なんだかこういうことに弱い
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e69.html">
+                      githubのtimelineがbigqueryで解析できる - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dbf.html">
+                      すきやきの陣 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9ce8012b30c00175fabbc.html">
+                      ブルース
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d62.html">
+                      転校生 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e3be23a10017086ea4.html">
+                      aws cli で複数アカウントを切り替える - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e2be23a10017086e97.html">
+                      gulp-riot をアップデートした - dev.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

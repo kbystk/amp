@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/io.js の fs.readFileSync を S3 と組み合わせると死ぬ - dev.jgs.me">
@@ -192,58 +194,122 @@ amp-img.contain img {
           </div>
           <h1>io.js の fs.readFileSync を S3 と組み合わせると死ぬ - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
-          今日は、運用してる簡単なバッチスクリプトに「挙動がバギーなんだが〜」と問い合わせをもらって調べた。すると、どうやら  でこちらが想定しているファイルを取得できていないことが分かった。
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
+          今日は、運用してる簡単なバッチスクリプトに「挙動がバギーなんだが〜」と問い合わせをもらって調べた。すると、どうやら <code>fs.readFileSync</code>
+       でこちらが想定しているファイルを取得できていないことが分かった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          ブレークダウンしていくと、一定以上のサイズのファイルが途切れて取得されていることが分かった。当該ファイルは EC2 上のサーバに S3 をマウントしていて、 経由でファイルを参照していた。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ブレークダウンしていくと、一定以上のサイズのファイルが途切れて取得されていることが分かった。当該ファイルは EC2 上のサーバに S3 をマウントしていて、<code>s3fs</code>
+       経由でファイルを参照していた。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          試しにそのファイルを  でローカルにコピーして read の権限を与えてやるとこちらが想定している通りのデータを取得することができた。まじかー。。。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          試しにそのファイルを <code>cp</code>
+       でローカルにコピーして read の権限を与えてやるとこちらが想定している通りのデータを取得することができた。まじかー。。。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          たぶん  の問題だろうから深入りせずに
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          たぶん <code>s3fs</code>
+       の問題だろうから深入りせずに
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (LiveScript)</code>
+          <pre><code>...
+execSync "cp #{s3Path} #{tmpPath}"
+execSync "chmod +r #{tmpPath}"
+readFileSync tmpPath
+...</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           というアレゲな対応になってしまった...。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2015/06/16/node-readfilesync-with-s3" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/20150616">#20150616</a>
-       <a href="https://scrapbox.io/jigsaw/0616">#0616</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #20150616 #0616
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e05.html">
+                      キャプテン・アメリカ ウィンター・ソルジャー(ネタバレ有り感想) - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82db6.html">
+                      オフ - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d89.html">
+                      アフターアースと惡の華 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e3be23a10017086e9c.html">
+                      fetch の今 - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cca73fe78d619001738bd56.html">
+                      すごいものを見聴きするとすぐ泣いちゃうスキル
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82ce6.html">
+                      シン・シティ 復讐の女神(ネタバレ有り) - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d57.html">
+                      2013年5月の平日 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d43.html">
+                      本日の研究室 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d4f.html">
+                      Flux Utilsのドキュメント日本語訳 | mae's blog - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e53e.html">
+                      カナザワ映画祭2013に行ってきた - blog.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

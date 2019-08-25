@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/githubのtimelineがbigqueryで解析できる - dev.jgs.me">
@@ -192,95 +194,146 @@ amp-img.contain img {
           </div>
           <h1>githubのtimelineがbigqueryで解析できる - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://www.githubarchive.org/">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://githut.info/" target="_blank" rel="noopener">
               Githut
             </a>
-          という <a href="https://scrapbox.io/jigsaw/Github" target="_blank" rel="noopener">
-              Github
-            </a>
-           の解析サイトがあって、仕掛けを調べていたらGithubはpublicな<a href="https://scrapbox.io/jigsaw/timeline" target="_blank" rel="noopener">
-              timeline
-            </a>
-          を<a href="https://scrapbox.io/jigsaw/オープンデータ" target="_blank" rel="noopener">
-              オープンデータ
-            </a>
-          として公開しているらしい。
+          という Github の解析サイトがあって、仕掛けを調べていたらGithubはpublicなtimelineをオープンデータとして公開しているらしい。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/Githut" target="_blank" rel="noopener">
-              Githut
-            </a>
-          の<a href="https://github.com/littleark/githut/blob/da6e8e89c33c3eb93b106b1c0d45d5681efb2da5/README.md" target="_blank" rel="noopener">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Githutの<a href="https://github.com/littleark/githut/blob/da6e8e89c33c3eb93b106b1c0d45d5681efb2da5/README.md" target="_blank" rel="noopener">
               README
             </a>
           にもある通り
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>select
+  repository_language,
+  count(distinct(repository_url)) as active_repos_by_url,
+  YEAR(created_at) as year,
+  QUARTER(created_at) as quarter,
+from [githubarchive:github.timeline]
+where
+    type="PushEvent"
+group by
+  repository_language,
+  year,
+  quarter
+order by
+  repository_language,
+  year DESC,
+  quarter DESC</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          みたいな<a href="https://scrapbox.io/jigsaw/SQL" target="_blank" rel="noopener">
-              SQL
-            </a>
-          を書くと言語毎のPush量みたいなやつが見れたりする。ほいでは<a href="https://scrapbox.io/jigsaw/Star" target="_blank" rel="noopener">
-              Star
-            </a>
-          はどうなのかなあ、とおもったらのスキーマのにStar的なやつがなかったので見れなかった。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          みたいなSQLを書くと言語毎のPush量みたいなやつが見れたりする。ほいではStarはどうなのかなあ、とおもったら<code>githubarchive:github.timeline</code>
+      のスキーマの<code>type</code>
+      にStar的なやつがなかったので見れなかった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/20140926">#20140926</a>
-       現在、はの<a href="https://scrapbox.io/jigsaw/Row" target="_blank" rel="noopener">
-              Row
-            </a>
-          があって、サイズは154GBもあるんだそうだ。それがものの10s程度で解析できるので<a href="https://scrapbox.io/jigsaw/BigQuery" target="_blank" rel="noopener">
-              BigQuery
-            </a>
-          スゲーなとおもいます。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #20140926 現在、<code>githubarchive:github.timeline</code>
+      は<code>249,308,569</code>
+      のRowがあって、サイズは154GBもあるんだそうだ。それがものの10s程度で解析できるのでBigQueryスゲーなとおもいます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2014/09/26/github-timeline-is-analyzable-on-bigquery" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0926">#0926</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0926
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209ddb.html">
+                      StatCounter Global Stats - Browser, OS, Search Engine including Mobile Usage Share - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209db2.html">
+                      行動ログでプロダクトを改善するには/exploit user behavior for product // Speaker Deck - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d586277bb1d770017c0bd51.html">
+                      Markdownの問題点 - 増井俊之
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9b415a1c9f2001751a39e.html">
+                      アメスパシリーズ
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dbf.html">
+                      Polyfill のあり方と Web の進化と協調するためのガイドライン | blog.jxck.io - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c385515c3acaa001715bdb1.html">
+                      佐野で有名になるにはゆるキャラになるかラッパーになるかなんだな
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209df1.html">
+                      Node.js8になって util.promisify が利用できるようになったのでメモ - MANA-DOT - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d41.html">
+                      リアル草刈りゲーム - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dde.html">
+                      FRESH! Web パフォーマンス改善 〜クライアントサイド編〜 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9a4b6b4c3610017130b95.html">
+                      GotG
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/Siriでうけみちゃんとおはなし  - blog.jgs.me">
@@ -192,22 +194,22 @@ amp-img.contain img {
           </div>
           <h1>Siriでうけみちゃんとおはなし  - blog.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://s1-05.twitpicproxy.com/photos/full/588757932.png?key=640960" target="_blank" rel="noopener">
               http://s1-05.twitpicproxy.com/photos/full/588757932.png?key=640960
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           全日本人iPhoneハッカー待望のiOS5.1/5.1.1で遊べるようになったので、早速サクサクとアップデートしました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           そして、やはりいじりたいのはSiriまわり！英語Siriは、英語のスピーキング能力のなさで思ったように認識してくれなくて涙をのむしかなかったのですが、ついに！日本語Siriきた！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           海外ハッカーがSiriにプロキシかますと任意のレスポンス投げられるよ、って盛り上がっているのを尻目に日本語Siriきたらうけみちゃんをアシスタントにするんだ…!って考えてました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           一応解説しておくと、 <a href="http://twitter.com/ykybot" target="_blank" rel="noopener">
               うけみちゃん
             </a>
@@ -216,63 +218,116 @@ amp-img.contain img {
             </a>
            を果たし、謎のアラビア人とお話したり、通話テロを全て無視したりしていたのですが、諸事情で現在は停止しています。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           さて、まずは <a href="https://github.com/plamoni/SiriProxy" target="_blank" rel="noopener">
               Siriproxy
             </a>
            の環境を整えます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           rvmでrubyの1.9.3をインスコしましょう。ただ、ここがかなり難関で(OSX Lion)一苦労。ここらへんがrubyイヤ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           準備ができたら、SiriporxyをcloneしてReadmeに従って整えていきます。それから、dnsmasqっていうやつも必要になるみたいなので、Homebrewでインストールします。インストールできたら、どっかにあるdnsmasq.confを編集して「address=/guzzoni.apple.com/MacのIPアドレス」を書き加えます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それで、とりあえずSiriで話した内容はMacでとれるようになったのですが、pluginの中のexampleをいくら編集してもウンともスンとも言わないのでおかしいな〜とおもったら、~/.rvm/gems/rubyなんたら/gems/siriproxy/pluginの中のファイルを編集しなきゃいけなかったみたいでこれに気付くのに一晩かかりました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           あとは、よしなにコードを書くだけです！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           と、いってもRubyよくわからないのでサンプルを写経しています。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           うごきました！かわいい！！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           現状の問題点として
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・プロキシつくっただけだから公開とかできるのかよくわからない
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・レスポンスが遅い(ver.1の頃に比べるとかなり高速になったのですが、まだまだ遅い)
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ・たまに止まる(どうやら、記号が交じると止まるっぽい◯とか顔文字とか)
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           って感じです。Siriにのっからずに会話アプリみたいなやつ作れば1,3あたりは解消できそう。2はチューニングするしかないですかね。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           たぶん、twitter界隈のbotでも作れるとおもうのでもうちょっとやりやすくなるといいなー。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           May 29th, 2012 6:28pm
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://blog.jgs.me/post/23988183295" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0529">#0529</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0529
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d16.html">
+                      Civil War/Captain America 感想(ネタバレ有) - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e52d.html">
+                      声を使って自堕落なインターネット生活を送る - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e45.html">
+                      栗山さんを毎日見れるようにした - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd8.html">
+                      yky* のメンテをした - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d33.html">
+                      翻訳: WebAPI 設計のベストプラクティス - Qiita - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a529631e47300173f39d1.html">
+                      キャプテン・アメリカ
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e540.html">
+                      iPad mini Retinaモデル買ったので設定とかいれたアプリまとめ - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d4e.html">
+                      コメント - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e3be23a10017086ea2.html">
+                      stylelint で CSS Modules の values がエラーになる件の対処 - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cca734e3e023e001737a626.html">
+                      F4
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

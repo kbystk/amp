@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/声を使って自堕落なインターネット生活を送る - blog.jgs.me">
@@ -192,10 +194,10 @@ amp-img.contain img {
           </div>
           <h1>声を使って自堕落なインターネット生活を送る - blog.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           まずはこの動画をみてほしい。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://vimeo.com/59714337" target="_blank" rel="noopener">
               Voice Reblog
             </a>
@@ -207,40 +209,40 @@ amp-img.contain img {
             </a>
            .
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           そう！声でDashboardを徘徊できたらどこでも、どんなスタイルでもTumblrが楽しめるじゃん！？！？！？
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           …と思ってつくりました。試験中に思いついていろんな壁にぶちあたってなんとか完成しました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           これがあれば、寝っ転がりながらでも家事しながらでもTumblrを楽しむことができます。が、リリースはちょっと難しそうなので誰でも手元でできるようになるのはまだ先になるとおもいます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ここからは開発で大変だった話です。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           当初の構想は
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 ">
           Chrome extension+Chrome Speech API
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ChromeのdevチャンネルバージョンにSpeech APIなるものが搭載されて、しかもディクテーションしてくれるということで試してみたんですが、マイクの使用の許諾が毎回でてきて、しかもそれが消せない厄介なやつだったので断念しました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           次の構想は
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 ">
           Julius→Node.js→(Websocket)→Chrome extension
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           というような感じをイメージしていました。以前、 <a href="http://blog.jgs.me/post/23988183295/ukemi-on-siri" target="_blank" rel="noopener">
               I am Electrical machine • Siriでうけみちゃんとおはなし
             </a>
@@ -249,51 +251,104 @@ amp-img.contain img {
             </a>
            というスーパー便利モジュールがあって、感謝しながら使わせていただきました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Chrome extensionにWebsocketでコマンドを送信するところまでできたので、コマンドを基にkeypressかkeydownを発火させればできるだろう、と見立てていたら <a href="https://gist.github.com/e-jigsaw/4945744" target="_blank" rel="noopener">
               Chrome extensionsでkeydown eventを発火させたいのだけれど、どうにも発火してくれない
             </a>
            というようなことがあって、しかもChromeのbug扱いされていたのでこれも断念しました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Chrome extensionの中にスクロールするコードとかリブログするコードを含めればextensionでも実現はできると思うけれど、面倒くさかったのでやめました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それで、最終的に
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 ">
           Julius→Node.js→(Websocket)→Windows8 App
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           っていう構成になりました。Windows8 App上でWebsocketが使えるか不安だったのですが、ずっこけるぐらいあっさり動いて拍子抜けでした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それにしても、ありあわせのものを組み合わせるだけでスッとこういうものが作れるのはすごいなあ、と改めておもいました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           音声認識もなかなかの精度で認識してくれるので、面白いです。声とWebの組み合わせアツいとおもうよ！！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           次は脳波でReblogですかね〜。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           February 15th, 2013 6:11pm tumblr Reblog Monster
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://blog.jgs.me/post/43137515474" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0215">#0215</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0215
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d30.html">
+                      ジャスティス！！！ジャスティス・リーグ(ネタバレあり) - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a572a59446c0017b1b267.html">
+                      ポストクレジットシーン
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209def.html">
+                      Google BigQueryの新機能 Standard SQLまとめ - VASILY DEVELOPERS BLOG - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d2842f75352350017ea7b57.html">
+                      Free Stock Charts, Stock Quotes and Trade Ideas — TradingView
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cb0296d43734d00173a0859.html">
+                      平成31年度東京大学学部入学式　祝辞 | 東京大学
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d3e.html">
+                      Shibuya.XSS #7 が開催されました - Cybozu Inside Out | サイボウズエンジニアのブログ - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0f2.html">
+                      大変な映画を見た - THE DARK KNIGHT - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9a3f5c80e2a00170ff812.html">
+                      ナタクリ
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e3be23a10017086e9e.html">
+                      PR や issue の消化スピードをバッジで表示する  issuestats - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e09f.html">
+                      rackhubをつかってみたよ！ - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

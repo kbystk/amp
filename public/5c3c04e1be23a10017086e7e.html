@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/atomのgrammarの構文がいまいちよく分からない - dev.jgs.me">
@@ -192,95 +194,174 @@ amp-img.contain img {
           </div>
           <h1>atomのgrammarの構文がいまいちよく分からない - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/atom-jade/blob/ac7246406c9a1753cef1403ec16025150315ce68/grammars/jade.cson">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Atom の language-jade で coffeescript がシンタックスハイライトされなくて困ったなあとなったのでとりあえず直してみることにしたら意外と大変だった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (jade)</code>
+          <pre><code>some
+  script(type='text/coffeescript').
+    x = 100
+    x.toString()</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          こういうやつ。元々 JavaScript のコードをハイライトさせるやつはあったから、それの JS になってる部分を Coffee に変えればいいや、とおもってコピペしてそれっぽく  に変えるとハイライトされるようにはなった。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          こういうやつ。元々 JavaScript のコードをハイライトさせるやつはあったから、それの JS になってる部分を Coffee に変えればいいや、とおもってコピペしてそれっぽく <code>source.coffee</code>
+       に変えるとハイライトされるようにはなった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           が、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (jade)</code>
+          <pre><code>some
+
+  script(type='text/coffeescript').
+    x = 100
+    x.toString()</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           みたいな感じで改行が入ると <a href="https://github.com/e-jigsaw/atom-jade/blob/ac7246406c9a1753cef1403ec16025150315ce68/grammars/jade.cson#L295" target="_blank" rel="noopener">
               tag.jade
             </a>
            と認識されてハイライトされなくなって困った。試行錯誤してみると <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/atom-jade/blob/ac7246406c9a1753cef1403ec16025150315ce68/grammars/jade.cson#L927-L959">
         </amp-img></div>
-       こんな感じで  に追加して <div class="imgContainer-0-0-3">
+       こんな感じで <code>repository</code>
+       に追加して <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/atom-jade/blob/ac7246406c9a1753cef1403ec16025150315ce68/grammars/jade.cson#L316">
         </amp-img></div>
        を付け足してやるとなんとなく動くようになったので一旦これでいくことにした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とはいえ正規表現が雑なので
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (jade)</code>
+          <pre><code>some
+
+  script(type='text/coffeescript', data='hoge').
+    x = 100
+    x.toString()</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          みたいなことされると死ぬ。あと  のところがハイライトされない問題も抱えている。TextMate の構文をそのまま持ってきているらしいけど、絶望的に分かりにくくてめっちゃつらかった。かといってこの辺の知見全くないのでどうこうできるアレもなく...。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          みたいなことされると死ぬ。あと <code>(type='text/coffeescript')</code>
+       のところがハイライトされない問題も抱えている。TextMate の構文をそのまま持ってきているらしいけど、絶望的に分かりにくくてめっちゃつらかった。かといってこの辺の知見全くないのでどうこうできるアレもなく...。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2015/01/31/can-not-understand-atom-grammar-structure" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0131">#0131</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0131
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0de.html">
+                      2009年今年観た映画ランキング - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c294684d9ffe200179e5218.html">
+                      settings
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e3a.html">
+                      hubotとhipchatでウワサのChatOpsの準備 - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5ce5e677deae8d00172d8590.html">
+                      シン・ニホン AIxデータ時代における日本の再生と人材育成
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d566a02a5000300179994bc.html">
+                      これは自家製の麺です🍜
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cf0f100837e1000171b8781.html">
+                      自分にとってのSplatoon - babonyans-akiu’s diary
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6d1d713f01050017e687ac.html">
+                      typescript-eslint 意外とサックリ導入できそうだった
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e52a.html">
+                      ブラウザでライフゲームつくった - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d27.html">
+                      ラ・ラ・ランドとアーティスト(どっちもネタバレ有) - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a55aa31e47300173f474d.html">
+                      パンフレット
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

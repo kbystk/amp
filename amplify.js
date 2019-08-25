@@ -1,29 +1,35 @@
 const { writeFileSync } = require('fs')
 const { html } = require('lit-ntml')
 const parse = require('@progfay/scrapbox-parser')
+const master = require('./data/pub.json')
 const data = require('./data/html.json')
+const dic = require('./data/dic.json')
 const { ga, css } = require('./styles')
 
 const nodeRender = async node => {
   switch (node.type) {
     case 'plain':
       return node.text
-    case 'hashTag':
-      return html`
-        <a href="https://scrapbox.io/jigsaw/${node.href}">#${node.href}</a>
-      `
+    case 'hashTag': {
+      if (dic[node.href] !== undefined) {
+        return html`
+          <a href="${`https://amp.kbys.tk/${dic[node.href]}`}">#${node.href}</a>
+        `
+      } else {
+        return `#${node.href}`
+      }
+    }
     case 'link': {
       switch (node.pathType) {
-        case 'relative':
-          return html`
-            <a
-              href="https://scrapbox.io/jigsaw/${node.href}"
-              target="_blank"
-              rel="noopener"
-            >
-              ${node.href}
-            </a>
-          `
+        case 'relative': {
+          if (dic[node.href] !== undefined) {
+            return html`
+              <a href="https://amp.kbys.tk/${dic[node.href]}">${node.href}</a>
+            `
+          } else {
+            return node.href
+          }
+        }
         case 'root':
           return html`
             <a
@@ -62,6 +68,10 @@ const nodeRender = async node => {
           ${node.nodes.map(nodeRender)}
         </span>
       `
+    case 'code':
+      return html`
+        <code>${node.text}</code>
+      `
     default: {
       console.log(node)
       return ''
@@ -73,7 +83,7 @@ const blockRender = block => {
   switch (block.type) {
     case 'line': {
       return html`
-        <div style="padding-left:${block.indent}rem;">
+        <div style="padding-left:${block.indent}rem; margin-bottom: .5rem;">
           ${block.nodes.length > 0
             ? block.nodes.map(nodeRender)
             : html`
@@ -82,13 +92,30 @@ const blockRender = block => {
         </div>
       `
     }
+    case 'codeBlock': {
+      return html`
+        <div style="padding-left:${block.indent}rem; overflow: scroll;">
+          <code>${block.fileName}</code>
+          <pre><code>${block.content}</code></pre>
+        </div>
+      `
+    }
     default:
+      console.log(block)
       return ''
   }
 }
 
 const render = async article => {
   const obj = parse(article.txt.replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+  let relatedPagesWithRandomPages = article.relatedPages
+  if (article.relatedPages.length < 10) {
+    for (let i = article.relatedPages.length; i < 10; i++) {
+      relatedPagesWithRandomPages.push(
+        master[Math.round((master.length - 1) * Math.random())]
+      )
+    }
+  }
   const res = await html`
     <!DOCTYPE html>
     <html amp>
@@ -192,11 +219,13 @@ const render = async article => {
         </amp-analytics>
         <div class="${css.classes.container}">
           <div class="${css.classes.logo}">
-            <amp-img
-              src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg"
-              width="40px"
-              height="40px"
-            ></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img
+                src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg"
+                width="40px"
+                height="40px"
+              ></amp-img>
+            </a>
           </div>
           <div class="${css.classes.sbLink}">
             <a href="https://scrapbox.io/jigsaw/${article.title}">
@@ -207,6 +236,19 @@ const render = async article => {
           <div>
             ${obj.blocks.map(blockRender)}
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            ${article.relatedPages.map(
+              relatedPage =>
+                html`
+                  <li>
+                    <a href="https://amp.kbys.tk/${relatedPage.id}.html">
+                      ${relatedPage.title}
+                    </a>
+                  </li>
+                `
+            )}
+          </ul>
         </div>
       </body>
     </html>

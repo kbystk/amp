@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/JavaScript の async/await の仕様をずっと誤解していた - dev.to/jgs">
@@ -192,216 +194,348 @@ amp-img.contain img {
           </div>
           <h1>JavaScript の async/await の仕様をずっと誤解していた - dev.to/jgs</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           すごい初歩的なことかもしれないのだけれど、年単位ぐらいで誤解したままコードを書いていたので懺悔のためにも書いておく...。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           何が違ったかというと、async function の扱いである。async function も
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>function</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           と同じだとおもっていて、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>Promise</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           を返さないと呼び出し側で
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>await</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           できないと勘違いしていた。そのため、今までは
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           というような感じで
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>Promise</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           を一旦返すようにしていた。しかし、async function は呼び出すと
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>Promise</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           を返してくれるのだ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           参照: <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/async_function">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Node.js v9.5 で確認した。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>Promise</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           が返ってくる...。よくよく調べていくと async function の中で
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>return</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           すると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>Promise</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           を
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>resolve</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           し、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>throw</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           すると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>Promise</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           を
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>reject</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           することになるんだそうな。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           = &gt;
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           = &gt;
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           まじか...。俺の
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>Promise</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とはなんだったんだ.........。とても恥ずかしい.....。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="https://dev.to/jgs/javascript--asyncawait---2l41" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0208">#0208</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0208
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/javascript">#javascript</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #javascript
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d52.html">
+                      今どきの若手育成にひそむ3つの思いこみ - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d2a7fdb647b3e00170f973e.html">
+                      RAIJINTEK OPHION EVO
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d3c.html">
+                      生産性のない日 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cb452c6237f5100173fd732.html">
+                      【公式 第2弾】SAGEMON GIRLS - RAIN - さげもんガールズ - 雨 - - YouTube
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dd2.html">
+                      Docker / Apache Mesos / Marathon による3倍速いIQONクローラーの構築 - VASILY DEVELOPERS BLOG - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5236805439000017998b65.html">
+                      daybrush/moveable: ↔️ ↕️ 🔄 Moveable! Draggable! Resizable! Scalable! Rotatable! Warpable! Pinchable!
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82de9.html">
+                      美とメタデータ - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e3b.html">
+                      texでpngを貼る - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e51f.html">
+                      うけみといっしょ！をリリースしました - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d33.html">
+                      俺の好きなゲーム50本(2018年上半期版) - diary.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

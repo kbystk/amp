@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/useImperativeHandle と forwardRef を使うととても便利">
@@ -192,76 +194,160 @@ amp-img.contain img {
           </div>
           <h1>useImperativeHandle と forwardRef を使うととても便利</h1>
           <div>
-            <div style="padding-left:1rem;">
+            <div style="padding-left:1rem; margin-bottom: .5rem;">
           hooks 出てきた頃に「使うのはコーナーケースなので〜」というようなことが書いてあったのでスルーしていたのだけど、ついに使うタイミングがきた
         </div>
-      <div style="padding-left:1rem;">
-          素直に <a href="https://scrapbox.io/jigsaw/React" target="_blank" rel="noopener">
-              React
-            </a>
-           のアプリ書いてるとユースケースは確かになさそうなのだけど
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          素直に React のアプリ書いてるとユースケースは確かになさそうなのだけど
         </div>
-      <div style="padding-left:2rem;">
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
           モーダルで使う機能を hook に切り出している
         </div>
-      <div style="padding-left:2rem;">
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
           モーダルの開け閉めをする関数をモーダルのコンポーネントが持っている
         </div>
-      <div style="padding-left:2rem;">
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
           親ページでモーダルの開け閉めをするために子の開け閉め関数を呼びたい
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           というシーンで使えることが分かった
         </div>
-      <div style="padding-left:1rem;">
-          子コンポーネントでは  で ref を受け取って  を使って、モーダル開け閉め用の関数を指定する
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          子コンポーネントでは <code>forwardRef</code>
+       で ref を受け取って <code>useImperativeHandle</code>
+       を使って、モーダル開け閉め用の関数を指定する
         </div>
-      <div style="padding-left:1rem;">
-          親コンポーネント側で  を使って  を作って、子に  で渡す
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          親コンポーネント側で <code>useRef</code>
+       を使って <code>ref</code>
+       を作って、子に <code>ref={ref}</code>
+       で渡す
         </div>
-      <div style="padding-left:1rem;">
-          親コンポーネントで  から参照する
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          親コンポーネントで <code>ref.current</code>
+       から参照する
         </div>
-      <div style="padding-left:2rem;">
-          少しハマったのは、 みたいな感じに書くと ref の更新で render が走らないっぽいので  を参照できない
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
+          少しハマったのは、<code>onClick={ref.current ? ref.current.foo : undefined}</code>
+       みたいな感じに書くと ref の更新で render が走らないっぽいので <code>foo</code>
+       を参照できない
         </div>
-      <div style="padding-left:2rem;">
-           にするとクリックしたタイミングで評価されるので参照できる
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
+          <code>onClick={() =&gt; ref.current ? ref.current.foo() : undefined}</code>
+       にするとクリックしたタイミングで評価されるので参照できる
         </div>
-      <div style="padding-left:1rem;">
-          具体的なコードは <a href="https://scrapbox.io/jigsaw/あとで書く">#あとで書く</a>
-      
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          具体的なコードは
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:1rem; overflow: scroll;">
+          <code>App.tsx</code>
+          <pre><code>interface Handler {
+  foo(): void
+}
+
+const Child = forwardRef&lt;Handler, Props&gt;(props, ref) =&gt; {
+  const { foo } = useSome()
+  useImperativeHandler(ref, () =&gt; {
+    foo: () =&gt; foo()
+  }))
+  return &lt;div&gt;...&lt;/div&gt;
+}
+
+const App: React.FC = () =&gt; {
+  const childRef = useRef({} as Handler)
+  return (
+  	&lt;div&gt;
+  	  &lt;button onClick={() =&gt; childRef.current ? childRef.current.foo() : null}&gt;click me&lt;/button&gt;
+  	  &lt;Child ref={childRef} /&gt;
+  	&lt;/div&gt;
+  )
+}</code></pre>
+        </div>
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          こんな感じ #20190821
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           参考:
         </div>
-      <div style="padding-left:2rem;">
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
           <a href="https://ja.reactjs.org/docs/hooks-reference.html#useimperativehandle" target="_blank" rel="noopener">
               https://ja.reactjs.org/docs/hooks-reference.html#useimperativehandle
             </a>
           
         </div>
-      <div style="padding-left:2rem;">
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
           <a href="https://ja.reactjs.org/docs/forwarding-refs.html" target="_blank" rel="noopener">
               https://ja.reactjs.org/docs/forwarding-refs.html
             </a>
           
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/20190815">#20190815</a>
-       <a href="https://scrapbox.io/jigsaw/0815">#0815</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #20190815 #0815
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e46.html">
+                      Gyazo on Rails Developer Talk に行ってきた - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2bcc3162ff8e001711934d.html">
+                      Detroit: Become Human(ネタバレもあるかもしれない)
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c73850f10da0f001769f62b.html">
+                      欧米におけるアニマルライツ、人間を動物として扱ってきた歴史（黒人奴隷とか）がすげー影響してる気がするんだよね。「えっ！あの動物人間だったの！？じゃあこれも人間！！！？？？」みたいな。
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d78.html">
+                      GolangでFlame Graphを描く | SOTA - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dba.html">
+                      bdash-app/bdash: A simple business intelligence application. - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c413ea1f17bb3001794ce35.html">
+                      denoについて知っていること2019年1月編 - keroxpのScrapbox
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5c12c0fecb390017b86c64.html">
+                      PHP
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c413ea1f17bb3001794ce35.html">
+                      denoについて知っていること2019年1月編 - keroxpのScrapbox
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d93.html">
+                      flexboxのバグに立ち向かう（flexboxバグまとめ） - Qiita - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a529631e47300173f39d1.html">
+                      キャプテン・アメリカ
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

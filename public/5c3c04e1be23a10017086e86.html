@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/LiveScript がだいぶ馴染んできた - dev.jgs.me">
@@ -192,179 +194,323 @@ amp-img.contain img {
           </div>
           <h1>LiveScript がだいぶ馴染んできた - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://livescript.net/">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ES6 に押され気味な CoffeeScript をなんとかせねばという想いがあったのだが、CoffeeScript はかなり保守的で最近 generators が入ったりはしたもののゆったりした感じでなんとも気力が湧かなかった。そこで、3回目ぐらいの LiveScript に入信を果たしたところ、今回は毎週 Haskell もくもく会をやっている甲斐もあってかわかりがだいぶあった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Coffee との違いは <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://livescript.net/#coffee-to-ls">
         </amp-img></div>
-       を見てもらうとして、今日スッときたのが  構文である。
+       を見てもらうとして、今日スッときたのが <code>do</code>
+       構文である。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Coffee では
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffeescript)</code>
+          <pre><code>f
+  a: x
+  b: y</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           と書けば
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (js)</code>
+          <pre><code>f({
+  a: x,
+  b: y
+});</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           みたいな感じで変換されるのが、LiveScript だと
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (livescript)</code>
+          <pre><code>f do
+  a: x
+  b: y</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          と書かなければならず、冗長だと感じていた。 は  以降の構文を  以前の関数の引数として食わせる構文。この  構文がすごいのは、 のあとに関数や配列など、 以外の引数をとるときである。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          と書かなければならず、冗長だと感じていた。<code>do</code>
+       は <code>do</code>
+       以降の構文を <code>do</code>
+       以前の関数の引数として食わせる構文。この <code>do</code>
+       構文がすごいのは、<code>Object</code>
+       のあとに関数や配列など、<code>Object</code>
+       以外の引数をとるときである。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Coffee だと
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffeescript)</code>
+          <pre><code>f
+  a: x
+  b: y
+, (c)-&gt; g c</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           というふうに書いて
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (javascript)</code>
+          <pre><code>f({
+  a: x,
+  b: y
+}, function(c) {
+  g(c);
+});</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           みたいな出力がされる。これが LiveScript だと
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (livescript)</code>
+          <pre><code>f do
+  a: x
+  b: y
+  (c)-&gt; g c</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          と書くだけで上のような JS が出力できるのである！！これだけだとまだスゴさが感じられないとおもうんだけど、これが真価を発揮するのが React の  で  を書くときである。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          と書くだけで上のような JS が出力できるのである！！これだけだとまだスゴさが感じられないとおもうんだけど、これが真価を発揮するのが React の <code>render</code>
+       で <code>DOM</code>
+       を書くときである。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Coffee だと
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffeescript)</code>
+          <pre><code>render: -&gt;
+  DOM.div
+    key: 'key'
+  , [
+    DOM.a
+      key: 'key2'
+      href: '...'
+    , [
+      DOM.div
+        key: 'key3'
+      , 'link'
+    ]
+  ]</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           という雰囲気で書かなくてはならないのだが、LiveScript だと
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (livescript)</code>
+          <pre><code>render: -&gt;
+  DOM.div do
+    key: 'key'
+    [
+      DOM.a do
+        key: 'key2'
+        href: '...'
+        [
+          DOM.div do
+            key: 'key3'
+            'link'
+        ]
+    ]</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          と、 とか  のインデントを気にしたりせずに書けるのです...!スッキリ!(と感じるかは個人差があるとはおもいます)
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          と、<code>,</code>
+       とか <code>[]</code>
+       のインデントを気にしたりせずに書けるのです...!スッキリ!(と感じるかは個人差があるとはおもいます)
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          あとは、 とか ,  のパイプ、 と書ける backslash-string など Coffee からさらに(関数脳に)気持ちいいシンタックスになってて気持ちが完全に LiveScript に持って行かれました。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          あとは、<code>require!</code>
+       とか <code>|&gt;</code>
+      , <code>&lt;|</code>
+       のパイプ、<code>\str</code>
+       と書ける backslash-string など Coffee からさらに(関数脳に)気持ちいいシンタックスになってて気持ちが完全に LiveScript に持って行かれました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          あと、これずっと言いたかったんだけど ES6 勢力が「Coffee はもうオワコン！時代は ES6！！」みたいなことを声高に言ってますけど ES6 のフィーチャはほとんど Coffee にも(もちろん LiveScript にも)あるしずっと Coffee 書いてた身からしてみると、わざわざ  や  を書くために ES6 を書くだけでしかなくて全然嬉しさがない。ES6 も ES5 に変換可能なわけだからネイティブで動くからといってあまりそっちを選択することにメリットがあることが少ないんじゃないかなーとおもってるんだけどどうだろ。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          あと、これずっと言いたかったんだけど ES6 勢力が「Coffee はもうオワコン！時代は ES6！！」みたいなことを声高に言ってますけど ES6 のフィーチャはほとんど Coffee にも(もちろん LiveScript にも)あるしずっと Coffee 書いてた身からしてみると、わざわざ <code>{}</code>
+       や <code>;</code>
+       を書くために ES6 を書くだけでしかなくて全然嬉しさがない。ES6 も ES5 に変換可能なわけだからネイティブで動くからといってあまりそっちを選択することにメリットがあることが少ないんじゃないかなーとおもってるんだけどどうだろ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ひとまず、僕はしばらく LiveScript という安住の地に住み続けます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2015/04/03/adjust-livescript" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0403">#0403</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0403
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d50.html">
+                      コミュニケーションのコスト - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d6f.html">
+                      Generative Art with Node.js and Canvas - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d9d.html">
+                      素早く自分の作りたいものを作る - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cea95ea9e43840017e651b7.html">
+                      10年代・ベスト映画
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cbd4d43a1618200171df49a.html">
+                      AMP Stories Builder, Tools &amp; Editor - MakeStories
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dca.html">
+                      Polyfills and the web // Speaker Deck - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d31.html">
+                      The Sad State of the Backbone Ecosystem - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209ddf.html">
+                      React v15.5(6) and v16 - blog.koba04.com - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e60.html">
+                      mac に imagemagick をいれる - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cb0b1ebd4dfb40017612628.html">
+                      20190412
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

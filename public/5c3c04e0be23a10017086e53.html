@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/zsh のキーバインドを変える - dev.jgs.me">
@@ -192,135 +194,140 @@ amp-img.contain img {
           </div>
           <h1>zsh のキーバインドを変える - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          最近3ヶ月に1回ぐらいやってくる「<a href="https://scrapbox.io/jigsaw/エディタ" target="_blank" rel="noopener">
-              エディタ
-            </a>
-          とか<a href="https://scrapbox.io/jigsaw/シェル" target="_blank" rel="noopener">
-              シェル
-            </a>
-          を強くしたい」月間に突入していて、継続的に<a href="https://scrapbox.io/jigsaw/dotfiles" target="_blank" rel="noopener">
-              dotfiles
-            </a>
-          の手入れをしている。本日の手入れは<a href="https://scrapbox.io/jigsaw/キーバインド" target="_blank" rel="noopener">
-              キーバインド
-            </a>
-          。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          最近3ヶ月に1回ぐらいやってくる「エディタとかシェルを強くしたい」月間に突入していて、継続的にdotfilesの手入れをしている。本日の手入れはキーバインド。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/dotfiles/commit/428ee60610c88ac61d632e09d5e7239b67a16820">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/zsh" target="_blank" rel="noopener">
-              zsh
-            </a>
-          はデフォルトで(だよね?)<a href="https://scrapbox.io/jigsaw/Emacs" target="_blank" rel="noopener">
-              Emacs
-            </a>
-          のキーバインドで<a href="https://scrapbox.io/jigsaw/キャレット" target="_blank" rel="noopener">
-              キャレット
-            </a>
-          を操作できる(<a href="https://scrapbox.io/jigsaw/C-p" target="_blank" rel="noopener">
-              C-p
-            </a>
-          ,<a href="https://scrapbox.io/jigsaw/C-n" target="_blank" rel="noopener">
-              C-n
-            </a>
-          とか)のでEかVかでいうとVな僕でも、さすがにシェル上ではEmacsのキーバインドが便利でよく使っている。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          zshはデフォルトで(だよね?)Emacsのキーバインドでキャレットを操作できる(C-p,C-nとか)のでEかVかでいうとVな僕でも、さすがにシェル上ではEmacsのキーバインドが便利でよく使っている。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          ところで、先日買った<a href="https://scrapbox.io/jigsaw/HHKB" target="_blank" rel="noopener">
-              HHKB
-            </a>
-          には上下左右キーがなくて  で入力できるのだけれども、fnキーの位置が押しにくいので代わりに  でバインドしている。(<a href="https://scrapbox.io/jigsaw/FPS脳" target="_blank" rel="noopener">
-              FPS脳
-            </a>
-          )
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ところで、先日買ったHHKBには上下左右キーがなくて <code>fn-[;/'</code>
+       で入力できるのだけれども、fnキーの位置が押しにくいので代わりに <code>C-wsad</code>
+       でバインドしている。(FPS脳)
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          これめっちゃ便利で、左手だけで<a href="https://scrapbox.io/jigsaw/上下左右" target="_blank" rel="noopener">
-              上下左右
-            </a>
-          押せるので楽なんだけど、 が使えなくなる致命的な欠陥を抱えていてどうしたものかなあ、みたいな感じになっていた。そもそもzsh側で設定できるの知らなくて、それがわかったのが収穫。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          これめっちゃ便利で、左手だけで上下左右押せるので楽なんだけど、<code>C-a</code>
+       が使えなくなる致命的な欠陥を抱えていてどうしたものかなあ、みたいな感じになっていた。そもそもzsh側で設定できるの知らなくて、それがわかったのが収穫。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>bindkey {key} {function}</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          でバインドされる。ちなみに、今回は  をいわゆる  に割り当てたので<a href="https://scrapbox.io/jigsaw/Ctrl" target="_blank" rel="noopener">
-              Ctrl
-            </a>
-          押しながらeを連打すると先頭に移動できる。便利だー。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          でバインドされる。ちなみに、今回は <code>^E^E</code>
+       をいわゆる <code>C-a</code>
+       に割り当てたのでCtrl押しながらeを連打すると先頭に移動できる。便利だー。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/git" target="_blank" rel="noopener">
-              git
-            </a>
-          のよく使う<a href="https://scrapbox.io/jigsaw/コマンド" target="_blank" rel="noopener">
-              コマンド
-            </a>
-          とかをこの<a href="https://scrapbox.io/jigsaw/bindkey" target="_blank" rel="noopener">
-              bindkey
-            </a>
-          で設定しておけば、<a href="https://scrapbox.io/jigsaw/エイリアス" target="_blank" rel="noopener">
-              エイリアス
-            </a>
-          を打つこともなく<a href="https://scrapbox.io/jigsaw/呼吸" target="_blank" rel="noopener">
-              呼吸
-            </a>
-          ができて<a href="https://scrapbox.io/jigsaw/便利" target="_blank" rel="noopener">
-              便利
-            </a>
-          かもしれないのでいずれ試そうとおもう。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          gitのよく使うコマンドとかをこのbindkeyで設定しておけば、エイリアスを打つこともなく呼吸ができて便利かもしれないのでいずれ試そうとおもう。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2014/05/04/zsh-becomes" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0504">#0504</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0504
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dce.html">
+                      google/sentencepiece - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d31e792ba7a880017111d00.html">
+                      イスタンブール2019その1
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d5b.html">
+                      Instant Loading // Speaker Deck - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d2f.html">
+                      新鮮な画はあるものの...新感染 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d10.html">
+                      Increments流GitHub稟議の手順と導入方法 - Qiita Blog - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d43f5e80f36df001786d207.html">
+                      4カ国周遊2019まとめ
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9a3e23afc880017f5ba25.html">
+                      梅干し
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0f7.html">
+                      正月映画 - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d34b347de75c8001778cf24.html">
+                      ストックホルム2019その4
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d82.html">
+                      flow-typedで外部ライブラリの型定義を使う - Qiita - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

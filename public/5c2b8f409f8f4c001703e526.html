@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/Windows8アプリの共有チャームのつくりかた - blog.jgs.me">
@@ -192,99 +194,145 @@ amp-img.contain img {
           </div>
           <h1>Windows8アプリの共有チャームのつくりかた - blog.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://66.media.tumblr.com/4926d434b37d01c6e621f61ae77c0fad/tumblr_inline_mfm4z0n4N31qa2uot.png">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/Windows8" target="_blank" rel="noopener">
-              Windows8
-            </a>
-          /<a href="https://scrapbox.io/jigsaw/Windows8 Store App" target="_blank" rel="noopener">
-              Windows8 Store App
-            </a>
-          で<a href="https://scrapbox.io/jigsaw/共有チャーム" target="_blank" rel="noopener">
-              共有チャーム
-            </a>
-          を実装しようとしたら、意外と苦労したので書き残しておきます。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Windows8/Windows8 Store Appで共有チャームを実装しようとしたら、意外と苦労したので書き残しておきます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://msdn.microsoft.com/ja-jp/library/windows/apps/hh465261.aspx" target="_blank" rel="noopener">
               クイックスタート: コンテンツの共有 (JavaScript と HTML を使った Windows ストア アプリ) (Windows)
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          にもありますが、まずは  にEventlistenerをaddするところからです。場合にもよりますが、だいたいは  の中でいいとおもいます。このとき、忘れてはいけないのがEventlistenerをremoveする部分を書き忘れないことです。これも、だいたいは  の中でいいとおもいます。removeしないと、一度は共有チャームが発動できてもsuspendなどした後は使えなくなります。removeしてなかったことに気付かなくて何時間か無駄にしました。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          にもありますが、まずは <code>Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView()</code>
+       にEventlistenerをaddするところからです。場合にもよりますが、だいたいは <code>WinJS.Application.onactivate()</code>
+       の中でいいとおもいます。このとき、忘れてはいけないのがEventlistenerをremoveする部分を書き忘れないことです。これも、だいたいは <code>WinJS.Application.oncheckpoint()</code>
+       の中でいいとおもいます。removeしないと、一度は共有チャームが発動できてもsuspendなどした後は使えなくなります。removeしてなかったことに気付かなくて何時間か無駄にしました。
         </div>
-      <div style="padding-left:0rem;">
-          これで共有チャームが押されたことをキャッチできるようになるので、次にどのデータを共有するかを書きます。ハンドラの引数がrequestというメソッドを持っているので、これにデータを投入します。 には、共有チャームに出てくる画面のタイトルが指定できます。また、 には同じく、その説明を指定できます。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          これで共有チャームが押されたことをキャッチできるようになるので、次にどのデータを共有するかを書きます。ハンドラの引数がrequestというメソッドを持っているので、これにデータを投入します。<code>request.data.properties.title</code>
+       には、共有チャームに出てくる画面のタイトルが指定できます。また、<code>request.data.properties.description</code>
+       には同じく、その説明を指定できます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://66.media.tumblr.com/36d9bd5ad295a54060b899ea9df9fcf3/tumblr_inline_mfm5wdzzwJ1qa2uot.png">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
-          その後は、共有するデータを request に指定します。 のような感じです。画像を指定するときは、画像のファイルを指定しなくてはいけないので  を使います。このとき、引数には  を使わないといけない上に、URLから画像を参照するときは、 を使うのですが、この引数もURI型の引数を指定しないと型が違うよ、とエラーが出ます。StringをURIにキャストするには、 を使います。同様に、URLを共有するときは、 をってURI型の引数を与えてやると共有が可能なアプリ一覧が表示されて共有することができるようになります。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          その後は、共有するデータを request に指定します。<code>request.data.setText(text)</code>
+       のような感じです。画像を指定するときは、画像のファイルを指定しなくてはいけないので <code>request.data.setBitmap(image)</code>
+       を使います。このとき、引数には <code>Windows.Storage.Streams.RandomAccessStreamReference</code>
+       を使わないといけない上に、URLから画像を参照するときは、<code>Windows.Storage.Streams.RandomAccessStreamReference.createFromUri()</code>
+       を使うのですが、この引数もURI型の引数を指定しないと型が違うよ、とエラーが出ます。StringをURIにキャストするには、<code>Windows.Foundation.Uri()</code>
+       を使います。同様に、URLを共有するときは、<code>request.data.setUri()</code>
+       をってURI型の引数を与えてやると共有が可能なアプリ一覧が表示されて共有することができるようになります。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-6-0-0-10">
           まとめ
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とりあえずメソッド名とか長い。あと、型ある振る舞いするのに、実行時じゃないと型が違うことがわからないの、型の意味なさすぎる。
         </div>
-      <div style="padding-left:0rem;">
-          共有チャームの使い方で苦戦した甲斐あって、<a href="https://scrapbox.io/jigsaw/Reblog Monster" target="_blank" rel="noopener">
-              Reblog Monster
-            </a>
-          次期リリースは共有ができるようになります。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          共有チャームの使い方で苦戦した甲斐あって、Reblog Monster次期リリースは共有ができるようになります。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           December 26th, 2012 11:37am
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://blog.jgs.me/post/38830709200" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/20121226">#20121226</a>
-       <a href="https://scrapbox.io/jigsaw/1226">#1226</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #20121226 #1226
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:1rem;">
-          Windows のアプリってまだ JS で開発できるんだろうか... <a href="https://scrapbox.io/jigsaw/20190502">#20190502</a>
-      
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Windows のアプリってまだ JS で開発できるんだろうか... #20190502
         </div>
-      <div style="padding-left:2rem;">
-          JS で開発するなら <a href="https://scrapbox.io/jigsaw/Electron" target="_blank" rel="noopener">
-              Electron
-            </a>
-           なりなんなりありそうだしモチベなさそうだが... <a href="https://scrapbox.io/jigsaw/20190502">#20190502</a>
-      
+      <div style="padding-left:2rem; margin-bottom: .5rem;">
+          JS で開発するなら Electron なりなんなりありそうだしモチベなさそうだが... #20190502
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d0d.html">
+                      Resource (pre)loading - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5ce5e677deae8d00172d8590.html">
+                      シン・ニホン AIxデータ時代における日本の再生と人材育成
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d4e.html">
+                      コメント - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd4.html">
+                      忘却 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209de2.html">
+                      facebook/react-vr: Create amazing 360 and VR content using React - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cd8fc23368fbf0017bb35f1.html">
+                      ラナ・ウォシャウスキーが原作小説のクラウドアトラスに接触したきっかけは、Vフォーヴェンデッタの撮影現場でナタリーポートマンが夢中になって読んでいた本だったから声をかけてタイトルを教えてもらった
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209ded.html">
+                      インスタは「妄想の検索エンジン」メルカリは「通販の検索エンジン」としてつかう。女子大生が教えてくれたスマホで「ビキニ」を買うまでの心理と経路。 | アプリマーケティング研究所 - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c62ec7b119c8100176e4fab.html">
+                      とにかく書くことを習慣化したい
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0ee.html">
+                      映画好きにはたまらない - Be Kind Rewind - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e72.html">
+                      hyperswitchのアップデート - dev.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

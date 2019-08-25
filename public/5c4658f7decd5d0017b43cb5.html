@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/published: false の記事供養 (2018/05 版) - dev.to/jgs">
@@ -192,192 +194,269 @@ amp-img.contain img {
           </div>
           <h1>published: false の記事供養 (2018/05 版) - dev.to/jgs</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           忙しさにかまけて、書き出しだけ書いてそのまま仕上がらなかった記事は Chrome のタブに開きっぱなしになっているのだけど、だいぶ日数が経って書き上がる気がしなくなってしまったのでまとめて放流して供養する。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-6-0-0-10">
           Slack から Google Home を喋らせる
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           3月のはじめごろに Google Home Mini を買った。スマートスピーカーがブームになってきた頃は、みんなそんなに喋るスピーカーがほしいんだろうか？と懐疑的だったが、お試しで1台買った。我が家では、喋るラジオみたいな役職に就いて便利だったので1台買い増して居間と寝室の2台構成となった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ところで、とても無益な話になってしまうのだが、私の妻は大変なものぐさで Slack で連絡をして通知音が鳴っても「なんか言ってるんだろうなー」とおもうだけで中身を確認してくれない習性がある。当人もその自覚があり、「Google Home 買ったんだしなんか伝えたい時は Google Home が喋れば聞いてやらんこともない(意訳)」というオーダーが入ったので日曜大工をがんばることになった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           いろいろ調べたが <a href="https://scrapbox.io/smart-home/Google_Home%E3%81%AE%E5%96%8B%E3%82%89%E3%81%9B%E6%96%B9" target="_blank" rel="noopener">
               Google Homeの喋らせ方
             </a>
            に書かれているように Google Home と同じネットワークの中に何らかの司令塔がないと喋れないようだった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           そこで、随分長らく買いそびれていた Raspberry Pi を買った。これもざざっと調べてスイッチサイエンスさんのスターターキット( <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://www.switch-science.com/catalog/3559/">
         </amp-img></div>
        )を買った。ちゃちゃっと組み立てて刺すだけで Linux が立ち上がって少し感動した。ただ、我が家は HDMI のディスプレイを置いている位置には使える LAN ケーブルがなくて、運用の際には別の位置に置いて有線で使いたかったので、最初のセットアップを無線でやって ssh でログインできるところまでやって、勢いで有線で切り替える少々トリッキーなセットアップをした。祈りながら ssh がつながった時も少し感動した。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ささっと Node.js をインストールして、前掲の記事で紹介されていた <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/noelportugal/google-home-notifier">
         </amp-img></div>
        で様子を探ってみる。試しに喋らせてみると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           というような WARN が出るが、調べると <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/thkl/homebridge-homematic/issues/41">
         </amp-img></div>
        なんか大変らしい。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           それはそれとして、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>google-home-notifier</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           が日本語を話してくれない問題があってコード読んだらそんなに大したことをしてなかったので、自分で再実装することにした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/google-home-notifier">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ここまで書いて力尽きていた。現在我が家は Slack から Telegram に移行してしまったので、Slack のシステムは止めてしまった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-6-0-0-10">
           Electron のアプリから TouchBar に UI をつくる
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           MacbookPro を新調して、TouchBar が搭載されたので何かできないかな〜とぼんやりおもってたら Electron で TouchBar を操作できる API が搭載されていることを知ったので触ってみる。Chrome Extension で特定ページで TouchBar に何らかを出して便利になったりすると面白そう。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/electron/electron/blob/master/docs/api/touch-bar.md">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           この辺の Doc を読みつつ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           こんな感じで書くだけで Label が表示できた。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           これで
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>yo yo</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           できるボタンが作れた。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code></code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           セレクタはこんな感じ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           これもここで力尽きている。そもそも TouchBar まわりのドキュメントが少なくて、すぐにソース掘ったりしなきゃいけなくなったりしてまだ望みの UI というか、システムが作れていない。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Electron 製のアプリは2コぐらい並列して開発を続けているが、どちらもあまり時間が取れていなくて進捗がない...。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           もっと下書きがあった気がしたんだけど、dev.to で下書いていたのはこの2本だった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           もっと継続的にアウトプットをデリバリーしていきたい...。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="https://dev.to/jgs/published-false--201805--1k06" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0525">#0525</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0525
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           #
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c386ac56eb9240017aad6a2.html">
+                      鶏が先か、卵が先か、みたいなやつ、現実的には卵をでっちあげて鶏をつくるか、鶏を諦めて、無から卵をつくるか、みたいな問題になる
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e70.html">
+                      rss に対応しました - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e53a.html">
+                      関西node.js寺子屋を開催しました - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc466efab94d80017adcb88.html">
+                      三度の飯よりオスカー好きの、銀座界隈ＯＬブログ: ブラッククランズマンをようやく見ました
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5fe0eb1f270a00177582ce.html">
+                      20190823
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82ce8.html">
+                      InfinifactoryとBesiege - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dc1.html">
+                      Image-to-Image Demo - Affine Layer - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e54c.html">
+                      新卒だけど社内のコンテストでグランプリ獲ってきた - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9a3f5c80e2a00170ff812.html">
+                      ナタクリ
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0dc.html">
+                      Bloggerお試しで - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

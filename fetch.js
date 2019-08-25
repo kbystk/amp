@@ -1,10 +1,10 @@
 const { writeFileSync } = require('fs')
 const fetch = require('isomorphic-unfetch')
-const data = require('./data/pub.json')
+const pages = require('./data/pub.json')
 
 const main = async () => {
   let res = []
-  for (const p of data.pages) {
+  for (const p of pages.slice(0, 100)) {
     try {
       const r1 = await fetch(
         `https://scrapbox.io/api/pages/jigsaw/${encodeURIComponent(

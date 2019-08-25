@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/bottlejsでDIを試す - dev.jgs.me">
@@ -192,271 +194,401 @@ amp-img.contain img {
           </div>
           <h1>bottlejsでDIを試す - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/young-steveo/bottlejs">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-4-0-0-8">
           tl;dr
         </span>
       
         </div>
-      <div style="padding-left:1rem;">
-           を使うと最小構成ぐらいの DI ができる
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          <code>bottlejs</code>
+       を使うと最小構成ぐらいの DI ができる
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           依存しているモジュールやライブラリをきれいにまとめて扱えるようになるので便利
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           記述量が増えたり、呼び出し元で呼び出すモジュールの依存関係を把握してないといけなくなったりするデメリットもある
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-4-0-0-8">
-          <a href="https://scrapbox.io/jigsaw/BottleJS" target="_blank" rel="noopener">
-              BottleJS
-            </a>
-           について
+          BottleJS について
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
-          BottleJS は <a href="https://scrapbox.io/jigsaw/Javascript" target="_blank" rel="noopener">
-              Javascript
-            </a>
-          /<a href="https://scrapbox.io/jigsaw/Node.js" target="_blank" rel="noopener">
-              Node.js
-            </a>
-           の <a href="https://scrapbox.io/jigsaw/DI" target="_blank" rel="noopener">
-              DI
-            </a>
-           の micro container だ。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          BottleJS は Javascript/<a href="https://amp.kbys.tk/5cd117a89f582d001734d73e">Node.js</a>
+             の DI の micro container だ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (js)</code>
+          <pre><code>var Barley = function() {};
+var Hops = function() {};
+var Water = function() {};
+var Beer = function(barley, hops, water) { /* A beer service, :yum: */ };</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           これで
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (js)</code>
+          <pre><code>var bottle = new Bottle();
+bottle.service('Barley', Barley);
+bottle.service('Hops', Hops);
+bottle.service('Water', Water);
+bottle.service('Beer', Beer, 'Barley', 'Hops', 'Water');</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           こういうことができるようになるらしい。サンプルコードがモジュールの名前ともマッチしていてすげーよかったので試してみることにした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           試してみると、Node.js で抱えるいくつかの問題を解決できることに気付いたので試しにこれに乗っかってコードを書いてみている。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-4-0-0-8">
           いいところ
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           テストでモックを作るのが楽になる
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
-          例えば、 とかを使って外部と通信するようなモジュールをテストする場合、 とかで  を作ったりして試すことになるとおもうんだけど、そもそも  自体を差し替え可能にしておくことでこれをしなくてよくなる。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          例えば、<code>request</code>
+       とかを使って外部と通信するようなモジュールをテストする場合、<code>sinon</code>
+       とかで <code>fakeserver</code>
+       を作ったりして試すことになるとおもうんだけど、そもそも <code>request</code>
+       自体を差し替え可能にしておくことでこれをしなくてよくなる。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffee)</code>
+          <pre><code>module.exports = class Some
+  constructor: (@request)-&gt;
+
+  get: (url)-&gt;
+    @request url, (err, res, body)-&gt; # ...</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          というような  を用意して
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          というような <code>lib/some.coffee</code>
+       を用意して
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffee)</code>
+          <pre><code>bottle = new Bottle()
+bottle.service 'request', -&gt; require 'request'
+bottle.service 'Some', require('./lib/some'), 'request'
+
+bottle.container.Some.get url</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          とすることで  を注入することができる。テストでは
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          とすることで <code>request</code>
+       を注入することができる。テストでは
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffee)</code>
+          <pre><code>describe 'Some', -&gt;
+  it 'blah blah', -&gt;
+    bottle = new Bottle()
+    bottle.service 'request', -&gt; (str, callback)-&gt; callback null, null, 'fake response'
+    bottle.service 'Some', require('./lib/some'), 'request'
+    bottle.container.Some.get # ...</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          みたいな感じでテストを書けるようになる。 がエラったときを試したいときは
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          みたいな感じでテストを書けるようになる。<code>request</code>
+       がエラったときを試したいときは
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffee)</code>
+          <pre><code>bottle.service 'request', -&gt; (str, callback)-&gt; callback new Error('blah')</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           というようにしてやれば強制的にエラーを発生させて挙動を確認することができる。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          [***  が相対パスで解決されるのが困る問題をちょっと緩和できる]
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          [*** <code>require</code>
+       が相対パスで解決されるのが困る問題をちょっと緩和できる]
         </div>
-      <div style="padding-left:0rem;">
-          node.js の  はモジュール名でない場合相対パスで解決されるので「あれ？あのモジュールってこのファイルからだとどうなるんだっけ...」みたいなのが発生する。これが  だと依存モジュールをその場で呼び出すことになるのでちょっと緩和できる(とおもう)。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          node.js の <code>require</code>
+       はモジュール名でない場合相対パスで解決されるので「あれ？あのモジュールってこのファイルからだとどうなるんだっけ...」みたいなのが発生する。これが <code>bottlejs</code>
+       だと依存モジュールをその場で呼び出すことになるのでちょっと緩和できる(とおもう)。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>|--- index.coffee
+|--- client
+     |--- model
+          |--- some.coffee
+     |--- controller
+          |--- some.coffee
+|--- util
+     |--- some.coffee</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           というような構成だったときに
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffee)</code>
+          <pre><code>module.exports = class SomeController
+  constructor: -&gt;
+    @model = require '../model/some'
+    @someutil  = require '../../util/some'</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          みたいな感じだったやつが、 側では
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          みたいな感じだったやつが、<code>SomeController</code>
+       側では
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffee)</code>
+          <pre><code>module.exports = class SomeController
+  constructor: (@model, @someutil)-&gt;</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           でよくなって、これを使うコード中で
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (coffee)</code>
+          <pre><code>bottle = new Bottle()
+bottle.service 'SomeUtil', require './util/some'
+bottle.service 'SomeModel', require './client/model/some'
+bottle.service 'SomeController', require './client/controller/some', 'SomeModel', 'SomeUtil'</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           としてやればよくなる。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           CoffeeScript の class 構文と相性がよさそう
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
-          上にも書いてきた通り、 に依存の解決系を書いて各メソッドでそれらを使ったコードを書くみたいな感じで書けるのでスッキリしていい。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          上にも書いてきた通り、<code>constructor</code>
+       に依存の解決系を書いて各メソッドでそれらを使ったコードを書くみたいな感じで書けるのでスッキリしていい。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-4-0-0-8">
           よくないところ
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           記述することは増える
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
-           みたいな依存管理系のコードが増えるので記述量自体は増えるとおもう。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <code>bottle =...</code>
+       みたいな依存管理系のコードが増えるので記述量自体は増えるとおもう。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           いちいちモジュールの依存まわりを呼び出し元が知ってないといけなくなる
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
-          モジュールで  していれば、呼び出し元がそのモジュールがどんなモジュールに依存してるかを知らなくても呼び出すことができるが、上のようなコードスタイルにすると呼び出す前に依存を解決しないといけなくなるので呼び出すモジュールがなにに依存してるか確認してそれを注入してやらないといけなくなる手間が発生する。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          モジュールで <code>require</code>
+       していれば、呼び出し元がそのモジュールがどんなモジュールに依存してるかを知らなくても呼び出すことができるが、上のようなコードスタイルにすると呼び出す前に依存を解決しないといけなくなるので呼び出すモジュールがなにに依存してるか確認してそれを注入してやらないといけなくなる手間が発生する。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           もうしばらく使ってみたいとおもいます。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2014/10/08/dependency-injection-in-node-js" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/20141008">#20141008</a>
-       <a href="https://scrapbox.io/jigsaw/1008">#1008</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #20141008 #1008
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5cd117a89f582d001734d73e.html">
+                      Node.js
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d19.html">
+                      沖縄暮らし #3 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d14.html">
+                      Delivering Octicons with SVG - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a545634b9ea0017c0eefa.html">
+                      スパイダーマン/ファー・フロム・ホーム
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d14.html">
+                      Delivering Octicons with SVG - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a334a595ea90017209dfa.html">
+                      進化を続けるChrome DevToolsの最新情報 2017 ──Google I/O 2017 セッションレポート | HTML5Experts.jp - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d65.html">
+                      今日のDDR -diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0b6.html">
+                      デザイン刷新！ - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e3be23a10017086ea0.html">
+                      Docker のコンテナからホストの localhost にアクセスする - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e6e.html">
+                      feedbackというリポジトリをforkした - dev.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

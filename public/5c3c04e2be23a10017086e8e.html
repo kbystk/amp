@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/Wercker の新バージョンがリリースされて Docker ベースになっていた - dev.jgs.me">
@@ -192,74 +194,88 @@ amp-img.contain img {
           </div>
           <h1>Wercker の新バージョンがリリースされて Docker ベースになっていた - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Wercker がいつの間にかアップデートされていて、いま新しくアプリケーションを作成すると新しいスタック(Ewok というらしい)で作成される。ので、古い yml ファイルをそのまま使うとエラーが出る。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           大きな変更点としては、box を Docker Hub からとってこれるようになったところだろう。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>box: nodesource/trusty:iojs-1.8.1</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とすると Docker Hub から Ubuntu + iojs@1.8.1 なイメージがダウンロードされて使える。もし複数バージョンを試したい場合は Docker Hub で nvm なり nodebrew なり入ったイメージを指定するといいだろう。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           ハマりどころ
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          どうやらデフォルトで  が  に設定されているようで  の Step で  のパッケージがインストールされなくなっていた。ついでにそれに依存していたテストもすっ転んだ。しょうがないので
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          どうやらデフォルトで <code>NODE_ENV</code>
+       が <code>production</code>
+       に設定されているようで <code>npm-install</code>
+       の Step で <code>devDependencies</code>
+       のパッケージがインストールされなくなっていた。ついでにそれに依存していたテストもすっ転んだ。しょうがないので
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>- script:
+    name: Set NODE_ENV
+    code: export NODE_ENV=development</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           を追加してなんとかした。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           その他
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ドキュメントは <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://devcenter.wercker.com/docs/pipelines/stacks.html">
         </amp-img></div>
@@ -268,29 +284,82 @@ amp-img.contain img {
         </amp-img></div>
        にあって、gulp で metalsmith の静的ページを Wercker でビルドしているようだ。オープンだし、ドッグフーディングしてるしとても好感がもてる。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           Wercker でいくつか飼ってるのがあるので移行させねばだー。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2015/06/24/wercker-v2" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0624">#0624</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0624
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82da1.html">
+                      カルチャー - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e51c.html">
+                      シリコンバレーテクノロジーキャンプ2012で優勝しました - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d4b.html">
+                      2013年の休日 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e5b.html">
+                      twlv というジョークライブラリをつくった - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9427fa4ca180017006c6c.html">
+                      Kraftwerk 3-D Concert
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cf44f2797d10500173ff403.html">
+                      Mobbin - Latest Mobile Design Patterns
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dd9.html">
+                      Transfer Learning - Machine Learning's Next Frontier - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df0.html">
+                      凪のあすから18話 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0bb.html">
+                      数日旅行してました - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a55898da4510017d35ef9.html">
+                      X-MEN: フューチャー&amp;パスト
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

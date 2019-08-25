@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/foreach文備忘録 - e-jigsaw.blogspot.com">
@@ -192,147 +194,234 @@ amp-img.contain img {
           </div>
           <h1>foreach文備忘録 - e-jigsaw.blogspot.com</h1>
           <div>
-            <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/PHP" target="_blank" rel="noopener">
-              PHP
-            </a>
-          の制御文に foreach 文という構造があります。最初は軽視していた制御文だったのですが <a href="http://www.blogger.com/e-jigsaw/#f1" target="_blank" rel="noopener">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <a href="https://amp.kbys.tk/5d5c12c0fecb390017b86c64">PHP</a>
+            の制御文に foreach 文という構造があります。最初は軽視していた制御文だったのですが <a href="http://www.blogger.com/e-jigsaw/#f1" target="_blank" rel="noopener">
               *1
             </a>
-           、ちょっと前にかなり重要であることを認識させられました。最近は<a href="https://scrapbox.io/jigsaw/Perl" target="_blank" rel="noopener">
-              Perl
-            </a>
-          とかでもあるようです。
+           、ちょっと前にかなり重要であることを認識させられました。最近はPerlとかでもあるようです。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           基本構造
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>foreach(配列名 as 値用の変数) {</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           基本はこんな感じです。配列名は普通に配列名、値用の変数というのはforeach文の中で使う値の変数のことで、Cでいうi <a href="http://www.blogger.com/e-jigsaw/#f2" target="_blank" rel="noopener">
               *2
             </a>
            になる変数です。PHPにもfor文はあります。Cを始め大半の言語で用いられている構文と同様です。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>for(初期値; 範囲; カウントアップ処理) {</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とまぁ、こんな感じです。なぜfor文ではダメなのでしょうか。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           for文とforeach文の違い
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           例えば、配列に文字が入っていたとします。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>$a = array("りんご", "まど", "ぺんぎん");</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           この配列の中身を全部表示したい時なんかには、for文では使い勝手がすごく悪いわけです。これが最たる理由 <a href="http://www.blogger.com/e-jigsaw/#f3" target="_blank" rel="noopener">
               *3
             </a>
            です。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>$a = array("りんご", "まど", "ぺんぎん");</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           こんな感じにしてやると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>りんご</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           こんな風に表示してくれるわけですね。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           他に、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>foreach(配列名 as キー変数 =</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           という書き方もあって、これを使うと連想配列も簡単に表示できるようになるわけです。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>$a = array("りんご" =</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とすると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>1:りんご</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           と表示されるわけです。ちなみに、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>$a = array("りんご", "まど", "ぺんぎん");</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とすると、
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>0:りんご</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           となります。ふと、備忘録をつけておこうと思ったので。最初はこの構文わけわかんなかったなー。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://www.blogger.com/e-jigsaw/#fn1" target="_blank" rel="noopener">
               *1
             </a>
            ：だってfor文あるじゃん！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://www.blogger.com/e-jigsaw/#fn2" target="_blank" rel="noopener">
               *2
             </a>
            ：iが一般的だよね？
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://www.blogger.com/e-jigsaw/#fn3" target="_blank" rel="noopener">
               *3
             </a>
            ：個人的には
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="https://e-jigsaw.blogspot.com/2010/11/foreach.html" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/20100214">#20100214</a>
-       <a href="https://scrapbox.io/jigsaw/0214">#0214</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #20100214 #0214
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5d5c12c0fecb390017b86c64.html">
+                      PHP
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d31.html">
+                      2017 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d18.html">
+                      pubkey/rxdb: Reactive Offline-first Database with Sync, Schema, Mongo-Query, Encryption, LevelDown - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a55898da4510017d35ef9.html">
+                      X-MEN: フューチャー&amp;パスト
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d34a7682d0aba00178016dc.html">
+                      ストックホルム2019その3
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0e7.html">
+                      北陸ラーメン博へ行ってきた！ - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc47306638af80017892787.html">
+                      フューチャー&amp;パスト
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c623b4ccf650800179bc110.html">
+                      2019
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0bb.html">
+                      数日旅行してました - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e53d.html">
+                      艦これタイマー for Google Chrome™をつくったぞ〜！！！ - blog.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

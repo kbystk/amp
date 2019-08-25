@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/Elm に本腰を入れてみようと - dev.jgs.me">
@@ -192,212 +194,339 @@ amp-img.contain img {
           </div>
           <h1>Elm に本腰を入れてみようと - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://elm-lang.org/">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           次世代 JavaScript フレームワークが百花繚乱で戦国時代な今、自分が求めているのは Elm なんじゃないかとおもってきて環境つくるところからやった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           install
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           cabal でやるか pkg からインストールするか迷ったが、最終的に brew cask にした
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>% brew cask install elm-platform</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           evancz/elm-examples
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           ひとまず <a href="https://github.com/evancz/elm-examples" target="_blank" rel="noopener">
               evancz/elm-examples
             </a>
            を clone して試した。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>% cd elm-examples
+% elm-reactor
+Elm Reactor 0.3
+Listening on http://0.0.0.0:8000/</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          この  がスゴくて、起動すると
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          この <code>elm-reactor</code>
+       がスゴくて、起動すると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://cloud.githubusercontent.com/assets/557961/6058446/ddbf634c-ad6a-11e4-9927-eae713949500.png">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          というようなページが立ち上がって  をクリックするとコンパイルされた実行結果のページが表示される。さらにすごいのが、Elm には Time Traveling Debugger っていう機能があって (<div class="imgContainer-0-0-3">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          というようなページが立ち上がって <code>Hello.elm</code>
+       をクリックするとコンパイルされた実行結果のページが表示される。さらにすごいのが、Elm には Time Traveling Debugger っていう機能があって (<div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://debug.elm-lang.org/edit/Stamps.elm">
         </amp-img></div>
       ) Time Traveling の名の通り入力を巻き戻したりできるのだ。スパナのアイコンを押すとこのデバッガが立ち上がってデバッグできる。すごい。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           Atom 環境
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/edubkendo/atom-elm">
         </amp-img></div>
        を入れればシンタックスハイライト効くしだいたいオッケー。WebStorm にもプラグインがあるようなのでいずれ試す。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-3-0-0-7">
           Syntax Reference
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           基本的に <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://elm-lang.org/learn/Syntax.elm">
         </amp-img></div>
        あたりを見ればオッケー。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          Example の  には
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Example の <code>Hello.elm</code>
+       には
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (elm)</code>
+          <pre><code>main : Element
+main =
+    flow down
+      [ helloWorld
+      , welcomeGraphics
+      ]</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          というような  という構文?関数?があってなんじゃらホイとなったが、 <div class="imgContainer-0-0-3">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          というような <code>flow</code>
+       という構文?関数?があってなんじゃらホイとなったが、 <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="http://elm-lang.org/edit/examples/Elements/FlowDown1a.elm">
         </amp-img></div>
        を見てあっさりわかった。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code> (elm)</code>
+          <pre><code>{-------------------------------------------------------------
+  Elements can be combined into more complex layouts using
+  the flow function:
+
+         flow : Direction -&gt; [Element] -&gt; Element
+
+  It is easy to change the direction of flow. Just use a
+  different value for the direction!
+
+     down, up, left, right, inward, outward : Direction
+
+  Try switching "down" in the code below with "up".
+-------------------------------------------------------------}
+
+import Graphics.Element (..)
+import Text (..)
+
+
+main : Element
+main =
+  flow right
+    [ plainText "By using the \"flow\" function,"
+    , plainText "we can stack elements"
+    , plainText "on top of other elements."
+    ]</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-           の定義は  で、 () と  から  をつくる関数のようだ。なので  とすると
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <code>flow</code>
+       の定義は <code>flow : Direction -&gt; [Element] -&gt; Element</code>
+       で、<code>Direction</code>
+       (<code>down, up, left, right, inward, outward : Direction</code>
+      ) と <code>[Element]</code>
+       から <code>Element</code>
+       をつくる関数のようだ。なので <code>up</code>
+       とすると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>on top of other elements.
+we can stack elements
+By using the "flow" function,</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          になるし  にすると
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          になるし <code>right</code>
+       にすると
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>By using the "flow" function,we can stack elementson top of other elements.</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          横に連結するような定義になっているようだ。実際に生成される html を見てみると  とか  をつけると inline style で  とか  が勝手に設定されて意図したデザインとなる。ここだけ取ってみても従来の HTML + CSS + JavaScript の構成でドキュメント構造考えて...スタイル考えて...スクリプト書いて...というようなはっきり言ってめんどくさいことをやらずに済むことが分かる。
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          横に連結するような定義になっているようだ。実際に生成される html を見てみると <code>right</code>
+       とか <code>left</code>
+       をつけると inline style で <code>float left</code>
+       とか <code>float right</code>
+       が勝手に設定されて意図したデザインとなる。ここだけ取ってみても従来の HTML + CSS + JavaScript の構成でドキュメント構造考えて...スタイル考えて...スクリプト書いて...というようなはっきり言ってめんどくさいことをやらずに済むことが分かる。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とりあえず今日はこの辺で。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2015/02/05/get-start-elm" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0205">#0205</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0205
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cf9.html">
+                      明日から使えるライフハック - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dd9.html">
+                      Transfer Learning - Machine Learning's Next Frontier - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dc5.html">
+                      W.W.D II - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dbe.html">
+                      Fuchsia - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d8c.html">
+                      プロメテウス - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d95.html">
+                      Erkaman/regl-cnn: Digit recognition with Convolutional Neural Networks in WebGL - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3daaa22214130017163179.html">
+                      ここに出てくる人物はすべて死んだかAppleを去ってしまった
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df2.html">
+                      馬がウマかった - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc5cf38ba9df500179bc01c.html">
+                      今回のエンドゲームにしても、サノスに殺されたガモーラにしても、 女性キャラクターの扱いが安易すぎやしないか。
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e50.html">
+                      Popcorn Timeは今すぐKickstarterあたりに丸ごと買収されてほしい - dev.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

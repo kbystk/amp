@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/tmux から atom コマンドでファイルを開こうとするとエラーが出る問題 - dev.jgs.me">
@@ -192,79 +194,150 @@ amp-img.contain img {
           </div>
           <h1>tmux から atom コマンドでファイルを開こうとするとエラーが出る問題 - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/atom/atom/issues/3093">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-           というパッケージがアップデートでシェルから  コマンドで起動しないとスクリプトが実行できなくなっていたので、 のエイリアス類を全部  に変更したところ、素 zsh 環境では起動するものの tmux からだと
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <code>atom-script</code>
+       というパッケージがアップデートでシェルから <code>atom</code>
+       コマンドで起動しないとスクリプトが実行できなくなっていたので、<code>open -a Atom</code>
+       のエイリアス類を全部 <code>atom</code>
+       に変更したところ、素 zsh 環境では起動するものの tmux からだと
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>LSOpenURLsWithRole() failed for the application /Applications/Atom.app with error -10810.</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           とエラーが出て起動しなかった。調べてみると細かいエラーの原因の特定にまでは至らなかったが、対処方法は分かったのでメモ。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-           に
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <code>.tmux.conf</code>
+       に
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>set-option -g default-command "which reattach-to-user-namespace &gt; /dev/null &amp;&amp; reattach-to-user-namespace -l $SHELL || $SHELL"</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
-          を追加すると起動するようになる。ちなみに、 というパッケージが入ってないと動かないので
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          を追加すると起動するようになる。ちなみに、<code>reattach-to-user-namespace</code>
+       というパッケージが入ってないと動かないので
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>% brew install reattach-to-user-namespace</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           でパッケージをインストールする。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="http://dev.jgs.me/2015/01/06/atom-LSOpenURLsWithRole-error" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0106">#0106</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0106
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0bc.html">
+                      高専カンファレンスin三重面白すぎた - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d01.html">
+                      Alpine Linuxあるある - Qiita - github.com/e-jigsaw/web
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e76b8f83c0017d0e0d2.html">
+                      IT研究会やめました! - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e53d.html">
+                      艦これタイマー for Google Chrome™をつくったぞ〜！！！ - blog.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d5d.html">
+                      I/O議論 - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a56fc501d6500171df2f4.html">
+                      トーマス・ウェイン
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e44.html">
+                      iTerm2 のカラースキームを dotfiles に追加した - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0aa.html">
+                      カナザワ映画祭2011フィルマゲドンⅡいってきました - e-jigsaw.blogspot.com
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cc9ce68cf96a200175d874f.html">
+                      ハワード
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dc2.html">
+                      ウォーム・ボディーズ - diary.jgs.me
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     

@@ -183,7 +183,9 @@ amp-img.contain img {
         </amp-analytics>
         <div class="container-0-0-1">
           <div class="logo-0-0-2">
-            <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg" width="40px" height="40px"></amp-img>
+            </a>
           </div>
           <div class="sbLink-0-0-4">
             <a href="https://scrapbox.io/jigsaw/Firebase Functions で Node.js 8 使えるようになったぞ〜〜〜！！！ - dev.to/jgs">
@@ -192,123 +194,181 @@ amp-img.contain img {
           </div>
           <h1>Firebase Functions で Node.js 8 使えるようになったぞ〜〜〜！！！ - dev.to/jgs</h1>
           <div>
-            <div style="padding-left:0rem;">
+            <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-6-0-0-10">
           tldr
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           firebase-tools をアップグレードする
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           functions/package.json に "engines": { "node": "8" } を追加する
         </div>
-      <div style="padding-left:1rem;">
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
           firebase deploy
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-6-0-0-10">
           経緯
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://cloud.google.com/functions/docs/concepts/nodejs-8-runtime">
         </amp-img></div>
        でしれっと（？） Cloud Functions で Node.js 8 が使えることが書いてあって(あと Python)小躍りしながら試しました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           じゃあ Firebase Functions でも使えるんじゃね...?と調べてみても、全く情報が出てきませんでした。ウェブのコンソールからランタイムを変更できる、と書いてる記事もあったのですが自分のプロジェクトにはそういう項目はなく...。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           firebase-tools のリポジトリを
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>runtime</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           で検索すると対応しているっぽい雰囲気がありました。しばらくコード追ったりした後に、最初に気付けばよかったんですが、リリースノートにちゃんと書いてありました。
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://github.com/firebase/firebase-tools/releases/tag/v4.0.0">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           まずはちゃんとリリースノートを読もうな！
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <span class="level-0-0-5 level-6-0-0-10">
           余談
         </span>
       
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           しばらく見ない間に TypeScript にもオフィシャルに対応していて
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; overflow: scroll;">
+          <code>_</code>
+          <pre><code>firebase init</code></pre>
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <br>
               
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           で対話的にプロジェクトを作成する際に TS でスキャッフォルドを作ってくれるのでお手軽に型を付けられるようになっていた。かなりマトモな環境の Node.js 8 で動かすものを TS で書けるとなるとだいぶ選択肢に入ってくるのでは...?というカンジがした。まだ beta っぽいけどガンバッテほしい...!
         </div>
-      <div style="padding-left:0rem;">
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
           <a href="https://dev.to/jgs/firebase-functions--nodejs-8--23lk" target="_blank" rel="noopener">
               * original:
             </a>
           
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/0802">#0802</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #0802
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/firebase">#firebase</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #firebase
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/cloudfunctions">#cloudfunctions</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #cloudfunctions
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/firebasefunctions">#firebasefunctions</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          #firebasefunctions
         </div>
-      <div style="padding-left:0rem;">
-          <a href="https://scrapbox.io/jigsaw/node">#node</a>
-      
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8">#node</a>
+        
         </div>
       
           </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            <li>
+                    <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8.html">
+                      node
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5d5a529631e47300173f39d1.html">
+                      キャプテン・アメリカ
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d56.html">
+                      Node.jsでうまい感じにライブラリを書こうとして失敗した - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82de0.html">
+                      WORLD WIDE DEMPA - diary.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e2be23a10017086e8a.html">
+                      npm の scoped-modules 試してみた - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cfe02721ff55500175bb75c.html">
+                      firebase, aws, adsense, amazon affiliate に載っけていいコンテンツ(リンク) | blog-tech.xyz
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c57a9425a5e910017fb1b0f.html">
+                      沖縄から帰ってきた人
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5cea95ea9e43840017e651b7.html">
+                      10年代・ベスト映画
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e76.html">
+                      zsh まわりを直した - dev.jgs.me
+                    </a>
+                  </li>
+                <li>
+                    <a href="https://amp.kbys.tk/5ce35975bcd30b00175a0aad.html">
+                      ra-gg/fleur: Typed Flux Framework inspired by Fluxible
+                    </a>
+                  </li>
+                
+          </ul>
         </div>
       
     
