@@ -1,10 +1,121 @@
 const { writeFileSync } = require('fs')
-const crypto = require('crypto')
 const { html } = require('lit-ntml')
+const parse = require('@progfay/scrapbox-parser')
+const master = require('./data/pub.json')
 const data = require('./data/html.json')
+const dic = require('./data/dic.json')
 const { ga, css } = require('./styles')
 
+const nodeRender = async node => {
+  switch (node.type) {
+    case 'plain':
+      return node.text
+    case 'hashTag': {
+      if (dic[node.href] !== undefined) {
+        return html`
+          <a href="${`https://amp.kbys.tk/${dic[node.href]}`}">#${node.href}</a>
+        `
+      } else {
+        return `#${node.href}`
+      }
+    }
+    case 'link': {
+      switch (node.pathType) {
+        case 'relative': {
+          if (dic[node.href] !== undefined) {
+            return html`
+              <a href="https://amp.kbys.tk/${dic[node.href]}">${node.href}</a>
+            `
+          } else {
+            return node.href
+          }
+        }
+        case 'root':
+          return html`
+            <a
+              href="https://scrapbox.io${node.href}"
+              target="_blank"
+              rel="noopener"
+            >
+              ${node.href}
+            </a>
+          `
+        case 'absolute':
+          return html`
+            <a href="${node.href}" target="_blank" rel="noopener">
+              ${node.content ? node.content : node.href}
+            </a>
+          `
+        default: {
+          console.log(node)
+          return ''
+        }
+      }
+    }
+    case 'image':
+      return html`
+        <div class="${css.classes.imgContainer}">
+          <amp-img class="contain" layout="fill" src="${node.src}" />
+        </div>
+      `
+    case 'decoration':
+      return html`
+        <span
+          class="${css.classes.level} ${css.classes[
+            node.decos[0].replace(/\*/, 'level')
+          ]}"
+        >
+          ${node.nodes.map(nodeRender)}
+        </span>
+      `
+    case 'code':
+      return html`
+        <code>${node.text}</code>
+      `
+    default: {
+      console.log(node)
+      return ''
+    }
+  }
+}
+
+const blockRender = block => {
+  switch (block.type) {
+    case 'line': {
+      return html`
+        <div style="padding-left:${block.indent}rem; margin-bottom: .5rem;">
+          ${block.nodes.length > 0
+            ? block.nodes.map(nodeRender)
+            : html`
+                <br />
+              `}
+        </div>
+      `
+    }
+    case 'codeBlock': {
+      return html`
+        <div style="padding-left:${block.indent}rem; overflow: scroll;">
+          <code>${block.fileName}</code>
+          <pre><code>${block.content}</code></pre>
+        </div>
+      `
+    }
+    default:
+      console.log(block)
+      return ''
+  }
+}
+
 const render = async article => {
+  const obj = parse(article.txt.replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+  let relatedPagesWithRandomPages = article.relatedPages
+  if (article.relatedPages.length < 10) {
+    for (let i = article.relatedPages.length; i < 10; i++) {
+      relatedPagesWithRandomPages.push(
+        master[Math.round((master.length - 1) * Math.random())]
+      )
+    }
+  }
   const res = await html`
     <!DOCTYPE html>
     <html amp>
@@ -108,41 +219,41 @@ const render = async article => {
         </amp-analytics>
         <div class="${css.classes.container}">
           <div class="${css.classes.logo}">
-            <amp-img
-              src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg"
-              width="40px"
-              height="40px"
-            ></amp-img>
+            <a href="https://amp.kbys.tk">
+              <amp-img
+                src="https://i.gyazo.com/67ba2e0bfe934bd265f24e4c3cbd85a4.jpg"
+                width="40px"
+                height="40px"
+              ></amp-img>
+            </a>
           </div>
           <div class="${css.classes.sbLink}">
             <a href="https://scrapbox.io/jigsaw/${article.title}">
               スクボで読む
             </a>
           </div>
-          ${article.html
-            .replace(/href="\.\/(.*?)"/gm, (_, p1) => {
-              let sha = crypto.createHash('sha1')
-              sha.update(p1)
-              const hash = sha.digest('hex')
-              return `href="https://amp.kbys.tk/${hash}.html"`
-            })
-            .replace(/<div class="telomere (.*?)<\/div>/gm, '')
-            .replace(
-              /<img\s(.*?)>/gm,
-              (_, p1) =>
-                `<div class="${css.classes.imgContainer}"><amp-img class="contain" layout="fill" ${p1}/></div>`
-            )
-            .replace(/type="link"/gm, '')
-            .replace(/type="hashTag"/gm, '')
-            .replace(/src="\/api/gm, 'src="https://scrapbox.io/api')}
+          <h1>${article.title}</h1>
+          <div>
+            ${obj.blocks.map(blockRender)}
+          </div>
+          <h2>関連ページとランダムに選ばれたページ</h2>
+          <ul>
+            ${article.relatedPages.map(
+              relatedPage =>
+                html`
+                  <li>
+                    <a href="https://amp.kbys.tk/${relatedPage.id}.html">
+                      ${relatedPage.title}
+                    </a>
+                  </li>
+                `
+            )}
+          </ul>
         </div>
       </body>
     </html>
   `
-  let sha = crypto.createHash('sha1')
-  sha.update(article.title)
-  const hash = sha.digest('hex')
-  writeFileSync(`./public/${hash}.html`, res)
+  writeFileSync(`./public/${article.id}.html`, res)
 }
 
 data.map(render)

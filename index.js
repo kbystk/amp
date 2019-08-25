@@ -1,16 +1,12 @@
 const { writeFileSync, readFileSync } = require('fs')
-const crypto = require('crypto')
 const { html, htmlFragment } = require('lit-ntml')
-const data = require('./data/pub.json')
+const master = require('./data/pub.json')
 const { ga, css } = require('./styles')
 
 const render = async (batch, pageCount, isFinal) => {
   const links = batch.map(article => {
-    let sha = crypto.createHash('sha1')
-    sha.update(article.title)
-    const hash = sha.digest('hex')
     return htmlFragment`
-      <li><a href="https://amp.kbys.tk/${hash}.html">${article.title}</a></li>
+      <li><a href="https://amp.kbys.tk/${article.id}.html">${article.title}</a></li>
     `
   })
   const res = await html`
@@ -145,8 +141,8 @@ const render = async (batch, pageCount, isFinal) => {
 
 const main = async () => {
   let pageCount = 1
-  let count = data.pages.length
-  const sortedPages = data.pages.sort((x, y) => y.created - x.created)
+  let count = master.length
+  const sortedPages = master.sort((x, y) => y.created - x.created)
   let batch = sortedPages.slice(count - 20, count)
   while (true) {
     const linkPage = await render(batch, pageCount, count <= 20)
