@@ -4,32 +4,9 @@ const preset = require('jss-preset-default').default
 jss.setup(preset())
 const styles = {
   '@global': {
-    '.line-title': {
-      fontSize: '1.5rem',
-      textAlign: 'center',
-      fontWeight: 'bold'
-    },
-    '.line': {
-      paddingBottom: '.4rem'
-    },
     a: {
       textDecoration: 'none',
       color: '#0469ea'
-    },
-    '.line .quote': {
-      fontStyle: 'italic',
-      backgroundColor: 'rgba(128,128,128,0.1)',
-      display: 'block',
-      borderLeft: 'solid 4px #a0a0a0',
-      paddingLeft: '4px'
-    },
-    '.line .code': {
-      padding: 0,
-      fontSize: '90%',
-      backgroundColor: 'rgba(0,0,0,0.04)',
-      whiteSpace: 'pre-wrap',
-      wordWrap: 'break-word',
-      borderRadius: '4px'
     },
     'amp-img.contain img': {
       objectFit: 'contain'
@@ -100,6 +77,9 @@ const styles = {
   'level-10': {
     fontSize: '5.16em',
     lineHeight: '105px'
+  },
+  unlinked: {
+    color: '#004bad'
   }
 }
 

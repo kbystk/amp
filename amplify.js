@@ -16,7 +16,9 @@ const nodeRender = async node => {
           <a href="${`https://amp.kbys.tk/${dic[node.href]}`}">#${node.href}</a>
         `
       } else {
-        return `#${node.href}`
+        return html`
+          <span class="${css.classes.unlinked}">#${node.href}</span>
+        `
       }
     }
     case 'link': {
@@ -72,6 +74,24 @@ const nodeRender = async node => {
       return html`
         <code>${node.text}</code>
       `
+    case 'icon': {
+      switch (node.pathType) {
+        case 'root': {
+          if (node.path === '/icons/hr') {
+            return html`
+              <hr />
+            `
+          } else {
+            console.log(node)
+            return
+          }
+        }
+        default: {
+          console.log(node)
+          return
+        }
+      }
+    }
     default: {
       console.log(node)
       return ''
