@@ -3,7 +3,7 @@
   "name": "amp",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node prepare.js && node dic.js && node fetch.js && node amplify.js && node index.js && node sitemap.js"
   },
   "license": "MIT",
   "devDependencies": {
