@@ -2,7 +2,7 @@ name: Batch
 
 on:
   schedule: 
-  - cron: 06 * * * *
+  - cron: 10 * * * *
 
 jobs:
   build:
@@ -12,11 +12,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - run: node --version
-    - run: yarn --version
+    - run: |
+        yarn install
+        yarn start
     - env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name "batch"
         git config --global user.email "m@jgs.me"
-        git config --get user.name
+        git status
