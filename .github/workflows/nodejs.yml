@@ -2,7 +2,7 @@ name: Batch
 
 on:
   schedule: 
-  - cron: 20 * * * *
+  - cron: 0 4 * * *
 
 jobs:
   build:
