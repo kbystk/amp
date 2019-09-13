@@ -2,7 +2,7 @@ name: Batch
 
 on:
   schedule: 
-  - cron: 14 * * * *
+  - cron: 20 * * * *
 
 jobs:
   build:
@@ -20,4 +20,9 @@ jobs:
       run: |
         git config --global user.name "batch"
         git config --global user.email "m@jgs.me"
+        git remote set-url origin https://kbystk:${GITHUB_TOKEN}@github.com/kbystk/amp.git
+        git checkout master
         git status
+        git add .
+        git commit -m 'Update'
+        git push origin HEAD
