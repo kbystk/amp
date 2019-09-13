@@ -1,18 +1,19 @@
-name: Node CI
+name: Batch
 
 on:
   schedule: 
-  - cron: 52 * * * *
+  - cron: 59 * * * *
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
     - run: node --version
-    - run: yarn version
+    - run: yarn --version
+    - run: git config --get user.name
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
