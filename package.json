@@ -3,10 +3,11 @@
   "name": "amp",
   "description": "",
   "scripts": {
-    "start": "node prepare.js && node dic.js && node fetch.js && node amplify.js && node index.js && node sitemap.js"
+    "start": "node node_modules/@jigsaw/sb-scripts/prepare.js && node node_modules/@jigsaw/sb-scripts/dic.js && node fetch.js && node amplify.js && node index.js && node sitemap.js"
   },
   "license": "MIT",
   "devDependencies": {
+    "@jigsaw/sb-scripts": "^0.0.4",
     "@progfay/scrapbox-parser": "^2.1.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.2.2",

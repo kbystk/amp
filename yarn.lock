@@ -90,6 +90,13 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@jigsaw/sb-scripts@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@jigsaw/sb-scripts/-/sb-scripts-0.0.4.tgz#97d0bd9ed9b91247a6c97fc7ce714d1e9af3d0d2"
+  integrity sha512-FrGISgjkxCwulJMnSYnhktB74uQjxiVIvHNTwSMpRfwF+o9k6aZt2vHQ8zQDYQLSCkdp/jVcuDD0LuI4Kc7wxA==
+  dependencies:
+    isomorphic-unfetch "^3.0.0"
+
 "@progfay/scrapbox-parser@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@progfay/scrapbox-parser/-/scrapbox-parser-2.1.1.tgz#24c725779cbb3c32ef3e6be43abec4ab9a914373"
