@@ -92,6 +92,11 @@ const nodeRender = async node => {
         }
       }
     }
+    case 'quote': {
+      return html`
+        <blockquote>${node.nodes.map(nodeRender)}</blockquote>
+      `
+    }
     default: {
       console.log(node)
       return ''
@@ -127,7 +132,9 @@ const blockRender = block => {
 }
 
 const render = async article => {
-  const obj = parse(article.txt.replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+  const obj = parse(
+    article.txt.replace(/</g, '&lt;').replace(/(.)>/g, (_, p1) => `${p1}&gt;`)
+  )
   let relatedPagesWithRandomPages = article.relatedPages
   if (article.relatedPages.length < 10) {
     for (let i = article.relatedPages.length; i < 10; i++) {

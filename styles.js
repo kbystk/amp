@@ -10,6 +10,12 @@ const styles = {
     },
     'amp-img.contain img': {
       objectFit: 'contain'
+    },
+    blockquote: {
+      margin: 0,
+      backgroundColor: 'rgba(128,128,128,0.1)',
+      borderLeft: 'solid 4px #a0a0a0',
+      paddingLeft: '4px'
     }
   },
   container: {
