@@ -136,8 +136,8 @@ const render = async article => {
     article.txt.replace(/</g, '&lt;').replace(/(.)>/g, (_, p1) => `${p1}&gt;`)
   )
   let relatedPagesWithRandomPages = article.relatedPages
-  if (article.relatedPages.length < 10) {
-    for (let i = article.relatedPages.length; i < 10; i++) {
+  if (article.relatedPages.length < 5) {
+    for (let i = article.relatedPages.length; i < 5; i++) {
       relatedPagesWithRandomPages.push(
         master[Math.round((master.length - 1) * Math.random())]
       )
