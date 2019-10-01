@@ -6,10 +6,12 @@
         <meta property="og:type" content="article">
         <meta property="og:url" content="https://amp.kbys.tk/5c4658f7decd5d0017b43cb6.html">
         <meta property="og:site_name" content="amp.kbys.tk">
-        <meta name="twitter:card" content="summary_large_image">
-            </head><body>
-        <meta property="og:image" content="https://gyazo.com/49cf610077dae8ebc758e1f978d09d62/raw">
-            
+        
+                <meta name="twitter:card" content="summary_large_image">
+              
+        
+                <meta property="og:image" content="https://gyazo.com/49cf610077dae8ebc758e1f978d09d62/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -154,8 +156,8 @@ blockquote {
         </style>
         <title>Oculus Go で React 360 の開発をはじめられる - dev.to/jgs | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/Oculus Go で React 360 の開発をはじめられる - dev.to/jgs">
-      
-      
+      </head>
+      <body>
         <amp-analytics type="gtag" data-credentials="include">
           <script type="application/json">
             {
@@ -187,348 +189,472 @@ blockquote {
           </div>
           <h1>Oculus Go で React 360 の開発をはじめられる - dev.to/jgs</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Oculus Go を買った <a href="https://note.mu/jgs/n/nd31e52697614" target="_blank" rel="noopener">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Oculus Go を買った 
+            <a href="https://note.mu/jgs/n/nd31e52697614" target="_blank" rel="noopener">
               https://note.mu/jgs/n/nd31e52697614
             </a>
           
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ちなみに、この FANBOX の記事で NetflixVR は左上の Void theater というところからゴロ寝追従モードに入ってくれることをコメントで教えてもらったので快適になりました
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <hr>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+              <hr>
             
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Oculus Go にはそれなりなブラウザが搭載されていることを <a href="https://qiita.com/wakufactory/items/98658e8d089386a7b073" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Oculus Go にはそれなりなブラウザが搭載されていることを 
+            <a href="https://qiita.com/wakufactory/items/98658e8d089386a7b073" target="_blank" rel="noopener">
               Oculus GoのブラウザについてのWeb開発者目線からのまとめ - Qiita
             </a>
            を読んで知ったので、WebVR はどんなもんかと見物するために買ったといっても過言ではない
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           だいたいの流れは上述の記事通りなのだけど、いくつかハマったので記しておく
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           まずは Oculus Go を開発者モードにする
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          これは <a href="http://unrealengine.hatenablog.com/entry/2018/05/04/232708" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          これは 
+            <a href="http://unrealengine.hatenablog.com/entry/2018/05/04/232708" target="_blank" rel="noopener">
               UE4 Oculus GoでVRアプリの開発を開始するまでの方法 - Let's Enjoy Unreal Engine
             </a>
            ここに詳しい
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="https://dashboard.oculus.com" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://dashboard.oculus.com" target="_blank" rel="noopener">
               https://dashboard.oculus.com
             </a>
            から団体を作るとスマホの Oculus アプリからデバイスの「その他の設定」から「開発者モード」という項目が出現するのでこれをトグルする
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>chrome://inspect/#devices</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           にアクセスして USB を接続すると Chrome のインスペクタから見えるのだが、
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>Pending authentication: please accept debugging session on the device.</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           と表示されてなかなかアクセスできない
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           Oculus Go で許可すると見れるようになるらしいが、それらしいダイアログが全く表示されない
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           Oculus の Developer 向けのページを見ても Windows 向けの zip は公開されているが、Mac には特に言及がない
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           adb がいるのかな？と推測して Android Studio をインストールするも
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code></code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           などと表示されてなかなか接続できない
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           半ばヤケクソで再起動を繰り返していたらコントローラが認識されなくなる...
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           これも調べてみると Oculus のボタンと戻るボタンを長押しすると再度ペアリングしてくれるようだ
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           それからいろいろ探ってみるも、全く Oculus Go で許可できなくて、アプリから設定をいろいろ変えてみたりして再起動したタイミングで起動時に許可を求めるダイアログが出た！！！！！！！！！！
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           いろいろ探ってみるとどうやらアンロックパターンを設定するとデバッグを許可するダイアログが出ないみたいだ...
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           また、許可する際に「このマシンから常にデバッグできるようにする」にチェックを入れて許可してもアンロックパターンを設定すると吹き飛んでしまうよう
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           なので、インスペクトする際にはとりあえずアンロックパターンを削除するのが定石っぽい
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           このアンロックパターンを削除するのも結構鬼門で、「Oculus 暗証番号」とかいうのを求められるのだが、正規ルートをなぞってきてもそんな番号を設定したおぼえはない
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           仕方ないので「Oculus 暗証番号をリセット」からリセットするのだが、リセット画面では8桁以上の入力を求められるのに実際の暗証番号入力画面では4桁しか入力できない謎仕様で合ってるんだか合ってないんだかよく分からない番号をとりあえず入力するとアンロックパターンは削除できる...。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           インスペクタは
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://gyazo.com/49cf610077dae8ebc758e1f978d09d62/thumb/1000">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           こんな感じで、ゴーグルをかぶらなくてもデバッグできるので楽そう〜とおもった
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           が、ブラウザの360度モードに入ると console にエラーを上げて死んでしまうのだ...
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           しょうがないので360度モードの時はコンソールやネットワークだけをとりあえず見れる程度におもっておく
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           さて、WebVR のことはあまり知らないのでとりあえず普段使っている React の
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>Learn Once Write Anywhere</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           を試すために ReactVR を触ってみようとおもったら、知らない間に React 360 に改名していたようだ
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ドキュメントを読むに、ReactVR は内部で使うことになって2つに分裂してしまったので元 ReactVR の方が React 360 になったらしい
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           チュートリアルに従って作っていく
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          リポジトリ: <a href="https://github.com/e-jigsaw/Hello360" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          リポジトリ: 
+            <a href="https://github.com/e-jigsaw/Hello360" target="_blank" rel="noopener">
               https://github.com/e-jigsaw/Hello360
             </a>
           
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           適当なディレクトリを切って
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>npm install react-360-cli</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>react-360 init Hello360</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           するとスキャフォールドを作ってくれて
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>npm install</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           がはじまるんだけど Electron のインストールとかもはじまって、何に使うんだ...みたいな気持ちになった
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>npm start</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           すると
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>localhost:8081</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           が立ち上がるのだが、シンプルな html が表示されるだけで何も出ない...
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           よくよくドキュメントを読んでみると
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>localhost:8081/index.html</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           にアクセスしろと書いてあるのでこちらを開くと CLI でビルドがはじまる
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ビルドが完了すると360度見回せるビューが出現する!!
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ソースを編集してリロードすると素早く反映してくれる謎技術。察するに React Native まわりの技術にのっかってる雰囲気がある
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           チュートリアルに従って VR ボタンを伴ったカウンターを作った
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://gyazo.com/3905d41c6adad4cb01f4e4d795e95003/thumb/1000">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ブラウザの360度モードだと動画を撮影する手段が見当たらなくて困っている。解決方法を知っている方はコメントいただけると助かります...!!
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           とりあえず今日はこの辺で。作りたいものを考えはじめたんだけど、WebVR(標準は WebXR として策定されるらしい？)だと UI が Web のそれが全く通じない気がしたのでどういう UI がいいのか考えるのが楽しそう
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Scrapbox Meetup <span class="unlinked-0-0-15">#4</span>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Scrapbox Meetup 
+          <span class="unlinked-0-0-15">#4</span>
          でも三次元で探索するにはどういう UI がいいか？という話題が LT で上がっていたが、確かに現在の Web のインターフェースは二次元で探索するのに適した UI だとおもうので三次元空間の面には持っていけるだろうが全体の体験の設計としては甘そう
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           Oculus Go のホーム画面の UI も結局ポインティングデバイスを使ってのソレなのでまだまだ、という感じがする
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           憧れ100%だけど
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://gyazo.com/c6d78a0ff1bdb4b11f500aefcd038e25/thumb/1000">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           みたいな UI 作れるといいな...!!
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#oculusgo</span>
-         <span class="unlinked-0-0-15">#react360</span>
+         
+          <span class="unlinked-0-0-15">#react360</span>
         
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="https://dev.to/jgs/oculus-go--react-360--29lg" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="https://dev.to/jgs/oculus-go--react-360--29lg" target="_blank" rel="noopener">
               https://dev.to/jgs/oculus-go--react-360--29lg
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20180526</span>
-         <span class="unlinked-0-0-15">#0526</span>
+         
+          <span class="unlinked-0-0-15">#0526</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d3e.html">
-                      Shibuya.XSS #7 が開催されました - Cybozu Inside Out | サイボウズエンジニアのブログ - github.com/e-jigsaw/web
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5cd8fc4a5d07db0017845986.html">
+                      ナタリーポートマン
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5cde6a79d7e8a900170a9c08.html">
-                      20190516
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d34.html">
+                      りぼんを応援している - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d6af52790aa080017a9ef95.html">
-                      ORANGE RIUM
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cd9abd785e47700172a21eb.html">
+                      同担嫌悪という文化
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d2e.html">
-                      まさに驚異、ワンダーウーマン - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d078f422fd9b50017707960.html">
+                      ChromeOS の開発環境整備2019
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82db2.html">
-                      Papers, Please!が尋常じゃないぐらい面白い - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d2a79fc34a1980017f0f6ea.html">
+                      星野源 – Pop Virus【DOME TOUR “POP VIRUS” at TOKYO DOME】/ Gen Hoshino - Pop Virus - YouTube
                     </a>
                   </li>
                 

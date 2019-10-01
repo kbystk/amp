@@ -6,8 +6,9 @@
         <meta property="og:type" content="article">
         <meta property="og:url" content="https://amp.kbys.tk/5c2b9afa5513850017f82dcf.html">
         <meta property="og:site_name" content="amp.kbys.tk">
-        <meta name="twitter:card" content="summary">
-            </head><body>
+        
+                <meta name="twitter:card" content="summary">
+              
         
         <style amp-boilerplate="">
           body {
@@ -153,8 +154,8 @@ blockquote {
         </style>
         <title>git&amp;Githubアンチパターン - diary.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/git&amp;Githubアンチパターン - diary.jgs.me">
-      
-      
+      </head>
+      <body>
         <amp-analytics type="gtag" data-credentials="include">
           <script type="application/json">
             {
@@ -186,87 +187,114 @@ blockquote {
           </div>
           <h1>git&amp;Githubアンチパターン - diary.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           svnから解放されたのもつかの間、今度はひどい運用のgitとGithubのプロジェクトにアサインされて、これまたひどい歪みのBackboneを矯正するバイトをしている。Backboneに対しては、どんな過酷なプロダクトでもとりあえず導入されていればまだ大丈夫だろう、という印象だったのだけれど、クソプログラマはそんな希望さえもあっさりと打ち砕いてくる。クソBackboneの話は長くなるので割愛するが、単純なページ構成のはずなのに、なぜかViewが複雑に絡み合い、liveとbindとonが混在しているし(これはjQueryアンチパターン)、そもそもそれはBackbone.events使えやという感じだし、なぜかBackbone.Routerが3000行超えてるし椎間板ヘルニアみたいな状態だけど、なんとか意図を読み取り、インデントを正し、git blameして呪詛の詞を並べている。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          それとは関係なく、gitの運用が酷い。携帯デバイスからだとステージングでしかデバッグできないので、1000000歩譲って適当なbranchにデバッグコードをコミットするのはまだ許すけれど、それがmasterにガッツリmergeされてるので頭が痛くなる。しかも、デバッグコードでいないメソッドを呼んで落ちたりするのだ。クソめ。それもね、まあエラー吐いたりするから気付けるし、一括削除してやればいいのだけれどね。それよりも深刻だとおもうのは、とりあえずコメントアウト、みたいなコミット。終了対応をさ、コメントアウトでやるもんだから、ゴミが相当蓄積されるのですわ。オシャレに対応コミットをrevertするとか、せめてコードを削除してコミットしてくれ。それから、「<a href="https://scrapbox.io//とりあえずコメントアウトすると動く" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          それとは関係なく、gitの運用が酷い。携帯デバイスからだとステージングでしかデバッグできないので、1000000歩譲って適当なbranchにデバッグコードをコミットするのはまだ許すけれど、それがmasterにガッツリmergeされてるので頭が痛くなる。しかも、デバッグコードでいないメソッドを呼んで落ちたりするのだ。クソめ。それもね、まあエラー吐いたりするから気付けるし、一括削除してやればいいのだけれどね。それよりも深刻だとおもうのは、とりあえずコメントアウト、みたいなコミット。終了対応をさ、コメントアウトでやるもんだから、ゴミが相当蓄積されるのですわ。オシャレに対応コミットをrevertするとか、せめてコードを削除してコミットしてくれ。それから、「
+            <a href="https://scrapbox.io//とりあえずコメントアウトすると動く" target="_blank" rel="noopener">
               //とりあえずコメントアウトすると動く
             </a>
           」みたいなやつは心底うんざりする。それは、自分がそのコードが動作している所以を理解していないのを明示しているようなもんだし、それにしたって削除してくれないとあっという間にゴミだらけになる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           それから、せっかくGithubで運用しているのに、ただのリモートリポジトリとしか使ってなくてhubの意味がない。PRは基本的にノーレビューノーディスカッションでステージングにマージされるし、ステージングからマスターには「動いてる/動いてない」しかファクタがないのでエスカレーター方式でクソコードがmasterにマージされる。その「動いてる/動いてない」も自動化などされておらず、なんとなく影響ありそうな箇所を人力確認するというオールドスクールっぷりだから厳しい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           そして、リファクタすれどもすれどもクソコードが次々と継ぎ足されていくカタストロフィが起きる。無間地獄かよ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ―リファクタバイトの朝は早い。「そうですね、出社したらまず出勤してなかった日のコミットログを洗って、該当部分から掃除ですね」的なやつをやっている。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そんなこと、こんなところで書いてるヒマあったらプロジェクトで共有しなよ、って話なんだけどそうもいかないからグチグチ書いてる。どうも、僕の位置からみて上に4階層ぐらいあって、上から下へそれぞれ締め付けがあってこの地獄が形成されているんじゃないかとおもっている。ひとつ上の階層のひとは、成果が求められる第二階層に締め付けられているからオンタイムでいろんなことをやらなきゃいけないし、その第二階層も第三階層から締め付けがあって、その上の第四階層ぐらいまでここから見える。とにかく動いて、評価値が稼げればとりあえずOKという文化がかなり根を深く張っていてこれが諸悪の根源なんじゃないかとおもう。そのクソコミットが未来の自分か、もしくは僕みたいにしわ寄せを請け負う人間の首をじわじわと絞めていることはわかってるのかわかってないのか知らないけれど、一ヶ月後だって、下手したら一週間後だってわからないプロジェクトの、コードの品質を保とうという発想にはなりにくいんだろう。だから<a href="https://amp.kbys.tk/5d73dc4becc0400017dd5f9b">CI</a>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          そんなこと、こんなところで書いてるヒマあったらプロジェクトで共有しなよ、って話なんだけどそうもいかないからグチグチ書いてる。どうも、僕の位置からみて上に4階層ぐらいあって、上から下へそれぞれ締め付けがあってこの地獄が形成されているんじゃないかとおもっている。ひとつ上の階層のひとは、成果が求められる第二階層に締め付けられているからオンタイムでいろんなことをやらなきゃいけないし、その第二階層も第三階層から締め付けがあって、その上の第四階層ぐらいまでここから見える。とにかく動いて、評価値が稼げればとりあえずOKという文化がかなり根を深く張っていてこれが諸悪の根源なんじゃないかとおもう。そのクソコミットが未来の自分か、もしくは僕みたいにしわ寄せを請け負う人間の首をじわじわと絞めていることはわかってるのかわかってないのか知らないけれど、一ヶ月後だって、下手したら一週間後だってわからないプロジェクトの、コードの品質を保とうという発想にはなりにくいんだろう。だから
+              <a href="https://amp.kbys.tk/5d73dc4becc0400017dd5f9b">CI</a>
             をしよう、という話にもならないし、テストを書くよりもプロダクションコードを書こうという話になるし、ドキュメントは書かなくてもいいという話になるのだろう。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           脱バイトしたら、リポジトリをみてまともそうなところに行きたいと強くおもう。svnの深遠な世界にも触れられたし、gitとGithubのアンチパターンが発現しているところがいかにつらいかも身をもって学べたので経験としてはよいかもしれないけれど、どれも二度とゴメンだとおもっている。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           November 2nd, 2013 1:40am
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://diary.jgs.me/post/65701553702" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://diary.jgs.me/post/65701553702" target="_blank" rel="noopener">
               http://diary.jgs.me/post/65701553702
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20131102</span>
-         <span class="unlinked-0-0-15">#1102</span>
+         
+          <span class="unlinked-0-0-15">#1102</span>
         
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ヒュー！苦労してんな！ <span class="unlinked-0-0-15">#20190923</span>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ヒュー！苦労してんな！ 
+          <span class="unlinked-0-0-15">#20190923</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
+            
+                  <li>
                     <a href="https://amp.kbys.tk/5d73dc4becc0400017dd5f9b.html">
                       CI
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5cdbca1d61c8aa0017d14705.html">
-                      カメラという機械の行く末｜深津 貴之 (fladdict)｜note
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd7.html">
+                      置き薬 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3286f8082cf80017a0d4c2.html">
-                      ブログのフォーマット
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0b3.html">
+                      スクリーンセーバーをTumblrの写真にしてみた - e-jigsaw.blogspot.com
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82db0.html">
-                      文化的な夏休み - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d3b.html">
+                      Fetch polyfill not working with Safari Technology Preview · Issue #303 · github/fetch - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c4658f6decd5d0017b43cb1.html">
-                      Storybook Driven Development を試している - dev.to/jgs
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5ccdd094ef77f800177df101.html">
+                      EU4 プレイ日記 その1
                     </a>
                   </li>
                 
