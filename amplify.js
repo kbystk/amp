@@ -1,10 +1,12 @@
 const { writeFileSync } = require('fs')
-const { html } = require('lit-ntml')
+const ntml = require('lit-ntml')
 const parse = require('@progfay/scrapbox-parser')
 const master = require('./data/pub.json')
 const data = require('./data/html.json')
 const dic = require('./data/dic.json')
 const { ga, css } = require('./styles')
+
+const html = ntml.htmlFragment
 
 const nodeRender = async node => {
   switch (node.type) {
@@ -143,10 +145,12 @@ const render = async article => {
       )
     }
   }
-  const res = await html`
+  const res = await ntml.html`
     <!DOCTYPE html>
     <html amp>
-      <head>
+      <head
+        prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#"
+      >
         <meta charset="utf-8" />
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script
@@ -158,6 +162,31 @@ const render = async article => {
           name="viewport"
           content="width=device-width,minimum-scale=1,initial-scale=1"
         />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://amp.kbys.tk/${article.id}.html"
+        />
+        <meta property="og:title" content="${
+          article.title
+        } | I am Electrical machine" />
+        <meta property="og:site_name" content="I am Electrical machine" />
+        ${
+          article.image
+            ? html`
+                <meta name="twitter:card" content="summary_large_image" />
+              `
+            : html`
+                <meta name="twitter:card" content="summary" />
+              `
+        }
+        ${
+          article.image
+            ? html`
+                <meta property="og:image" content="${article.image}" />
+              `
+            : ''
+        }
         <style amp-boilerplate>
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;

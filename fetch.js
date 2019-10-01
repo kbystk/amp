@@ -19,7 +19,7 @@ const main = async () => {
       res.push({
         created: p.created,
         id: p.id,
-        image: json.iamge,
+        image: json.image,
         title: p.title,
         txt,
         updated: p.updated,
