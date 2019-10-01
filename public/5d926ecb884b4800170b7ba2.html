@@ -4,7 +4,7 @@
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e57.html">
+        <meta property="og:url" content="https://amp.kbys.tk/5d926ecb884b4800170b7ba2.html">
         <meta property="og:site_name" content="amp.kbys.tk">
         <meta name="twitter:card" content="summary">
             </head><body>
@@ -151,8 +151,8 @@ blockquote {
   color: #004bad;
 }
         </style>
-        <title>激ヤバ鬼便利日報ツールを Go でリプレースした - dev.jgs.me | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/激ヤバ鬼便利日報ツールを Go でリプレースした - dev.jgs.me">
+        <title>さとなおさん「日本の本当の下り坂」にデータで反論したので、何らかコメントを頂ければ幸いです｜松本健太郎｜note | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/さとなおさん「日本の本当の下り坂」にデータで反論したので、何らかコメントを頂ければ幸いです｜松本健太郎｜note">
       
       
         <amp-analytics type="gtag" data-credentials="include">
@@ -180,133 +180,89 @@ blockquote {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/激ヤバ鬼便利日報ツールを Go でリプレースした - dev.jgs.me">
+            <a href="https://scrapbox.io/jigsaw/さとなおさん「日本の本当の下り坂」にデータで反論したので、何らかコメントを頂ければ幸いです｜松本健太郎｜note">
               スクボで読む
             </a>
           </div>
-          <h1>激ヤバ鬼便利日報ツールを Go でリプレースした - dev.jgs.me</h1>
+          <h1>さとなおさん「日本の本当の下り坂」にデータで反論したので、何らかコメントを頂ければ幸いです｜松本健太郎｜note</h1>
           <div>
             <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="https://github.com/e-jigsaw/journal" target="_blank" rel="noopener">
-              https://github.com/e-jigsaw/journal
+          <a href="https://note.mu/jyaga0716/n/nb459bf6629b4" target="_blank" rel="noopener">
+              さとなおさん「日本の本当の下り坂」にデータで反論したので、何らかコメントを頂ければ幸いです｜松本健太郎｜note
             </a>
           
         </div>
       <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          弊社には日報をメールで送る文化があって(それの如何についてはともかく)、意外と読まれるようなので力入れて書いた方がいろいろな場面でよさそうとのことなのでここ一週間ぐらい日報をいかに楽して書くかに全力を投じてきた。一旦は git の pre-commit hook を使ってメールを送信する「激ヤバ鬼便利日報システム」で落ち着いていた。pre-commit hook は <a href="https://amp.kbys.tk/5d63d0da6c257f00179cc1da">coffee-script</a>
-             で書いていたので coffee が入ってないと使えない欠点があるので布教しやすい何かにリプレースすることを模索していた。
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そこに、先日になって急に Go の熱が燃え上がって Go をはじめたので Go でリプレースすることにした。A tour of Go を途中までやった程度の Go力なので、Go をやるきっかけになった ghq(<a href="https://github.com/motemen/ghq" target="_blank" rel="noopener">
-              https://github.com/motemen/ghq
-            </a>
-          ) などを参考につくった。
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Go は CLI ツールとの相性がとてもよくて、Go がインストールされていれば
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; overflow: scroll;">
-          <code>_</code>
-          <pre><code>% go get github.com/e-jigsaw/journal</code></pre>
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          するだけでコマンドが使えるようになるし、gox (<a href="https://github.com/mitchellh/gox" target="_blank" rel="noopener">
-              https://github.com/mitchellh/gox
-            </a>
-          ) を使えばクロスコンパイルも容易で、他プラットフォームのバイナリもスッと吐けるのであとは github に release をつくるだけでよかった。あと <a href="https://speakerdeck.com/tcnksm/fu-shu-puratutohuomunigoyan-yu-falseturuwopei-bu-suru-number-hikarie-go" target="_blank" rel="noopener">
-              https://speakerdeck.com/tcnksm/fu-shu-puratutohuomunigoyan-yu-falseturuwopei-bu-suru-number-hikarie-go
-            </a>
-          　も参考に homebrew の formura もはじめてつくった(<a href="https://github.com/e-jigsaw/homebrew-journal" target="_blank" rel="noopener">
-              https://github.com/e-jigsaw/homebrew-journal
-            </a>
-          )。
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; overflow: scroll;">
-          <code>_</code>
-          <pre><code>% brew tap e-jigsaw/journal
-% brew install journal</code></pre>
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          で homebrew からのインストールもできるようにした。使い方とかは github の README を参照してほしい。
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          余談だけど、<code>alias j='journal'</code>
-       にすると <code>j c</code>
-       とか <code>j s</code>
-       みたいなコマンドになることに気付いたのでいっそ
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; overflow: scroll;">
-          <code>_</code>
-          <pre><code>alias jk='journal write'
-alias jc='journal comment'
-alias js='journal send'</code></pre>
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          にしてしまうと、日報をつける度にちょっとムフフな気持ちになれる、いや、なれないか。
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          あと、最近話題の Wercker も試しているところで、Go のテストの作法を学んで CI していきたい。
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/06/29/journal-by-go" target="_blank" rel="noopener">
-              http://dev.jgs.me/2014/06/29/journal-by-go
-            </a>
-          
-        </span>
+          <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/4da41c3f742a919e1d676752cf60f9b5/thumb/1000">
+        </amp-img></div>
       
         </div>
       <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="unlinked-0-0-15">#20140629</span>
-         <span class="unlinked-0-0-15">#0629</span>
+          <blockquote> 下り坂をおりるのはもう避けられない。今の日本をこのように表現される方は大勢います。さとなおさんも参照した平田オリザさんしかり、内田樹さんしかり。</blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> </blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> 「坂の上の雲」精神というか、高度経済成長を経て日本は坂を上り切って後は下るだけ…という論評は、はっきり言って若い世代（ギリギリ私も入れてくれ！）は「知らんがな」と思うのです。</blockquote>
+      
+        </div>
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          イイゾ〜〜！
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <br>
+              
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> 第二次世界大戦後、独立を果たして日本は「もう復興需要は終わったから経済成長は戦前止まりだ」と悲観して「もはや戦後ではない」と述べました。</blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> </blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> 第二次世界大戦前、膨張する人口に対して耕作地も雇用先も無い日本は「需要を作らなきゃ」と焦りました。</blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> </blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> 幕末にはペリーが来て開国を迫るし、江戸は何度も火事になるし、富士山は噴火するし…いや、もうどの時代遡ったって「課題」しかないでしょ。</blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> </blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> 課題が解けた場合も解けなかった場合も、それでも時代は確実に刻まれる。その時代を生きる人々が懸命になり、下村治のような経済学者が活躍する時代もあれば、満州軍が暴走して戦争になった時代もありました。</blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> </blockquote>
+      
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <blockquote> それを、どういう尺度を持って「下りる」と言ってるのかは知りませんが、何十年と生きてきた人生の先輩が課題を解決せずに「上がった」つもりになって「下りよう」と表現するとは一体、どういう考え方なんだ。と私は思うのです。</blockquote>
+      
+        </div>
+      <div style="padding-left:1rem; margin-bottom: .5rem;">
+          力強い
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <br>
+              
+        </div>
+      <div style="padding-left:0rem; margin-bottom: .5rem;">
+          <span class="unlinked-0-0-15">#20191001</span>
+         <span class="unlinked-0-0-15">#1001</span>
         
         </div>
       
@@ -314,28 +270,28 @@ alias js='journal send'</code></pre>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
             <li>
-                    <a href="https://amp.kbys.tk/5d63d0da6c257f00179cc1da.html">
-                      coffee-script
+                    <a href="https://amp.kbys.tk/5d69111bcaebee0017a9a161.html">
+                      最近クリップしたページ
                     </a>
                   </li>
                 <li>
-                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d16.html">
-                      Houdini、それはCSSの進化を促すプロジェクト - The future starts today - github.com/e-jigsaw/web
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209cf3.html">
+                      ドキュメント作成時のあるあるアンチパターン20 - Qiita - github.com/e-jigsaw/web
                     </a>
                   </li>
                 <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e3b.html">
-                      texでpngを貼る - dev.jgs.me
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dcb.html">
+                      CertSimple | An nginx config for 2017 - github.com/e-jigsaw/web
                     </a>
                   </li>
                 <li>
-                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0b5.html">
-                      ジャック・ブラック映画の王道！ - ガリバー旅行記 - e-jigsaw.blogspot.com
+                    <a href="https://amp.kbys.tk/5d566a5a9790dd0017da2088.html">
+                      201908
                     </a>
                   </li>
                 <li>
-                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
-                      最近書かれた記事
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e09d.html">
+                      未踏カンファレンスへ行ってきました - e-jigsaw.blogspot.com
                     </a>
                   </li>
                 
