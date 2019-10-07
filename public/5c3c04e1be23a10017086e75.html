@@ -1,8 +1,18 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e1be23a10017086e75.html">
+        <meta property="og:title" content="Yosemite マシンゲットしたので環境を整えた - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary_large_image">
+              
+        
+                <meta property="og:image" content="https://cloud.githubusercontent.com/assets/557961/5437871/eb223848-84b6-11e4-9fa1-76f4560e208f.png">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -180,268 +190,409 @@ blockquote {
           </div>
           <h1>Yosemite マシンゲットしたので環境を整えた - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/dotfiles">
-        </amp-img></div>
-      
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/e-jigsaw/dotfiles" target="_blank" rel="noopener">
+              https://github.com/e-jigsaw/dotfiles
+            </a>
+          
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           まえがき
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           会社でマシンが買い替えられるチャンスみたいなのが舞い込んできたので Mac mini と Macbook Air に換えたいとダメもとで頼んでみたら本当にやってきた。mini を 10.9, Air を 10.10(人柱的な)で運用しようと企んでいたところ、mini のプリインが 10.10 だったので諦めて両方とも 10.10 で運用することにした。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           そのため、2台を別々にセットアップするのが確実にだるそうだったのと、同期に「cask 使ってないとか情弱かよ(意訳)」と煽られたので Package manage as Code 的なことをやろうと思い立ってモリモリやったのでその辺が本旨。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ついでにイチからセットアップしたのでいろいろ備忘録っぽく残しておこうかと。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           homebrew のインストール
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://brew.sh/">
-        </amp-img></div>
       
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="http://brew.sh/" target="_blank" rel="noopener">
+              http://brew.sh/
+            </a>
+          
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          [**** <code>brew file</code>
-      ]
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
+          brew file
+        </span>
+      
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          以前は <code>brew bundle</code>
-       が使えたので <code>Brewfile</code>
-       で管理していたところ、<code>brew bundle</code>
-       が nerf されたので管理を断念していた。今回調べてみて知ったのが <code>brew file</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          以前は 
+        <code>brew bundle</code>
+       が使えたので 
+        <code>Brewfile</code>
+       で管理していたところ、
+        <code>brew bundle</code>
+       が nerf されたので管理を断念していた。今回調べてみて知ったのが 
+        <code>brew file</code>
        である。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/rcmdnk/homebrew-file">
-        </amp-img></div>
-        本家リポジトリ
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/rcmdnk/homebrew-file" target="_blank" rel="noopener">
+              https://github.com/rcmdnk/homebrew-file
+            </a>
+            本家リポジトリ
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/dotfiles/blob/0b0322c01b2b0ece3832c89fb626a90e1ac9961e/Brewfile">
-        </amp-img></div>
-        オレの最高の <code>Brewfile</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/e-jigsaw/dotfiles/blob/0b0322c01b2b0ece3832c89fb626a90e1ac9961e/Brewfile" target="_blank" rel="noopener">
+              https://github.com/e-jigsaw/dotfiles/blob/0b0322c01b2b0ece3832c89fb626a90e1ac9961e/Brewfile
+            </a>
+            オレの最高の 
+        <code>Brewfile</code>
        (執筆時点)
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           (めっちゃ便利)
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           もろもろのインストラクションに従って
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>$ brew install rcmdnk/file/brew-file</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          する。スラッシュ区切りのやつでもろもろインストールできるっぽいのでもしかしたら <code>brew tap</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          する。スラッシュ区切りのやつでもろもろインストールできるっぽいのでもしかしたら 
+        <code>brew tap</code>
        のところは冗長かもしれない。とりあえずそのまま置いてある。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          インストールしたら <code>Brewfile</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          インストールしたら 
+        <code>Brewfile</code>
        のあるリポジトリを設定する。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>$ brew file set_repo -R https://github.com/e-jigsaw/dotfiles.git</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ここなんだけど、<code>README.md</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ここなんだけど、
+        <code>README.md</code>
        には user/repo でいけるという記載があるのだけれど、その記法だと ssh で git clone がかかってまっさらなマシンだと ssh の設定まわりがアレでコケたので https のフルパス指定にしたらうまくいった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ここにかつて <code>brew bundle</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ここにかつて 
+        <code>brew bundle</code>
        で運用していた頃の残骸が残っていたので
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>$ brew file edit</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           でエディタが立ち上がって編集できるのでよしなに書き換える。書き換えたら
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>$ brew file install</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          で書いたパッケージがずんずん入る。いちいち <code>brew file</code>
-       って打つのがダルかったので適当なタイミングで <code>alias bf='brew file'</code>
-       とか <code>alias bfi='brew file install'</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          で書いたパッケージがずんずん入る。いちいち 
+        <code>brew file</code>
+       って打つのがダルかったので適当なタイミングで 
+        <code>alias bf='brew file'</code>
+       とか 
+        <code>alias bfi='brew file install'</code>
        とかして楽をした。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ひとしきりできたら
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>$ brew file push</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          で変更が github に push される。ちなみに、最初なにも考えずに <code>brew file edit</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          で変更が github に push される。ちなみに、最初なにも考えずに 
+        <code>brew file edit</code>
        したらデフォルトさんでコミットされちゃう事件が発生したのでそこは気をつけないといけないとおもった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>Brewfile</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>Brewfile</code>
        の更新を反映させるときは
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>$ brew file pull</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          でいける。コンフリクトとかしたら <code>/usr/local/Library/user_repo</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          でいける。コンフリクトとかしたら 
+        <code>/usr/local/Library/user_repo</code>
        みたいなディレクトリがそれなのでそこへ行って適当に解消してやればよい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          あとは <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://caskroom.io/">
-        </amp-img></div>
-       でパッケージを探して、あったら <code>bfe</code>
-       して <code>bfi</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          あとは 
+            <a href="http://caskroom.io/" target="_blank" rel="noopener">
+              http://caskroom.io/
+            </a>
+           でパッケージを探して、あったら 
+        <code>bfe</code>
+       して 
+        <code>bfi</code>
        する、を繰り返すだけで Package manage as Code みたいなことが実現できる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          (追記 
+          <span class="unlinked-0-0-15">#20191007</span>
+         )
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          caskroom.io から 
+            <a href="https://formulae.brew.sh/cask/" target="_blank" rel="noopener">
+              https://formulae.brew.sh/cask/
+            </a>
+           に変わっているそうです 
+            <a href="https://github.com/kbystk/amp/issues/2" target="_blank" rel="noopener">
+              https://github.com/kbystk/amp/issues/2
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          (追記了)
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           dotfiles を蒔く
         </span>
       
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>$ git clone https://github.com/e-jigsaw/dotfiles.git .ghq/src/github.com/e-jigsaw/dotfiles
 $ cd .ghq/src/github.com/e-jigsaw/dotfiles
@@ -449,213 +600,302 @@ $ git submodule init
 $ git submodule update
 $ sh install.sh</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          順番としては、dotfiles を蒔いて gitconfig を設定して <code>brew file</code>
-       をセットアップするという流れだったので、<code>ghq</code>
-       のことを見越して <code>ghq</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          順番としては、dotfiles を蒔いて gitconfig を設定して 
+        <code>brew file</code>
+       をセットアップするという流れだったので、
+        <code>ghq</code>
+       のことを見越して 
+        <code>ghq</code>
        フレンドリーなところに dotfiles を置いてからインストール(シンボリックリンクをホームに張りまくる)スクリプトを叩くという感じ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           Finder まわりの設定
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://cloud.githubusercontent.com/assets/557961/5437871/eb223848-84b6-11e4-9fa1-76f4560e208f.png">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          最終形態はこんな感じ。Xtrafinder を cask でインストールして、黒背景にしたり上タブにしたりしている。地味に便利なのがフォルダをまとめて上に表示する機能。サイドバーに <code>$HOME/.ghq/src</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          最終形態はこんな感じ。Xtrafinder を cask でインストールして、黒背景にしたり上タブにしたりしている。地味に便利なのがフォルダをまとめて上に表示する機能。サイドバーに 
+        <code>$HOME/.ghq/src</code>
        をいれておくと Finder からも自由にリポジトリ群にアクセスできて便利だったりとか。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           iTerm2
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
           <amp-img class="contain" layout="fill" src="https://cloud.githubusercontent.com/assets/557961/5437997/2191f98a-84b8-11e4-9971-e9c9a4fa4951.png">
         </amp-img></div>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          オレの最高のカラースキームを github 上にあげているので使いたいひとがいればどうぞ -&gt; <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/iTerm-2-Color-Themes/blob/master/thayer.itermcolors">
-        </amp-img></div>
       
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          オレの最高のカラースキームを github 上にあげているので使いたいひとがいればどうぞ -&gt; 
+            <a href="https://github.com/e-jigsaw/iTerm-2-Color-Themes/blob/master/thayer.itermcolors" target="_blank" rel="noopener">
+              https://github.com/e-jigsaw/iTerm-2-Color-Themes/blob/master/thayer.itermcolors
+            </a>
+          
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          フォントは ASCII コードは Adobe の Sourcecode Pro を、日本語は Osaka。それぞれ 18pt。ログインシェルを brew 産 zsh に変えるのをちょっと躊躇ってしまうので iTerm2 のデフォルトシェルを <code>/usr/local/bin/zsh</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          フォントは ASCII コードは Adobe の Sourcecode Pro を、日本語は Osaka。それぞれ 18pt。ログインシェルを brew 産 zsh に変えるのをちょっと躊躇ってしまうので iTerm2 のデフォルトシェルを 
+        <code>/usr/local/bin/zsh</code>
        にして糊口を凌いでいる。タブ開いたときは素の zsh が立ち上がるようになってて、がっつりシェル触るときに tmux を立ち上げるというような運用。なんかに困ったら Terminal.app で素の bash を立ち上げてなんとかする。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           Dock
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           手短に
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           下
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           アイコンサイズ最大
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           自動的に隠す
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           元から入ってるアプリケーションは全部削除
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           起動インジケータをオフ
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           10.9 までは下左寄せで使っていたのだけれど、その機能がどうやら Yosemite で削除されてしまっているらしく、forum 見ても解決法がわからなかったので諦めて下中央でとりあえず運用している。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           Trackpad
         </span>
       
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           スクロール方向反転は気持ち悪いのでオフ
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           Launchpad も使わないのでオフ
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           通知センターも使わないのでオフ
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-3-0-0-7">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-3-0-0-7">
           BetterTouchTool
         </span>
       
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          3本指上で <code>Home</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          3本指上で 
+        <code>Home</code>
        が押される
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          3本指下で <code>End</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          3本指下で 
+        <code>End</code>
        が押される
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           確か SnowLeopard まではこれデフォルトでできたとおもうんだけどできなくなってかなしみ。。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           Alfred
         </span>
       
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          起動は <code>Cmd+Space</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          起動は 
+        <code>Cmd+Space</code>
       
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          cask でいれたアプリケーションを叩くために <code>/opt/homebrew-cask/Caskroom</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          cask でいれたアプリケーションを叩くために 
+        <code>/opt/homebrew-cask/Caskroom</code>
        を Scope に含める
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <code>o Dropbox</code>
-       でフォルダを開く、<code>f hoge</code>
-       でファイル開く、<code>d word</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>o Dropbox</code>
+       でフォルダを開く、
+        <code>f hoge</code>
+       でファイル開く、
+        <code>d word</code>
        で辞書検索
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          以前は <code>g hoge</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          以前は 
+        <code>g hoge</code>
        で Google を検索したりしていたんだけどそんなに使わないことに気付いたので今は使っていない。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           Karabiner
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           cask の Karabiner が古かったので PR 送ったらすげー早さで merge された。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/caskroom/homebrew-cask/pull/8124">
-        </amp-img></div>
       
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/caskroom/homebrew-cask/pull/8124" target="_blank" rel="noopener">
+              https://github.com/caskroom/homebrew-cask/pull/8124
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>private.xml</code>
           <pre><code>&lt;?xml version="1.0"?&gt;
 &lt;root&gt;
@@ -681,179 +921,244 @@ $ sh install.sh</code></pre>
   &lt;/item&gt;
 &lt;/root&gt;</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           という設定を書いて、左右の Shift 空押しで切り替わるようにしている。cmd にしてるひとが多いとおもうけど、cmd だと後続のキーでコマンドが実行されてめんどくさい事態が起きやすかったので Shift にした。Shift だと後続のキーと合わせて認識されても大文字が入力されるだけなのでリカバーがききやすい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           それから、Macbook Air 用に HHK っぽい Remap を書いた。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           Backquote -&gt; Esc
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           delete -&gt; Backquote
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           Backslash -&gt; delete
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           fn+Backslash -&gt; Backslash
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           普段 HHK に慣れすぎて無意識でバックスラッシュを連打してしまうのでまずはこれを変えたかった。そうすると元々の delete が空くので delete にはバッククオートを当てた。あと Esc のつもりでバッククオートも連打してしまうのでここを Esc にした。するとバックスラッシュの行き場がなくなるので、しぶしぶ fn+Backslash でもともとの Backslash が出るようにした。これを XML に書いたんだけど、Modflag に option を設定しないと円マークが出てきてウザかった。順番の方も先に shift との組み合わせを先に書かないと縦棒が出なかった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           あと key repeat を体感に合わせて調整して最高の key repeat を設定した。とても入力がはかどる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           アクセシビリティ
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           Yosemite になってさらにアクセシビリティのアクセシビリティ感が強まったような気がするけど気のせいかなあ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           透明度を下げる
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           カーソルのサイズを大きく
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           通知音が鳴るときに画面を点滅させる
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           慣性スクロールなし
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           ドラッグロックあり
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           この辺設定しとくと結構アクセシビリティ高まる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           メニューバーあたり
         </span>
       
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           Bartender で不要だけどちょっと要ぐらいのやつをまとめる
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           Menumeter で CPU, メモリ, ネットワークのグラフとかを出す
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           ファストユーザスイッチャーを消す
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           まとめ
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Yosemite なマシンが2台きたので Package manage as Code 的なことを試した。実際には Mac mini の方でもろもろ試行錯誤をして <code>Brewfile</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Yosemite なマシンが2台きたので Package manage as Code 的なことを試した。実際には Mac mini の方でもろもろ試行錯誤をして 
+        <code>Brewfile</code>
        を更新して Macbook Air の方にデプロイしてお手軽に環境を構築できることを確認した。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/12/15/setup-yosemite-machines" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2014/12/15/setup-yosemite-machines" target="_blank" rel="noopener">
               http://dev.jgs.me/2014/12/15/setup-yosemite-machines
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20141215</span>
-         <span class="unlinked-0-0-15">#1215</span>
+         
+          <span class="unlinked-0-0-15">#1215</span>
         
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          思い返してみると、快適な環境だったなあ... <span class="unlinked-0-0-15">#20190712</span>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          思い返してみると、快適な環境だったなあ... 
+          <span class="unlinked-0-0-15">#20190712</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d55.html">
-                      キュレーション系サービスの所感 - diary.jgs.me
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5c310e76b8f83c0017d0e0da.html">
+                      パラノーマルアクティビティがちょっとイマイチ...だった人のための映画4本+1 - e-jigsaw.blogspot.com
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dbb.html">
-                      2年前 - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c3d3c336d79810017348bb0.html">
+                      YMOの曲はクリックに対してドラムは前に、ベースは後ろに、シンセはジャストで鳴ってる
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e53b.html">
-                      RetinaMacbookProにWindows8.1をBootcampでインストールする - blog.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cdc.html">
+                      価値を届ける - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df4.html">
-                      スポーツとナショナリズム - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d5a54ae932930001738e58c.html">
+                      ガーディアン・オブ・ザ・ギャラクシー Vol.2
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e4e.html">
-                      Mountain Lion で tumblr のスライドショーをスクリーンセーバーにする - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e68.html">
+                      githubのtimelineをBigQueryで解析する(その2) - dev.jgs.me
                     </a>
                   </li>
                 
