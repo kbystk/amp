@@ -8,9 +8,11 @@
         <meta property="og:title" content="GitHub Actions を外からトリガーする | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/57c92e97d5b4c3f9645bc3822b1f498e/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -189,6 +191,52 @@ blockquote {
           <h1>GitHub Actions を外からトリガーする</h1>
           <div>
             
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5d8492d567095a0017d491da">Scrapbox を中心にしたコンテンツ生成</a>
+            に書いた通り、GitHub Actions で Scrapbox の API を叩いて html を錬成する仕掛けをつくった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          その際には、cron でしかトリガーしないようにしていたのだけど、やっぱり何かを書いた時にすぐにトリガーして生成できた方が嬉しいよな〜とおもった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          GitHub Actions には repository dispatch を受け取ってトリガーする仕組みがあるので、GitHub の API を叩いてやれば Action をキックできる
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/swinton/trigger-repository-dispatch" target="_blank" rel="noopener">
+              https://github.com/swinton/trigger-repository-dispatch
+            </a>
+           を使うと CLI からリクエストを送れてラク
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          とはいえ、いつもかも CLI を使えるわけでもないのでもうちょい簡便にリクエスト送れないかな〜と考えた結果、自前の Telegram の bot から叩けるようにした
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/57c92e97d5b4c3f9645bc3822b1f498e/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          こんな感じ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>@octkit/rest</code>
+       が便利で権限を絞った(
+        <code>repo</code>
+      のみでOK)アクセストークンを渡しておくといい感じにリクエストを送ってくれてよかった
+        </div>
+      
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
                 <br>
@@ -197,7 +245,9 @@ blockquote {
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-          <a href="https://amp.kbys.tk/5d618012c33f180017196af4">#あとで書く</a>
+          <span class="unlinked-0-0-15">#20191008</span>
+         
+          <span class="unlinked-0-0-15">#1008</span>
         
         </div>
       
@@ -206,32 +256,32 @@ blockquote {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5d618012c33f180017196af4.html">
-                      あとで書く
+                    <a href="https://amp.kbys.tk/5d8492d567095a0017d491da.html">
+                      Scrapbox を中心にしたコンテンツ生成
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ce3663a409cb50017ebe72d.html">
-                      なぜMicroservicesか? | SOTA
+                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
+                      最近書かれた記事
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5cf6db04048bb80017f7523d.html">
-                      201906
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d50.html">
+                      コミュニケーションのコスト - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e86.html">
-                      LiveScript がだいぶ馴染んできた - dev.jgs.me
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e12.html">
+                      高専エフェクト - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dd3.html">
-                      Docker to donate containerd to the Cloud Native Computing Foundation - Docker Blog - github.com/e-jigsaw/web
+                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0a9.html">
+                      高専カンファレンスin茨城へ参加してきました - e-jigsaw.blogspot.com
                     </a>
                   </li>
                 
