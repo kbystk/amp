@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e3be23a10017086ea4.html">
+        <meta property="og:title" content="aws cli で複数アカウントを切り替える - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -180,43 +188,54 @@ blockquote {
           </div>
           <h1>aws cli で複数アカウントを切り替える - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           また仕事が激忙で間が空いてしまった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ちゃんと AWS と向き合うのも悪くないかな〜とおもって時間をみつけて整備してみている。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          今日は cli で仕事の AWS アカウントと個人アカウントを切り替えるにはどうすれば...?となって調べてみたら <code>aws</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          今日は cli で仕事の AWS アカウントと個人アカウントを切り替えるにはどうすれば...?となって調べてみたら 
+        <code>aws</code>
        コマンドにちゃんと備わっていた。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="http://uorat.hatenablog.com/entry/2015/10/16/023008" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="http://uorat.hatenablog.com/entry/2015/10/16/023008" target="_blank" rel="noopener">
               AWS CLI のprofileを簡単に切り替える - tail my trail
             </a>
           
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code> (sh)</code>
           <pre><code>✈ aws configure --profile jgs
 AWS Access Key ID [None]: ...
@@ -224,82 +243,111 @@ AWS Secret Access Key [None]: ...
 Default region name [None]: ap-northeast-1
 Default output format [None]: json</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          みたいな感じでプロンプトに入力したら <code>~/.aws</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          みたいな感じでプロンプトに入力したら 
+        <code>~/.aws</code>
        以下のファイルが更新されていた。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           実際に切り替えて使うには
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code> (sh)</code>
           <pre><code>✈ aws s3 ls --profile jgs</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          と <code>profile</code>
-       オプションを付けてやればいいようだ。省略すると <code>default</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          と 
+        <code>profile</code>
+       オプションを付けてやればいいようだ。省略すると 
+        <code>default</code>
        が用いられるようだった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2016/10/20/switch-aws-multiple-account-in-cli" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2016/10/20/switch-aws-multiple-account-in-cli" target="_blank" rel="noopener">
               http://dev.jgs.me/2016/10/20/switch-aws-multiple-account-in-cli
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="unlinked-0-0-15">#1020</span>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#20161020</span>
+         
+          <a href="https://amp.kbys.tk/5db1f9a777119700170ae10e">#1020</a>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5cea9fce226ba60017b44b78.html">
-                      サニー
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1f9a777119700170ae10e.html">
+                      1020
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c73850f10da0f001769f62b.html">
-                      欧米におけるアニマルライツ、人間を動物として扱ってきた歴史（黒人奴隷とか）がすげー影響してる気がするんだよね。「えっ！あの動物人間だったの！？じゃあこれも人間！！！？？？」みたいな。
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d69158354f12e001749e4a1.html">
+                      ジャンゴ繋がれざる者
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3f4ec1470b0b0017f5e253.html">
-                      フランク・ミラーがダークナイト・リターンズを発表したのは29歳のとき。アレックス・ロスがマーベルズを描いたのは24歳のとき。
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d77.html">
+                      Docker だらけの FRESH な動画配信プラットフォーム // Speaker Deck - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209de7.html">
-                      linuxkit/linuxkit: A toolkit for building secure, portable and lean operating systems for containers - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cc9a32f3afc880017f5b841.html">
+                      ファイナルディシジョン
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6cfffec269850017747799.html">
-                      bojand/ghz: Simple gRPC benchmarking and load testing tool
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dfd.html">
+                      インターネットへのパブリッシュ - diary.jgs.me
                     </a>
                   </li>
                 

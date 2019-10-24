@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e37.html">
+        <meta property="og:title" content="socket.io で CORS にハマったメモ - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -180,42 +188,56 @@ blockquote {
           </div>
           <h1>socket.io で CORS にハマったメモ - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>api.hoge.jp</code>
-       で <code>socket.io</code>
-       を走らせてるときに <code>hoge.jp</code>
-       から Websocketで通信しようとしたら案の定 <code>CORS</code>
-       エラーが出てハマった。<code>node.js</code>
-       の <code>Express</code>
-       では適当にミドルウェア書いておけば抜けられるのは知っていたのだけれど、<code>socket.io</code>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>api.hoge.jp</code>
+       で 
+        <code>socket.io</code>
+       を走らせてるときに 
+        <code>hoge.jp</code>
+       から Websocketで通信しようとしたら案の定 
+        <code>CORS</code>
+       エラーが出てハマった。
+        <code>node.js</code>
+       の 
+        <code>Express</code>
+       では適当にミドルウェア書いておけば抜けられるのは知っていたのだけれど、
+        <code>socket.io</code>
        でどうすればいいのかわからなかった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://groups.google.com/forum/#!topic/socket_io/Fkq9Pyc8s6E">
-        </amp-img></div>
       
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://groups.google.com/forum/#!topic/socket_io/Fkq9Pyc8s6E" target="_blank" rel="noopener">
+              https://groups.google.com/forum/#!topic/socket_io/Fkq9Pyc8s6E
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           に従って
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>app = express()
 
@@ -224,58 +246,76 @@ server = http.createServer app
 io = require('socket.io').listen server,
   origins: "hoge.jp:*"</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          と <code>listen</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          と 
+        <code>listen</code>
        するときにオプションで指定できるようだ。アー盛大にハマった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2013/10/18/socket-dot-io-de-cors-nihamatutamemo" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2013/10/18/socket-dot-io-de-cors-nihamatutamemo" target="_blank" rel="noopener">
               http://dev.jgs.me/2013/10/18/socket-dot-io-de-cors-nihamatutamemo
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="unlinked-0-0-15">#1018</span>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#20131018</span>
+         
+          <a href="https://amp.kbys.tk/5db1f92477119700170ae092">#1018</a>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5ceb9c47f965780017e77282.html">
-                      型板ガラス - ガラスの種類辞典
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1f92477119700170ae092.html">
+                      1018
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c310e76b8f83c0017d0e0c2.html">
-                      1991年生まれのわたしの話 - e-jigsaw.blogspot.com
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d4f.html">
+                      Flux Utilsのドキュメント日本語訳 | mae's blog - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e52.html">
-                      WindowFlowからHyperSwitchに変えた - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d6920ead28ed20017bb5ed7.html">
+                      タランティーノ
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5cc9d46078d6190017381c47.html">
-                      ポスクレ
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e82.html">
+                      emo の React 実装をつくった - dev.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e51.html">
-                      iMac買ったらBluetooth使えなかったけどなんとかなった - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c77a1599051230017c30c21.html">
+                      私立恵比寿中学 「明日もきっと70点 feat.東雲めぐ」(short ver.) - YouTube
                     </a>
                   </li>
                 
