@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e3b.html">
+        <meta property="og:title" content="texでpngを貼る - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -180,71 +188,104 @@ blockquote {
           </div>
           <h1>texでpngを貼る - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          TeXで <code>.png</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          TeXで 
+        <code>.png</code>
        ファイルを貼るのがダルかったのでメモ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          画像を貼るときは <code>\includegraphics</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          画像を貼るときは 
+        <code>\includegraphics</code>
        というクソ長いタグを使う。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>\includegraphics[width=8cm]{hoge.png}</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          同じディレクトリに <code>hoge.png</code>
-       を置いておいたら、<code>hoge.bb</code>
-       がねえよ！って怒られるのでググってみると <code>extractbb</code>
-       というコマンドで <code>.bb</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          同じディレクトリに 
+        <code>hoge.png</code>
+       を置いておいたら、
+        <code>hoge.bb</code>
+       がねえよ！って怒られるのでググってみると 
+        <code>extractbb</code>
+       というコマンドで 
+        <code>.bb</code>
        ファイルに変換しておかなればいけないらしい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>% extractbb hoge.png</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          すると、<code>hoge.xbb</code>
-       というファイルが生成されるのでこれでいいのかとおもったらやっぱりダメで、<code>hoge.bb</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          すると、
+        <code>hoge.xbb</code>
+       というファイルが生成されるのでこれでいいのかとおもったらやっぱりダメで、
+        <code>hoge.bb</code>
        にリネームしてやらないといけない。このあたりを自動化するスクリプトを準備しようとおもった。あとでな！
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          このままだと、図番とかがつけられないので <code>figure</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          このままだと、図番とかがつけられないので 
+        <code>figure</code>
        ブロックを使って図番やキャプションをつける。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>  \begin{figure}
     \includegraphics[width=8cm]{hoge.png}
@@ -252,57 +293,74 @@ blockquote {
     \label{fig:1}
   \end{figure}</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           みたいな感じ。これだと、これを書いたところに挿入されない。なるほど、論文とかはちょっと意味わからん位置に図があったりするわけか、と納得。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2013/10/23/texdepngwotie-ru" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2013/10/23/texdepngwotie-ru" target="_blank" rel="noopener">
               http://dev.jgs.me/2013/10/23/texdepngwotie-ru
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="unlinked-0-0-15">#1023</span>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#20131023</span>
+         
+          <a href="https://amp.kbys.tk/5db1d863a580410017f84f63">#1023</a>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5d6914fe7621b500177c5f76.html">
-                      ネタバレ
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1d863a580410017f84f63.html">
+                      1023
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0b1.html">
-                      自転車買ったよ！(2週間ぶり・2回目) - e-jigsaw.blogspot.com
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d63.html">
+                      tumblrとYahooの件 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e4a.html">
-                      png を eps に変換 - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d7f9126f73b750017535679.html">
+                      CNN.co.jp : サウジの石油施設にドローン攻撃、生産半減　フーシが犯行声明
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e2be23a10017086e8f.html">
-                      mad programming - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1d581037e98001739771c.html">
+                      1025
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d5a7b9aac2da80017797698.html">
-                      ベビーカーにぶつかられたのだけど、「ヘタですいませ〜ん！」と謝られて面白かったしそういうスタンスでいてほしいと思った
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d2a7fdb647b3e00170f973e.html">
+                      RAIJINTEK OPHION EVO
                     </a>
                   </li>
                 
