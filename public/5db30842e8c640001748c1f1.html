@@ -4,8 +4,8 @@
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5c2b9af65513850017f82cd0.html">
-        <meta property="og:title" content="解放勝利 - diary.jgs.me | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/5db30842e8c640001748c1f1.html">
+        <meta property="og:title" content="React Hooks の useReducer と向き合う | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -153,8 +153,8 @@ blockquote {
   color: #004bad;
 }
         </style>
-        <title>解放勝利 - diary.jgs.me | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/解放勝利 - diary.jgs.me">
+        <title>React Hooks の useReducer と向き合う | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/React Hooks の useReducer と向き合う">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -182,57 +182,105 @@ blockquote {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/解放勝利 - diary.jgs.me">
+            <a href="https://scrapbox.io/jigsaw/React Hooks の useReducer と向き合う">
               スクボで読む
             </a>
           </div>
-          <h1>解放勝利 - diary.jgs.me</h1>
+          <h1>React Hooks の useReducer と向き合う</h1>
           <div>
             
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          週末は寿司食べた以外はだいたいゲームしてて、引き続きCiv:BEをメインにやっていた。The Forestがセールだったのでうっかり買ってしまった。先住民怖い。
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>useState</code>
+       で誤魔化していたのだけど、使ってみたら案外便利かも？とおもってちょっと素振りした
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Civ:BEは、至高アフィニティーの建築勝利であるところの「解放勝利」を達成した。超越ではポイントを合算してそれが一定値を超えたら勝利だったけども、解放では「解放ゲート」を建造したあとに軍事ユニットを地球に送り込むという名目で軍事ユニットを解放ゲートに投入して一定ポイント貯まると勝利ということになる。この特性上、終盤に軍事ユニットが凄まじい勢いで減っていくので敵国に攻められたらだいぶ厳しかったが戦略資源を放出したりしてご機嫌をとってしのぐ、というような感じだった。毎ターン1ユニットしか送り込めないので、ANGELのような高火力ユニットを予め準備できているとよさげ。
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          仕事で Apollo を使っていて便利なのだけど、別件では未だに REST なので、Apollo っぽいインターフェースで REST を叩けることを目標にする
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          アフィニティーに関しても、単発でとりまくるよりは序盤のうちはアフィニティーを気にせずに数を稼いだ方がユニットをアップグレードできていいかなと思ってきた。あと、好みの問題だけど調和のユニットよりは至高のユニットの方がカッコよかった。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          次は純血でテラフォーミングに励む予定。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
                 <br>
               
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          October 27th, 2014 10:32am
+        <div style="padding-left:1rem; overflow: scroll;">
+          <code>index.tsx</code>
+          <pre><code>enum DATA_FETCH_ACTION {
+  FETCH_COMPLETE = 'FETCH_COMPLETE'
+}
+
+interface DataFetchState&lt;T&gt; {
+  loading: boolean
+  error: Maybe&lt;Error&gt;
+  data: Maybe&lt;T&gt;
+}
+
+interface DataFetchAction&lt;T&gt; {
+  type: DATA_FETCH_ACTION
+  payload: T
+  error?: boolean
+}
+
+const dataFetchReducer = &lt;T&gt;(
+  state: DataFetchState&lt;T&gt;,
+  action: DataFetchAction&lt;T&gt;
+): DataFetchState&lt;T&gt; =&gt; {
+  switch (action.type) {
+    case DATA_FETCH_ACTION.FETCH_COMPLETE: {
+      return {
+        ...state,
+        loading: false,
+        data: action.payload
+      }
+    }
+  }
+  return state
+}
+
+const useRequest = &lt;T&gt;(url: string) =&gt; {
+  const [state, dispatch] = useReducer&lt;
+    React.Reducer&lt;DataFetchState&lt;T&gt;, DataFetchAction&lt;T&gt;&gt;
+  &gt;(dataFetchReducer, {
+    loading: true,
+    error: null,
+    data: null
+  })
+  useEffect(() =&gt; {
+    fetch(url)
+      .then(res =&gt; res.json())
+      .then(json =&gt; {
+        if (json.data) {
+          dispatch({
+            type: DATA_FETCH_ACTION.FETCH_COMPLETE,
+            payload: json.data as T
+          })
+        } else {
+          // TODO
+        }
+      })
+  }, [])
+  return state
+}</code></pre>
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <span class="level-0-0-5 ">
-          original: 
-            <a href="http://diary.jgs.me/post/101048060059" target="_blank" rel="noopener">
-              http://diary.jgs.me/post/101048060059
-            </a>
-          
-        </span>
-      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ざっくり共通リクエスト部分
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-          <span class="unlinked-0-0-15">#20141027</span>
-         
-          <a href="https://amp.kbys.tk/5db1f9afa580410017f85c1d">#1027</a>
-        
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:1rem; overflow: scroll;">
+          <code>index.tsx</code>
+          <pre><code>export const useFoo = ({ id }: Params) {
+  const state = useRequest&lt;FooResponse&gt;(`/api/foo/${id}`)
+  return state
+}</code></pre>
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -242,10 +290,36 @@ blockquote {
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Civ:BE どころか 
-          <span class="unlinked-0-0-15">#Civilization</span>
-         やってない人が読むとなんのこっちゃだな 
-          <span class="unlinked-0-0-15">#20190102</span>
+          こんな感じで hook を用意しておくと、コンポーネント側から Apollo ライクに呼び出してハンドリングしてあげるだけでアプリケーションが組み立てられて便利
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          まだエラーハンドリングとかはやってないのでおいおいということで...
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#react</span>
+         
+          <span class="unlinked-0-0-15">#javascript</span>
+         
+          <span class="unlinked-0-0-15">#typescript</span>
+         
+          <span class="unlinked-0-0-15">#hooks</span>
+        
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#20191025</span>
+         
+          <a href="https://amp.kbys.tk/5db1d581037e98001739771c">#1025</a>
         
         </div>
       
@@ -254,32 +328,32 @@ blockquote {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5db1f9afa580410017f85c1d.html">
-                      1027
+                    <a href="https://amp.kbys.tk/5db1d581037e98001739771c.html">
+                      1025
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c7b72a7425eb90017dae48f.html">
-                      「関西電気保安グルーヴ」│関西電気保安協会【公式】
+                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
+                      最近書かれた記事
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d5a5475e05aaf0017082637.html">
-                      Mad Max: Fury Road
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209de5.html">
+                      Angular最新トピックとテクニックをng-japan代表のlacoさんに聞いてきた！（前編） | HTML5Experts.jp - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5cea9fce226ba60017b44b78.html">
-                      サニー
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d3b.html">
+                      Fetch polyfill not working with Safari Technology Preview · Issue #303 · github/fetch - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5db1e71e0dd4930017bd89ab.html">
-                      util.promisify が追加された - from scratch
+                    <a href="https://amp.kbys.tk/5d879d1611a2190017a8d9c0.html">
+                      メジャー3rdアルバム解禁。進化するブクガはどこへ向かうのか――Maison book girl、メンバー全員インタビュー | ダ・ヴィンチニュース
                     </a>
                   </li>
                 
