@@ -9,7 +9,8 @@
     "index": "node index.js",
     "prepare": "node node_modules/@jigsaw/sb-scripts/prepare.js",
     "sitemap": "node sitemap.js",
-    "start": "yarn prepare && yarn dic && yarn fetch && yarn amplify && yarn index && yarn sitemap"
+    "views": "node views.js",
+    "start": "yarn prepare && yarn dic && yarn fetch && yarn amplify && yarn index && yarn sitemap && yarn views"
   },
   "license": "MIT",
   "devDependencies": {
