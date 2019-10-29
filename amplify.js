@@ -1,6 +1,6 @@
 const { writeFileSync } = require('fs')
 const ntml = require('lit-ntml')
-const parse = require('@progfay/scrapbox-parser')
+const { parse } = require('@progfay/scrapbox-parser')
 const master = require('./data/pub.json')
 const data = require('./data/html.json')
 const dic = require('./data/dic.json')
