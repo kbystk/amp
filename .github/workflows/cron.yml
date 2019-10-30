@@ -15,6 +15,7 @@ jobs:
     - run: |
         yarn install
         yarn start
+        yarn views
     - env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
