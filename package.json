@@ -7,16 +7,17 @@
     "dic": "node node_modules/@jigsaw/sb-scripts/dic.js",
     "fetch": "node fetch.js",
     "index": "node index.js",
-    "prepare": "node node_modules/@jigsaw/sb-scripts/prepare.js",
+    "prepare_": "node node_modules/@jigsaw/sb-scripts/prepare.js",
     "sitemap": "node sitemap.js",
     "views": "node views.js",
-    "start": "yarn prepare && yarn dic && yarn fetch && yarn amplify && yarn index && yarn sitemap && yarn views"
+    "start": "yarn prepare_ && yarn dic && yarn fetch && yarn amplify && yarn index && yarn sitemap"
   },
   "license": "MIT",
   "devDependencies": {
     "@jigsaw/sb-scripts": "^0.0.4",
     "@progfay/scrapbox-parser": "^3.0.0",
     "babel-eslint": "^10.0.3",
+    "date-fns": "^2.6.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
