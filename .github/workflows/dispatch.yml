@@ -10,12 +10,9 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - env:
-        PIXE_LA_TOKEN: ${{ secrets.PIXE_LA_TOKEN }}
-      run: |
+    - run: |
         yarn install
         yarn start
-        yarn views
     - env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
