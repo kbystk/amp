@@ -2,6 +2,7 @@ const { writeFileSync, readFileSync } = require('fs')
 const fetch = require('isomorphic-unfetch')
 const format = require('date-fns/format')
 const subDays = require('date-fns/subDays')
+const getHours = require('date-fns/getHours')
 const master = require('./data/pub.json')
 
 const PATH = './public/COUNT'
@@ -16,7 +17,10 @@ const main = async () => {
     },
     method: 'POST',
     body: JSON.stringify({
-      date: format(subDays(new Date(), 1), 'yyyyMMdd'),
+      date: format(
+        subDays(new Date(), getHours(new Date()) === 19 ? 0 : 1),
+        'yyyyMMdd'
+      ),
       quantity: diff.toString()
     })
   })
