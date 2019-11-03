@@ -4,14 +4,14 @@
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5dbc43cf1a4e760017e4da08.html">
-        <meta property="og:title" content="・・・・・・・・・について - Qiita | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/5dbddf84329d8800177717f7.html">
+        <meta property="og:title" content="Scrapbox の閲覧数を Pixela で記録する | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary_large_image">
               
         
-                <meta property="og:image" content="https://gyazo.com/4ef9277c205e81af706ddcb2b4c888f9/raw">
+                <meta property="og:image" content="https://pixe.la/v1/users/jgs/graphs/sbv.svg">
               
         <style amp-boilerplate="">
           body {
@@ -155,8 +155,8 @@ blockquote {
   color: #004bad;
 }
         </style>
-        <title>・・・・・・・・・について - Qiita | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/・・・・・・・・・について - Qiita">
+        <title>Scrapbox の閲覧数を Pixela で記録する | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/Scrapbox の閲覧数を Pixela で記録する">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -184,27 +184,101 @@ blockquote {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/・・・・・・・・・について - Qiita">
+            <a href="https://scrapbox.io/jigsaw/Scrapbox の閲覧数を Pixela で記録する">
               スクボで読む
             </a>
           </div>
-          <h1>・・・・・・・・・について - Qiita</h1>
+          <h1>Scrapbox の閲覧数を Pixela で記録する</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-            <a href="https://qiita.com/a-r-i/private/efb6064c168d8767ab87" target="_blank" rel="noopener">
-              ・・・・・・・・・について - Qiita
-            </a>
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://pixe.la/v1/users/jgs/graphs/sbv.svg">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          元ネタは
+              <a href="https://amp.kbys.tk/5db1e285f76c840017cf2294">Scrapbox への更新がどれくらい活発におこなわれているかを Pixela で可視化する - えいのうにっき</a>
+            
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          自分は更新の方は日付とかもろもろの方で活性は分かるとおもった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一方で、閲覧数は Scrapbox が巧妙にそれを隠すというか、見られる/アクセスがたくさんくるというところに重きを置いてないのは重々分かっている
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           
+            <a href="https://pixe.la/v1/users/june29/graphs/scrapbox-june29v.html" target="_blank" rel="noopener">
+              https://pixe.la/v1/users/june29/graphs/scrapbox-june29v.html
+            </a>
+           を見て、やっぱりそういうのもいいなとおもったので記録する仕組みをつくった
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          このスクボから錬成している 
+            <a href="https://amp.kbys.tk" target="_blank" rel="noopener">
+              https://amp.kbys.tk
+            </a>
+           は Google Analytics が入っているのでだいたい分かるようになっている
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          スクボ自体はページにいって i を押さないとわからない状態だった
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/4ef9277c205e81af706ddcb2b4c888f9/thumb/1000">
-        </amp-img></div>
+                <br>
+              
+        </div>
       
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5d8492d567095a0017d491da">Scrapbox を中心にしたコンテンツ生成</a>
+            に書いたが、このスクボを基に毎朝バッチで html を錬成している
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          GitHub Actions の cron でやっている
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          その際に全ページの views も記録されているので、集計して前日の総数と差分をとってその日の閲覧数とした
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          コードは 
+            <a href="https://github.com/kbystk/amp/blob/7b5ed38c9480145d64080b3c472f410749bdc79c/views.js" target="_blank" rel="noopener">
+              https://github.com/kbystk/amp/blob/7b5ed38c9480145d64080b3c472f410749bdc79c/views.js
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          こんな感じ
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          TZ の関係でちょっと微妙なコードになってるけど妥協で...
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">views</a>
+             といページを切って pin しておいた
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -215,15 +289,9 @@ blockquote {
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-          <span class="unlinked-0-0-15">#・・・・・・・・・</span>
+          <a href="https://amp.kbys.tk/5dbded9316019800170cd783">#20191103</a>
          
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <span class="unlinked-0-0-15">#20171102</span>
-         
-          <a href="https://amp.kbys.tk/5dbd6eba1b8ef30017aa066e">#1102</a>
+          <a href="https://amp.kbys.tk/5dbde3481b8ef30017aa7cf2">#1103</a>
         
         </div>
       
@@ -232,32 +300,38 @@ blockquote {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5dbd6eba1b8ef30017aa066e.html">
-                      1102
+                    <a href="https://amp.kbys.tk/5dbde3481b8ef30017aa7cf2.html">
+                      1103
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d6fcc5f1489dd001752a1a7.html">
-                      Path of Exile の hideout に送るコマンド
+                    <a href="https://amp.kbys.tk/5dbded9316019800170cd783.html">
+                      20191103
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d25.html">
-                      justify-content - CSS | MDN - github.com/e-jigsaw/web
+                    <a href="https://amp.kbys.tk/5db1e285f76c840017cf2294.html">
+                      Scrapbox への更新がどれくらい活発におこなわれているかを Pixela で可視化する - えいのうにっき
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5db401c597e22c0017333981.html">
-                      Rainway | Play Your Games Anywhere
+                    <a href="https://amp.kbys.tk/5d8492d567095a0017d491da.html">
+                      Scrapbox を中心にしたコンテンツ生成
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e544.html">
-                      Perfume 4th Tour in DOME LEVEL3 に行って圧倒されてきた - blog.jgs.me
+                    <a href="https://amp.kbys.tk/5dbbc52057d9010017438a87.html">
+                      views
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
+                      最近書かれた記事
                     </a>
                   </li>
                 
