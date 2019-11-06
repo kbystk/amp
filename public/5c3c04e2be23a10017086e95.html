@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e2be23a10017086e95.html">
+        <meta property="og:title" content="require.resolve で npm3 に耐える - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -180,92 +188,122 @@ blockquote {
           </div>
           <h1>require.resolve で npm3 に耐える - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>power-assert</code>
-       がビルトインされたし <code>ava</code>
-       つかってみっか〜とおもって <code>gulp-mocha</code>
-       を <code>gulp-ava</code>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>power-assert</code>
+       がビルトインされたし 
+        <code>ava</code>
+       つかってみっか〜とおもって 
+        <code>gulp-mocha</code>
+       を 
+        <code>gulp-ava</code>
        に置き換えてみたらエラった。こいつぁプルリクチャンスだぜーとコード読んだり修正してみたりしたんだけど、解決方法が分からなかったので issue を立ててみたら一瞬で解決して OSS 楽しいなーとおもった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/sindresorhus/gulp-ava/issues/2">
-        </amp-img></div>
       
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          結局のところ、npm3 だと <code>node_modules</code>
-       が flat になってしまって <code>gulp-ava/node_modules/.bin/ava</code>
-       ではなくプロジェクトルートの <code>node_modules/.bin</code>
-       にエイリアスが張られてしまうことによって引き起こされている。そこで、これを解決するのが [<code>require.resolve</code>
-       <a href="https://nodejs.org/api/globals.html#globals_require_resolve" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/sindresorhus/gulp-ava/issues/2" target="_blank" rel="noopener">
+              https://github.com/sindresorhus/gulp-ava/issues/2
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          結局のところ、npm3 だと 
+        <code>node_modules</code>
+       が flat になってしまって 
+        <code>gulp-ava/node_modules/.bin/ava</code>
+       ではなくプロジェクトルートの 
+        <code>node_modules/.bin</code>
+       にエイリアスが張られてしまうことによって引き起こされている。そこで、これを解決するのが [
+        <code>require.resolve</code>
+       
+            <a href="https://nodejs.org/api/globals.html#globals_require_resolve" target="_blank" rel="noopener">
               https://nodejs.org/api/globals.html#globals_require_resolve
             </a>
           ] で、こいつに &lt;パッケージ名/ファイル名&gt; を食わせてやればそいつのファイルパスを返してくれる API なのだー。(知らなかった)
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           npm の issues を見てると同様の事案が起きてるように見受けられるのでこれで解決できるかもしれない。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2015/11/07/require-resolve-for-npm3" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2015/11/07/require-resolve-for-npm3" target="_blank" rel="noopener">
               http://dev.jgs.me/2015/11/07/require-resolve-for-npm3
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="unlinked-0-0-15">#1107</span>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#20151107</span>
+         
+          <a href="https://amp.kbys.tk/5dc2e464d243c800176838aa">#1107</a>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c3c04e3be23a10017086ea5.html">
-                      Chrome Dev Tool でアニメーションの編集がしやすかった - dev.jgs.me
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5dc2e464d243c800176838aa.html">
+                      1107
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dee.html">
-                      Ubuntu, SUSE Linux, and Fedora are all coming to the Windows Store - The Verge - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d61e50d755c5d0017e647b6.html">
+                      アルフレッド
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d805026784ef30017a54f1b.html">
-                      正直早く帰って、次の日にレコーディングしても別に何も変わらない
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d8b.html">
+                      Nitrous.IO試してみた - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2945c6b5e66300171a512c.html">
-                      2018
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0df.html">
+                      H8 on Mac - e-jigsaw.blogspot.com
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5cc47075fe771c00170fbb4b.html">
-                      CW
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d78.html">
+                      大規模なリファクタリング - diary.jgs.me
                     </a>
                   </li>
                 
