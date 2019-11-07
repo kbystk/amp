@@ -351,9 +351,9 @@ blockquote {
      image: 'https://gyazo.com/d57fea8a143650375af1c8bba1fc1370/raw'
  })
  scrapbox.PageMenu('emoji').addItem({
-     title: "load emojis from /emoji",
+     title: "load emojis from /jgsemj",
      onClick: () =&gt; {
-     	 fetch('/api/pages/emoji?limit=10000')
+     	 fetch('/api/pages/jgsemj?limit=10000')
        	.then( res =&gt; res.text())
         	.then( text =&gt; {
          	const data = JSON.parse( text );
@@ -365,8 +365,8 @@ blockquote {
                      	}
                			emojis.push({
                  			name: page.title,
-                    			path: '/emoji/' + page.title,
-                      		icon: `/api/pages/emoji/${page.title}/icon`,
+                    			path: '/jgsemj/' + page.title,
+                      		icon: `/api/pages/jgsemj/${page.title}/icon`,
                  		})
                		})
             })
@@ -625,20 +625,20 @@ blockquote {
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d723be8e1d29200178cad64.html">
-                      tricoro
+                    <a href="https://amp.kbys.tk/5d773d005d08a100172b3c10.html">
+                      yarn why | Yarn
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e4a.html">
-                      png を eps に変換 - dev.jgs.me
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d8f.html">
+                      前田憂佳さんのこと - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5db9479249bc38001792592c.html">
-                      一緒に働く人に求めること
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dde.html">
+                      むかしのインターネット - diary.jgs.me
                     </a>
                   </li>
                 
