@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e53.html">
+        <meta property="og:title" content="zsh のキーバインドを変える - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>zsh のキーバインドを変える - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/zsh のキーバインドを変える - dev.jgs.me">
@@ -180,116 +212,163 @@ blockquote {
           </div>
           <h1>zsh のキーバインドを変える - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           最近3ヶ月に1回ぐらいやってくる「エディタとかシェルを強くしたい」月間に突入していて、継続的にdotfilesの手入れをしている。本日の手入れはキーバインド。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/dotfiles/commit/428ee60610c88ac61d632e09d5e7239b67a16820">
-        </amp-img></div>
       
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/e-jigsaw/dotfiles/commit/428ee60610c88ac61d632e09d5e7239b67a16820" target="_blank" rel="noopener">
+              https://github.com/e-jigsaw/dotfiles/commit/428ee60610c88ac61d632e09d5e7239b67a16820
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           zshはデフォルトで(だよね?)Emacsのキーバインドでキャレットを操作できる(C-p,C-nとか)のでEかVかでいうとVな僕でも、さすがにシェル上ではEmacsのキーバインドが便利でよく使っている。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ところで、先日買ったHHKBには上下左右キーがなくて <code>fn-[;/'</code>
-       で入力できるのだけれども、fnキーの位置が押しにくいので代わりに <code>C-wsad</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ところで、先日買ったHHKBには上下左右キーがなくて 
+        <code>fn-[;/'</code>
+       で入力できるのだけれども、fnキーの位置が押しにくいので代わりに 
+        <code>C-wsad</code>
        でバインドしている。(FPS脳)
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          これめっちゃ便利で、左手だけで上下左右押せるので楽なんだけど、<code>C-a</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          これめっちゃ便利で、左手だけで上下左右押せるので楽なんだけど、
+        <code>C-a</code>
        が使えなくなる致命的な欠陥を抱えていてどうしたものかなあ、みたいな感じになっていた。そもそもzsh側で設定できるの知らなくて、それがわかったのが収穫。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>bindkey {key} {function}</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          でバインドされる。ちなみに、今回は <code>^E^E</code>
-       をいわゆる <code>C-a</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          でバインドされる。ちなみに、今回は 
+        <code>^E^E</code>
+       をいわゆる 
+        <code>C-a</code>
        に割り当てたのでCtrl押しながらeを連打すると先頭に移動できる。便利だー。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           gitのよく使うコマンドとかをこのbindkeyで設定しておけば、エイリアスを打つこともなく呼吸ができて便利かもしれないのでいずれ試そうとおもう。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/05/04/zsh-becomes" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2014/05/04/zsh-becomes" target="_blank" rel="noopener">
               http://dev.jgs.me/2014/05/04/zsh-becomes
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20140504</span>
-         <span class="unlinked-0-0-15">#0504</span>
+         
+          <span class="unlinked-0-0-15">#0504</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5ccdd459f0a59900178f675d.html">
-                      Civ4
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d1d.html">
+                      沖縄暮らし #7 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d39.html">
-                      Revenge of the Reblog Monster - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5dca86feb046b90017aa280b.html">
+                      そもそもRX100はどういう使い方をすると最高なのか | Sony DSC-RX100だけで撮るブログ
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209de4.html">
-                      「Web Componentsが来る！CSS設計はどうなる？」―CSSのエキスパートに聞いてみた！ | HTML5Experts.jp - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1f4af84f6370017f89236.html">
+                      周年日記
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d57fc769491990017647788.html">
-                      「戦争の語り部」が少なくなった今だからこそ…。 ワシ、コレを読むたび、泣けてくるんよ
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d60.html">
+                      スプラッターとJホラー - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d63d507a25cfd0017dace67.html">
-                      ジェシー・アイゼンバーグ
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cca736fa6d45d0017845338.html">
+                      201905
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

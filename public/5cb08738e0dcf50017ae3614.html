@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5cb08738e0dcf50017ae3614.html">
+        <meta property="og:title" content="Mojave にアップグレードして Karabiner が壊れたのを直した | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>Mojave にアップグレードして Karabiner が壊れたのを直した | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/Mojave にアップグレードして Karabiner が壊れたのを直した">
@@ -180,87 +212,120 @@ blockquote {
           </div>
           <h1>Mojave にアップグレードして Karabiner が壊れたのを直した</h1>
           <div>
-            <div style="padding-left:1rem; margin-bottom: .5rem;">
-          iPad Pro を買って、久々に <span class="unlinked-0-0-15">#Duet</span>
-         を使おうとしたら <span class="unlinked-0-0-15">#AirPlay</span>
+            
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          iPad Pro を買って、久々に 
+          <span class="unlinked-0-0-15">#Duet</span>
+         を使おうとしたら 
+          <span class="unlinked-0-0-15">#AirPlay</span>
          越しにしか接続できなくなってて困った
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          調べてみると最新の <span class="unlinked-0-0-15">#Mojave</span>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          調べてみると最新の 
+          <span class="unlinked-0-0-15">#Mojave</span>
          にアップグレードするとハードウェアアクセラレーションもされて接続できるらしい
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           というわけで、重い腰を上げてアップグレードした
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           ら、無事 Duet は動いた
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           最初は 10.14 を使ってて全然動かなかったが、10.14.4 まで上げたら動くようになった
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          が、今度は <span class="unlinked-0-0-15">#Karabiner</span>
-         で使っていた左右の <span class="unlinked-0-0-15">#Shift</span>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          が、今度は 
+          <span class="unlinked-0-0-15">#Karabiner</span>
+         で使っていた左右の 
+          <span class="unlinked-0-0-15">#Shift</span>
          単押しで英数/かなの切り替えをオンにすると Shift + マウスクリックで選択ができなくなってしまった
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          こちらも調べてみると <a href="https://pqrs.org/osx/karabiner/complex_modifications/#japanese" target="_blank" rel="noopener">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          こちらも調べてみると 
+            <a href="https://pqrs.org/osx/karabiner/complex_modifications/#japanese" target="_blank" rel="noopener">
               https://pqrs.org/osx/karabiner/complex_modifications/#japanese
             </a>
            が rev 3 に更新されていた
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           これを参考に config を書き換えたら共存できるようになった
         </div>
-      <div style="padding-left:3rem; margin-bottom: .5rem;">
-          <a href="https://gist.github.com/e-jigsaw/92a897b3c6de600afeaf703d471ac0cd" target="_blank" rel="noopener">
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          
+            <a href="https://gist.github.com/e-jigsaw/92a897b3c6de600afeaf703d471ac0cd" target="_blank" rel="noopener">
               https://gist.github.com/e-jigsaw/92a897b3c6de600afeaf703d471ac0cd
             </a>
           
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           助かった
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <a href="https://amp.kbys.tk/5cb0b1ebd4dfb40017612628">#20190412</a>
-         <span class="unlinked-0-0-15">#0412</span>
+         
+          <span class="unlinked-0-0-15">#0412</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
+            
+                  <li>
                     <a href="https://amp.kbys.tk/5cb0b1ebd4dfb40017612628.html">
                       20190412
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d47aba52d45740017795556.html">
-                      Stop blaming the video games you absolute morons
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d74.html">
+                      Civ5 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d1e.html">
-                      平成ガメラシリーズ - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d0d.html">
+                      Resource (pre)loading - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e2be23a10017086e90.html">
-                      Wercker v2その2 - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d723cdf71d4250017a1d114.html">
+                      SPA
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d69158fcaebee0017a9a58a.html">
-                      ジャンゴ 繋がれざる者
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d57fa9171b7e00017bde2dd.html">
+                      本当の多様性社会はそれなりに不愉快 - taizooo
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

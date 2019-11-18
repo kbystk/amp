@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e47.html">
+        <meta property="og:title" content="coffee-script を 1.7 にしたら mocha が死ぬときの対応 - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>coffee-script を 1.7 にしたら mocha が死ぬときの対応 - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/coffee-script を 1.7 にしたら mocha が死ぬときの対応 - dev.jgs.me">
@@ -180,97 +212,134 @@ blockquote {
           </div>
           <h1>coffee-script を 1.7 にしたら mocha が死ぬときの対応 - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="https://amp.kbys.tk/5d63d0da6c257f00179cc1da">coffee-script</a>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5d63d0da6c257f00179cc1da">coffee-script</a>
              のバージョン1.7がリリースされたので、アップデートしたら mocha が
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>nction (exports, require, module, __filename, __dirname) { describe "
 
 SyntaxError: Unexpected string
 ...</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           というエラーで死ぬようになったので調べてみたところ
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="https://github.com/visionmedia/mocha/commit/a807007661e098484a682db9f6bbe3177a0f416b" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/visionmedia/mocha/commit/a807007661e098484a682db9f6bbe3177a0f416b" target="_blank" rel="noopener">
               describing how to compile CoffeeScript 1.7 · a807007 · visionmedia/mocha
             </a>
           
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          1.7+ では、<code>mocha.opts</code>
-       もしくは CLI のオプション <code>--compilers coffee:coffee-script</code>
-       を <code>--compilers coffee:coffee-script/register</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          1.7+ では、
+        <code>mocha.opts</code>
+       もしくは CLI のオプション 
+        <code>--compilers coffee:coffee-script</code>
+       を 
+        <code>--compilers coffee:coffee-script/register</code>
        に変えなくてはいけないとのこと。ここを直すだけで通るようになった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/02/03/update-coffee-script-with-mocha" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2014/02/03/update-coffee-script-with-mocha" target="_blank" rel="noopener">
               http://dev.jgs.me/2014/02/03/update-coffee-script-with-mocha
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20140203</span>
-         <span class="unlinked-0-0-15">#0203</span>
+         
+          <span class="unlinked-0-0-15">#0203</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
+            
+                  <li>
                     <a href="https://amp.kbys.tk/5d63d0da6c257f00179cc1da.html">
                       coffee-script
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0e8.html">
-                      カナザワ映画祭に行ってきました！ - 四日目 - e-jigsaw.blogspot.com
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d7236c55c7ff500170638f6.html">
+                      映画の感想テンプレ
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0be.html">
-                      明日はHokuriku.rb×高専カンファレンス! - e-jigsaw.blogspot.com
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e32.html">
+                      nginxでサブドメインの指定 - dev.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d6018030afc650017b3d0d6.html">
-                      ガル・ガドット
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db6b91869bf3000171cf7db.html">
+                      Ayo.js について - from scratch
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dc8.html">
-                      SpeedCurve: Monitor front-end performance - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cb56a9c0b6fde00177eaaa7.html">
+                      74歳画家、カメラより精巧に描く理由　ボックスアート達人のこだわり - withnews（ウィズニュース）
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

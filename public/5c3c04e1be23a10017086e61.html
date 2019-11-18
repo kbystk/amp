@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e1be23a10017086e61.html">
+        <meta property="og:title" content="api blueprint のインデントでつまずいた - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>api blueprint のインデントでつまずいた - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/api blueprint のインデントでつまずいた - dev.jgs.me">
@@ -180,138 +212,209 @@ blockquote {
           </div>
           <h1>api blueprint のインデントでつまずいた - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           TL;DR
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <code>API Blueprint</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>API Blueprint</code>
        の markdown は 4スペース
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           さて、
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>synth</code>
-       や <code>rendr</code>
-       的な発想で <code>front</code>
-       と <code>back</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>synth</code>
+       や 
+        <code>rendr</code>
+       的な発想で 
+        <code>front</code>
+       と 
+        <code>back</code>
        を分けて開発する潮流がいよいよキテる感じを感じ取ったので今のうちにおれの最高の Webサービス開発ノウハウを貯めておこうとおもって試行錯誤している。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>synth</code>
-       は <code>Angular</code>
-       にべったりでちょっと触る気力が起きないので、消去法的に <code>rendr</code>
-       かなという話なんだけど、<code>rendr</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>synth</code>
+       は 
+        <code>Angular</code>
+       にべったりでちょっと触る気力が起きないので、消去法的に 
+        <code>rendr</code>
+       かなという話なんだけど、
+        <code>rendr</code>
        は他に APIサーバがある前提の FW なのでむかしズコーってなった思い出があった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そこへ <code>API Blueprint</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          そこへ 
+        <code>API Blueprint</code>
        が出てきて、
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          1. <code>API Blueprint</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          1. 
+        <code>API Blueprint</code>
        で API のドキュメントを策定する
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          2. front は <code>API Blueprint</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          2. front は 
+        <code>API Blueprint</code>
        でモックサーバを建てて開発スタート
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          3. back は <code>API Blueprint</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          3. back は 
+        <code>API Blueprint</code>
        をテストとして開発スタート
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          というようなフローが実現できるのではと思い至った。ちなみに、<code>rendr</code>
-       を用いる場合 <code>rendr</code>
-       が front になる。back は <code>restify</code>
-       とかで API に専念したような構成にすればいいんじゃないかとおもう。ちなみに、<code>~fy</code>
-       みたいなやつは <code>browserfy</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          というようなフローが実現できるのではと思い至った。ちなみに、
+        <code>rendr</code>
+       を用いる場合 
+        <code>rendr</code>
+       が front になる。back は 
+        <code>restify</code>
+       とかで API に専念したような構成にすればいいんじゃないかとおもう。ちなみに、
+        <code>~fy</code>
+       みたいなやつは 
+        <code>browserfy</code>
        の系列なのかと判断する傾向にあるので名前がちょっとびみょい。。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そういうわけでやっと本題なんだけど、<code>API Blueprint</code>
-       の書式でだいぶハマった。書けども書けどもパーサからエラーが返ってくるし、エラーが返ってくる割には行番号ぐらいしか分からないのでなにがダメなのかさっぱりわからなかった。いろいろと試行錯誤するに、<span class="level-0-0-5 ">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          そういうわけでやっと本題なんだけど、
+        <code>API Blueprint</code>
+       の書式でだいぶハマった。書けども書けどもパーサからエラーが返ってくるし、エラーが返ってくる割には行番号ぐらいしか分からないのでなにがダメなのかさっぱりわからなかった。いろいろと試行錯誤するに、
+        <span class="level-0-0-5 ">
           インデントが 2スペースだと死んで 4スペースだと通る
         </span>
-      ってことに気付いた。ドキュメントが 4スペで書いてあったら横着せずに 4スペいれろってことですね。そういうわけで、<code>API Blueprint</code>
-       を書くときにはエディタの設定を 4スペにしないとダルい。とはいえ、<code>API Blueprint</code>
-       の拡張子が <code>.md</code>
-       のやつもあれば <code>.apib</code>
-       のやつもあって混乱している。<code>.apib</code>
+      ってことに気付いた。ドキュメントが 4スペで書いてあったら横着せずに 4スペいれろってことですね。そういうわけで、
+        <code>API Blueprint</code>
+       を書くときにはエディタの設定を 4スペにしないとダルい。とはいえ、
+        <code>API Blueprint</code>
+       の拡張子が 
+        <code>.md</code>
+       のやつもあれば 
+        <code>.apib</code>
+       のやつもあって混乱している。
+        <code>.apib</code>
        にしてもらえると拡張子マッチさせてインデント差し替えられるから便利なのだけれど。。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          エディタでいうと Atom のプレビュープラグインは既にあるので、<code>linter-apib</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          エディタでいうと Atom のプレビュープラグインは既にあるので、
+        <code>linter-apib</code>
        があるといいのかなーと。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/08/20/api-blueprint-indent" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2014/08/20/api-blueprint-indent" target="_blank" rel="noopener">
               http://dev.jgs.me/2014/08/20/api-blueprint-indent
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#0820</span>
         
         </div>
@@ -319,33 +422,44 @@ blockquote {
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d15.html">
-                      Make Tumblr Rick Again - diary.jgs.me
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5dc7ea89e050220017c34fa2.html">
+                      1110
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d63.html">
-                      tumblrとYahooの件 - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db5bebd5af19600179dd08a.html">
+                      蜜蜂と遠雷(映画版) 感想 (ネタバレがあります)
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d38b7e22168b30017c0d108.html">
-                      労働がもうつらいから社会の一員をやめたい
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d28.html">
+                      LGのディスプレイ(27MU67-B)とラトックのHDMIセレクタ(RP-HDSW31-4K)を組み合わせる時の注意点 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82da4.html">
-                      ぶひぶひだらだら - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d6b0ffb0bc4f300173182de.html">
+                      ストレンジャー・シングス
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5cc9a35dc80e2a00170ff6dc.html">
-                      アイアンマン2
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209db4.html">
+                      GLSL作曲入門 - Qiita - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

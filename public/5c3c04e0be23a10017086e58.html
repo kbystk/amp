@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e58.html">
+        <meta property="og:title" content="ghq と gopath の兼ね合い - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>ghq と gopath の兼ね合い - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/ghq と gopath の兼ね合い - dev.jgs.me">
@@ -180,146 +212,212 @@ blockquote {
           </div>
           <h1>ghq と gopath の兼ね合い - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-4-0-0-8">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-4-0-0-8">
           TL;DR
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <code>$GOPATH</code>
-       を <code>~/.ghq</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>$GOPATH</code>
+       を 
+        <code>~/.ghq</code>
        にした
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <code>ghq.root</code>
-       を <code>~/.ghq/src</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>ghq.root</code>
+       を 
+        <code>~/.ghq/src</code>
        にした
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-3-0-0-7">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-3-0-0-7">
           詳細
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/dotfiles/commit/23d70e1d30f9f23b20ee97cdb39cde1dbad1eec1">
-        </amp-img></div>
       
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ghq マジ便利だな！ワッハッハ！と、何も考えずに <code>$GOPATH</code>
-       を <code>~/.go</code>
-       に、<code>ghq.root</code>
-       を <code>~/.ghq</code>
-       にしてたら、手元の go のリポジトリが重複することに気付いたので、ディレクトリ名を <code>.repos</code>
-       とか <code>.projects</code>
-       にしようとしたんだけど、どうにもしっくりこなかったのでそのまま <code>~/.ghq</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/e-jigsaw/dotfiles/commit/23d70e1d30f9f23b20ee97cdb39cde1dbad1eec1" target="_blank" rel="noopener">
+              https://github.com/e-jigsaw/dotfiles/commit/23d70e1d30f9f23b20ee97cdb39cde1dbad1eec1
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ghq マジ便利だな！ワッハッハ！と、何も考えずに 
+        <code>$GOPATH</code>
+       を 
+        <code>~/.go</code>
+       に、
+        <code>ghq.root</code>
+       を 
+        <code>~/.ghq</code>
+       にしてたら、手元の go のリポジトリが重複することに気付いたので、ディレクトリ名を 
+        <code>.repos</code>
+       とか 
+        <code>.projects</code>
+       にしようとしたんだけど、どうにもしっくりこなかったのでそのまま 
+        <code>~/.ghq</code>
        にすることにした。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/astaxie/build-web-application-with-golang/blob/master/ja/ebook/01.3.md">
-        </amp-img></div>
       
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Go でビルドしたバイナリを <code>$GOPATH/bin</code>
-       に移すのは <code>go install</code>
-       で出来るので、パッケージをアップデートしたりするときは適宜当該リポジトリへ行って <code>git pull</code>
-       して <code>go install</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/ja/ebook/01.3.md" target="_blank" rel="noopener">
+              https://github.com/astaxie/build-web-application-with-golang/blob/master/ja/ebook/01.3.md
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Go でビルドしたバイナリを 
+        <code>$GOPATH/bin</code>
+       に移すのは 
+        <code>go install</code>
+       で出来るので、パッケージをアップデートしたりするときは適宜当該リポジトリへ行って 
+        <code>git pull</code>
+       して 
+        <code>go install</code>
        すればいい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/06/30/ghq-gopath-and-shin-o-muhammad" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2014/06/30/ghq-gopath-and-shin-o-muhammad" target="_blank" rel="noopener">
               http://dev.jgs.me/2014/06/30/ghq-gopath-and-shin-o-muhammad
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#0630</span>
         
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ここで軽い気持ちで <code>.ghq</code>
-       にしたせいで後々 webpack の watch が走らない悲劇に見舞われることになる... <span class="unlinked-0-0-15">#20190114</span>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ここで軽い気持ちで 
+        <code>.ghq</code>
+       にしたせいで後々 webpack の watch が走らない悲劇に見舞われることになる... 
+          <span class="unlinked-0-0-15">#20190114</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d1c.html">
-                      Variable Fontについて - console.blog(self); - github.com/e-jigsaw/web
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db6d05adee6b1001718eb9e.html">
+                      ドイツ極右政党、州議会選で「メルケル首相の与党下し」第2党に - BBCニュース
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d91.html">
-                      Re: Re:「開催する」を目標にするのはよくない - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d67.html">
+                      5月の帰省 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d52543d5910fc00173b4e03.html">
-                      Google Chrome EV表示の終焉 - ぼちぼち日記
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dd9.html">
+                      Transfer Learning - Machine Learning's Next Frontier - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209df3.html">
-                      Codenvy | Cloud Workspaces for Development Teams - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cca736fa6d45d0017845338.html">
+                      201905
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c57ddc8a5fcbf0017d330b6.html">
-                      Noises Off... (1992) - IMDb
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a334a595ea90017209dfc.html">
+                      ES Modules への橋渡しとしての nomodule 属性 | blog.jxck.io - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e1be23a10017086e78.html">
+        <meta property="og:title" content="Haskell で Web サーバをつくってみる - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>Haskell で Web サーバをつくってみる - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/Haskell で Web サーバをつくってみる - dev.jgs.me">
@@ -180,38 +212,52 @@ blockquote {
           </div>
           <h1>Haskell で Web サーバをつくってみる - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://adit.io/posts/2013-04-15-making-a-website-with-haskell.html">
-        </amp-img></div>
       
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="http://adit.io/posts/2013-04-15-making-a-website-with-haskell.html" target="_blank" rel="noopener">
+              http://adit.io/posts/2013-04-15-making-a-website-with-haskell.html
+            </a>
+          
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           を見ながら Scotty で Web サーバをつくってみる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-3-0-0-7">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-3-0-0-7">
           Haskell のインストール
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ brew install ghc
 ==&gt; Installing ghc dependency: gmp
@@ -225,18 +271,24 @@ blockquote {
 ==&gt; Pouring ghc-7.8.3.mavericks.bottle.1.tar.gz
 🍺  /usr/local/Cellar/ghc/7.8.3: 5742 files, 724M</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           brew で。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ brew install cabal-install
 ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/cabal-install-1.20.0.3_1.mavericks.bottle.1.tar.gz
@@ -248,51 +300,73 @@ Bash completion has been installed to:
 ==&gt; Summary
 🍺  /usr/local/Cellar/cabal-install/1.20.0.3_1: 5 files, 18M</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          次に <code>cabal-install</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          次に 
+        <code>cabal-install</code>
       。どうやら brew のやつは古いっぽくてアップデートを求められたのでアップデート。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ cabal install cabal-install</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          [*** <code>cabal sandbox init</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          [*** 
+        <code>cabal sandbox init</code>
       ]
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          なんか <code>cabal sandbox</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          なんか 
+        <code>cabal sandbox</code>
        を使うといいらしいので使う。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          [*** <code>todo.cabal</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          [*** 
+        <code>todo.cabal</code>
        を写経]
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>name:                todo
 version:             0.0.1
@@ -328,19 +402,26 @@ executable todo
                      , wai-extra
                      , time</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          [*** <code>Main.hs</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          [*** 
+        <code>Main.hs</code>
        を写経]
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>{-# LANGUAGE OverloadedStrings #-}
 import Web.Scotty
@@ -349,21 +430,28 @@ main = scotty 3000 $ do
   get "/" $ do
     html "Hello World!!"</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-3-0-0-7">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-3-0-0-7">
           エラーが出る
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ cabal install
 Resolving dependencies...
@@ -378,26 +466,36 @@ Note: when using a sandbox, all packages are required to have consistent
 dependencies. Try reinstalling/unregistering the offending packages or
 recreating the sandbox.</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ちょっとよくわからないです。。。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ので、大人しく <code>cabal init</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ので、大人しく 
+        <code>cabal init</code>
        することにした。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ cabal init
 Package name? [default: haskell-webserver-sample]
@@ -468,26 +566,36 @@ Generating haskell-webserver-sample.cabal...
 
 You may want to edit the .cabal file and add a Description field.</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           生成されたファイルはというと
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>haskell-webserver-sample.cabal</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>haskell-webserver-sample.cabal</code>
       :
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>-- Initial haskell-webserver-sample.cabal generated by cabal init.  For
 -- further documentation, see http://haskell.org/cabal/users-guide/
@@ -515,28 +623,40 @@ executable haskell-webserver-sample
   -- hs-source-dirs:
   default-language:    Haskell2010</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>LICENSE</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>LICENSE</code>
        も勝手に生成してくれてて優しい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          たぶん <code>scotty</code>
-       がないよっていわれるだろうなとおもいつつ <code>cabal install</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          たぶん 
+        <code>scotty</code>
+       がないよっていわれるだろうなとおもいつつ 
+        <code>cabal install</code>
        してみる
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>Main.hs:2:8:
     Could not find module ‘Web.Scotty’
@@ -546,83 +666,120 @@ haskell-webserver-sample-0.1.0.0 failed during the building phase. The
 exception was:
 ExitFailure 1</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ウッス。<code>haskell-webserver-sample.cabal</code>
-       の <code>build-depends</code>
-       に <code>scotty</code>
-       を追加して <code>cabal install</code>
-       しなおす。するとずるずる〜っと依存の解決をしてくれるのでしばらく待つ。すると <code>.cabal-sandbox/bin/haskell-webserver-sample</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ウッス。
+        <code>haskell-webserver-sample.cabal</code>
+       の 
+        <code>build-depends</code>
+       に 
+        <code>scotty</code>
+       を追加して 
+        <code>cabal install</code>
+       しなおす。するとずるずる〜っと依存の解決をしてくれるのでしばらく待つ。すると 
+        <code>.cabal-sandbox/bin/haskell-webserver-sample</code>
        にバイナリができているのであとはそいつを実行すると
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ .cabal-sandbox/bin/haskell-webserver-sample
 Setting phasers to stun... (port 3000) (ctrl-c to quit)</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           あとは
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ curl http://localhost:3000
 Hello World!!%</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           wa~i!!
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-3-0-0-7">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-3-0-0-7">
           名前を表示するぞ
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          チュートリアルの次がルーティングの項目だったので、<code>GET /</code>
-       で <code>name</code>
-       を querystring で受けたら名前を出すやつをつくる。querystring は <code>name &lt;- param "name"</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          チュートリアルの次がルーティングの項目だったので、
+        <code>GET /</code>
+       で 
+        <code>name</code>
+       を querystring で受けたら名前を出すやつをつくる。querystring は 
+        <code>name &lt;- param "name"</code>
        みたいな感じで受け取れるようだ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>Main.hs</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>Main.hs</code>
       :
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>{-# LANGUAGE OverloadedStrings #-}
 import Web.Scotty
@@ -633,55 +790,79 @@ main = scotty 3000 $ do
     name &lt;- param "name"
     text $ mconcat ["あけまして", name, "おめでとう"]</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          なにも考えずに <code>"あけまして" ++ name ++ "おめでとう"</code>
-       ってやったらエラーが出てダメだった。チュートリアルにあるとおり <code>mconcat</code>
-       を使うとできる。ちなみに <code>mconcat</code>
-       は <code>Data.Monoid</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          なにも考えずに 
+        <code>"あけまして" ++ name ++ "おめでとう"</code>
+       ってやったらエラーが出てダメだった。チュートリアルにあるとおり 
+        <code>mconcat</code>
+       を使うとできる。ちなみに 
+        <code>mconcat</code>
+       は 
+        <code>Data.Monoid</code>
        を import しないといけなかった。とりあえずこれで
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>✈ curl http://localhost:3000/?name=yeah
 あけましてyeahおめでとう%</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          yeah!(ところで <code>Monoid</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          yeah!(ところで 
+        <code>Monoid</code>
        って何)
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ここまでやって、json で返すのを試そうとしてたら日本酒が完全にまわって倒れたので寝ました。あけましておめでとう。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/12/31/making-web-server-with-haskell" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2014/12/31/making-web-server-with-haskell" target="_blank" rel="noopener">
               http://dev.jgs.me/2014/12/31/making-web-server-with-haskell
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#1231</span>
         
         </div>
@@ -689,33 +870,44 @@ main = scotty 3000 $ do
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d50.html">
-                      Flux – Dispatcherのドキュメント【日本語訳】と実装のポイント | mae's blog - github.com/e-jigsaw/web
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db03460ad897e0017abc218.html">
+                      HEROIC VERSE 初段
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df1.html">
-                      卒研とラーメン - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e10.html">
+                      まゆゆさん首位に関してのコメント - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0ef.html">
-                      B級スプラッタホラー - ハロウィン - e-jigsaw.blogspot.com
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5ce29e9a70dc220017a12303.html">
+                      人間交差点でライブを見てからずーっと聴いてる曲を歌いました。本当にかっこよくて憧れのシンガーの1人です。
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d3e.html">
-                      ホーリーモーターズ - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db43a6007e847001796f771.html">
+                      おとはすちゃ〜❤︎ いちばんよく話してる気がする、、 ステージでもずっとお隣いさせて もらいました 🥰💗 ゲームいっしょしたい、したい！
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d60187112a4660017354819.html">
-                      DCEU
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5dc7ea6f2eb34b0017fb3219.html">
+                      how to buy clothes // Speaker Deck
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

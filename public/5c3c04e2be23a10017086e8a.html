@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e2be23a10017086e8a.html">
+        <meta property="og:title" content="npm の scoped-modules 試してみた - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>npm の scoped-modules 試してみた - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/npm の scoped-modules 試してみた - dev.jgs.me">
@@ -180,94 +212,130 @@ blockquote {
           </div>
           <h1>npm の scoped-modules 試してみた - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="http://blog.npmjs.org/post/116936804365/solving-npms-hard-problem-naming-packages" target="_blank" rel="noopener">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="http://blog.npmjs.org/post/116936804365/solving-npms-hard-problem-naming-packages" target="_blank" rel="noopener">
               The npm Blog — solving npm’s hard problem: naming packages
             </a>
           
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          という記事が出ていて、ついに npm で <code>@ユーザ名/パッケージ名</code>
-       という感じでパッケージ管理できるようになった。これを試しついでに最近あまり手入れしてなかった <code>tmpl</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          という記事が出ていて、ついに npm で 
+        <code>@ユーザ名/パッケージ名</code>
+       という感じでパッケージ管理できるようになった。これを試しついでに最近あまり手入れしてなかった 
+        <code>tmpl</code>
        を scoped modules で公開してみた。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="https://www.npmjs.com/package/@jigsaw/tmpl" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://www.npmjs.com/package/@jigsaw/tmpl" target="_blank" rel="noopener">
               @jigsaw/tmpl
             </a>
           
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ついでに LiveScript に変更したりなんやかんやしたけど、テンプレート関連を一括で書き換えるのが気合いが足りなかったので一旦 publish までやっちゃったから動かなかったりする。。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           はてさて、一部で待望している人が多かったこの機能、どうなるでしょうね。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2015/05/05/npm-scoped-modules" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2015/05/05/npm-scoped-modules" target="_blank" rel="noopener">
               http://dev.jgs.me/2015/05/05/npm-scoped-modules
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20150505</span>
-         <span class="unlinked-0-0-15">#0505</span>
+         
+          <span class="unlinked-0-0-15">#0505</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82db2.html">
-                      Papers, Please!が尋常じゃないぐらい面白い - diary.jgs.me
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1e285f76c840017cf2294.html">
+                      Scrapbox への更新がどれくらい活発におこなわれているかを Pixela で可視化する - えいのうにっき
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d63cfc240dd5a0017266109.html">
-                      スプリット
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cb35959e064430017bbf8cc.html">
+                      統一地方選2019
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e522.html">
-                      Twitterの全文ダウンロードがはじまったので早速ダウンロードしてみたら日本語が文字化けしています - blog.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d3f.html">
+                      stackとNixを使って安定したビルド環境を作る - Qiita - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5ccdd094ef77f800177df101.html">
-                      EU4 プレイ日記 その1
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5dbd6d2e6524760017c28bb8.html">
+                      ティーチインのQ&amp;Aは難しい
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d20.html">
-                      Docker と Kubernetes を使って『変化に強いインフラ』を作る by 坂部 広大 | Wantedly Engineer Blog - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1d2e284f6370017f875fb.html">
+                      HEXA - Vincross
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

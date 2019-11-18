@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c62e57e119c8100176e4813.html">
+        <meta property="og:title" content="React v16.8 雑感 | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>React v16.8 雑感 | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/React v16.8 雑感">
@@ -180,83 +212,118 @@ blockquote {
           </div>
           <h1>React v16.8 雑感</h1>
           <div>
-            <div style="padding-left:1rem; margin-bottom: .5rem;">
+            
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#React</span>
          の v16.8 が気付いたらリリースされていて、v16.7の肩透かしもあったので、今回は hooks は～含まれて～～～～？？？る！！
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           ついに stable に hooks がやってきた！
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           ということで alpha からの変更点などをみつつ早速いろいろ試した
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Suspense for Data Fetch はロードマップではまだ先のアナウンスになっていたのでそこまで期待していたわけではなかったが、hooks とうまいこと組み合わせたらなんとか現行の仕様でもそれっぽい動きができるのではないか...?と試したものの、やっぱりダメで先行実装を調べていくと <code>useRef</code>
-       が <code>ref</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Suspense for Data Fetch はロードマップではまだ先のアナウンスになっていたのでそこまで期待していたわけではなかったが、hooks とうまいこと組み合わせたらなんとか現行の仕様でもそれっぽい動きができるのではないか...?と試したものの、やっぱりダメで先行実装を調べていくと 
+        <code>useRef</code>
+       が 
+        <code>ref</code>
        以外のオブジェクトを格納できることを利用して結構無理くり Suspense に Data の待ちを渡すことができるようだが、さすがにまだプロダクトで使うのは尚早な感じがする
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
-          <code>throw</code>
-       した <code>Promise</code>
-       の中で <code>useState</code>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>throw</code>
+       した 
+        <code>Promise</code>
+       の中で 
+        <code>useState</code>
        の返り値の関数を呼べばええんちゃうんか、という雑なアテでトライしたが無限ループに入ってしまってダメだった...
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これが <code>useState</code>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          これが 
+        <code>useState</code>
        じゃなければ動くので、何らかの用途には使えるかもしれない
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今のところは、末端のコンポーネントなどで <code>useState</code>
-       や <code>useContext</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          今のところは、末端のコンポーネントなどで 
+        <code>useState</code>
+       や 
+        <code>useContext</code>
        らへんを細々つかっていくのがベターかな...?
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           先般、吸う会で hooks によってコンポーネントの粒度の切り方が大きく変わってくるのではないか？という話をしていたが、実際のところどういう形がベストプラクティスかはまだ分からないので探り探りやっていくかなあ...
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Suspense for Data Fetch (<code>react-cache</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Suspense for Data Fetch (
+        <code>react-cache</code>
        が主かなあ？)がとても楽しみなのと、Concurrent Mode も未だ unstable なのでここらも早く stable になってイイ感じになってほしいナ...
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20190213</span>
-         <span class="unlinked-0-0-15">#0213</span>
+         
+          <a href="https://amp.kbys.tk/5db1d8fb12e7bc0017b73c9b">#0213</a>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5cb4529567529a001779870b.html">
-                      【柳川市観光PRビデオ】SAGEMON GIRLS　さげもんガールズ - YouTube
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1d8fb12e7bc0017b73c9b.html">
+                      0213
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd5.html">
-                      インターネット最高 - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d5f.html">
+                      いい会社 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d05.html">
-                      Serverless Architecture // Speaker Deck - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e539.html">
+                      iOS7 の動く壁紙っぽいインタラクションをWebでやる - blog.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cda.html">
-                      35人学級の話 - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d752133379b680017d637ff.html">
+                      PoE 3.8 島流し日誌 その2
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d32.html">
-                      ノンデザイナーズ・デザインブックが20周年らしい - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d9f39e6e189930017cf1ad2.html">
+                      20191010
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     
