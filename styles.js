@@ -86,6 +86,32 @@ const styles = {
   },
   unlinked: {
     color: '#004bad'
+  },
+  moreProfile: {
+    textAlign: 'center',
+    margin: '2rem 0',
+    '& a': {
+      background:
+        'linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%)',
+      borderRadius: '2rem',
+      padding: '1rem',
+      color: '#fff',
+      fontWeight: 'bold',
+      textShadow: '0px 1px 2px #333'
+    }
+  },
+  donation: {
+    textAlign: 'center',
+    marginTop: '2rem',
+    '& a': {
+      background:
+        'linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%)',
+      borderRadius: '2rem',
+      padding: '1rem',
+      color: '#fff',
+      fontWeight: 'bold',
+      textShadow: '0px 1px 2px #333'
+    }
   }
 }
 
