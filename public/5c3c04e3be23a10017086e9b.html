@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e3be23a10017086e9b.html">
+        <meta property="og:title" content="npm run-scripts から watch する - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>npm run-scripts から watch する - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/npm run-scripts から watch する - dev.jgs.me">
@@ -180,34 +212,50 @@ blockquote {
           </div>
           <h1>npm run-scripts から watch する - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          先日 <code>npm-run-all</code>
-       を使ってビルドスクリプトなどを <code>npm run-script</code>
-       に寄せるようにしたが(<div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://dev.jgs.me/2015/10/28/alpine-linux.html">
-        </amp-img></div>
-      )これに <code>gulp.watch</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          先日 
+        <code>npm-run-all</code>
+       を使ってビルドスクリプトなどを 
+        <code>npm run-script</code>
+       に寄せるようにしたが(
+            <a href="http://dev.jgs.me/2015/10/28/alpine-linux.html" target="_blank" rel="noopener">
+              http://dev.jgs.me/2015/10/28/alpine-linux.html
+            </a>
+          )これに 
+        <code>gulp.watch</code>
        的な機構を載せようという試み。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          これまでは若干面倒ながらも Atom で <code>cmd+b</code>
-       でもってビルドをしていたのだけれど、さすがに面倒になってきたので watch して自動でビルドするように変更した。<code>npm-run-all</code>
-       が glob のインターフェイスを持っているので、できれば glob のインターフェイスで watch するファイルを指定してコマンドを走らせたい。探してみたところ、<code>chokidar-cli</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          これまでは若干面倒ながらも Atom で 
+        <code>cmd+b</code>
+       でもってビルドをしていたのだけれど、さすがに面倒になってきたので watch して自動でビルドするように変更した。
+        <code>npm-run-all</code>
+       が glob のインターフェイスを持っているので、できれば glob のインターフェイスで watch するファイルを指定してコマンドを走らせたい。探してみたところ、
+        <code>chokidar-cli</code>
        というパッケージを使えばあっさりだった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code> (js)</code>
           <pre><code>"scripts": {
   "watch": "npm-run-all -p watch:*",
@@ -215,83 +263,114 @@ blockquote {
   "watch:jade": "chokidar '**/*.jade' -c 'npm run build:jade'"
 }</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          というような感じで指定してやると <code>npm run watch</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          というような感じで指定してやると 
+        <code>npm run watch</code>
        で監視が走るようになる。これに
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code> (js)</code>
           <pre><code>"scripts": {
   "dev": "npm-run-all clean build -p watch serve",
   "serve": "static -p $npm_package_config_PORT $npm_package_config_DEST"
 }</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>node-static</code>
-       でサーブするようにしていれば <code>npm run dev</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>node-static</code>
+       でサーブするようにしていれば 
+        <code>npm run dev</code>
        でサーブと監視を開始することができる。便利。あとは Atom か Notification center あたりにビルド完了を notify したいなあ〜。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2015/11/24/watch-by-npm-run-scripts" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2015/11/24/watch-by-npm-run-scripts" target="_blank" rel="noopener">
               http://dev.jgs.me/2015/11/24/watch-by-npm-run-scripts
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20151124</span>
-         <span class="unlinked-0-0-15">#1124</span>
+         
+          <span class="unlinked-0-0-15">#1124</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e525.html">
-                      Windows8/WindowsRT向けTumblrクライアント「Reblog Monster」を作ってみて便利だったことや苦しんだことなど - blog.jgs.me
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5d6fcc5f1489dd001752a1a7.html">
+                      Path of Exile の hideout に送るコマンド
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e5f.html">
-                      shields.io でバッジのガタガタが直せるっぽい - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cd911fd98dd4300171923fa.html">
+                      【速報】中国ＳＦの雄、劉慈欣『三体』ついに2019年早川書房より刊行決定｜Hayakawa Books &amp; Magazines（β）
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d01c29e3ceaf10017a5cb41.html">
-                      iPhone Xs の強制再起動
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5da17f1940f7e900175afcb5.html">
+                      土木工学から台所へ。世界の台所探検家の今までとこれから｜岡根谷実里 | 世界の台所探検家｜note
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c62e847f4ba4b00171aff0f.html">
-                      会社は宗教
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1d39ba580410017f84c18.html">
+                      Pearson English Readers Level 3 by Various on ピアソン・ジャパン株式会社
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d61e4e3c344a20017173464.html">
-                      マーク・ザッカーバーグ
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db261c9b8a12c0017015db8.html">
+                      danvk/source-map-explorer: Analyze and debug space usage through source maps
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

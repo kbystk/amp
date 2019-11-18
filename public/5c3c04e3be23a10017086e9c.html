@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e3be23a10017086e9c.html">
+        <meta property="og:title" content="fetch の今 - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>fetch の今 - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/fetch の今 - dev.jgs.me">
@@ -180,105 +212,147 @@ blockquote {
           </div>
           <h1>fetch の今 - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <a href="https://amp.kbys.tk/5d723cdf71d4250017a1d114">SPA</a>
-             作るときに Ajax が絡むときは Github の <a href="https://github.com/github/fetch" target="_blank" rel="noopener">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5d723cdf71d4250017a1d114">SPA</a>
+             作るときに Ajax が絡むときは Github の 
+            <a href="https://github.com/github/fetch" target="_blank" rel="noopener">
               fetch
             </a>
            を使うようにしていたのだが、Browserify や Webpack でバンドルしようとするとそれが考慮されていないので死ぬ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そこで、<a href="https://github.com/matthew-andrews/isomorphic-fetch" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          そこで、
+            <a href="https://github.com/matthew-andrews/isomorphic-fetch" target="_blank" rel="noopener">
               isomorphic-fetch
             </a>
-           を使いましょうという話だが、<code>require</code>
+           を使いましょうという話だが、
+        <code>require</code>
        し忘れたまま開発していたが Chrome だと fetch が既に実装されているので気付かないままだった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          モバイルの対応をするために iOS の <a href="https://amp.kbys.tk/5d73e6aed8c364001792515c">Safari</a>
-             で確認してたときになぜかリクエストが発火してなかったので気付くに至った。一方、iOS8 以降であれば <code>Promise</code>
-       は使えるようなので polyfill は使わなくてよかった。ただ、Mobile Safari だと <code>undefined</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          モバイルの対応をするために iOS の 
+              <a href="https://amp.kbys.tk/5d73e6aed8c364001792515c">Safari</a>
+             で確認してたときになぜかリクエストが発火してなかったので気付くに至った。一方、iOS8 以降であれば 
+        <code>Promise</code>
+       は使えるようなので polyfill は使わなくてよかった。ただ、Mobile Safari だと 
+        <code>undefined</code>
        に文字列を食わせてるのにエラーが出なくて、気付くのが遅くなった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code> (livescript)</code>
           <pre><code>if fetch is undefined then fetch = require \fetch</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           と一行加えるだけだったんだけど、非対応ブラウザのために polyfill 載せるのもな...みたいな気分になって、動的ロードも考えたんだけど面倒だったのでバンドルすることにした。ES6 modules 早くきてくれ〜。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           他方で fetch は前述の通り Chrome では(for Andoid でも)使えるし Firefox でも使えるのだが、(Mobile でない方の) Safari は使えないし Edge でも使えないのは意外だった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2015/12/02/fetch" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2015/12/02/fetch" target="_blank" rel="noopener">
               http://dev.jgs.me/2015/12/02/fetch
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20151202</span>
-         <span class="unlinked-0-0-15">#1202</span>
+         
+          <span class="unlinked-0-0-15">#1202</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
+            
+                  <li>
                     <a href="https://amp.kbys.tk/5d73e6aed8c364001792515c.html">
                       Safari
                     </a>
                   </li>
-                <li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5d723cdf71d4250017a1d114.html">
                       SPA
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e0c.html">
-                      Rails寺子屋#4 - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209da0.html">
+                      Angular, version 2: proprioception-reinforcement - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d601852aef47f00177ce5d7.html">
-                      Batman v Superman
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cf0f100837e1000171b8781.html">
+                      自分にとってのSplatoon - babonyans-akiu’s diary
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d59.html">
-                      progrium/entrykit: Entrypoint tools for elegant, programmable containers - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5dbc3e97d131ef00170bb364.html">
+                      高機能ホスティングサービスNetlifyについて調べて使ってみた - Qiita
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

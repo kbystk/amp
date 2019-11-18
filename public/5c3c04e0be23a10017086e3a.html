@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e3a.html">
+        <meta property="og:title" content="hubotとhipchatでウワサのChatOpsの準備 - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>hubotとhipchatでウワサのChatOpsの準備 - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/hubotとhipchatでウワサのChatOpsの準備 - dev.jgs.me">
@@ -180,150 +212,222 @@ blockquote {
           </div>
           <h1>hubotとhipchatでウワサのChatOpsの準備 - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           むかし見かけたけど、あまり便利さがわからなかったのでスルーしていた hubot が面白そうだったので、ちょっと触ってみることにした。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           目標は、サービスのデプロイや、通知なんかを一手に管理できる状態。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>hubot</code>
-       のインストールは簡単で <code>npm</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>hubot</code>
+       のインストールは簡単で 
+        <code>npm</code>
        からインストールするだけ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>% npm install -g hubot</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>% npm install -g hubot</code>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           インストールしたら
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>% mkdir YOUR_BOT_NAME</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>% mkdir YOUR_BOT_NAME</code>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>% hubot --create YOUR_BOT_NAME</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>% hubot --create YOUR_BOT_NAME</code>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          でテンプレートを展開してくれる。<code>coffee</code>
-       がないよ！って言われるときは <code>% npm install -g coffee-script</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          でテンプレートを展開してくれる。
+        <code>coffee</code>
+       がないよ！って言われるときは 
+        <code>% npm install -g coffee-script</code>
        してやればOK。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          初期状態だと <code>redis-brain</code>
-       という保存用の <code>redis</code>
-       が走るようになっているので <code>hubot-scripts.json</code>
-       から <code>redis-brain.coffee</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          初期状態だと 
+        <code>redis-brain</code>
+       という保存用の 
+        <code>redis</code>
+       が走るようになっているので 
+        <code>hubot-scripts.json</code>
+       から 
+        <code>redis-brain.coffee</code>
        を削除してから起動してみる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>% hubot -n Alfred</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <code>-n</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>-n</code>
        で名前を指定できるので適当に指定してやる。シェルで起動したら
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>Alfred&gt; @Alfred ping
 Alfred&gt; PONG</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           みたいな感じで確認できる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          うまいことウェブから操作できないかなあ、といろいろ探してみたところ hiptchat をインターフェイスにするのがよさげだったので <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://www.hipchat.com">
-        </amp-img></div>
-       から適当に登録。チャットルームにBOTを追加するのが意外と面倒で、<code>hipchat</code>
-       の <code>Room</code>
-       の設定ページから <code>invite url</code>
-       を取得してきて、<code>Sign out</code>
-       してから <code>invite url</code>
-       を踏んでBOT用のアカウントを登録する。メアドめんどくさいときには <code>your_name+botname@gmail.com</code>
-       みたいな感じで <code>Gmail</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          うまいことウェブから操作できないかなあ、といろいろ探してみたところ hiptchat をインターフェイスにするのがよさげだったので 
+            <a href="http://www.hipchat.com" target="_blank" rel="noopener">
+              http://www.hipchat.com
+            </a>
+           から適当に登録。チャットルームにBOTを追加するのが意外と面倒で、
+        <code>hipchat</code>
+       の 
+        <code>Room</code>
+       の設定ページから 
+        <code>invite url</code>
+       を取得してきて、
+        <code>Sign out</code>
+       してから 
+        <code>invite url</code>
+       を踏んでBOT用のアカウントを登録する。メアドめんどくさいときには 
+        <code>your_name+botname@gmail.com</code>
+       みたいな感じで 
+        <code>Gmail</code>
        の便利機能を使えばよい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          あとは、<code>hubot</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          あとは、
+        <code>hubot</code>
        のディレクトリで
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>% npm install hubot-hipchat --save</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          としてやって <code>adapter</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          としてやって 
+        <code>adapter</code>
        をインストールして環境変数を設定する。面倒なのでシェルスクリプトを作っておくとよい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>export HUBOT_HIPCHAT_TOKEN="RoomのAdminのToken"
 export HUBOT_HIPCHAT_JID="BotのアカウントのJabbr ID"
@@ -332,91 +436,129 @@ export HUBOT_HIPCHAT_ROOMS="Roomの名前"
 
 exec bin/hubot "$@" -n BOT_NAME -a hipchat</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          みたいな <code>start.sh</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          みたいな 
+        <code>start.sh</code>
        を準備して
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>% sh start.sh</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          としてやれば起動する。あとは <code>hipchat</code>
-       側で <code>@alfred ping</code>
-       してやれば <code>PONG</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          としてやれば起動する。あとは 
+        <code>hipchat</code>
+       側で 
+        <code>@alfred ping</code>
+       してやれば 
+        <code>PONG</code>
        が返ってくる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ひとまずこれで準備は完了。意外と <code>hipchat</code>
-       の設定がダルくて、事前にボット用のアカウントを作成しておくと、それを <code>Room</code>
-       に追加する手段がなくて消して <code>invite url</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ひとまずこれで準備は完了。意外と 
+        <code>hipchat</code>
+       の設定がダルくて、事前にボット用のアカウントを作成しておくと、それを 
+        <code>Room</code>
+       に追加する手段がなくて消して 
+        <code>invite url</code>
        から作りなおしたらいけた。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2013/10/22/hubottohipchatdeuwasafalsechatopsfalsezhun-bei" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2013/10/22/hubottohipchatdeuwasafalsechatopsfalsezhun-bei" target="_blank" rel="noopener">
               http://dev.jgs.me/2013/10/22/hubottohipchatdeuwasafalsechatopsfalsezhun-bei
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20131022</span>
-         <span class="unlinked-0-0-15">#1022</span>
+         
+          <a href="https://amp.kbys.tk/5db1f9a977119700170ae111">#1022</a>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5d7239d368f35800172cd6a9.html">
-                      XCOM: Enemy Unknown
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1f9a977119700170ae111.html">
+                      1022
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e511.html">
-                      アトムハウス映画祭へ行ってきました  - blog.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d88.html">
+                      NGINX Amplify雑感 - Innovator Japan Engineers’ Blog - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209da7.html">
-                      tsayen/dom-to-image: Generates an image from a DOM node using HTML5 canvas - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e54e.html">
+                      広告が嫌いだったけど気付いたら広告に携わることになった話 - blog.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cd7.html">
-                      Zen Bound 2が絶妙にエロい - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5ccaaa774b1e7c00174706a7.html">
+                      エンドゲームのソー、ああなったのはひょっとしてナタリーポートマンをブック出来ず登場シーンを未使用素材使ってやったのかな。だから元カノに対峙出来ずママに泣きつくことになり、ストーン集めに貢献してないことに...?
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d35.html">
-                      データサイエンティストを目指す人のpython環境構築 2016 - Qiita - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82ce8.html">
+                      InfinifactoryとBesiege - diary.jgs.me
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e2be23a10017086e90.html">
+        <meta property="og:title" content="Wercker v2その2 - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>Wercker v2その2 - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/Wercker v2その2 - dev.jgs.me">
@@ -180,157 +212,222 @@ blockquote {
           </div>
           <h1>Wercker v2その2 - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          以前 Wercker が Docker からビルドするようになったという話を書いたのだが(<a href="http://dev.jgs.me/2015/06/24/wercker-v2.html" target="_blank" rel="noopener">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          以前 Wercker が Docker からビルドするようになったという話を書いたのだが(
+            <a href="http://dev.jgs.me/2015/06/24/wercker-v2.html" target="_blank" rel="noopener">
               参照
             </a>
-          )そのことをすっかり忘れて <code>Wercker.yml</code>
-       をアップデートすることがあって以前と状況が変わっていたので。ちなみに <a href="https://amp.kbys.tk/5cd117a89f582d001734d73e">Node.js</a>
+          )そのことをすっかり忘れて 
+        <code>Wercker.yml</code>
+       をアップデートすることがあって以前と状況が変わっていたので。ちなみに 
+              <a href="https://amp.kbys.tk/5cd117a89f582d001734d73e">Node.js</a>
              のなんかをビルドする場合の話。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Node.js のメジャーリリースバージョンである v4 が(Node.js になってもリリースが早く既に <code>v4.2.1</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Node.js のメジャーリリースバージョンである v4 が(Node.js になってもリリースが早く既に 
+        <code>v4.2.1</code>
        である...)Docker Hub にアップロードされているので、以前
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>box: nodesource/trusty:iojs-1.8.1</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          としていたのを(少し前の話だけど、当時は <code>iojs-1.8.1</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          としていたのを(少し前の話だけど、当時は 
+        <code>iojs-1.8.1</code>
        だったのか...)
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>box: node:latest</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           やら、もうちょいバージョンを狭める場合には
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>box: node:4</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           とか
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>box: node:4.2</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           なんかにすればよさそう。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          また、<code>devDependencies</code>
-       がインストールされない問題は既に解決されていて、上記の <code>node</code>
-       オフィシャルイメージであれば <code>npm-install</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          また、
+        <code>devDependencies</code>
+       がインストールされない問題は既に解決されていて、上記の 
+        <code>node</code>
+       オフィシャルイメージであれば 
+        <code>npm-install</code>
        step でインストールされていた。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           めでたしめでたし。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2015/10/17/wercker-v2-2" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2015/10/17/wercker-v2-2" target="_blank" rel="noopener">
               http://dev.jgs.me/2015/10/17/wercker-v2-2
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20151017</span>
-         <span class="unlinked-0-0-15">#1017</span>
+         
+          <a href="https://amp.kbys.tk/5db1d833a24916001702b764">#1017</a>
         
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          この後 Wercker は Oracle に買収されるのであった <span class="unlinked-0-0-15">#20190906</span>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          この後 Wercker は Oracle に買収されるのであった 
+          <span class="unlinked-0-0-15">#20190906</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1d833a24916001702b764.html">
+                      1017
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5cd117a89f582d001734d73e.html">
                       Node.js
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d85.html">
-                      Tutorial: It's all about time: Building a performant Stopwatch with MobX and React - fast - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db30fe5d8afb1001717449c.html">
+                      Chrome Dev Summitに参加しました！ - from scratch
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d66.html">
-                      Rules For Structuring (Redux) Applications — Jack Hsu - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d93.html">
+                      壁紙に女の子がいる - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e523.html">
-                      大人気Windows8/WindowsRT向けTumblrクライアント「Reblog Monster」がTextとQuoteに対応しました！ - blog.jgs.me
-                    </a>
-                  </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5ce29e9a70dc220017a12303.html">
-                      人間交差点でライブを見てからずーっと聴いてる曲を歌いました。本当にかっこよくて憧れのシンガーの1人です。
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e506.html">
+                      Hello, Tumblr!  - blog.jgs.me
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

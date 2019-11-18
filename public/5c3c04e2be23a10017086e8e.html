@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e2be23a10017086e8e.html">
+        <meta property="og:title" content="Wercker の新バージョンがリリースされて Docker ベースになっていた - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>Wercker の新バージョンがリリースされて Docker ベースになっていた - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/Wercker の新バージョンがリリースされて Docker ベースになっていた - dev.jgs.me">
@@ -180,117 +212,165 @@ blockquote {
           </div>
           <h1>Wercker の新バージョンがリリースされて Docker ベースになっていた - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           Wercker がいつの間にかアップデートされていて、いま新しくアプリケーションを作成すると新しいスタック(Ewok というらしい)で作成される。ので、古い yml ファイルをそのまま使うとエラーが出る。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           大きな変更点としては、box を Docker Hub からとってこれるようになったところだろう。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>box: nodesource/trusty:iojs-1.8.1</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           とすると Docker Hub から Ubuntu + iojs@1.8.1 なイメージがダウンロードされて使える。もし複数バージョンを試したい場合は Docker Hub で nvm なり nodebrew なり入ったイメージを指定するといいだろう。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-3-0-0-7">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-3-0-0-7">
           ハマりどころ
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          どうやらデフォルトで <code>NODE_ENV</code>
-       が <code>production</code>
-       に設定されているようで <code>npm-install</code>
-       の Step で <code>devDependencies</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          どうやらデフォルトで 
+        <code>NODE_ENV</code>
+       が 
+        <code>production</code>
+       に設定されているようで 
+        <code>npm-install</code>
+       の Step で 
+        <code>devDependencies</code>
        のパッケージがインストールされなくなっていた。ついでにそれに依存していたテストもすっ転んだ。しょうがないので
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>- script:
     name: Set NODE_ENV
     code: export NODE_ENV=development</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           を追加してなんとかした。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 level-3-0-0-7">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 level-3-0-0-7">
           その他
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ドキュメントは <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://devcenter.wercker.com/docs/pipelines/stacks.html">
-        </amp-img></div>
-       にまとまっている。ところで、このドキュメントのページは <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/wercker/docs">
-        </amp-img></div>
-       にあって、gulp で metalsmith の静的ページを Wercker でビルドしているようだ。オープンだし、ドッグフーディングしてるしとても好感がもてる。
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ドキュメントは 
+            <a href="http://devcenter.wercker.com/docs/pipelines/stacks.html" target="_blank" rel="noopener">
+              http://devcenter.wercker.com/docs/pipelines/stacks.html
+            </a>
+           にまとまっている。ところで、このドキュメントのページは 
+            <a href="https://github.com/wercker/docs" target="_blank" rel="noopener">
+              https://github.com/wercker/docs
+            </a>
+           にあって、gulp で metalsmith の静的ページを Wercker でビルドしているようだ。オープンだし、ドッグフーディングしてるしとても好感がもてる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           Wercker でいくつか飼ってるのがあるので移行させねばだー。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2015/06/24/wercker-v2" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2015/06/24/wercker-v2" target="_blank" rel="noopener">
               http://dev.jgs.me/2015/06/24/wercker-v2
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#0624</span>
         
         </div>
@@ -298,33 +378,44 @@ blockquote {
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e1b.html">
-                      日本的な文化とフラットデザイン - diary.jgs.me
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1f9a8ed15a5001716750f.html">
+                      1021
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e52e.html">
-                      たのしい開発のたのしい感想 - blog.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5dcc0c2e92e2bc001723ca97.html">
+                      新QiitaでReactをやめてhyperappを採用した背景 - Qiita
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d69111bcaebee0017a9a161.html">
-                      最近クリップしたページ
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cc470cdb495920017192c1f.html">
+                      エンドゲーム直後！思ったことを吐き出しておく会(ネタバレがあるので注意)
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5ce29f55c202490017a37b20.html">
-                      【ライブレポート】リリスク2度目のメジャーデビュー!ニッパーくんと共に世界へ（写真50枚） - 音楽ナタリー
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db30d95d5831000172621fc.html">
+                      失感情症（アレキサイミア） | e-ヘルスネット 情報提供
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5cc9cd01b4c36100171343a2.html">
-                      ニューアベ
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c3c04e2be23a10017086e98.html">
+                      CSSConf.asia 2015 メモと感想 - dev.jgs.me
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e3be23a10017086ea2.html">
+        <meta property="og:title" content="stylelint で CSS Modules の values がエラーになる件の対処 - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>stylelint で CSS Modules の values がエラーになる件の対処 - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/stylelint で CSS Modules の values がエラーになる件の対処 - dev.jgs.me">
@@ -180,35 +212,50 @@ blockquote {
           </div>
           <h1>stylelint で CSS Modules の values がエラーになる件の対処 - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           なんやかんや書かないとな〜とおもっているうちに数ヶ月が過ぎてしまった。忙しいと大変。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          さて今日は stylelint をアップデートしたら(正確には <code>stylelint-config-standard</code>
-       だけど) CSS Modules の <code>@value ...</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          さて今日は stylelint をアップデートしたら(正確には 
+        <code>stylelint-config-standard</code>
+       だけど) CSS Modules の 
+        <code>@value ...</code>
        構文でエラーになるようになってしまったのでその対処をした。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>at-rule-no-unknown</code>
-       という rule に引っかかってるので rule の <a href="https://github.com/stylelint/stylelint/blob/6ae1e9bebb18a2193e4ebbdec6f950f89c4833b2/src/rules/at-rule-no-unknown/README.md" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>at-rule-no-unknown</code>
+       という rule に引っかかってるので rule の 
+            <a href="https://github.com/stylelint/stylelint/blob/6ae1e9bebb18a2193e4ebbdec6f950f89c4833b2/src/rules/at-rule-no-unknown/README.md" target="_blank" rel="noopener">
               README
             </a>
-           を参照すると <code>.stylelintrc</code>
+           を参照すると 
+        <code>.stylelintrc</code>
        に
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code> (json)</code>
           <pre><code>  "rules": {
     "at-rule-no-unknown":[true, {
@@ -216,69 +263,94 @@ blockquote {
     }]
   }</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           てな感じのオプションを渡してやればよいとのこと。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           Happy linting!!
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2016/07/02/stylelint-new-rule-at-rule-no-unknown" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2016/07/02/stylelint-new-rule-at-rule-no-unknown" target="_blank" rel="noopener">
               http://dev.jgs.me/2016/07/02/stylelint-new-rule-at-rule-no-unknown
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20160702</span>
-         <span class="unlinked-0-0-15">#0702</span>
+         
+          <span class="unlinked-0-0-15">#0702</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d9a.html">
-                      JavaScriptをOCamlから生成するトランスパイラ「BuckleScript 1.0」、米ブルームバーグがオープンソースで公開。TypeScriptよりタイプセーフかつ効率的で高速と － Pu - github.com/e-jigsaw/web
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d4f.html">
+                      Flux Utilsのドキュメント日本語訳 | mae's blog - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e4c.html">
-                      Clash of Clans のチームが Reddit で質問に答える企画をやっている - dev.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d6b0ffb0bc4f300173182de.html">
+                      ストレンジャー・シングス
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d26115d91230a00171b00ce.html">
-                      ＜lyrical school × BEAMS＞再び！ ポップアップイベント『VIDEO YOUNG』販売商品ラインナップ公開！※6/27更新 : lyrical school official web site (リリカルスクール)
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1e6a8037e980017399962.html">
+                      pastak/scboloo: easy way to post webpage to scrapbox.io
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d38b72e3ad6dd00176c7998.html">
-                      言語学の魅力、おもしろさを少し語ってみた - Zebra Crossing
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db3101458f77c00176d0c97.html">
+                      Free vector icons - SVG, PSD, PNG, EPS &amp; Icon Font - Thousands of free icons
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e508.html">
-                      HHKB買っちゃいました  - blog.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d63cfaddc6c8e0017e74c21.html">
+                      M・ナイト・シャマラン
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04dfbe23a10017086e2f.html">
+        <meta property="og:title" content="node.jsのmongooseでnestしたobjectをpopulateする - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>node.jsのmongooseでnestしたobjectをpopulateする - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/node.jsのmongooseでnestしたobjectをpopulateする - dev.jgs.me">
@@ -180,88 +212,126 @@ blockquote {
           </div>
           <h1>node.jsのmongooseでnestしたobjectをpopulateする - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>node.js</code>
-       の <code>mongoose</code>
-       でネストしたドキュメントを <code>populate</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>node.js</code>
+       の 
+        <code>mongoose</code>
+       でネストしたドキュメントを 
+        <code>populate</code>
        したいときの話。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <code>3.6</code>
-       系から <code>populate</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <code>3.6</code>
+       系から 
+        <code>populate</code>
        の仕様が変わるようで、以前のように
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>Document.find().populate("comment.author").exec (err, docs)-&gt;</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          のようなコードでは <code>populate</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          のようなコードでは 
+        <code>populate</code>
        できなくなった。代わりに
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>Document.find().populate("comment").exec (err, docs)-&gt;
   User.populate docs,
     path: "comment.author"
   , (err, docs)-&gt;</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          のように書いてやると当該部分が <code>populate</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          のように書いてやると当該部分が 
+        <code>populate</code>
        される。ちょっとややこしいなあ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
-              
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/LearnBoost/mongoose/issues/1377">
-        </amp-img></div>
       
-        </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2013/09/25/nested-mongoose" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/LearnBoost/mongoose/issues/1377" target="_blank" rel="noopener">
+              https://github.com/LearnBoost/mongoose/issues/1377
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2013/09/25/nested-mongoose" target="_blank" rel="noopener">
               http://dev.jgs.me/2013/09/25/nested-mongoose
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#0925</span>
         
         </div>
@@ -269,33 +339,44 @@ blockquote {
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82ce4.html">
-                      electroX で Armin van Buuren を見てきた - diary.jgs.me
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5d9f39e6e189930017cf1ad2.html">
+                      20191010
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c62e847f4ba4b00171aff0f.html">
-                      会社は宗教
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b8fb446c149001737bc2e.html">
+                      過去をインポートする
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dcb.html">
-                      齟齬 - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5dbc3e97d131ef00170bb364.html">
+                      高機能ホスティングサービスNetlifyについて調べて使ってみた - Qiita
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c465ade0b280e001770bd10.html">
-                      1uオンリーの40-60%キーボード
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e534.html">
+                      学生残酷映画祭京都皆殺し編2日目 - blog.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d2b.html">
-                      electronjs/electron-rebuild: Package to rebuild native io.js modules against the currently installed - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c8bc7eb8808f90017f280a8.html">
+                      キャプテン・マーベル(ネタバレがあるよ)
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

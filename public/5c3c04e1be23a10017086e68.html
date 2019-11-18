@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e1be23a10017086e68.html">
+        <meta property="og:title" content="githubのtimelineをBigQueryで解析する(その2) - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>githubのtimelineをBigQueryで解析する(その2) - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/githubのtimelineをBigQueryで解析する(その2) - dev.jgs.me">
@@ -180,70 +212,96 @@ blockquote {
           </div>
           <h1>githubのtimelineをBigQueryで解析する(その2) - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://dev.jgs.me/posts/github-timeline-is-analyzable-on-bigquery/">
-        </amp-img></div>
-       のつづき。
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="http://dev.jgs.me/posts/github-timeline-is-analyzable-on-bigquery/" target="_blank" rel="noopener">
+              http://dev.jgs.me/posts/github-timeline-is-analyzable-on-bigquery/
+            </a>
+           のつづき。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           試しに自分のアカウントでフィルタしたクエリを投げてみる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>select *
 from [githubarchive:github.timeline]
 where actor = 'e-jigsaw'
 limit 100</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           すると
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>...
 https://github.com/yutaono/__.swift,true,2014-06-07 05:19:01,false,__.swift will be an utility belt for Swift Language.,0,true,true,,0,false,__.swift,yutaono,0,1,2014-06-07 01:56:30,Swift,null,null,master,38039ef5991573d89944a552471f13b7,User,e-jigsaw,jigsaw,,"Shibuya, Tokyo, JAPAN",http://jgs.me,m@jgs.me,2014-06-07 07:47:29,true,e-jigsaw,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,started,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,https://github.com/yutaono/__.swift,WatchEvent
 https://github.com/rainycape/magick,true,2013-10-11 10:45:10,true,ImageMagick bindings for Go (golang),13,false,true,,18618,false,magick,rainycape,3,52,2014-08-15 19:02:19,Go,null,null,master,38039ef5991573d89944a552471f13b7,User,e-jigsaw,jigsaw,CyberAgent Inc.,"Shibuya, Tokyo, JAPAN",http://jgs.me,m@jgs.me,2014-08-24 15:37:49,true,e-jigsaw,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,started,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,https://github.com/rainycape/magick,WatchEvent
 ...</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          みたいなやつが返ってくる(6.1s)。よくよく見てみると、やたら<code>null</code>
-      が入っててなんだろうとおもったら、Starしたやつは<code>WatchEvent</code>
-      が発火して、commitとかpushのときに埋まるカラムが<code>null</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          みたいなやつが返ってくる(6.1s)。よくよく見てみると、やたら
+        <code>null</code>
+      が入っててなんだろうとおもったら、Starしたやつは
+        <code>WatchEvent</code>
+      が発火して、commitとかpushのときに埋まるカラムが
+        <code>null</code>
       で埋まるようだ。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           ということは、
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code>_</code>
           <pre><code>select *
 from [githubarchive:github.timeline]
@@ -252,69 +310,94 @@ and type = 'WatchEvent'
 order by created_at desc
 limit 100</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           というようなやつを投げればよくて(6.2s)、これで自分の直近のStarしたリポジトリが見れる。バッチはどうやら1時間おきに走っているようで、ほぼ最新の情報も取得できているようだ。スゲー！
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           気が向いたらもうちょっと調べる。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2014/09/26/github-timeline-analyze-by-bigquery-2" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2014/09/26/github-timeline-analyze-by-bigquery-2" target="_blank" rel="noopener">
               http://dev.jgs.me/2014/09/26/github-timeline-analyze-by-bigquery-2
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20140926</span>
-         <span class="unlinked-0-0-15">#0926</span>
+         
+          <span class="unlinked-0-0-15">#0926</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d5b.html">
-                      Instant Loading // Speaker Deck - github.com/e-jigsaw/web
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5dbc3cc01a4e760017e4ceec.html">
+                      ECMAScript 2017、2018 の時代の開発環境 - Qiita
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d5668ef6b06390017fc3641.html">
-                      Nullish Coalescing と Optional Chaining | blog.jxck.io
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209df4.html">
+                      Azure/draft: A tool for developers to create cloud-native applications on Kubernetes. - github.com/e-jigsaw/web
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dd9.html">
-                      Transfer Learning - Machine Learning's Next Frontier - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d6c.html">
+                      ファーストデー - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d9b.html">
-                      Facebook、新しいMySQL用ストレージエンジン「MyRocks」をオープンソースで公開。フラッシュに適したデータの書き込みと圧縮効果 － Publickey - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d617ae48709b600172428ae.html">
+                      MV
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209daf.html">
-                      Arrival – Mozilla Open Design - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e6b.html">
+                      tumblrからランダムに写真を表示するサービスをつくった - dev.jgs.me
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

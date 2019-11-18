@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e1be23a10017086e82.html">
+        <meta property="og:title" content="emo の React 実装をつくった - dev.jgs.me | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>emo の React 実装をつくった - dev.jgs.me | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/emo の React 実装をつくった - dev.jgs.me">
@@ -180,115 +212,159 @@ blockquote {
           </div>
           <h1>emo の React 実装をつくった - dev.jgs.me</h1>
           <div>
-            <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+            
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="http://e-jigsaw.github.io/emo-react/">
-        </amp-img></div>
       
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+            <a href="http://e-jigsaw.github.io/emo-react/" target="_blank" rel="noopener">
+              http://e-jigsaw.github.io/emo-react/
+            </a>
+          
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Riotjs でつくった emo っていう絵文字検索システムを React で再実装してみた。ちょっと前に <a href="https://github.com/planningcenter/react-patterns" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Riotjs でつくった emo っていう絵文字検索システムを React で再実装してみた。ちょっと前に 
+            <a href="https://github.com/planningcenter/react-patterns" target="_blank" rel="noopener">
               react-patterns
             </a>
            っていうドキュメントを見つけて、「オレが求めていたのはコレだったんだ...!」という気持ちになったので。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          オリジナルの方で絵文字のデータまわりの準備はできていたので、ajax でデータをとってきて実装するだけでよかった。コードは <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://github.com/e-jigsaw/emo-react">
-        </amp-img></div>
-       に。Riotjs 版の方では Fuse というファジー検索ツールを使ってみていたんだけど、精度がイマイチというか、思ったような結果が出にくいなあとおもったので適当に Immutable.js の List に検索する文字の組をコンマ区切りにしてぶっこんで正規表現の <code>search</code>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          オリジナルの方で絵文字のデータまわりの準備はできていたので、ajax でデータをとってきて実装するだけでよかった。コードは 
+            <a href="https://github.com/e-jigsaw/emo-react" target="_blank" rel="noopener">
+              https://github.com/e-jigsaw/emo-react
+            </a>
+           に。Riotjs 版の方では Fuse というファジー検索ツールを使ってみていたんだけど、精度がイマイチというか、思ったような結果が出にくいなあとおもったので適当に Immutable.js の List に検索する文字の組をコンマ区切りにしてぶっこんで正規表現の 
+        <code>search</code>
        で検索するようにしたら体感早くなったし良かった。ちなみに得られた知見として正規表現でユーザの入力した文字列を検索する際には正規表現のメタ文字をエスケープする必要があった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; overflow: scroll;">
+      
+        <div style="padding-left:0rem; overflow: scroll;">
           <code> (coffee)</code>
           <pre><code>r = new RegExp @state.keyword.replace /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&amp;'</code></pre>
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           デフォルトでなんかできるのかとおもったけど、意外と泥臭く書く必要があった。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           さて、React なんですがだいぶどういう風に書いていけばいいのかも分かってきたし、先述の react-patterns の後光もあって結構よいなと思ってきた。ここ数日「やっぱ Elm じゃね！？」ってなってたけど、いざ自分のほしいものを作ろうとしたときにまだスッと手が動かないので難しい。具体的にいうと、Ajax でデータをとってくるところで大いに消耗した(公式にいまいちパッとしたドキュメントがない &amp; サンプルの Flickr アプリが壊れてる)のでうーむ。あと、調べていくにつれて Elm でも DOM のあれこれを書くサンプルがちょいちょい出てきて、結局そこ書かなアカンのかい！となったのもある。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           この絵文字検索、通信もあるしそれなりにインタラクションも多いので題材としてちょうどいい(し、アセットも既に揃っている)と感じてきたので次は Mithril あたりで書いてみたい。
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <span class="level-0-0-5 ">
-          original: <a href="http://dev.jgs.me/2015/02/09/emo-impremented-by-react" target="_blank" rel="noopener">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <span class="level-0-0-5 ">
+          original: 
+            <a href="http://dev.jgs.me/2015/02/09/emo-impremented-by-react" target="_blank" rel="noopener">
               http://dev.jgs.me/2015/02/09/emo-impremented-by-react
             </a>
           
         </span>
       
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20150209</span>
-         <span class="unlinked-0-0-15">#0209</span>
+         
+          <span class="unlinked-0-0-15">#0209</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209d11.html">
-                      React with Reduxによる大規模商用サービスの開発 / nodefest2016 // Speaker Deck - github.com/e-jigsaw/web
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5db03460ad897e0017abc218.html">
+                      HEROIC VERSE 初段
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d5a568bac2da8001778f6ff.html">
-                      スター・ウォーズ
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5ca22442c0e2d30017426be7.html">
+                      ホモソーシャル感
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d14.html">
-                      ちはやふる 上の句(ネタバレ有) - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d31.html">
+                      2017 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d61e50d755c5d0017e647b6.html">
-                      アルフレッド
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82d9e.html">
+                      今すぐ辞めて欲しい、「jQuery勉強してます」「Backbone.js勉強してます」 - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd7.html">
-                      置き薬 - diary.jgs.me
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e0a.html">
+                      リテンション装置としての楽曲 - diary.jgs.me
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     

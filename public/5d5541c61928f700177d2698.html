@@ -1,8 +1,16 @@
-<!DOCTYPE html><html amp=""><head>
+<!DOCTYPE html><html amp=""><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
         <meta charset="utf-8">
         <script async="" src="https://cdn.ampproject.org/v0.js"></script>
         <script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://amp.kbys.tk/5d5541c61928f700177d2698.html">
+        <meta property="og:title" content="useImperativeHandle と forwardRef を使うととても便利 | I am Electrical machine">
+        <meta property="og:site_name" content="I am Electrical machine">
+        
+                <meta name="twitter:card" content="summary">
+              
+        
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -144,6 +152,30 @@ blockquote {
 .unlinked-0-0-15 {
   color: #004bad;
 }
+.moreProfile-0-0-16 {
+  margin: 2rem 0;
+  text-align: center;
+}
+.moreProfile-0-0-16 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(120,119,119,1) 0%, rgba(5,119,254,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
+.donation-0-0-17 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.donation-0-0-17 a {
+  color: #fff;
+  padding: 1rem;
+  background: linear-gradient(0deg, rgba(255,177,8,1) 0%, rgba(235,251,26,1) 100%);
+  font-weight: bold;
+  text-shadow: 0px 1px 2px #333;
+  border-radius: 2rem;
+}
         </style>
         <title>useImperativeHandle と forwardRef を使うととても便利 | I am Electrical machine</title>
         <link rel="canonical" href="https://scrapbox.io/jigsaw/useImperativeHandle と forwardRef を使うととても便利">
@@ -180,52 +212,74 @@ blockquote {
           </div>
           <h1>useImperativeHandle と forwardRef を使うととても便利</h1>
           <div>
-            <div style="padding-left:1rem; margin-bottom: .5rem;">
+            
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           hooks 出てきた頃に「使うのはコーナーケースなので〜」というようなことが書いてあったのでスルーしていたのだけど、ついに使うタイミングがきた
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           素直に React のアプリ書いてるとユースケースは確かになさそうなのだけど
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           モーダルで使う機能を hook に切り出している
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           モーダルの開け閉めをする関数をモーダルのコンポーネントが持っている
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           親ページでモーダルの開け閉めをするために子の開け閉め関数を呼びたい
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           というシーンで使えることが分かった
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          子コンポーネントでは <code>forwardRef</code>
-       で ref を受け取って <code>useImperativeHandle</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          子コンポーネントでは 
+        <code>forwardRef</code>
+       で ref を受け取って 
+        <code>useImperativeHandle</code>
        を使って、モーダル開け閉め用の関数を指定する
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          親コンポーネント側で <code>useRef</code>
-       を使って <code>ref</code>
-       を作って、子に <code>ref={ref}</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          親コンポーネント側で 
+        <code>useRef</code>
+       を使って 
+        <code>ref</code>
+       を作って、子に 
+        <code>ref={ref}</code>
        で渡す
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          親コンポーネントで <code>ref.current</code>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          親コンポーネントで 
+        <code>ref.current</code>
        から参照する
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
-          少しハマったのは、<code>onClick={ref.current ? ref.current.foo : undefined}</code>
-       みたいな感じに書くと ref の更新で render が走らないっぽいので <code>foo</code>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          少しハマったのは、
+        <code>onClick={ref.current ? ref.current.foo : undefined}</code>
+       みたいな感じに書くと ref の更新で render が走らないっぽいので 
+        <code>foo</code>
        を参照できない
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
-          <code>onClick={() =&gt; ref.current ? ref.current.foo() : undefined}</code>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>onClick={() =&gt; ref.current ? ref.current.foo() : undefined}</code>
        にするとクリックしたタイミングで評価されるので参照できる
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           具体的なコードは
         </div>
-      <div style="padding-left:1rem; overflow: scroll;">
+      
+        <div style="padding-left:1rem; overflow: scroll;">
           <code>App.tsx</code>
           <pre><code>interface Handler {
   foo(): void
@@ -249,69 +303,94 @@ const App: React.FC = () =&gt; {
   )
 }</code></pre>
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          こんな感じ <span class="unlinked-0-0-15">#20190821</span>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          こんな感じ 
+          <span class="unlinked-0-0-15">#20190821</span>
         
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           参考:
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
-          <a href="https://ja.reactjs.org/docs/hooks-reference.html#useimperativehandle" target="_blank" rel="noopener">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://ja.reactjs.org/docs/hooks-reference.html#useimperativehandle" target="_blank" rel="noopener">
               https://ja.reactjs.org/docs/hooks-reference.html#useimperativehandle
             </a>
           
         </div>
-      <div style="padding-left:2rem; margin-bottom: .5rem;">
-          <a href="https://ja.reactjs.org/docs/forwarding-refs.html" target="_blank" rel="noopener">
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://ja.reactjs.org/docs/forwarding-refs.html" target="_blank" rel="noopener">
               https://ja.reactjs.org/docs/forwarding-refs.html
             </a>
           
         </div>
-      <div style="padding-left:1rem; margin-bottom: .5rem;">
-          <br>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+                <br>
               
         </div>
-      <div style="padding-left:0rem; margin-bottom: .5rem;">
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
           <span class="unlinked-0-0-15">#20190815</span>
-         <span class="unlinked-0-0-15">#0815</span>
+         
+          <span class="unlinked-0-0-15">#0815</span>
         
         </div>
       
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>
-            <li>
-                    <a href="https://amp.kbys.tk/5c310e77b8f83c0017d0e0ef.html">
-                      B級スプラッタホラー - ハロウィン - e-jigsaw.blogspot.com
+            
+                  <li>
+                    <a href="https://amp.kbys.tk/5d6914fe7621b500177c5f76.html">
+                      ネタバレ
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5d47aba52d45740017795556.html">
-                      Stop blaming the video games you absolute morons
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1e82884f6370017f887ed.html">
+                      僕は「矢島舞美さんを生んだ地球ありがとう。もはや地球推し」のスタンスでやっておりますので、地球を思うこと＝毎日を生きることが僕にとってのファン活動みたいなところがありますし、当然これからもそれは続きますので、コンサートを観られないのは悔しいですが、不思議と寂しさはないのです。。
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d54.html">
-                      GreenSock | Homepage - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d2e.html">
+                      まさに驚異、ワンダーウーマン - diary.jgs.me
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209da5.html">
-                      フロントエンドエンジニアのための動画ストリーミング技術基礎 | ygoto3.com - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db260fa5ab7190017438821.html">
+                      町山智浩『ルック・オブ・サイレンス』を語る
                     </a>
                   </li>
-                <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d88.html">
-                      NGINX Amplify雑感 - Innovator Japan Engineers’ Blog - github.com/e-jigsaw/web
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5cc47054f7975b0017e74c05.html">
+                      AoU
                     </a>
                   </li>
                 
           </ul>
+          <h2>筆者について</h2>
+          <div>jigsaw(ジグソウ、1991年6月12日-)は日本のプログラマ、会社代表。本名は小林貴也(こばやし たかや)。主にウェブ、フロントエンド領域で活動している。カミング・スーン合同会社の代表社員。</div>
+          <div class="moreProfile-0-0-16"><a href="https://amp.kbys.tk/5c29451d434bf90017d3b219.html">さらに詳しく</a></div>
+          <h2>寄附について</h2>
+          <div>面白かったら<a href="https://amp.kbys.tk/5dcc34d2e8364600170f07f6.html">BTC</a>や<a href="https://amp.kbys.tk/5dcc35503afcd0001731ff2c.html">ETH</a>での寄附をお待ちしております。</div>
+          <div class="donation-0-0-17"><a href="https://amp.kbys.tk/5dbbc52057d9010017438a87">寄附のきろく</a></div>
         </div>
       
     
