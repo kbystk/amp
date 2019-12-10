@@ -16,6 +16,9 @@ const styles = {
       backgroundColor: 'rgba(128,128,128,0.1)',
       borderLeft: 'solid 4px #a0a0a0',
       paddingLeft: '4px'
+    },
+    body: {
+      fontFamily: '"Roboto",Helvetica,Arial,"Hiragino Sans",sans-serif'
     }
   },
   container: {
