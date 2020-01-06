@@ -1,6 +1,7 @@
 const { writeFileSync } = require('fs')
 const ntml = require('lit-ntml')
 const { parse } = require('@progfay/scrapbox-parser')
+const videoParser = require('js-video-url-parser')
 const master = require('./data/pub.json')
 const data = require('./data/html.json')
 const dic = require('./data/dic.json')
@@ -44,12 +45,24 @@ const nodeRender = async node => {
               ${node.href}
             </a>
           `
-        case 'absolute':
+        case 'absolute': {
+          if (/^https:\/\/www\.youtube\.com/.test(node.href)) {
+            const video = videoParser.parse(node.href)
+            return html`
+              <amp-youtube
+                data-videoid="${video.id}"
+                layout="responsive"
+                width="480"
+                height="270"
+              ></amp-youtube>
+            `
+          }
           return html`
             <a href="${node.href}" target="_blank" rel="noopener">
               ${node.content ? node.content : node.href}
             </a>
           `
+        }
         default: {
           console.log(node)
           return ''
@@ -158,6 +171,7 @@ const render = async article => {
           custom-element="amp-analytics"
           src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
         ></script>
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta
           name="viewport"
           content="width=device-width,minimum-scale=1,initial-scale=1"
