@@ -5,14 +5,14 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5c2b9af75513850017f82d17.html">
-        <meta property="og:title" content="沖縄暮らし #1 - diary.jgs.me | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/5e15c5e9903ed1001749625c.html">
+        <meta property="og:title" content="snowpack 事始め | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary_large_image">
               
         
-                <meta property="og:image" content="https://gyazo.com/ba5ff194845beee2a93315b9e00495e5/raw">
+                <meta property="og:image" content="https://gyazo.com/db72896c94d34c0fdf9ae2f1a8301143/raw">
               
         <style amp-boilerplate="">
           body {
@@ -183,8 +183,8 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>沖縄暮らし #1 - diary.jgs.me | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/沖縄暮らし #1 - diary.jgs.me">
+        <title>snowpack 事始め | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/snowpack 事始め">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -212,47 +212,84 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/沖縄暮らし #1 - diary.jgs.me">
+            <a href="https://scrapbox.io/jigsaw/snowpack 事始め">
               スクボで読む
             </a>
           </div>
-          <h1>沖縄暮らし #1 - diary.jgs.me</h1>
+          <h1>snowpack 事始め</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          昨晩はまぜそばの店へ。うまい。
+          
+            <a href="https://www.snowpack.dev/" target="_blank" rel="noopener">
+              https://www.snowpack.dev/
+            </a>
+          
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          今日は
+          おもろそうだったので様子見
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          pika の系譜らしい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          元々 
+        <code>@pika/web</code>
+       だったのが 
+        <code>snowpack</code>
+       になったっぽい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          シンプルに npm の module を 
+        <code>web_modules</code>
+       以下にバンドルしてくれて esm でロードできるようにしてくれるやつ、って感じか？
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/ba5ff194845beee2a93315b9e00495e5/thumb/1000">
-        </amp-img></div>
-      
+                <br>
+              
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          座間味島と黒島のポイントで3本潜ってきた。ほぼはじめてぐらいのウェットがすこぶる快適だったのと、海底の地形がダイナミックで感動した。あと船がだいぶ揺れて、行きは結構ハラハラしたけど帰りは爆睡だった。海を眺めてると、こんなに水があるんだからなるほど水の惑星だなあ、などと思い耽っていた。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          今晩は
+        <div style="padding-left:0rem; overflow: scroll;">
+          <code>shell</code>
+          <pre><code>y add preact
+y add -D snowpack
+snowpack
+y add -D serve
+serve
+open http://localhost:5000</code></pre>
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/b1fbd8824fc01252b80e8bcaa37933af/thumb/1000">
-        </amp-img></div>
+                <br>
+              
+        </div>
       
+        <div style="padding-left:0rem; overflow: scroll;">
+          <code>index.html</code>
+          <pre><code>&lt;div id="app"&gt;&lt;/div&gt;
+&lt;script type="module" src="/src/app.js"&gt;&lt;/script&gt;</code></pre>
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          表にジジシャツ姿の爺さんと店内に婆さんが2人いる定食屋(といってもだいぶ夜中までやってるらしい)でゴーヤチャンプルー。うまい。
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; overflow: scroll;">
+          <code>src/app.js</code>
+          <pre><code>import { h, Component, render } from '/web_modules/preact.js'
+
+const app = h('div', null, 'Helloooo')
+
+render(app, document.getElementById('app'))</code></pre>
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -262,26 +299,143 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          June 15th, 2016 3:07am
+          動く
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-        <span class="level-0-0-5 ">
-          original: 
-            <a href="http://diary.jgs.me/post/145919031124" target="_blank" rel="noopener">
-              http://diary.jgs.me/post/145919031124
-            </a>
-          
-        </span>
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/db72896c94d34c0fdf9ae2f1a8301143/thumb/1000">
+        </amp-img></div>
       
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-          <span class="unlinked-0-0-15">#20160615</span>
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; overflow: scroll;">
+          <code>shell</code>
+          <pre><code>y add htm
+snowpack</code></pre>
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; overflow: scroll;">
+          <code>src/app.js</code>
+          <pre><code>import { h, Component, render } from '/web_modules/preact.js'
+import htm from '/web_modules/htm.js'
+
+const html = htm.bind(h)
+
+const app = html`
+  &lt;div&gt;yo yo&lt;/div&gt;
+`
+
+render(app, document.getElementById('app'))</code></pre>
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          動く
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/9475beb6f20836000b60436f3f9cbe35/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; overflow: scroll;">
+          <code>shell</code>
+          <pre><code>y add csz
+snowpack</code></pre>
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; overflow: scroll;">
+          <code>src/app.js</code>
+          <pre><code>import { h, Component, render } from '/web_modules/preact.js'
+import htm from '/web_modules/htm.js'
+import css from '/web_modules/csz.js'
+
+const html = htm.bind(h)
+
+const style = css`
+  color: #f00;
+`
+
+const app = html`
+  &lt;div class="${style}"&gt;yo yo&lt;/div&gt;
+`
+
+render(app, document.getElementById('app'))</code></pre>
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          動く
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/3d2a42ec9f58e32714d5bde425bf5578/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          snowpack
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#20200108</span>
          
-          <span class="unlinked-0-0-15">#0615</span>
+          <a href="https://amp.kbys.tk/5e15c63f2c7f8000173018bc">#0108</a>
         
         </div>
       
@@ -290,32 +444,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5e0fc2c1e5636b00173716db.html">
-                      20190205
+                    <a href="https://amp.kbys.tk/5e15c63f2c7f8000173018bc.html">
+                      0108
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e0fc2fa79a255001773fcbf.html">
-                      沖縄 2016 recap
+                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
+                      最近書かれた記事
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dcf.html">
-                      Google Cloud Platform Japan 公式ブログ: Google Cloud Datastoreでのデータ整理の考え方 - github.com/e-jigsaw/web
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dcd.html">
+                      気が抜けた生活をしている - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c4ecc24247d3c00171235e7.html">
-                      ローマ時代のエンジニアは、自分の建てた橋の下でしばらく過ごさなければならなかった
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82da2.html">
+                      猛者鍋 - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ceb83f1d762c600179fa42c.html">
-                      Twitter との付き合い方を変えた
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82ddb.html">
+                      すきやき - diary.jgs.me
                     </a>
                   </li>
                 
