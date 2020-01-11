@@ -9,18 +9,25 @@ const { ga, css } = require('./styles')
 
 const html = ntml.htmlFragment
 
+const escapeAngle = str =>
+  str.replace(/</g, '&lt;').replace(/(.)>/g, (_, p1) => `${p1}&gt;`)
+
 const nodeRender = async node => {
   switch (node.type) {
     case 'plain':
-      return node.text
+      return escapeAngle(node.text)
     case 'hashTag': {
       if (dic[node.href] !== undefined) {
         return html`
-          <a href="${`https://amp.kbys.tk/${dic[node.href]}`}">#${node.href}</a>
+          <a href="${`https://amp.kbys.tk/${dic[node.href]}`}"
+            >#${escapeAngle(node.href)}</a
+          >
         `
       } else {
         return html`
-          <span class="${css.classes.unlinked}">#${node.href}</span>
+          <span class="${css.classes.unlinked}"
+            >#${escapeAngle(node.href)}</span
+          >
         `
       }
     }
@@ -29,10 +36,12 @@ const nodeRender = async node => {
         case 'relative': {
           if (dic[node.href] !== undefined) {
             return html`
-              <a href="https://amp.kbys.tk/${dic[node.href]}">${node.href}</a>
+              <a href="https://amp.kbys.tk/${dic[node.href]}"
+                >${escapeAngle(node.href)}</a
+              >
             `
           } else {
-            return node.href
+            return escapeAngle(node.href)
           }
         }
         case 'root':
@@ -42,11 +51,14 @@ const nodeRender = async node => {
               target="_blank"
               rel="noopener"
             >
-              ${node.href}
+              ${escapeAngle(node.href)}
             </a>
           `
         case 'absolute': {
-          if (/^https:\/\/www\.youtube\.com/.test(node.href)) {
+          if (
+            /^https:\/\/www\.youtube\.com/.test(node.href) ||
+            /^https:\/\/youtu.be/.test(node.href)
+          ) {
             const video = videoParser.parse(node.href)
             return html`
               <amp-youtube
@@ -59,7 +71,9 @@ const nodeRender = async node => {
           }
           return html`
             <a href="${node.href}" target="_blank" rel="noopener">
-              ${node.content ? node.content : node.href}
+              ${node.content
+                ? escapeAngle(node.content)
+                : escapeAngle(node.href)}
             </a>
           `
         }
@@ -87,7 +101,7 @@ const nodeRender = async node => {
       `
     case 'code':
       return html`
-        <code>${node.text}</code>
+        <code>${escapeAngle(node.text)}</code>
       `
     case 'icon': {
       switch (node.pathType) {
@@ -135,8 +149,8 @@ const blockRender = block => {
     case 'codeBlock': {
       return html`
         <div style="padding-left:${block.indent}rem; overflow: scroll;">
-          <code>${block.fileName}</code>
-          <pre><code>${block.content}</code></pre>
+          <code>${escapeAngle(block.fileName)}</code>
+          <pre><code>${escapeAngle(block.content)}</code></pre>
         </div>
       `
     }
@@ -147,9 +161,7 @@ const blockRender = block => {
 }
 
 const render = async article => {
-  const obj = parse(
-    article.txt.replace(/</g, '&lt;').replace(/(.)>/g, (_, p1) => `${p1}&gt;`)
-  )
+  const obj = parse(article.txt)
   let relatedPagesWithRandomPages = article.relatedPages
   if (article.relatedPages.length < 5) {
     for (let i = article.relatedPages.length; i < 5; i++) {
