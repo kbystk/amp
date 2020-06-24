@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e0be23a10017086e54.html">
-        <meta property="og:title" content="phantomjs on ubuntu で日本語が文字化けする件 - dev.jgs.me | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/5ef29696cffd32001efbb09e.html">
+        <meta property="og:title" content="20200624 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,8 +181,8 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>phantomjs on ubuntu で日本語が文字化けする件 - dev.jgs.me | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/phantomjs on ubuntu で日本語が文字化けする件 - dev.jgs.me">
+        <title>20200624 | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/20200624">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -210,192 +210,200 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/phantomjs on ubuntu で日本語が文字化けする件 - dev.jgs.me">
+            <a href="https://scrapbox.io/jigsaw/20200624">
               スクボで読む
             </a>
           </div>
-          <h1>phantomjs on ubuntu で日本語が文字化けする件 - dev.jgs.me</h1>
+          <h1>20200624</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
+          反出生主義
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-        <span class="level-0-0-5 level-4-0-0-8">
-          TL;DR
-        </span>
-      
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          日本語フォントいれろ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          locale を 
-        <code>en_US.UTF-8</code>
-       にしろ
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <span class="level-0-0-5 level-4-0-0-8">
-          詳細
-        </span>
-      
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          表題の通りで、まず ubuntu の locale を変更してみる。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; overflow: scroll;">
-          <code>_</code>
-          <pre><code>% sudo apt-get install -y language-surrpot-ja
-% update-locale LANG=ja_JP.UTF8
-% sudo vim /etc/default/locale
-# LANG=ja_JP.UTF-8</code></pre>
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          これでログインしなおすと
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; overflow: scroll;">
-          <code>_</code>
-          <pre><code>% echo $LANG
-# =&gt; ja_JP.UTF-8</code></pre>
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          で、スクリーンショットを撮ってみるも相変わらず文字化け。そうか、フォントがないのか、と気付いてフォントをインストール。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; overflow: scroll;">
-          <code>_</code>
-          <pre><code>% wget http://ipafont.ipa.go.jp/ipafont/IPAfont00303.php
-% unzip IPAfont00303.php
-% cd IPAfont00303/
-% mkdir -p /usr/share/fonts/ipa
-% cp *.ttf /usr/share/fonts/ipa
-% fc-cache -fv</code></pre>
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          これでもダメ。が、調べてみると locale が 
-        <code>ja_JP.UTF-8</code>
-       だと日本語フォントが出ないらしい。なんじゃそら。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; overflow: scroll;">
-          <code>_</code>
-          <pre><code>% sudo vim /etc/default/locale
-# LANG=en_US.UTF-8</code></pre>
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          できましたー。ちょっと phantomjs 殴りたい。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
+        <blockquote>親になって子供を育てることは、幸福をもたらすとは限らない。子供の立場から見ても、
         <span class="level-0-0-5 ">
-          original: 
-            <a href="http://dev.jgs.me/2014/06/12/phantomjs-on-ubuntu-japan-text-language" target="_blank" rel="noopener">
-              http://dev.jgs.me/2014/06/12/phantomjs-on-ubuntu-japan-text-language
-            </a>
-          
+          子供は親を選べない
         </span>
+      点から、児童心理を知らなかったり、子供を奴隷扱いするなど育児に不適格な親のもとに生まれたら、必然的に子供は不幸になる。</blockquote>
       
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-          <span class="unlinked-0-0-15">#20140612</span>
-         
-          <a href="https://amp.kbys.tk/5ee27bab8dafbd001e1c9dbc">#0612</a>
+        <blockquote>
+            <a href="https://ja.wikipedia.org/wiki/反出生主義" target="_blank" rel="noopener">
+              https://ja.wikipedia.org/wiki/反出生主義
+            </a>
+          </blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>デイヴィッド・ベネターは、生まれてくることはその本人にとって常に災難であり、それゆえに子供を生むことは反道徳的な行為であり、子供は生むべきではない、と主張する。子供を生むことは、多くの動物がそうしているように単に何も考えずに性的欲求を満たすための行動である性行為の結果として引き起こされている現象であるか、または生む側の欲求を満たすために引き起こされている現象であるか（例えば子育てしてみたいといった欲求を満たすため、自分の老後の世話をしてもらおうという計算の為）、または判断するさいに生の質（QOL）を不当に高く誤評価していること（ポリアンナ効果）から起きている現象である、とする。</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>
+            <a href="https://ja.wikipedia.org/wiki/反出生主義" target="_blank" rel="noopener">
+              https://ja.wikipedia.org/wiki/反出生主義
+            </a>
+          </blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>ベネターは地球上の理想の人口はゼロであるとしている。つまり人間は絶滅した方がよい、と主張している。とはいえ即座に人類絶滅を目指すのは生まれてきてしまった人たちにとって大きい苦痛を伴うものとなるであろうから、少しずつ段階的に人口を減らしていき、最終的に絶滅する、つまりゆるやかに絶滅していくのが良いだろう、としている。ちなみにヒトに限らず、他の感覚を持った生物も、まったく生まれてこない方が良かった、つまり絶滅してしまった方が良い、としている。</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>
+            <a href="https://ja.wikipedia.org/wiki/反出生主義" target="_blank" rel="noopener">
+              https://ja.wikipedia.org/wiki/反出生主義
+            </a>
+          </blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          先祖たちの小さな偶然の積み重ねで今ここに立っている、先祖たちの積み重ねを自ら絶ち切ってよいのか...?とずっと疑問におもっていたのだけど、苦しみがここまで連鎖してきて私も苦しんでいるとしたらここで苦しみの連鎖は絶ち切った方がよいのだろうな
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          人類や生きとし生けるものは絶滅した方がよいというのはなかなか刹那的ではあるが
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          妻に反出生主義の話をしたら、その話がまとまっている雑誌が返ってきた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          面白かったのは、ベネターが「めいっぱい弾が込められた銃でロシアンルーレットをやっているようなものだ、銃口は自分の子供に向いている」と主張しているらしいところ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          古代ギリシアでも既に厭世的な表現があったらしい、もっと勢いよく広まってくれれば今ごろもっと様相が違ったかもしれない
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          俺は仕方ないので精一杯生きるけど、人類は絶滅した方がいいな
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Solitude BOX Online
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          無観客でもただ無観客でやるわけじゃねえぞ精神が芯にあってグッときた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5e139e537e380d001777b16e">Solitude HOTEL ∞F</a>
+             から重なるように
+              <a href="https://amp.kbys.tk/5e4a7d64ea7b7d00176de9da">悲しみの子供たち | Maison book girl</a>
+            からはじまって、レインコート連投はシビれた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          いろいろオンラインのライブをみてきて「もうこれでいいじゃん」となってきたけど、ブクガはやっぱり生の迫力というか、存在感というか、そういうのがあるなあ、などとおもっているとレインコートがループしはじめて「はて...?」となり、井上さんがこっちを指さしてるとこなんかはもうホラーかよみたいな怖さがあって
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ライブでやってることをただデジタルにするんじゃなくて、デジタルでしかできない演出をやろうという心意気を感じた
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          こういうところが好きなんだな...	
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          なんとなく、4人の声の雰囲気が極まってる感があって終始ハラハラしながらみてるところに新曲の Fiction | Maison book girl がきて、矢川さんのあのパートのあたりとか、もうこの後解散話が出てきてもおかしくないぐらい感情が入ってて、そして non Fiction | Maison book girl かな...?ポエトリーのあとに久々に MC あったりしてもどうしよう.....などととおもってたらなかった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          9Fあるのかなあ...せめて 
+              <a href="https://amp.kbys.tk/5ef28dd48a4b970020d3e6fd">Best Album 『Fiction』 | Maison book girl</a>
+             を主題にやれたらいいな...絶対行きたい.....
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ベストバイ2020上半期
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          年末にまとめてやると忘れそうなので半年分くらいでやりたい
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          テラスハウスもフリースタイルダンジョンも終わってしまって、週間でみてる番組がゼロになってしまった
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#0624</span>
         
         </div>
       
@@ -404,32 +412,38 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5ee27bab8dafbd001e1c9dbc.html">
-                      0612
+                    <a href="https://amp.kbys.tk/5ef28dd48a4b970020d3e6fd.html">
+                      Best Album 『Fiction』 | Maison book girl
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c4658f7decd5d0017b43cb9.html">
-                      Tofu キーボードを組み立てた - dev.to/jgs
+                    <a href="https://amp.kbys.tk/5e139e537e380d001777b16e.html">
+                      Solitude HOTEL ∞F
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5cd1177a6c8ae50017404b69.html">
-                      faast.js · Serverless batch computing made simple
+                    <a href="https://amp.kbys.tk/5e4a7d64ea7b7d00176de9da.html">
+                      悲しみの子供たち | Maison book girl
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4d63a4ef76770017cf37e9.html">
-                      1917 感想
+                    <a href="https://amp.kbys.tk/5e0ce5241235760017413c12.html">
+                      2020
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5df0967b5daf290017d3add2.html">
-                      今年のベスト　…なのか　2019版｜dannna o｜note
+                    <a href="https://amp.kbys.tk/5ed54aece3cdfa001e07520b.html">
+                      202006
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5ef344b37fe0a3001fba4b0d.html">
+                      よしおじさん入荷
                     </a>
                   </li>
                 
