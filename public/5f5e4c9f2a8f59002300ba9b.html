@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5c3c04e1be23a10017086e61.html">
-        <meta property="og:title" content="api blueprint のインデントでつまずいた - dev.jgs.me | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/5f5e4c9f2a8f59002300ba9b.html">
+        <meta property="og:title" content="0911 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,8 +181,8 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>api blueprint のインデントでつまずいた - dev.jgs.me | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/api blueprint のインデントでつまずいた - dev.jgs.me">
+        <title>0911 | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/0911">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -210,189 +210,41 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/api blueprint のインデントでつまずいた - dev.jgs.me">
+            <a href="https://scrapbox.io/jigsaw/0911">
               スクボで読む
             </a>
           </div>
-          <h1>api blueprint のインデントでつまずいた - dev.jgs.me</h1>
+          <h1>0911</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <span class="level-0-0-5 level-4-0-0-8">
-          TL;DR
-        </span>
+          &lt; 
+              <a href="https://amp.kbys.tk/5f5a02f744c65200232717df">0910</a>
+             | 
+              <a href="https://amp.kbys.tk/5f5e4cb6520ed9001ea88dc7">0912</a>
+             &gt;
+        </div>
       
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          255日目
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5db1d7a42dbea10017a49dbf">2016</a>
+            
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <code>API Blueprint</code>
-       の markdown は 4スペース
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <span class="level-0-0-5 level-4-0-0-8">
-          さて、
-        </span>
-      
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <code>synth</code>
-       や 
-        <code>rendr</code>
-       的な発想で 
-        <code>front</code>
-       と 
-        <code>back</code>
-       を分けて開発する潮流がいよいよキテる感じを感じ取ったので今のうちにおれの最高の Webサービス開発ノウハウを貯めておこうとおもって試行錯誤している。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <code>synth</code>
-       は 
-        <code>Angular</code>
-       にべったりでちょっと触る気力が起きないので、消去法的に 
-        <code>rendr</code>
-       かなという話なんだけど、
-        <code>rendr</code>
-       は他に APIサーバがある前提の FW なのでむかしズコーってなった思い出があった。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そこへ 
-        <code>API Blueprint</code>
-       が出てきて、
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          1. 
-        <code>API Blueprint</code>
-       で API のドキュメントを策定する
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          2. front は 
-        <code>API Blueprint</code>
-       でモックサーバを建てて開発スタート
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          3. back は 
-        <code>API Blueprint</code>
-       をテストとして開発スタート
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          というようなフローが実現できるのではと思い至った。ちなみに、
-        <code>rendr</code>
-       を用いる場合 
-        <code>rendr</code>
-       が front になる。back は 
-        <code>restify</code>
-       とかで API に専念したような構成にすればいいんじゃないかとおもう。ちなみに、
-        <code>~fy</code>
-       みたいなやつは 
-        <code>browserfy</code>
-       の系列なのかと判断する傾向にあるので名前がちょっとびみょい。。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そういうわけでやっと本題なんだけど、
-        <code>API Blueprint</code>
-       の書式でだいぶハマった。書けども書けどもパーサからエラーが返ってくるし、エラーが返ってくる割には行番号ぐらいしか分からないのでなにがダメなのかさっぱりわからなかった。いろいろと試行錯誤するに、
-        <span class="level-0-0-5 ">
-          インデントが 2スペースだと死んで 4スペースだと通る
-        </span>
-      ってことに気付いた。ドキュメントが 4スペで書いてあったら横着せずに 4スペいれろってことですね。そういうわけで、
-        <code>API Blueprint</code>
-       を書くときにはエディタの設定を 4スペにしないとダルい。とはいえ、
-        <code>API Blueprint</code>
-       の拡張子が 
-        <code>.md</code>
-       のやつもあれば 
-        <code>.apib</code>
-       のやつもあって混乱している。
-        <code>.apib</code>
-       にしてもらえると拡張子マッチさせてインデント差し替えられるから便利なのだけれど。。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          エディタでいうと Atom のプレビュープラグインは既にあるので、
-        <code>linter-apib</code>
-       があるといいのかなーと。
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <span class="level-0-0-5 ">
-          original: 
-            <a href="http://dev.jgs.me/2014/08/20/api-blueprint-indent" target="_blank" rel="noopener">
-              http://dev.jgs.me/2014/08/20/api-blueprint-indent
-            </a>
-          
-        </span>
-      
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <span class="unlinked-0-0-15">#20140820</span>
-         
-          <a href="https://amp.kbys.tk/5f3e76104c9fe9001f3a24f5">#0820</a>
-        
+              <a href="https://amp.kbys.tk/5c2b9af75513850017f82d20">スーサイドとゴッサム - diary.jgs.me</a>
+            
         </div>
       
           </div>
@@ -400,32 +252,44 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5f3e76104c9fe9001f3a24f5.html">
-                      0820
+                    <a href="https://amp.kbys.tk/5f5a02f744c65200232717df.html">
+                      0910
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e32.html">
-                      nginxでサブドメインの指定 - dev.jgs.me
+                    <a href="https://amp.kbys.tk/5f5e4cb6520ed9001ea88dc7.html">
+                      0912
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0bf.html">
-                      レスポンスの返し方 - e-jigsaw.blogspot.com
+                    <a href="https://amp.kbys.tk/5db1d7a42dbea10017a49dbf.html">
+                      2016
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209da6.html">
-                      HTTP APIの詳細なエラー情報をレスポンスに持たせるための仕様 - github.com/e-jigsaw/web
+                    <a href="https://amp.kbys.tk/5c2b9af75513850017f82d20.html">
+                      スーサイドとゴッサム - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5df558803ff53e00179ba8a9.html">
-                      1213
+                    <a href="https://amp.kbys.tk/5d78cbf76902ba0017447e56.html">
+                      lyrical school「BE KIND REWIND」インタビュー｜5つの個性がビートを刻む ガールズラップの可能性 - 音楽ナタリー 特集・インタビュー
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5db1f4af84f6370017f89236.html">
+                      周年日記
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5f5ba3b8a27067001e3512bf.html">
+                      20200911
                     </a>
                   </li>
                 
