@@ -9,11 +9,9 @@
         <meta property="og:title" content="20210116 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/e4b96e36db27ba433c70e3fd1de9243c/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -236,143 +234,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ステータスページをつくった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-            <a href="https://st.kbys.tk" target="_blank" rel="noopener">
-              https://st.kbys.tk
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/5ff576eb69e764001cd2335f">ツイッター離れ(n回目)</a>
-            に書いたまま、Twitter から離れ続けている
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/5ceb83f1d762c600179fa42c">Twitter との付き合い方を変えた</a>
-            から1年半くらい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          muute は面白く、内省は捗るのだけどカテゴリふりがダルくて腰が重くなりがちなので、もうちょいインスタントなものがほしかった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          機能はすごく絞って、pplog や fleet みたいな感じで最新1件が表示されるだけにした
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/e4b96e36db27ba433c70e3fd1de9243c/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          実装: 
-            <a href="https://github.com/kbystk/st" target="_blank" rel="noopener">
-              https://github.com/kbystk/st
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          使ってる技術は
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Next.js + Tailwind
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Vercel + Supabase
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Sveltekit が気になってたので、そっちでやろうとしたがまだ beta でしかもクローズドソースだったので先送りした
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Vercel 全乗り構成をやってみたくて(now 以来ご無沙汰だった)Next にした
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          あと 
-              <a href="https://amp.kbys.tk/5f6c49597e9fdd001e3e879e">ISR</a>
-             も試したかった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Vercel は随分と洗練されていて、GitHub と integration 設定したら何も設定しなくても全てがデプロイされた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          当然のように PR 毎に環境が作られたりもする
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Analytics はなんか設定いるんかなとおもったけど、GUI でポチッとすると勝手に測定が始まって便利
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          Real Experience Score という独自のスコアリングだが、ベースは Web Vitals っぽい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/5ecd4dc8c7a652df82230a0f2c7552ba/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          CSR で返してた時は LCP が悪すぎてスコアが低かったが、ISR に変えたら抜群によくなった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Supabase も前から試したいとおもっていた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          素の Postgres としか使ってないが、Firebase の Realtime Database のように subscription 方式でデータを読み出せたり、Auth のようにユーザの認証もできる、オープンソース Firebase を目指してるんだろうか
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          こちらもコンソールが非常に使いやすくて、特段苦労しなかった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ORM なんか入れようかと思ったが、素の SQL を書くだけにした(SQLインジェクションがある気がするが、一旦忘れる...)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          コネクションが増えたりしないかな〜と心配していたが、API 毎に lambda function が分かれているぶんの2つのコネクションだけでいけてるっぽい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          前に仕事で ISR やろうとしてめっちゃ苦労したのでだいたいの勘所はわかっていた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <code>[[...slug]].jsx</code>
-       とダイナミックルーティングをして、gSP x2 を設定するのがミソ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一応、revalidate が走ってるか確認するために generate されたときにタイムスタンプを送るようにした(想定通り動いてる気がする)
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Tailwind も仕事で触ってるので可もなく不可もなく
+              <a href="https://amp.kbys.tk/600d77d24dff1c0022385ba8">ステータスページをつくった</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -382,41 +246,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          改めてチャドウィック・ボーズマンさん
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          亡くなって四半期くらい経ったけど、未だに飲み込めてない
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          この前は 
-              <a href="https://amp.kbys.tk/5d6b101d2f0b19001740c525">Netflix</a>
-             の F1 のドキュメンタリーでニキ・ラウダが亡くなったというシーンで、メルセデスの人が話してるところでなぜかボーズマンがフラッシュバックしてしまい、精神が不安定になってしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          エンドゲームやインフィニティウォー、シビルウォーの登場するシーンをみるだけでもうダメ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ブラックパンサーがヒットして、世界が、アメリカがよりよくなっていれば...というところなのに、むしろ悪化していてとてもつらい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          討論会でプラウドボーイズに言及してるところが紹介される度に肚の底から怒りがこみ上げてくる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あまりに理不尽すぎる、耐えられない
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ライアン・クーグラーは続編をなんとかしてくれそうな雰囲気が出てきたけど、今の自分の精神状態がボロボロすぎて違う意味で心配
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          親族や共演者、スタッフの皆さんは大変な気持ちだろうけど、折り合いをつけてやっているのわかるし、ただのファンの自分に比べたらとんでもないかなしみだろうし....自分ごときがグズグズしていていいのか、という気持ちが湧いては消えていく...
+          
+              <a href="https://amp.kbys.tk/600d77f622b0c8001c230726">改めてチャドウィック・ボーズマンさん</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -460,38 +292,26 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/600d77d24dff1c0022385ba8.html">
+                      ステータスページをつくった
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/600d77f622b0c8001c230726.html">
+                      改めてチャドウィック・ボーズマンさん
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5e1f616a82bfda00172535a4.html">
                       0116
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5f6c49597e9fdd001e3e879e.html">
-                      ISR
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5d6b101d2f0b19001740c525.html">
-                      Netflix
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5ceb83f1d762c600179fa42c.html">
-                      Twitter との付き合い方を変えた
-                    </a>
-                  </li>
-                
-                  <li>
                     <a href="https://amp.kbys.tk/5db3e6f306b4060017aed567.html">
                       ウェアラブルはオワコンなのか? Jawboneが倒産し、Fitbit, GoProも絶不調 | freshtrax | デザイン会社 btrax ブログ
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5ff576eb69e764001cd2335f.html">
-                      ツイッター離れ(n回目)
                     </a>
                   </li>
                 

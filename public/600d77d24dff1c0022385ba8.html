@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5fff6eff31e612001e87d6ec.html">
-        <meta property="og:title" content="20210114 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/600d77d24dff1c0022385ba8.html">
+        <meta property="og:title" content="ステータスページをつくった | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/e4b96e36db27ba433c70e3fd1de9243c/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,8 +183,8 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>20210114 | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/20210114">
+        <title>ステータスページをつくった | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/ステータスページをつくった">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -210,141 +212,159 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/20210114">
+            <a href="https://scrapbox.io/jigsaw/ステータスページをつくった">
               スクボで読む
             </a>
           </div>
-          <h1>20210114</h1>
+          <h1>ステータスページをつくった</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          IPoE でネットにつなぐとめっちゃ速い
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し前の家での構成(OCN)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU(ルーター/PPPoE) =&gt; TP-Link Deco M9(ルーター) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Deco から有線もぶら下げたかったのだが、ONU に有線で直つなぎすると600Mbpsぐらい出るのが Deco の有線ポートにつなぐと10Mbpsほどまで低下してしまう減少に悩まされていた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し後の構成(IIJ) その1
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU =&gt; TP-Link Deco M9(ルーター/PPPoE) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:6rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          前の構成で2重ルーターになっていたのが問題だったのでは？と Deco にルーターを集約したが、有線ポートが遅い問題は変わらず
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し後の構成(IIJ) その2
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU =&gt; Cisco Meraki Go GX20(PPPoE) =&gt; TP-Link Deco M9(ブリッジ) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:5rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これで Meraki Go から引いてる有線はかなり速くなったが、ONU 直に比べると遅い、半分以下ぐらいになってしまう
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          そういえば IIJ に変えた時に IPoE なるオプションがついてたな〜とおもい、試してみることに
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Meraki Go で IPoE(DS-Lite) の設定を探したのだが、なさげだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          仕方ないのでダメ元で Deco の設定を変えて試すことに
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し後の構成(IIJ) その3
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU =&gt; TP-Link Deco M9(ルーター/DS-Lite) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:5rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          信じられないが、DS-Lite で接続したら Deco の有線ポートが信じられないぐらい速くなった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ONU 直とほぼ同じスピードが出る
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          DS-Lite だと認証書くところもなかったので、どういう仕組みになっているんだ？と謎が多いので今度調べる
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          BenQ の27インチディスプレイに MacbookPro つなぐと右端でマウスの挙動がおかしくなる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          HDMI で接続すると起きる問題だとおもっていたが、Thunderbolt3 でつないでも発生する
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          古い MBP だと発生しないので、最近もマシンの問題っぽい気がする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ディスプレイは買い替えたい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          27インチを縦に複数並べようと画策していたが、じゃあデカいディスプレイを1発置けばいいんじゃね？とおもいはじめている
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          LGの42インチあたりを考えている
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <a href="https://amp.kbys.tk/5e1ce2ef3e70cf0017dd191b">#0114</a>
+          from 
+              <a href="https://amp.kbys.tk/60025ad7bc92ed001cc6c160">20210116</a>
+             
+          <a href="https://amp.kbys.tk/5e1f616a82bfda00172535a4">#0116</a>
         
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ステータスページをつくった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+            <a href="https://st.kbys.tk" target="_blank" rel="noopener">
+              https://st.kbys.tk
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5ff576eb69e764001cd2335f">ツイッター離れ(n回目)</a>
+            に書いたまま、Twitter から離れ続けている
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5ceb83f1d762c600179fa42c">Twitter との付き合い方を変えた</a>
+            から1年半くらい
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          muute は面白く、内省は捗るのだけどカテゴリふりがダルくて腰が重くなりがちなので、もうちょいインスタントなものがほしかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          機能はすごく絞って、pplog や fleet みたいな感じで最新1件が表示されるだけにした
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/e4b96e36db27ba433c70e3fd1de9243c/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          実装: 
+            <a href="https://github.com/kbystk/st" target="_blank" rel="noopener">
+              https://github.com/kbystk/st
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          使ってる技術は
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Next.js + Tailwind
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Vercel + Supabase
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Sveltekit が気になってたので、そっちでやろうとしたがまだ beta でしかもクローズドソースだったので先送りした
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Vercel 全乗り構成をやってみたくて(now 以来ご無沙汰だった)Next にした
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          あと 
+              <a href="https://amp.kbys.tk/5f6c49597e9fdd001e3e879e">ISR</a>
+             も試したかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Vercel は随分と洗練されていて、GitHub と integration 設定したら何も設定しなくても全てがデプロイされた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          当然のように PR 毎に環境が作られたりもする
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Analytics はなんか設定いるんかなとおもったけど、GUI でポチッとすると勝手に測定が始まって便利
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          Real Experience Score という独自のスコアリングだが、ベースは Web Vitals っぽい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/5ecd4dc8c7a652df82230a0f2c7552ba/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          CSR で返してた時は LCP が悪すぎてスコアが低かったが、ISR に変えたら抜群によくなった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Supabase も前から試したいとおもっていた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          素の Postgres としか使ってないが、Firebase の Realtime Database のように subscription 方式でデータを読み出せたり、Auth のようにユーザの認証もできる、オープンソース Firebase を目指してるんだろうか
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          こちらもコンソールが非常に使いやすくて、特段苦労しなかった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ORM なんか入れようかと思ったが、素の SQL を書くだけにした(SQLインジェクションがある気がするが、一旦忘れる...)
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          コネクションが増えたりしないかな〜と心配していたが、API 毎に lambda function が分かれているぶんの2つのコネクションだけでいけてるっぽい
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          前に仕事で ISR やろうとしてめっちゃ苦労したのでだいたいの勘所はわかっていた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>[[...slug]].jsx</code>
+       とダイナミックルーティングをして、gSP x2 を設定するのがミソ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一応、revalidate が走ってるか確認するために generate されたときにタイムスタンプを送るようにした(想定通り動いてる気がする)
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Tailwind も仕事で触ってるので可もなく不可もなく
         </div>
       
           </div>
@@ -352,32 +372,44 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5fef959cd51342001c05cb1f.html">
-                      2021
+                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
+                      最近書かれた記事
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5fef964515cb7b001c82f111.html">
-                      202101
+                    <a href="https://amp.kbys.tk/60025ad7bc92ed001cc6c160.html">
+                      20210116
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5fff6ebc19ca2c0022d0df2d.html">
-                      State of JS 2020
+                    <a href="https://amp.kbys.tk/600cf9c56abaf3001ff82ae1.html">
+                      20210124
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e1ce2ef3e70cf0017dd191b.html">
-                      0114
+                    <a href="https://amp.kbys.tk/5e1f616a82bfda00172535a4.html">
+                      0116
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5faa78f80a5600170d9251.html">
-                      意外とデキる
+                    <a href="https://amp.kbys.tk/5f6c49597e9fdd001e3e879e.html">
+                      ISR
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5ceb83f1d762c600179fa42c.html">
+                      Twitter との付き合い方を変えた
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5ff576eb69e764001cd2335f.html">
+                      ツイッター離れ(n回目)
                     </a>
                   </li>
                 
