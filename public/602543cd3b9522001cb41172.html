@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/5fff6eff31e612001e87d6ec.html">
-        <meta property="og:title" content="20210114 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/602543cd3b9522001cb41172.html">
+        <meta property="og:title" content="PoE 3.13 その8 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/7691beb1cd819de2c71f537e8e4f9d0c/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,8 +183,8 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>20210114 | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/20210114">
+        <title>PoE 3.13 その8 | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/PoE 3.13 その8">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -210,141 +212,109 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/20210114">
+            <a href="https://scrapbox.io/jigsaw/PoE 3.13 その8">
               スクボで読む
             </a>
           </div>
-          <h1>20210114</h1>
+          <h1>PoE 3.13 その8</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          IPoE でネットにつなぐとめっちゃ速い
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し前の家での構成(OCN)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU(ルーター/PPPoE) =&gt; TP-Link Deco M9(ルーター) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Deco から有線もぶら下げたかったのだが、ONU に有線で直つなぎすると600Mbpsぐらい出るのが Deco の有線ポートにつなぐと10Mbpsほどまで低下してしまう減少に悩まされていた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し後の構成(IIJ) その1
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU =&gt; TP-Link Deco M9(ルーター/PPPoE) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:6rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          前の構成で2重ルーターになっていたのが問題だったのでは？と Deco にルーターを集約したが、有線ポートが遅い問題は変わらず
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し後の構成(IIJ) その2
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU =&gt; Cisco Meraki Go GX20(PPPoE) =&gt; TP-Link Deco M9(ブリッジ) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:5rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これで Meraki Go から引いてる有線はかなり速くなったが、ONU 直に比べると遅い、半分以下ぐらいになってしまう
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          そういえば IIJ に変えた時に IPoE なるオプションがついてたな〜とおもい、試してみることに
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Meraki Go で IPoE(DS-Lite) の設定を探したのだが、なさげだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          仕方ないのでダメ元で Deco の設定を変えて試すことに
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          引っ越し後の構成(IIJ) その3
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ONU =&gt; TP-Link Deco M9(ルーター/DS-Lite) =&gt; (無線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:5rem; margin-bottom: .5rem;">
-          =&gt; (有線) =&gt; いくつかのデバイス
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          信じられないが、DS-Lite で接続したら Deco の有線ポートが信じられないぐらい速くなった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ONU 直とほぼ同じスピードが出る
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          DS-Lite だと認証書くところもなかったので、どういう仕組みになっているんだ？と謎が多いので今度調べる
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          BenQ の27インチディスプレイに MacbookPro つなぐと右端でマウスの挙動がおかしくなる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          HDMI で接続すると起きる問題だとおもっていたが、Thunderbolt3 でつないでも発生する
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          古い MBP だと発生しないので、最近もマシンの問題っぽい気がする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ディスプレイは買い替えたい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          27インチを縦に複数並べようと画策していたが、じゃあデカいディスプレイを1発置けばいいんじゃね？とおもいはじめている
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          LGの42インチあたりを考えている
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <a href="https://amp.kbys.tk/5e1ce2ef3e70cf0017dd191b">#0114</a>
+          from 
+              <a href="https://amp.kbys.tk/6023ed14670a82001c4ca2e9">20210210</a>
+             
+          <a href="https://amp.kbys.tk/5e41a4d4838aac0017146d1e">#0210</a>
         
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/60194ea1dd4392001c90f367">PoE 3.13</a>
+             その8
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/7691beb1cd819de2c71f537e8e4f9d0c/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Enlighten がドロップ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/0aa6238769ec5c81986d1cbab6564336/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          パッシブの Immortal Ambition まであと少し!
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/256614552f7b122e479ffa3688024ad4/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ヤクザリーグあんまちゃんとやってなくて、Mastermind に到達するのははじめて
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/e3955c4cbaa4f18eb9e2336fab41b54f/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          フラスコでた～
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/3730c3bce85a7b2315dabc531628a142/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          いい加減胴体を白シャツから Skin of the Loyal に換装
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/88e28290113a3f440ebe9fd43f50f3a2/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          石カツアゲ3回目かな...?
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/355ae3fbe77cbfbf3e7b80cd4d0d44dc/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Harbinger に割り振り
         </div>
       
           </div>
@@ -352,32 +322,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5fef959cd51342001c05cb1f.html">
-                      2021
+                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
+                      最近書かれた記事
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5fef964515cb7b001c82f111.html">
-                      202101
+                    <a href="https://amp.kbys.tk/6023ed14670a82001c4ca2e9.html">
+                      20210210
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5fff6ebc19ca2c0022d0df2d.html">
-                      State of JS 2020
+                    <a href="https://amp.kbys.tk/5e41a4d4838aac0017146d1e.html">
+                      0210
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e1ce2ef3e70cf0017dd191b.html">
-                      0114
+                    <a href="https://amp.kbys.tk/60194ea1dd4392001c90f367.html">
+                      PoE 3.13
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82d0d.html">
-                      Star Wars ep.7 - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e0c.html">
+                      Rails寺子屋#4 - diary.jgs.me
                     </a>
                   </li>
                 
