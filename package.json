@@ -15,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@jigsaw/sb-scripts": "^0.0.4",
-    "@progfay/scrapbox-parser": "^3.1.0",
+    "@progfay/scrapbox-parser": "^6.0.3",
     "babel-eslint": "^10.0.3",
     "date-fns": "^2.8.1",
     "eslint": "^6.8.0",
