@@ -316,7 +316,7 @@ const render = async article => {
           </div>
           <h1>${article.title}</h1>
           <div>
-            ${obj.blocks.map(blockRender)}
+            ${obj.map(blockRender)}
           </div>
           <h2>関連ページとランダムに選ばれたページ</h2>
           <ul>

@@ -10,23 +10,23 @@
     "prepare_": "node node_modules/@jigsaw/sb-scripts/prepare.js",
     "sitemap": "node sitemap.js",
     "views": "node views.js",
-    "start": "yarn prepare_ && yarn dic && yarn fetch && yarn amplify && yarn index && yarn sitemap"
+    "start": "npm run prepare_ && npm run dic && npm run fetch && npm run amplify && npm run index && npm run sitemap"
   },
   "license": "MIT",
   "devDependencies": {
     "@jigsaw/sb-scripts": "^0.0.4",
-    "@progfay/scrapbox-parser": "^3.1.0",
-    "babel-eslint": "^10.0.3",
-    "date-fns": "^2.8.1",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "isomorphic-unfetch": "^3.0.0",
-    "js-video-url-parser": "^0.4.0",
-    "jss": "^10.0.3",
-    "jss-preset-default": "^10.0.3",
-    "lit-ntml": "^2.10.0",
-    "prettier": "^1.19.1",
-    "sitemap": "^5.1.0"
+    "@progfay/scrapbox-parser": "^7.1.0",
+    "babel-eslint": "^10.1.0",
+    "date-fns": "^2.21.3",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "js-video-url-parser": "^0.4.3",
+    "jss": "^10.6.0",
+    "jss-preset-default": "^10.6.0",
+    "lit-ntml": "^2.18.2",
+    "prettier": "^2.3.0",
+    "sitemap": "^7.0.0"
   }
 }
