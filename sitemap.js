@@ -1,13 +1,17 @@
 const { writeFileSync } = require('fs')
-const { createSitemap } = require('sitemap')
+const { Readable } = require('stream')
+const { SitemapStream, streamToPromise } = require('sitemap')
 const master = require('./data/pub.json')
 
-const sitemap = createSitemap({
+const links = master.map(page => ({
+  url: `/${page.id}.html`
+}))
+const stream = new SitemapStream({
   hostname: 'https://amp.kbys.tk',
-  cacheTime: 600000,
-  urls: master.map(page => ({
-    url: `/${page.id}.html`
-  }))
+  cacheTime: 600000
 })
-const xml = sitemap.toXML()
-writeFileSync('./public/sitemap.xml', xml)
+
+;(async () => {
+  const xml = await streamToPromise(Readable.from(links).pipe(stream))
+  writeFileSync('./public/sitemap.xml', xml)
+})()
