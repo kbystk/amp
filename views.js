@@ -28,7 +28,7 @@ const main = async () => {
   console.log(json)
   console.log(`Today views: ${diff}`)
   console.log(`Total views: ${count}`)
-  writeFileSync(PATH, count)
+  writeFileSync(PATH, count.toString())
 }
 
 main()
