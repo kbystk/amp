@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/61abf46f1793e8001f4abbfb.html">
-        <meta property="og:title" content="Rust + Node-APIでクロスプラットフォーム向けnpmパッケージを公開する - 別にしんどくないブログ | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/61b4b2a0e7bab50021986d25.html">
+        <meta property="og:title" content="20211211 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/56920cabaf0dc58b3367942ca79e0684/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,8 +181,8 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Rust + Node-APIでクロスプラットフォーム向けnpmパッケージを公開する - 別にしんどくないブログ | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/Rust + Node-APIでクロスプラットフォーム向けnpmパッケージを公開する - 別にしんどくないブログ">
+        <title>20211211 | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/20211211">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -212,37 +210,17 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Rust + Node-APIでクロスプラットフォーム向けnpmパッケージを公開する - 別にしんどくないブログ">
+            <a href="https://scrapbox.io/jigsaw/20211211">
               スクボで読む
             </a>
           </div>
-          <h1>Rust + Node-APIでクロスプラットフォーム向けnpmパッケージを公開する - 別にしんどくないブログ</h1>
+          <h1>20211211</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-            <a href="https://shisama.hatenablog.com/entry/2021/12/03/054437" target="_blank" rel="noopener">
-              Rust + Node-APIでクロスプラットフォーム向けnpmパッケージを公開する - 別にしんどくないブログ
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/56920cabaf0dc58b3367942ca79e0684/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Next@12 入れた時に swc がプラットフォーム向けに大量のパッケージを作っていたことは観測していたが、手でやってるのかとおもったが N-API の代替ツールが既にあったんだなあ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まーじで Rust は勉強しとかないとヤバイかもしれん、
-              <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8">node</a>
-             の時代はちょっと掘ると C++ が出てきてうんざりしたものだが、deno ベースに移行したりしたらいよいよ Rust にのっかることになるわけだし
+          <a href="https://amp.kbys.tk/5defe188e04c4b00174eb0d7">#1211</a>
+        
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -252,11 +230,75 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <a href="https://amp.kbys.tk/61ac7017d14aa7001d008c56">#20211205</a>
-         
-          <a href="https://amp.kbys.tk/5de8a1cd6aa46d0017ecd69a">#1205</a>
-        
+          deno そこそこ触る
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ちょっと前にも書いたが deno ウェーブきてる感あって本腰を入れて遊んでみることに
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ここの scrapbox の AMP 版として実装した amp.kbys.tk の AMP をそろそろ外したいし、仕組みを変えたりしたいのでコイツでいろいろやってみる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          大元に sb-scripts というユーティリティ的なリポジトリを別で作ってて、まずはそいつを deno 化した
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          特に依存とかなくて、fetch がネイティブで実装されているのでむしろラクになった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          deno.land に登録してみたくてとりあえず登録したけど、別に rawgithub からスクリプト落ちてくれば別にそれでもいい感はあった
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          とくにアカウントの登録とかもなくて(?) GitHub でぽいぽい設定したら勝手に publish される
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          esm とかもそうだけど、もうなんかビルドして云々とかもはやダルいよなあ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          続いて、大きく依存している scrapbox-parser が deno で動くか試してみることに
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          package.json みて、devDep ぐらいしかなかったのでいけそうなことを確信したけど import で拡張子が必須なのでいちいちつけてまわる必要があった
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          手作業で終わらせてとりあえず fork したリポジトリにあげておいた
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          deno fmt もかかっちゃったので本家に変更があった時に取り込むのが少し面倒になるかもしれない
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          ここらへんは既存の npm 中心のエコシステムとどう落としどころつくっていくのかなあ？なんかもううまいことやると node 互換？とやらで動いたりするんだろうか？
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          適当なスクリプトを書いてちゃんとパースできていることを確認した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          お膳立てはできたけど肝心の本体をどうするかは考え中
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          せっかくなので deno deploy を使ってみたいが、deno deploy における next.js っぽい fresh? というやつがまだまだ手作り感ある状態でどうしようかなあと
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          今までは AMP を予め生成しておいて、ランタイムなしにして静的なアセットだけ配信すればいい状態にしていたが、deno deploy におくなら edge server から直で API を叩いてそれを出すだけでいいんじゃないか？とおもわんでもない
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          とはいえルーティングとか考えると最低限なんらかの FW はほしいが、なんか定番的なのあったりするんだろうか....
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -270,32 +312,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5d69111bcaebee0017a9a161.html">
-                      最近クリップしたページ
+                    <a href="https://amp.kbys.tk/5fef959cd51342001c05cb1f.html">
+                      2021
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5de8a1cd6aa46d0017ecd69a.html">
-                      1205
+                    <a href="https://amp.kbys.tk/61a77fd191660e0023a7555e.html">
+                      202112
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61ac7017d14aa7001d008c56.html">
-                      20211205
+                    <a href="https://amp.kbys.tk/61b38cc4bf6ec300233846b2.html">
+                      楽天銀行個人口座への対応予定について | ヘルプセンター | マネーツリー
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8.html">
-                      node
+                    <a href="https://amp.kbys.tk/61b49df4994255001d7fdf88.html">
+                      denosaurs/denon: 👀 Monitor any changes in your Deno application and automatically restart.
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5de753dab8112b0017de92e0.html">
-                      スクボの投稿をrescrapしてdsbdみたいなのを作れる？
+                    <a href="https://amp.kbys.tk/5defe188e04c4b00174eb0d7.html">
+                      1211
                     </a>
                   </li>
                 
