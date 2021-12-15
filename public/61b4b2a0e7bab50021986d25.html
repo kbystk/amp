@@ -230,75 +230,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          deno そこそこ触る
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ちょっと前にも書いたが deno ウェーブきてる感あって本腰を入れて遊んでみることに
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ここの scrapbox の AMP 版として実装した amp.kbys.tk の AMP をそろそろ外したいし、仕組みを変えたりしたいのでコイツでいろいろやってみる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          大元に sb-scripts というユーティリティ的なリポジトリを別で作ってて、まずはそいつを deno 化した
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          特に依存とかなくて、fetch がネイティブで実装されているのでむしろラクになった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          deno.land に登録してみたくてとりあえず登録したけど、別に rawgithub からスクリプト落ちてくれば別にそれでもいい感はあった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          とくにアカウントの登録とかもなくて(?) GitHub でぽいぽい設定したら勝手に publish される
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          esm とかもそうだけど、もうなんかビルドして云々とかもはやダルいよなあ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          続いて、大きく依存している scrapbox-parser が deno で動くか試してみることに
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          package.json みて、devDep ぐらいしかなかったのでいけそうなことを確信したけど import で拡張子が必須なのでいちいちつけてまわる必要があった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          手作業で終わらせてとりあえず fork したリポジトリにあげておいた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          deno fmt もかかっちゃったので本家に変更があった時に取り込むのが少し面倒になるかもしれない
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          ここらへんは既存の npm 中心のエコシステムとどう落としどころつくっていくのかなあ？なんかもううまいことやると node 互換？とやらで動いたりするんだろうか？
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          適当なスクリプトを書いてちゃんとパースできていることを確認した
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          お膳立てはできたけど肝心の本体をどうするかは考え中
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          せっかくなので deno deploy を使ってみたいが、deno deploy における next.js っぽい fresh? というやつがまだまだ手作り感ある状態でどうしようかなあと
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          今までは AMP を予め生成しておいて、ランタイムなしにして静的なアセットだけ配信すればいい状態にしていたが、deno deploy におくなら edge server から直で API を叩いてそれを出すだけでいいんじゃないか？とおもわんでもない
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          とはいえルーティングとか考えると最低限なんらかの FW はほしいが、なんか定番的なのあったりするんだろうか....
+          
+              <a href="https://amp.kbys.tk/61b9feec75890f001d05978d">deno そこそこ触る</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -332,6 +266,12 @@ body {
                   <li>
                     <a href="https://amp.kbys.tk/61b49df4994255001d7fdf88.html">
                       denosaurs/denon: 👀 Monitor any changes in your Deno application and automatically restart.
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/61b9feec75890f001d05978d.html">
+                      deno そこそこ触る
                     </a>
                   </li>
                 
