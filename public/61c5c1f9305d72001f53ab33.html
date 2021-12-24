@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/61a35c105047ae001d735c4e.html">
-        <meta property="og:title" content="Blown Away: Christmas 感想 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/61c5c1f9305d72001f53ab33.html">
+        <meta property="og:title" content="久しぶりにラズパイ | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,8 +181,8 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Blown Away: Christmas 感想 | I am Electrical machine</title>
-        <link rel="canonical" href="https://scrapbox.io/jigsaw/Blown Away: Christmas 感想">
+        <title>久しぶりにラズパイ | I am Electrical machine</title>
+        <link rel="canonical" href="https://scrapbox.io/jigsaw/久しぶりにラズパイ">
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -210,65 +210,151 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Blown Away: Christmas 感想">
+            <a href="https://scrapbox.io/jigsaw/久しぶりにラズパイ">
               スクボで読む
             </a>
           </div>
-          <h1>Blown Away: Christmas 感想</h1>
+          <h1>久しぶりにラズパイ</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/61a01e16d39275001dd42654">20211126</a>
+              <a href="https://amp.kbys.tk/61bd5b38f5e3f1001d8cd624">20211218</a>
              
-          <a href="https://amp.kbys.tk/5ddcb90f14855e0017b2cbaf">#1126</a>
+          <a href="https://amp.kbys.tk/5df9d4ebb6252f00176cbe1c">#1218</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Blown Away: Christmas 感想
+          久しぶりにラズパイ
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          別にいいけど司会のかる〜いニイちゃんが変わってしまって少し残念
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          FabFive も好きだけど、
-              <a href="https://amp.kbys.tk/5d6b101d2f0b19001740c525">Netflix</a>
-             で相当出ずっぱり感があってまあ...
+          今さら感あるかもしれないが、やっぱり部屋にこもって仕事してると二酸化炭素濃度やばいのでは？という疑念が
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          懐かしの(とは言ってもみたのは最近だけど)面々が戻ってきてちょっとした同窓会みたいな
+          適当にセンサを買おうと探してみたが、画面に表示だけするやつは数あれどセンサの値を引っ張ってきて記録しておく、というやつは全然見つからなかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          仕方ないのでマジのセンサだけ買ってなんらか電子工作するしかねえか...とおもい、そっちも調べてると M5Stack? M5Stick? というやつにつなげたりするやつが出てきたりした
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          我らがナオさんついに決勝まで勝ち進んで嬉しい
+          こういう時ぐらい他の言語書けよという気がしないでもないけど、慣れてるツールでコードを書きたい欲が出てきてしまって、どうにか Raspberry Pi でやれないかなと
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          大昔に買ったラズパイ3が引っ越しだかのタイミングでぶっ壊れてしまっていて、復旧できるか試した
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://dev.classmethod.jp/articles/restore-the-raspberry-pi-4-model-b-os-destroyed-by-a-biginner/" target="_blank" rel="noopener">
+              https://dev.classmethod.jp/articles/restore-the-raspberry-pi-4-model-b-os-destroyed-by-a-biginner/
+            </a>
+          
         </div>
       
         <div style="padding-left:3rem; margin-bottom: .5rem;">
-          決勝は審査読みでたぶんキャットさんなんだろうな〜〜〜...とおもいつつ、読み違いでいってくれ〜〜いと祈っていたが届かず
+          によると、不意の電源抜き差しで SD がぶっ壊れるらしい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          ひとまず SD に OS を焼き直してみることに
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener">
+              https://www.raspberrypi.com/software/
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          なんと SD 焼くアプリを公式が配布してて、これでぱぱっと焼くことに成功した
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          SD(microも)のスロットがついたデバイスなどなかったので、これも大昔に使っていた microSD =&gt; USB-A のコネクタに USB-A =&gt; USB-C のコネクタをかませないと macbook につながらなかったのだが、さすがにタワーすぎるせいか mac だと認識されなかった
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          仕方ないので母艦の windows に USB-A で接続したら、認識はするものの、そもそも SD がぶっ壊れてそうだった
+        </div>
+      
+        <div style="padding-left:5rem; margin-bottom: .5rem;">
+          コネクタがイカれてるのか、本体がイカれてるのかわからなかったので、転がってた8GB の SD を挿してみると無事に認識されたのでこのままこいつでいくことにした
+        </div>
+      
+        <div style="padding-left:6rem; margin-bottom: .5rem;">
+          容量半分になってしまったので些か不安ではある
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://qiita.com/c60evaporator/items/ebe9c6e8a445fed859dc" target="_blank" rel="noopener">
+              https://qiita.com/c60evaporator/items/ebe9c6e8a445fed859dc
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          linux でもろもろ整えるの毎回やっては忘れてしまうので、これを参考に整えた
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          初手だと GUI が上がってしまって、適当なマウスがなくて詰んだのだが、キーボードで ctrl+alt+t でターミナルが立ち上がるってことだったので、これでターミナルを開いて 
+        <code>raspi-config</code>
+       を実行して CUI をデフォルトにしたり、ssh を enable にしたりした
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          工芸やってる時はアレキサンダーさんがワイルド感あってイイ、と妻の談
+          最近はもっぱら volta 使ってるので volta 使えるかな〜とおもったが、volta は x86 しかダメらしい
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          nvm 試してみたらちゃんと armv7l のバイナリを引いてきてくれてさすがだなと
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Blown Away
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          普通に node@16 動いた
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ちなみに、deno も動いたりしないかな〜とおもって 
+        <code>curl -fsSL https://deno.land/x/install/install.sh | sh</code>
+       したら x86? のバイナリが入ってきただけで使えなかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          しょうがないので rust の環境を入れた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          rust は 
+        <code>curl https://sh.rustup.rs -sSf | sh</code>
+       だけで入って便利
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          んで 
+        <code>cargo install deno --locked</code>
+       を試したんだけど、rustry_v8 のコンパイルで失敗するっぽい
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ちょこっと調べて 
+            <a href="https://github.com/LukeChannings/deno-arm64" target="_blank" rel="noopener">
+              https://github.com/LukeChannings/deno-arm64
+            </a>
+           で配布されてるバイナリを試してみたけど動かず
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          今回は deno はサブなので一旦スルーすることにした
         </div>
       
           </div>
@@ -276,32 +362,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/61a01e16d39275001dd42654.html">
-                      20211126
+                    <a href="https://amp.kbys.tk/5d6910fc2a4eeb0017fe6d4f.html">
+                      最近書かれた記事
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ddcb90f14855e0017b2cbaf.html">
-                      1126
+                    <a href="https://amp.kbys.tk/61bd5b38f5e3f1001d8cd624.html">
+                      20211218
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d6b101d2f0b19001740c525.html">
-                      Netflix
+                    <a href="https://amp.kbys.tk/61c5b9f7256c8800229c9fc1.html">
+                      20211224
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e760b57ece83600172502a2.html">
-                      PoE 3.10 86歳になった
+                    <a href="https://amp.kbys.tk/5df9d4ebb6252f00176cbe1c.html">
+                      1218
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5eb61d15ef59d90024285527.html">
-                      0503
+                    <a href="https://amp.kbys.tk/605acd85aba685002232272f.html">
+                      20210324
                     </a>
                   </li>
                 
