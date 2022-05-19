@@ -275,10 +275,6 @@ const render = async article => {
           ${css.toString()}
         </style>
         <title>${article.title} | I am Electrical machine</title>
-        <link
-          rel="canonical"
-          href="https://scrapbox.io/jigsaw/${article.title}"
-        />
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
