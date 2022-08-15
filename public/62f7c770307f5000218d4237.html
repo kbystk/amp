@@ -229,151 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Scrapbox であそぼう2022夏
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          UserScript でまだまだやれそうなことがわかったのでいろいろ試す
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まずは素のコードブロックだと書きにくいのでどうにか VSCode から書けないか模索する
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          最初は GhostText っていう Chrome の拡張と VSCode の拡張を組み合わせて試してみたけど、割と予想通り Scrapbox が素の textarea じゃないので入力が壊れてダメだった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          それじゃあ Codespaces から js を配信して開発中は UserScript にその URL を入れればよいのでは？と試してみたがこれもまあ予想通り CSP にブロックされて読み込んでくれなかった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          deno で esbuild を watch で起動して、std/http/server で配信するだけというお手軽サーバーを作ったのだが....
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そうなったらもうChrome拡張ですわーということで腰を上げたものの、ManifestV3 対応絶対だるそうだな〜...なんか手軽に環境立ち上げられへんかな〜...とおもってたら vite の plugin に @crxjs/vite-plugin てやつがあって、これに適当に設定を書いたら立ち上がるようになった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          前にトライしてた時に content_script で web_accessible_resources に指定した js を script としてインジェクションするという方法でスクリプトをブチ込んでいたが、どうやらUserScriptが読み込まれるタイミングと合わないっぽくて、謎に setTimeout をつけると動くようになるという状態になってしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          しかし、これがCSP的にOKなんであれば UserScript に 
-        <code>chrome-extension://</code>
-       で埋め込むスクリプトを読むようにすればよいのでは...?と試してみると動いた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          vite のビルド結果はエントリーポイントのファイルに 
-        <code>import</code>
-       が書いてあるだけなんだけど、crxjs は割と豪快に web_accessible_resources に全てのアセットを指定しているのでネイティブの import でファイルが読まれてくるので問題なかった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          せっかくなのでちゃんと型ほしいなあ、とおもったら 
-            <a href="https://github.com/scrapbox-jp/types" target="_blank" rel="noopener">
-              https://github.com/scrapbox-jp/types
-            </a>
-           があったのでこいつを使おうかと
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          しかし、deno 向けに書かれているのでそのままだと vite から使えないので dnt で変換してみることに
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          deno.ns が解決できない問題に遭遇したがそっと消すとビルド自体は通ったので適当に publish してみる
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ...が Scrapbox の型が any になってしまう問題に遭遇
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          こいつがなかなかやっかいで、deno 側の型定義は node の events から引っ張ってきてて、EventEmitter が class で export されているせいなのかなんなのか、うまくそのままの変換では動かず
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          かといって vite には events なんてモジュールはないので無理やり型フォージもできず
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          なぜなのか全くわからないけど、呼び出すモジュール側で EventEmitter と Scrapbox を別々で読んできたらこっちではうまく解決できるのでとりあえずのワークアラウンドとしてこれでいくことにした
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          やっとこ動くようになったら、最後は esbuild で1つのファイルにバンドルしてそいつを chrome-extension の URL と差し替えてやれば完成である
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          この雑な manifest で動くってことは、実は deno でビルドして watch しとけば開発できるのでは...?とおもむろに deno bundle でビルドするようにして、dist には manifest と1つの js がある状態で試してみると動いた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          こいつぁーいろいろ作れるな〜と早速 UI もあるような UserScript を作ってみようと
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          fresh を試していた時になんとなく preact 不信になってしまったので、ここは多少フットプリントでかくてもいいから react でたのもう！と react でかる〜く組んでみた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          途中 hook が import できない謎状態に陥ったが、import_map をコネコネしてたらなんか治った、なんで治ったのかはよくわからない
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          とりあえず簡単なスクリプト群ができあがったので、ビルドした js を esbuild で minify してコピペしようとしたら Too large! って言われてペーストできなかった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          なるほどそういう制限もあるわけね〜...と react をやめて svelte だとか solid あたりでミニマルなフットプリントでどうにかできないか調べてみたけど、未知のライブラリを deno でバンドルしてもっていける未来が想像できなかったので諦めた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          代わりに適当な UI で textarea を出現させて、そこに貼りつけたコードをチョップしてストリームで挿入できないか検討した
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          雑に試したら動いたので、まずは1文字ずつ wait を挟みながら実行したのだが、scrapbox は入力中はバッファして、ある程度入力が終わったら変更を反映する〜みたいな挙動をするので、1文字ずつだーっとやるよりはもう少し大きいチャンクで貼りつけていくのがよさそうだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          今度はチャンクを大きめにして、待ち時間を気持ち長めに設定したらどんどん書き足されていくようにはなったけどコードブロックからはみだしてしまう問題が発生してしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これは想像だけど、insert する時に 
-        <code>\n</code>
-       だと特段処理が走らないけど、Enter の press で改行されるような気がする...
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          とおもって 
-        <code>\n</code>
-       で分割して Enter を都度入力させながら試してみるとついに動くようになった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そういえば途中 Chakra UI 試したんだが、バンドルに失敗するようになっちゃって断念した
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          deno界で使われている twind を使ってみてるけど、インテリセンスが効いたり効かなかったり(大抵効かない)で困っている
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          あと成果物のコードをチラ見したけど、んーなんかそういう感じかーみたいな...
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          tailwind を cli で生成して UserCSS にぶち込む方式なんかどうかなあ...?
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          play cdn 使えるといいんだけどな...
+          
+              <a href="https://amp.kbys.tk/62f9adbba97a36001fe0225b">Scrapbox であそぼう2022夏</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -399,20 +257,20 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/62f9adbba97a36001fe0225b.html">
+                      Scrapbox であそぼう2022夏
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5f3696406b957f00235da993.html">
                       0814
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d52133203e0760017cfb4a8.html">
-                      Automattic + Tumblr
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5f0861f672af08001e85137e.html">
-                      【日本と韓国 : 隣国で暮らしてみて Vol.3 】| Valknee - FNMNL (フェノメナル)
+                    <a href="https://amp.kbys.tk/5ec846618a178b001e102ce4.html">
+                      0521
                     </a>
                   </li>
                 
