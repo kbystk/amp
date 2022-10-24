@@ -9,11 +9,9 @@
         <meta property="og:title" content="20221022 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/644c99ef323c35c8212b9edde73f66cd/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -231,155 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          スプラトゥーン3 サイエンス その1
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          イカリング3で取得できる情報をダンプして保存している
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          当初は Bigquery に放り込むスクリプトをやっていたが、null の扱いなんかで取り回しがよくなくて、ひっっっっさびさに mongodb を使ってみることに
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          イカリング3は GraphQL でできていて、吐き出されるのがそこそこネストされた json なので RDB とは相性が悪げ...
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          SaaS の mongodb には、BIツールみたいなのがついていて、これでサクッとグラフを出力できて便利だった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/644c99ef323c35c8212b9edde73f66cd/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          試しにオオモノ毎に出現回数とチームの討伐数と自分の討伐数をグラフにして出してみた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          出動回数は278回で、ゲーム発売当初からほとんどの分が含まっているとおもう(たぶん)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          したっぱのランクからでんせつまで幅があるので、グレード毎に絞ったりしてもいいかもしれん
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/0a02c55e6d909c27b5ef77dd3a5fa941/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          mongodb の chart では出し方がわからんかったので、データをエクスポートして Google Sheets で自分の貢献度を足してみる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          自分のキル数もチーム討伐数には含まっているはずで、4人で出撃しているので25%を超えていればおおざっぱに自分の役割は果たしているといってよいのではないか
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ...で、実際の数字をみてみると、モグラ〜ハシラまでは25%を超えているものの、カタパは22%で、バクダンに至っては17%という...
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          (みんなゴメン)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/427ace65a2afacfc6dd0b3e069a9fd20/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          例えば出現したけど、ほっとかれたままだった率を計算してみるとこんな感じ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          カタパが驚異の48%で、いかにほっとかれてる(というかフタが閉じてる間無敵だからな...)かがわかる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          次いでコウモリもなんかわかる
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ほっといててガンガン雨降らされて場が荒れてしまっているあるある
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/b43e79679e5b9d0071338b9395c08740/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          オオモノの登場回数の分布
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          カタパ13体、ダイバー13体という地獄回があったらしい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          wave1やwave2で乙ってる回も多々あるので、左に偏る分布にはなるとおもうが、だいたいで...
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          wave の数毎に分布の計算した方がいいのかなあ？
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          その他概況
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/13b54d57b9e13ce772b8b97bdee74c0a/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          278回出動して、トータルの獲得ポイントは4万ちょいだが、イカリング3によると329回出動して累計5万ちょいなので多少データをロストしているっぽい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/ebe67ef547154e62a2c33d8b81c66f50/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          助けられてばかりの人
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/b5dfdfd779670d22320e4c7f3d148781/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          雑に出力できるグラフだと、水位の分布はこんな感じで、400waveぐらいが通常の水位で、その4割ぐらいの量で満潮と干潮があるというような感じらしい
+              <a href="https://amp.kbys.tk/635692a7058707001d0746e3">スプラトゥーン3 サイエンス その1</a>
+            
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
@@ -395,39 +247,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          omz の theme を fino-time に変更
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/98f00a9e4829e8dee32bd1af8ad6d1fb/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Mac Studio では Oh My Zsh に戻ってきた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          PROMPT にもうちょい情報出したいな〜...と調べてみると標準でたくさん theme が積まれていたのでこっから選んで使うことにした
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-            <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#fino-time" target="_blank" rel="noopener">
-              https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#fino-time
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          情報レーンとコマンドレーンが分離してるプロンプトが好きなのでまずはそれって感じで、あとは時間出てる方が嬉しいのでそれっぽいやつに変更
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          自前でつくってもいいかなとおもったけど、なるべく手間をかけないために標準でいくことにした
+              <a href="https://amp.kbys.tk/635692b9c2837d001e1e8d59">omz の theme を fino-time に変更</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -453,20 +275,20 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/635692a7058707001d0746e3.html">
+                      スプラトゥーン3 サイエンス その1
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/635692b9c2837d001e1e8d59.html">
+                      omz の theme を fino-time に変更
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5db1f9a977119700170ae111.html">
                       1022
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/6248161c419d27001df482c0.html">
-                      テスタロッサ
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/6329cccb3859fb001d896039.html">
-                      スプラトゥーン2のブラックバイト「サーモンラン」徹底解説。攻略ポイントは？報酬受け取り場所は？
                     </a>
                   </li>
                 
