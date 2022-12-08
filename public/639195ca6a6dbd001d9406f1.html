@@ -5,14 +5,14 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/637467345e9d9f001dcfb732.html">
-        <meta property="og:title" content="End of the Beta - Codespaces for Individuals | GitHub Changelog | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/639195ca6a6dbd001d9406f1.html">
+        <meta property="og:title" content="deno deployで「ReferenceError: h is not defined」が出たときの対処法 - Qiita | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary_large_image">
               
         
-                <meta property="og:image" content="https://gyazo.com/b5ab5638960170e61d8b31f3ffe33651/raw">
+                <meta property="og:image" content="https://gyazo.com/196bdae9e486d2f16f39c8c269927246/raw">
               
         <style amp-boilerplate="">
           body {
@@ -183,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>End of the Beta - Codespaces for Individuals | GitHub Changelog | I am Electrical machine</title>
+        <title>deno deployで「ReferenceError: h is not defined」が出たときの対処法 - Qiita | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,17 +211,17 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/End of the Beta - Codespaces for Individuals | GitHub Changelog">
+            <a href="https://scrapbox.io/jigsaw/deno deployで「ReferenceError: h is not defined」が出たときの対処法 - Qiita">
               スクボで読む
             </a>
           </div>
-          <h1>End of the Beta - Codespaces for Individuals | GitHub Changelog</h1>
+          <h1>deno deployで「ReferenceError: h is not defined」が出たときの対処法 - Qiita</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-            <a href="https://github.blog/changelog/2022-11-09-codespaces-individual-beta-end/?dotcom-banner" target="_blank" rel="noopener">
-              End of the Beta - Codespaces for Individuals | GitHub Changelog
+            <a href="https://qiita.com/access3151fq/items/d6026e656844abfae922" target="_blank" rel="noopener">
+              deno deployで「ReferenceError: h is not defined」が出たときの対処法 - Qiita
             </a>
           
         </div>
@@ -229,29 +229,37 @@ body {
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
         <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/b5ab5638960170e61d8b31f3ffe33651/thumb/1000">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/196bdae9e486d2f16f39c8c269927246/thumb/1000">
         </amp-img></div>
       
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          メールで使用量どんどん増えとるで〜〜みたいなのがきてるうちにあっという間に上限に達してしまった
+          
+        <blockquote>TypeScript本体のデフォルト値はReact.createElementなので、DenoのデフォルトもReact.createElementになっている。</blockquote>
+      
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          そもそもどこで codespace が開かれてるかわからずウロウロしてたら 
-            <a href="https://github.com/codespaces" target="_blank" rel="noopener">
-              https://github.com/codespaces
-            </a>
-           ここが正解だった
-        </div>
+          
+        <blockquote> ただしDenoではReactが主流ではないので、デフォルト値がReactという名前の関数になっている意味はあまりない。そのためこのデフォルト値をhという名前の関数に変更しようという議論が行われた。これは破壊的変更なので、近々リリースされるDeno 2.0で導入しよう、となった。</blockquote>
       
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえず全部消した
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          codespaces そんなに悪くはなかったけど、ぱっとなんか書く文脈だと StackBlitz とか使っちゃうなあ
+          
+        <blockquote> そのタイミングでdeno deployが提供開始されたため、deno deployではデフォルト値がhという名前になった</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote> ところが、Deno 2.0リリースが様々な事情で延期されたため、Deno本体のデフォルト値は現在もReact.createElementのままである</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          こういうことらしい。なんでやね〜ん
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -262,9 +270,65 @@ body {
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-          <a href="https://amp.kbys.tk/637458658de490001f2392b0">#20221116</a>
+        <code>deno.json</code>
+       に 
+        <code>compilerOptions</code>
+       を設定する
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>{</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>   "compilerOptions": {</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>     "jsx": "react",</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>     "jsxFactory": "React.createElement",</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>     "jsxFragmentFactory": "React.Fragment"</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote>   }</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+        <blockquote> }</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+          <span class="unlinked-0-0-15">#20221208</span>
          
-          <a href="https://amp.kbys.tk/5dd21651ee612700177e1ead">#1116</a>
+          <a href="https://amp.kbys.tk/5dece6a8f28d7e0017623c3b">#1208</a>
         
         </div>
       
@@ -285,32 +349,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5dd21651ee612700177e1ead.html">
-                      1116
+                    <a href="https://amp.kbys.tk/5dece6a8f28d7e0017623c3b.html">
+                      1208
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/637458658de490001f2392b0.html">
-                      20221116
+                    <a href="https://amp.kbys.tk/5c3c04e1be23a10017086e71.html">
+                      universal-url-modifier をつくった - dev.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/624bed82f8b94f001dab1fee.html">
-                      20220405
+                    <a href="https://amp.kbys.tk/6190f7ccbbc22600234ae2dd.html">
+                      新型コロナ感染で急逝した江崎マサルが見た夢と、突然プロデューサーを失ったhy4_4yhの決意 - 音楽ナタリー
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5db30c61d5831000172620aa.html">
-                      OnetapInc/chromy: Chromy is a library for operating headless chrome. 🍺🍺🍺
+                    <a href="https://amp.kbys.tk/5ff8069c499f73001cc2f6dd.html">
+                      選挙不正を言い募るトランプ支持の「カルト性」に警戒を(江川紹子) - 個人 - Yahoo!ニュース
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e006b1a8dcfab001795548f.html">
-                      【ドキュメンタリー】クラロワリーグ アジア2019 シーズン2【FAV gaming編パート3】 - YouTube
+                    <a href="https://amp.kbys.tk/5d01c29e3ceaf10017a5cb41.html">
+                      iPhone Xs の強制再起動
                     </a>
                   </li>
                 
