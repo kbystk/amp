@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63843fd45dfaad002080996d.html">
-        <meta property="og:title" content="20221128 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63ab8918c7d2e4001e9f388d.html">
+        <meta property="og:title" content="20221228 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/7d62a45fb9f557412354642ab11dc017/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>20221128 | I am Electrical machine</title>
+        <title>20221228 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,16 +209,16 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/20221128">
+            <a href="https://scrapbox.io/jigsaw/20221228">
               スクボで読む
             </a>
           </div>
-          <h1>20221128</h1>
+          <h1>20221228</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-          <a href="https://amp.kbys.tk/5ddff34568881a0017b19016">#1128</a>
+          <a href="https://amp.kbys.tk/5e0779a12baaf00017727981">#1228</a>
         
         </div>
       
@@ -231,19 +229,121 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          State of JS 2022
+          Next.js から 
+              <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e">Astro</a>
+             に遷宮
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/7d62a45fb9f557412354642ab11dc017/thumb/1000">
-        </amp-img></div>
+              <a href="https://amp.kbys.tk/5d6b124b2f0b19001740c6ab">201909</a>
+            あたりに Next.js へ遷宮した自分のポータルサイト的なやつを Astro に書き換えた
+        </div>
       
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/5d8492d567095a0017d491da">Scrapbox を中心にしたコンテンツ生成</a>
+            
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/kbystk/y/pull/31" target="_blank" rel="noopener">
+              https://github.com/kbystk/y/pull/31
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まだまだ知らんことはたくさんあるわ...
+          next@13 で追加された 
+        <code>appDir</code>
+       がまだ Static Export に対応していなかったのと、React も next も元々オーバーキル感が強くて微妙だとおもっていたので思い切って書き換えた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          当時は SSG でイイ感じにパッケージングされてる選択肢が限られていて、消極的に next を採用したのもあり
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          最近はすっかり vite ばっかり使ってて、いける手応えが結構ある
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Sveltekit か Qwik City あたりも検討したが、Svelte はやっぱり svelte のテンプレートの記法に抵抗感があるのと、Qwik はまだ1.0じゃないのもあるけどいろいろ不安定で変更も多いので
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Astro は1.0出たし、テンプレートの記法はベター JSX といってよいと感じる
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          もちろん JSX はコンパイルすればピュアな JS に落ちるという利点があるとはおもうが、だから何？って最近はおもってきた
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          どうせ TypeScript で書くし、babel はもうほぼ使わんけど swc にせよなんらかのコンパイルは挟むわけなので、じゃあ多少のテンプレートは許容できるかなと
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          TIL
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          svg をインラインで読みたい:
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          frontmatter 部分に 
+        <code>const { default: innerHTML } = await import("some.svg?raw");</code>
+       てな具合で import すると 
+        <code>innerHTML</code>
+       には svg の中身が string として格納されるので、あとはこいつをテンプレートで参照すればよい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          json の string を union に upcast したい:
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          json の特定の key には string の union として提供されている型の中身しか入ってないけど、それを表現する術がねえ....と困るのだが、
+        <code>hoge as Foo</code>
+       的な感じで 
+        <code>as</code>
+       を使っても、string は 
+        <code>Foo</code>
+       に upcast できないよ〜んと怒られてしまう
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          あまり good なプラクティスにはみえないけど 
+        <code>hoge as unknown as Foo</code>
+       と一旦 
+        <code>unknown</code>
+       に落としてやることで無理矢理 upcast できる
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          VSC でフォーマットされたい:
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          Astro の ext 入れたらイイ感じになるのかなとおもったら別途 prettier の設定をいれないとダメだった
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          
+            <a href="https://github.com/withastro/prettier-plugin-astro" target="_blank" rel="noopener">
+              https://github.com/withastro/prettier-plugin-astro
+            </a>
+          
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          また、pnpm 使ってると巻き上げられてるので 
+            <a href="https://github.com/withastro/prettier-plugin-astro#pnpm-support-1" target="_blank" rel="noopener">
+              https://github.com/withastro/prettier-plugin-astro#pnpm-support-1
+            </a>
+           に従って設定しておく
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -263,26 +363,38 @@ body {
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/6360c17b89be460020ce4fcc.html">
-                      202211
+                    <a href="https://amp.kbys.tk/63880da61b7634001d60cc35.html">
+                      202212
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63838acd8305f50021f20f6a.html">
-                      Announcing 3.0 · Nuxt
+                    <a href="https://amp.kbys.tk/63ab9e3f53dc99001dc9d8ed.html">
+                      2022年と、AI戦争の歴史
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ddff34568881a0017b19016.html">
-                      1128
+                    <a href="https://amp.kbys.tk/5e0779a12baaf00017727981.html">
+                      1228
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50.html">
-                      Amazon
+                    <a href="https://amp.kbys.tk/5d6b124b2f0b19001740c6ab.html">
+                      201909
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
+                      Astro
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5d8492d567095a0017d491da.html">
+                      Scrapbox を中心にしたコンテンツ生成
                     </a>
                   </li>
                 
