@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63b29c987248b6001e170faf.html">
-        <meta property="og:title" content="CLIMAX の OST の Supernature がカッコよすぎる | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63c9852674ebe1001ec0484c.html">
+        <meta property="og:title" content="開発環境で useEffect が二重に実行されて困る | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://i.ytimg.com/vi/QgGK4qBTwpw/mqdefault.jpg">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>CLIMAX の OST の Supernature がカッコよすぎる | I am Electrical machine</title>
+        <title>開発環境で useEffect が二重に実行されて困る | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,73 +209,47 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/CLIMAX の OST の Supernature がカッコよすぎる">
+            <a href="https://scrapbox.io/jigsaw/開発環境で useEffect が二重に実行されて困る">
               スクボで読む
             </a>
           </div>
-          <h1>CLIMAX の OST の Supernature がカッコよすぎる</h1>
+          <h1>開発環境で useEffect が二重に実行されて困る</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/5dc574bd2a9cd500178df3cd">20191108</a>
+              <a href="https://amp.kbys.tk/63c529609062c4001d933692">20230116</a>
              
-          <a href="https://amp.kbys.tk/5dc57521fe58fe00177e4b2e">#1108</a>
+          <a href="https://amp.kbys.tk/5e1f616a82bfda00172535a4">#0116</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          CLIMAX の OST の 
-            <a href="https://open.spotify.com/track/22FtmoFhRVgq0gfNpbU4uh" target="_blank" rel="noopener">
-              Supernature (Instrumental CLIMAX edit) | Cerrone
+          開発環境で 
+        <code>useEffect</code>
+       が二重に実行されて困る
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+            <a href="https://ja.reactjs.org/docs/strict-mode.html#ensuring-reusable-state" target="_blank" rel="noopener">
+              https://ja.reactjs.org/docs/strict-mode.html#ensuring-reusable-state
             </a>
-           がカッコよすぎる
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          映画のあのシーンを思い出すからなのか、アレンジがうまいのか
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          サンプリングでいうとShangri-La | 電気グルーヴみたい
+          地味にしばらく前からどうやら開発環境でだけ二重に実行されていそげなことがあって、困ってたんだけど、まあ開発環境でしか起きないしな....とおもってたら react18 から strict にしていると将来的な state の復元マウントの再現のために二重に実行される、というようなことが起きるらしい
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          原曲はイントロのところはアガるんだけど、曲全体としてはまぁ...みたいな
+          今のところは、困るケースで strict を外せば問題なさそうという感じだけど、復元マウントの実装に備えて修正しておいた方がいいのかもなあ
         </div>
       
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-              <amp-youtube data-videoid="QgGK4qBTwpw" layout="responsive" width="480" height="270"></amp-youtube>
-            
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          なんやこのビデオは.......
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これが
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-              <amp-youtube data-videoid="Hwkacrln26o" layout="responsive" width="480" height="270"></amp-youtube>
-            
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          こう
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          (このあと何人かがえらい目に遭います、詳しくは
-              <a href="https://amp.kbys.tk/5dc2864a78299f0017d36dba">CLIMAX 感想 (ネタバレがあります)</a>
-            へ)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          それにしても情報量が多い、劇場でも聖徳太子スタイルでみないと追いつかねえ！ってなったけど、改めて見返してもあちこちでいろんなことが起きていて何回みても飽きない
+              <a href="https://amp.kbys.tk/5ce6c035329e840017967998">TIL</a>
+             react next.js
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -291,32 +263,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5dc574bd2a9cd500178df3cd.html">
-                      20191108
+                    <a href="https://amp.kbys.tk/63c529609062c4001d933692.html">
+                      20230116
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dc57521fe58fe00177e4b2e.html">
-                      1108
+                    <a href="https://amp.kbys.tk/5e1f616a82bfda00172535a4.html">
+                      0116
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dc2864a78299f0017d36dba.html">
-                      CLIMAX 感想 (ネタバレがあります)
+                    <a href="https://amp.kbys.tk/5ce6c035329e840017967998.html">
+                      TIL
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209da4.html">
-                      複雑なJavaScriptアプリケーションを考えながら作る話 - github.com/e-jigsaw/web
+                    <a href="https://amp.kbys.tk/6258f82e75b8d2001db1db15.html">
+                      20220415
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dcac8c3d7980200173b65a6.html">
-                      tslint - In Typescript, what is the ! (exclamation mark / bang) operator when dereferencing a member? - Stack Overflow
+                    <a href="https://amp.kbys.tk/5f4270cf76642f001e2c01ee.html">
+                      0822
                     </a>
                   </li>
                 
