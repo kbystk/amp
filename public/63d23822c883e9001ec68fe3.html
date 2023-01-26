@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63b29c35ecb4e6001de82271.html">
-        <meta property="og:title" content="The Outer Worlds その1 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63d23822c883e9001ec68fe3.html">
+        <meta property="og:title" content="続・NanoPi R5S をルーターとして使う | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>The Outer Worlds その1 | I am Electrical machine</title>
+        <title>続・NanoPi R5S をルーターとして使う | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,41 +209,83 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/The Outer Worlds その1">
+            <a href="https://scrapbox.io/jigsaw/続・NanoPi R5S をルーターとして使う">
               スクボで読む
             </a>
           </div>
-          <h1>The Outer Worlds その1</h1>
+          <h1>続・NanoPi R5S をルーターとして使う</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/5db5d090e7a46700174bb1a0">20191027</a>
+              <a href="https://amp.kbys.tk/63cfa30f0ea1e6001efa9fa8">20230124</a>
              
-          <a href="https://amp.kbys.tk/5db1f9afa580410017f85c1d">#1027</a>
+          <a href="https://amp.kbys.tk/5e2a259554238900174d793e">#0124</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
+          続・
+              <a href="https://amp.kbys.tk/63cfa5eb5e1798001ec1e134">NanoPi R5S をルーターとして使う</a>
+            
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          つながったぜ!!っておもってたんだけど、一晩明けたらまたつながらなくなっててなんでやね〜ん...とトラブルシュートを....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/5dc18f349899630017a09370">The Outer Worlds</a>
-             その1
+            <a href="https://wifi-manual.net/openwrt-dslite-settings/" target="_blank" rel="noopener">
+              https://wifi-manual.net/openwrt-dslite-settings/
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ナビキーをゲットするために、自由港のおばちゃんに唆されて救難信号を発信している地に降り立った
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          降り立ってみるとトカゲみたいなやつらが研究施設から放たれてしまってバイオハザードみたいになっていた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          それからなんやかんやあって諍いは収めたんだけど、おばちゃんに手土産を何も持って帰れなくて結局クレジットで支払うハメになってしまった
+          
+            <a href="https://nabe.adiary.jp/0633" target="_blank" rel="noopener">
+              https://nabe.adiary.jp/0633
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          最初の街で拾ってきた娘さんが自由港のエンジニアの師匠みたいな女性と突然のロマンスがはじまってしまって酒場で聞き役をやったりした
+          この記事がめちゃめちゃ参考になりました............
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ds-lite でつなげられてるとおもったんだけど、設定が全然足りてなかった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          どうにも DNS がおかしいってにらんでたが、DNS 無罪だった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          DNS の設定をいろいろいじったが解決せず
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          DHCPサーバーまわりの設定が足りていなくて WAN6 と LAN のDHCPサーバーのとこをリレーモードにしないといけなかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          これでまたつながるようにはなったけど、まだ不安定な感じであれ〜〜？？と調べたところ、WAN を ds-lite に設定するんじゃなくて WAN はDHCPクライアントのままにしておいて、別途インターフェースを追加して、そいつを ds-lite の設定をしてやる必要があった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          前書いた時には transix の IP を直に指定していたが、これは追加されたりすることもあるっぽいので、
+        <code>gw.transix.jp</code>
+       を指定するように変更した
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ファイアウォールの設定で、wan のゾーンを指定してやると IPv4 のアップストリームとして動作するようになった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          まあなんか無知なまま適当にセットアップするのはよくないな...(反省)
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -257,32 +299,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5db5d090e7a46700174bb1a0.html">
-                      20191027
+                    <a href="https://amp.kbys.tk/63cfa30f0ea1e6001efa9fa8.html">
+                      20230124
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5db1f9afa580410017f85c1d.html">
-                      1027
+                    <a href="https://amp.kbys.tk/5e2a259554238900174d793e.html">
+                      0124
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dc18f349899630017a09370.html">
-                      The Outer Worlds
+                    <a href="https://amp.kbys.tk/63cfa5eb5e1798001ec1e134.html">
+                      NanoPi R5S をルーターとして使う
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5faacf43f15e00170c0319.html">
-                      誰に書くか
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e550.html">
+                      高専DJ部 #1 を開催しました - blog.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dccf21e51ea7500179d547c.html">
-                      「一重まぶた」論争 “ルッキズム”の呪いとは？｜ネット急上昇現場行ってみた。｜NHK NEWS WEB
+                    <a href="https://amp.kbys.tk/5c2b9af95513850017f82daa.html">
+                      例の件のつづき - diary.jgs.me
                     </a>
                   </li>
                 

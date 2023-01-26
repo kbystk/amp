@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63b29c35ecb4e6001de82271.html">
-        <meta property="og:title" content="The Outer Worlds その1 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63d23803ca3622001e436e8d.html">
+        <meta property="og:title" content="Fresh から Astro に遷宮 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>The Outer Worlds その1 | I am Electrical machine</title>
+        <title>Fresh から Astro に遷宮 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,41 +209,105 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/The Outer Worlds その1">
+            <a href="https://scrapbox.io/jigsaw/Fresh から Astro に遷宮">
               スクボで読む
             </a>
           </div>
-          <h1>The Outer Worlds その1</h1>
+          <h1>Fresh から Astro に遷宮</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/5db5d090e7a46700174bb1a0">20191027</a>
+              <a href="https://amp.kbys.tk/63cfa30f0ea1e6001efa9fa8">20230124</a>
              
-          <a href="https://amp.kbys.tk/5db1f9afa580410017f85c1d">#1027</a>
+          <a href="https://amp.kbys.tk/5e2a259554238900174d793e">#0124</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Fresh から 
+              <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e">Astro</a>
+             に遷宮
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/5dc18f349899630017a09370">The Outer Worlds</a>
-             その1
+            <a href="https://github.com/kbystk/w/pull/1" target="_blank" rel="noopener">
+              https://github.com/kbystk/w/pull/1
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ナビキーをゲットするために、自由港のおばちゃんに唆されて救難信号を発信している地に降り立った
+          Fresh も Deno Deploy も面白かったんだけど、esm.sh 絡みでどうしても不安定になりがちで、Deno Deploy 自体もテンポよく開発が進んでいるっぽいので、何も変更をしていないのに壊れる、という事態に何度か見舞われてちょっとウーンとなった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          降り立ってみるとトカゲみたいなやつらが研究施設から放たれてしまってバイオハザードみたいになっていた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          それからなんやかんやあって諍いは収めたんだけど、おばちゃんに手土産を何も持って帰れなくて結局クレジットで支払うハメになってしまった
+          ビルドレスでリクエストきたタイミングで依存から何から解決して評価されるので、ネットワーク越しに依存があるとそれだけで壊れてしまう...
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          最初の街で拾ってきた娘さんが自由港のエンジニアの師匠みたいな女性と突然のロマンスがはじまってしまって酒場で聞き役をやったりした
+          ポータルのサイトを Astro に遷宮したので、Astro に書き換えるのはやるとして、どこにデプロイしようかなと
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          rel: 
+              <a href="https://amp.kbys.tk/63b24319a18606001d3b5a77">Next.js から Astro に遷宮</a>
+            
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          一応 Deno Deploy のアダプタもあったけど、大人しく Netlify にした
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          結構 Netlify 依存が多い
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          GitHub Pages も Azure のなんかエッジコンピューティングと組合わさらないかなとおもっているんだが.....
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/6206918a3feba50023dc2acc">Cloudflare Pages</a>
+             の方向性
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          API になるものを Netlify の edge-fn にデプロイしたら、やっぱり Deno Deploy の制約で同一プロジェクトのエンドポイントにはリクエスト時に弾かれるのが健在みたい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ??どっかに書いたような気がしていたが見当たらない??
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          仕方ないので API 部分は切り出して、こっちは素直な Deno Deploy のサーバとしてつくることにした
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          実際 edge-fn の部分は Deno で書かないといけなくて VSCode の拡張が激突しちゃってうまく統合できなかった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Astro の API routing っぽいやつは Netlify だと使えなかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Astro ベースのプロジェクトは、ちょびっと動的なぐらいだったら script タグに直書きして終わらせるけど、さすがにデータフェッチしてきて、それらに対してイベント張って....みたいな挙動はどうしても発想が react に縛られていて、さすがになんかそれっぽい UIFW ほしいなーと
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Svelte も考えたんだけど、あんま使ったことなかった Solid を試してみることに
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ちょびっとしか触ってないけど、solid は solid で思ってたより react のむずかしい部分を別の形で表現するようになっていて面白いといえば面白かった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Astro はアダプティブに機能を足していけるところも良いなと改めて
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -257,32 +321,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5db5d090e7a46700174bb1a0.html">
-                      20191027
+                    <a href="https://amp.kbys.tk/63cfa30f0ea1e6001efa9fa8.html">
+                      20230124
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5db1f9afa580410017f85c1d.html">
-                      1027
+                    <a href="https://amp.kbys.tk/5e2a259554238900174d793e.html">
+                      0124
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dc18f349899630017a09370.html">
-                      The Outer Worlds
+                    <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
+                      Astro
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5faacf43f15e00170c0319.html">
-                      誰に書くか
+                    <a href="https://amp.kbys.tk/6206918a3feba50023dc2acc.html">
+                      Cloudflare Pages
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dccf21e51ea7500179d547c.html">
-                      「一重まぶた」論争 “ルッキズム”の呪いとは？｜ネット急上昇現場行ってみた。｜NHK NEWS WEB
+                    <a href="https://amp.kbys.tk/63b24319a18606001d3b5a77.html">
+                      Next.js から Astro に遷宮
                     </a>
                   </li>
                 
