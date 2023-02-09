@@ -279,74 +279,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          NanoPi R5S を docker のホストにする
-        </div>
-      
-        <div style="padding-left:1rem; overflow: scroll;">
-          <code>sh</code>
-          <pre><code>$ opkg install docker
-$ opkg install dockerd
-$ /etc/init.d/dockerd start</code></pre>
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえず Docker いれとけばそこそこクリーンに環境つくれるやろう、ということで
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          よくわからんけど 
-        <code>dockerd restart</code>
-       しないと socket につながらんぽい感じだった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <code>opkg install docker-compose</code>
-       で docker compose もいれておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          n度めの homebridge を docker 上にインストールした
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          net=host とかでうまく動くのかなあ、とちょっと心配だったけど割と素直に動いた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          plugin なんかいれよーとおもって、最近 Switchbot のオートメーションをトライしてたので調べてみたら公式で homebridge の plugin を公開してくれているという太っ腹ぶり
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          で、さらに調べてみると BLE でセンサやボットと接続できるらしくて、期待としては homebridge =&gt; hub mini =&gt; bot とか sensor =&gt; hub mini =&gt; home みたいな hub mini が hub になって BLE で通信してくれるーを期待してたけど、bluetooth 積んでるデバイスで homebridge が動いてたら BLE で通信できるよ〜ん的な話っぽかった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          残念ながら NanoPi は bluetooth は積んでなさそう...
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          USB のスロットは空いてるので M5StickCとかを挿したらイイ感じに BLE で通信できたりすんのかなあ...?
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          Switchbot 自体は BLE で通信してみた系の記事は結構あるのでいけそうげではある
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          家のエアコンはダイキンなので、何度か試みているダイキンとの通信をまたやってみるかあとn回めのトライをして、そういえば 
-        <code>/skyfi...</code>
-       等々の API 叩く式のやつは先人たちのコードがあるんだけど、そういえば 
-        <code>/dsiot/multireq</code>
-       に複雑そうな json を渡す方式だったんだったわ....とゲンナリした
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一応 python の実装はみつけたんだけど、python 熟練度もひくくてよーわからん 
-            <a href="https://github.com/lltcggie/py-dsapi" target="_blank" rel="noopener">
-              https://github.com/lltcggie/py-dsapi
-            </a>
-          
+              <a href="https://amp.kbys.tk/63e53f4e398d32001bf489c2">NanoPi R5S を docker のホストにする</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -372,6 +307,12 @@ $ /etc/init.d/dockerd start</code></pre>
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/63e53f4e398d32001bf489c2.html">
+                      NanoPi R5S を docker のホストにする
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5e38ab967d4c5d001777a405.html">
                       0204
                     </a>
@@ -380,12 +321,6 @@ $ /etc/init.d/dockerd start</code></pre>
                   <li>
                     <a href="https://amp.kbys.tk/5e38bbe284e2e10017f02ca5.html">
                       私はクラロワの中心から身を引きます。重大なお知らせあり。 - YouTube
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5dcc3b76e8364600170f1048.html">
-                      1005
                     </a>
                   </li>
                 
