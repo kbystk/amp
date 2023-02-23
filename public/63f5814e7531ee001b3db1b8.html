@@ -9,11 +9,9 @@
         <meta property="og:title" content="20230222 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/af350f1b4d16bcbf3fd84fe99a105789/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -231,143 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Herobox に Proxmox をインストールする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ルーターとして使っている NanoPi R5S に docker をいれて、いくつかコンテナを立ち上げてたら 
-        <code>docker: Error response from daemon: no space left on device.</code>
-       ってエラーが出てコンテナを起動できなくなってしまった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <code>docker system df</code>
-       をみてみると 
-        <code>RECLAIMABLE</code>
-       が0になっていた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          よくよく考えてみると、このマシンはメモリ2GBのストレージ8GBの極限(まあHDDが256MB?ぐらいの時代に比べたら贅沢なものだが)環境なのであった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          なんかたまに fs? でつっかえるなとおもったこともあったんだけど、そりゃメモリ2GBじゃそうか〜と
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一応 M.2 の口があるみたいなのでストレージは増設できそうだけど、それにしてもメモリが限界すぎる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Tailscale のお陰ですっかり selfhosted 沼に足を踏み入れつつあり、Proxmox という沼沢地を発見してしまった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          自宅にいろいろマシンは転がってるんだけど、常時起動しとくことも考えるとなるべく省電力なマシンの方がいいよなーという気持ちがあり、最初は M2 の Mac mini をクラスタリングできないかなーとおもったんだけどまあ Apple silicon がむずそうなのは容易に想像できるのでやめた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Raspberry Pi は全然在庫が観測できなくて無理そうってなった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ラズパイ用に Pimox ってやつがあって、それでクラスタリングできるみたい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一瞬ファンレスCPUのケースとか、ファンレスCPUクーラーとかに意識を奪われたんだけど、値段をみて冷静になった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          で、たどり着いたのがミニPCというジャンルで、DeskMini とか前から知ってたけど NUC もそこそこ値段するし、そういう話なら素直にパーツポチポチしてそれなりのスペックのマシン組むのが手っ取り早いのかなーとも考えた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          今回購入した Herobox は Celeron N5100 という CPU を積んでて、スペック的には6世代のi3ぐらいのものらしい(省電力ではあるみたい)
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          よくわからんけどまあ2万切る値段で、万が一全然使えないスペックだったとしても Proxmox ってやつならクラスタリングできるらしいじゃーん？ということで検証用に買った
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          AMD の CPU 何度も検討してきたけど、なんだかんだで linux で壁にぶち当たった時に自力で乗り越えられる気がしないので結局 Intel にしてしまう
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/af350f1b4d16bcbf3fd84fe99a105789/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          適当に安いやつ買ったんだけど、Windows11 Home も入って2万はスゲーとおもう...
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          どうせ Proxmox いれてぶっとばしちゃうので OS いらんかったんだけど、まあ使うこともあるかなーと...
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          現代の Windows の認証方式がまるでよくわかってなくて、
-              <a href="https://amp.kbys.tk/5d63d70b6c257f00179cd184">MS</a>
-             のアカウントでログインしたらそのままライセンスの認証も通って普通に使える感じだった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          USBメモリを引っ張り出してきて、Proxmox VE 7 の ISO イメージをダウンロードして、mac で Balena Etcher という GUI の焼きツールで焼いた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          CHUWI の BIOS の入り方が全然わからなくて、調べたところに依るとロゴが表示されるところで ESC を押すだけで入れるそうなんだが.....イマイチ勘所がわからなくて何回か Windows の起動とシャットダウンを繰り返してたら、Windows の復旧モードに入ったので、チャンスとおもって UEFI に入れた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          USBからブートして、Proxmox VE をインストールした
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          マウス挿すの面倒すぎてキーボードだけでトライしたが、Tab だけでどうにかなった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <code>/etc/apt/sources.list</code>
-       に 
-        <code>deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription</code>
-       を追加して、
-        <code>/etc/apt/sources.list.d/pve-enterprise.list</code>
-       のエンプラ向けリポジトリをコメントアウトしておく
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <code>apt-get update &amp;&amp; apt-get -y upgrade &amp;&amp; apt-get -y dist-upgrad</code>
-       でいろいろ最新にしておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          これでブラウザで &lt;ip&gt;:8006 にアクセスすると Web の GUI が出るそうなんだが、レスポンスが返ってこなくてあれ〜とおもってたら 
-        <code>https://&lt;ip&gt;:8006</code>
-       でアクセスしないとダメだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          コンソールにも 
-        <code>https</code>
-       って書いてあったわ....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          オレオレ証明書にブラウザが怒ってくるのでLEあたりでマトモな証明書で返るようにしたいなー(課題)
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえず起動するとこまではいけたので満足
+              <a href="https://amp.kbys.tk/63f7041a39f3c2001b843f5b">Herobox に Proxmox をインストールする</a>
+            
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
@@ -383,85 +247,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ポストクァントマニアから振り返るサノス
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          クァントマニアの感想はかなりガッカリテンションで、というのもカーンの怖さが全然描けていなかったことも一因としてあったなと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          サノスの行動原理は筋が通っていて、だからこそ恐ろしくもあるわけで
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一応 SF なので宇宙としての資源は有限だと語るサノスだけど、それは地球のメタファーだとおもっていて、この星の資源も有限なのである
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          地中に埋蔵されている資源はもちろんだけど、地表の大きさも有限なわけで、総日照量というハードキャップがあり、日照量当たりの食糧生産効率をあげるという方法もあるだろうけど、それにしてもこの星にも住む人口のキャパシティがあるわけで
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          まあSF的な解としてマトリックスみたいに人間の精神をネットワーク上にアップロードして、擬似的な信号を送ることで肉体の軛から解き放たれて、より高効率にこの星に人類をたくさん存在させることもできるかもしれない
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          発展した星に侵攻していたのは、単に私利私欲によって侵略していたわけではなく、ある意味ではその星に住む生命体のことを本当に想って無作為に半分を消し去るという活動をしていただけなのであって
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          自分と似たような生命体に対してそういう行いはどうなんだって感覚にならんでもないけど、畑をやる時に多めに蒔いて間引いたりするし、農作物の品種改良の過程や動物の選別なんかを人類史を通して我々は行ってきているわけで、改めて驚くような話ではないわけである
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/5cc9a45b3f08b700177acbee">ソウルストーン</a>
-            を得るために娘のように育ててきたガモーラを犠牲にしているというのもまた、サノスの献身さを表しているとおもう(善し悪しは別として)
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          やれ SDGs だの、サステナビリティだのとお題目として唱えられていても、真にそういった取り組みをしているのは一握りだと感じている
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ナントカウォッシュと揶揄されているように、上辺だけの連中が結構いる感じがする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ただまあ、人口の問題に関してはいわゆる先進国と呼ばれる国々は勝手に少子高齢化して自浄的に解決してくれているから、怒れるタイタン人がいなくても、勝手に数十年後にはパッチン後の世界になっているのであろう
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/6267f3a17936f60023b39c2d">エンドゲーム</a>
-            ではそんな世界をしてキャップが「空気もきれいになったし、川にはクジラが〜」などと話していた気がするけど、実際のところ本当にそれが起こったらどうなるんだろう？
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          一方のカーンはというと、今のところ在り続ける者としてのカーンは全知全能の存在に飽きていて....というのは結構雰囲気としてよかった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          逆にあっちのカーンに煽られていただけにクァントマニアのカーンが余計ザコくみえた気もする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          インカージョン(ロキのカーンのいう多宇宙戦争がインカージョンってことだよね...?)で他宇宙に侵攻しようとするカーンは割と私欲っぽい感じがする
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          カーンがいっぱいいる、みたいな絵面はウルトロンで既視感があるしなあ...
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/6267f3a17936f60023b39c2d">エンドゲーム</a>
-            では、そんなサノスの哲学に対して暴力によってそれを突っ返して勝つっていう解決を採ったので、うるさい人にはそこをくどくど言われることになってしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          しかし、カーンに関してはクァントマニアでもスコットがうっすら懸念していたように、1人を暴力的に追い返したとしても次から次へマルチバースから襲ってくるんだろうし、どーすんの？というのと、このエンドゲームからの宿題をどうマーベルスタジオが解決してくれるのか、そういう意味では楽しみ
+              <a href="https://amp.kbys.tk/63f70439f981da002187ae42">ポストクァントマニアから振り返るサノス</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -487,26 +275,20 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/63f7041a39f3c2001b843f5b.html">
+                      Herobox に Proxmox をインストールする
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/63f70439f981da002187ae42.html">
+                      ポストクァントマニアから振り返るサノス
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5e505b0b47cc190017098528.html">
                       0222
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5d63d70b6c257f00179cd184.html">
-                      MS
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/6267f3a17936f60023b39c2d.html">
-                      エンドゲーム
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5cc9a45b3f08b700177acbee.html">
-                      ソウルストーン
                     </a>
                   </li>
                 

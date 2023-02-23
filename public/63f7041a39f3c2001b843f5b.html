@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63f5a36880b0f3001b2ab6f5.html">
-        <meta property="og:title" content="Battle of the Year 2022 感想 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63f7041a39f3c2001b843f5b.html">
+        <meta property="og:title" content="Herobox に Proxmox をインストールする | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/af350f1b4d16bcbf3fd84fe99a105789/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Battle of the Year 2022 感想 | I am Electrical machine</title>
+        <title>Herobox に Proxmox をインストールする | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,83 +211,159 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Battle of the Year 2022 感想">
+            <a href="https://scrapbox.io/jigsaw/Herobox に Proxmox をインストールする">
               スクボで読む
             </a>
           </div>
-          <h1>Battle of the Year 2022 感想</h1>
+          <h1>Herobox に Proxmox をインストールする</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63f23ccb71c99a001bc4b4af">20230219</a>
+              <a href="https://amp.kbys.tk/63f5814e7531ee001b3db1b8">20230222</a>
              
-          <a href="https://amp.kbys.tk/5e4d615963bc850017e00868">#0219</a>
+          <a href="https://amp.kbys.tk/5e505b0b47cc190017098528">#0222</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Battle of the Year 2022 感想
+          Herobox に Proxmox をインストールする
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          NHK で放送されていた様子をみた
+          ルーターとして使っている NanoPi R5S に docker をいれて、いくつかコンテナを立ち上げてたら 
+        <code>docker: Error response from daemon: no space left on device.</code>
+       ってエラーが出てコンテナを起動できなくなってしまった
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          F1 からの流れでスポーツ観戦おもろいなとおもって
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ブレイキンて種目自体も全然知らなくて、評価の項目のリストをみて、競技をみてもどっちもすごいのでどっちがどうすごいかわからん領域ではあったが、漫才のM1にしてもフリースタイルのラップバトルにしても、細かく両者のテクニカルな要素についてわかるわけでもないよな〜と知った気になっていたことを自覚したりした
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          すっかりレペゼン川崎なので、川崎が拠点(といってもメンバーは全国からの寄せ集めらしいが)のフローリアーズに肩入れしながらみた
+          
+        <code>docker system df</code>
+       をみてみると 
+        <code>RECLAIMABLE</code>
+       が0になっていた
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          対する大阪のモータルコンバットは結構根詰めてやってる感じがしたけど、フローリアーズの方は割とさっと集まってざっと合わせてハイ！本番！みたいなノリを感じて、それが王者の風格なのか…！と
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          予選に相当するショーケースは Cheer でもみたようなチアに近い集団ダンスバトルなのに対して決勝のバトルはラップバトルみたいに DJ が曲を流して即興でお互いにダンスを披露するという方式
+          よくよく考えてみると、このマシンはメモリ2GBのストレージ8GBの極限(まあHDDが256MB?ぐらいの時代に比べたら贅沢なものだが)環境なのであった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Cheer みてると評価の項目が厳しいというか細かすぎて、すげえ大変な集団芸やなあとおもったのだけど相手の出方をみて繰り出す演目を変えて競い合うってのは競技性があっておもろいのかなあとおもった
+          なんかたまに fs? でつっかえるなとおもったこともあったんだけど、そりゃメモリ2GBじゃそうか〜と
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一応 M.2 の口があるみたいなのでストレージは増設できそうだけど、それにしてもメモリが限界すぎる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Tailscale のお陰ですっかり selfhosted 沼に足を踏み入れつつあり、Proxmox という沼沢地を発見してしまった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          自宅にいろいろマシンは転がってるんだけど、常時起動しとくことも考えるとなるべく省電力なマシンの方がいいよなーという気持ちがあり、最初は M2 の Mac mini をクラスタリングできないかなーとおもったんだけどまあ Apple silicon がむずそうなのは容易に想像できるのでやめた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Raspberry Pi は全然在庫が観測できなくて無理そうってなった
         </div>
       
         <div style="padding-left:3rem; margin-bottom: .5rem;">
-          とはいえ、ソロにしてもルーティンという数人または全員でやるやつにしてもある程度仕込みはしてるっぽいので曲の合わせは若干おまけなのかなあ、という感じはした
+          ラズパイ用に Pimox ってやつがあって、それでクラスタリングできるみたい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一瞬ファンレスCPUのケースとか、ファンレスCPUクーラーとかに意識を奪われたんだけど、値段をみて冷静になった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          で、たどり着いたのがミニPCというジャンルで、DeskMini とか前から知ってたけど NUC もそこそこ値段するし、そういう話なら素直にパーツポチポチしてそれなりのスペックのマシン組むのが手っ取り早いのかなーとも考えた
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          今回購入した Herobox は Celeron N5100 という CPU を積んでて、スペック的には6世代のi3ぐらいのものらしい(省電力ではあるみたい)
         </div>
       
         <div style="padding-left:4rem; margin-bottom: .5rem;">
-          ただまあ、そこは自分の解像度が低くてブレイクビーツっぽい曲がかかってるなー程度なので審査員からしてみたらこのビートにこのフリを当ててくるのはアツい！！みたいなのがあるのかもしれない
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Cheer ではかなり明確に縁の下で支えるマッチョと花形の女性たちという構図が鮮明だったけど、ブレイキンではあんまり男女の差異はない感じで、特に若い人は国籍を問わず中性的な顔立ちをしてる人が多い印象を受けたが、それにしても競技人口の問題なのか、チーム内の女性の比率は低い競技なんだなあと感じた
+          よくわからんけどまあ2万切る値段で、万が一全然使えないスペックだったとしても Proxmox ってやつならクラスタリングできるらしいじゃーん？ということで検証用に買った
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          そんな中で、3人女性が入ってるフローリアーズの3人がキメに行くところに月並みかもしれないがグッときてしまった
+          AMD の CPU 何度も検討してきたけど、なんだかんだで linux で壁にぶち当たった時に自力で乗り越えられる気がしないので結局 Intel にしてしまう
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/af350f1b4d16bcbf3fd84fe99a105789/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          適当に安いやつ買ったんだけど、Windows11 Home も入って2万はスゲーとおもう...
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          どうせ Proxmox いれてぶっとばしちゃうので OS いらんかったんだけど、まあ使うこともあるかなーと...
         </div>
       
         <div style="padding-left:3rem; margin-bottom: .5rem;">
-          チーム内のオールドボーイズクラブをまずダンスでねじ伏せないといけないんだもんなあ
+          現代の Windows の認証方式がまるでよくわかってなくて、
+              <a href="https://amp.kbys.tk/5d63d70b6c257f00179cd184">MS</a>
+             のアカウントでログインしたらそのままライセンスの認証も通って普通に使える感じだった
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          個人的にはもっと DJ がいろいろなビートの曲をかけてくれた方が、それぞれのビートに対するアプローチがみれたりして面白いんじゃないかなーとおもった
+          USBメモリを引っ張り出してきて、Proxmox VE 7 の ISO イメージをダウンロードして、mac で Balena Etcher という GUI の焼きツールで焼いた
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          こういうストリートのダンスみてるとどうしてもギャスパー・ノエのCLIMAXがみたくなっちゃってまたオープニングだけみた
+          CHUWI の BIOS の入り方が全然わからなくて、調べたところに依るとロゴが表示されるところで ESC を押すだけで入れるそうなんだが.....イマイチ勘所がわからなくて何回か Windows の起動とシャットダウンを繰り返してたら、Windows の復旧モードに入ったので、チャンスとおもって UEFI に入れた
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          (その後展開されることは忘れておく)
+          USBからブートして、Proxmox VE をインストールした
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          マウス挿すの面倒すぎてキーボードだけでトライしたが、Tab だけでどうにかなった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>/etc/apt/sources.list</code>
+       に 
+        <code>deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription</code>
+       を追加して、
+        <code>/etc/apt/sources.list.d/pve-enterprise.list</code>
+       のエンプラ向けリポジトリをコメントアウトしておく
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>apt-get update &amp;&amp; apt-get -y upgrade &amp;&amp; apt-get -y dist-upgrad</code>
+       でいろいろ最新にしておく
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          これでブラウザで &lt;ip&gt;:8006 にアクセスすると Web の GUI が出るそうなんだが、レスポンスが返ってこなくてあれ〜とおもってたら 
+        <code>https://&lt;ip&gt;:8006</code>
+       でアクセスしないとダメだった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          コンソールにも 
+        <code>https</code>
+       って書いてあったわ....
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          オレオレ証明書にブラウザが怒ってくるのでLEあたりでマトモな証明書で返るようにしたいなー(課題)
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          とりあえず起動するとこまではいけたので満足
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -299,32 +377,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63f23ccb71c99a001bc4b4af.html">
-                      20230219
+                    <a href="https://amp.kbys.tk/63f5814e7531ee001b3db1b8.html">
+                      20230222
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4d615963bc850017e00868.html">
-                      0219
+                    <a href="https://amp.kbys.tk/5e505b0b47cc190017098528.html">
+                      0222
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82d0a.html">
-                      アイドルとしてのナイル・ロジャース - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5d63d70b6c257f00179cd184.html">
+                      MS
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e832fe3764fb50017de4090.html">
-                      20200331
+                    <a href="https://amp.kbys.tk/5e454f0959fdd7001790fb29.html">
+                      0212
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e09d.html">
-                      未踏カンファレンスへ行ってきました - e-jigsaw.blogspot.com
+                    <a href="https://amp.kbys.tk/60025a18f0c4ce0022b6ab3b.html">
+                      Announcing Openbase's $3.6M seed round to help developers choose open-source | LinkedIn
                     </a>
                   </li>
                 
