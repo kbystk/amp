@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63ef1c4c919b22001b39864e.html">
-        <meta property="og:title" content="Tailscale メッチャ便利 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63f85b6a76e486001b48fa31.html">
+        <meta property="og:title" content="Proxmox に Ubuntu の VM をつくる | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/59cdaccc1c4dba14fbce1f7953700c6b/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Tailscale メッチャ便利 | I am Electrical machine</title>
+        <title>Proxmox に Ubuntu の VM をつくる | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,81 +211,87 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Tailscale メッチャ便利">
+            <a href="https://scrapbox.io/jigsaw/Proxmox に Ubuntu の VM をつくる">
               スクボで読む
             </a>
           </div>
-          <h1>Tailscale メッチャ便利</h1>
+          <h1>Proxmox に Ubuntu の VM をつくる</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005">20230216</a>
+              <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf">20230223</a>
              
-          <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04">#0216</a>
+          <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65">#0223</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Tailscale メッチャ便利
+          Proxmox に Ubuntu の VM をつくる
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          VPNサービス...ってことでいいのかな？
+          Ubuntu のダウンロードページから Server の LTS の ISO をダウンロードする
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          クライアントからマシンを登録しておくと、登録しているマシン間で通信するのでゲートウェイが不要ということらしい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          WireGuard という仕組みにのっかっているそう
+          ISO はホストにアップロードしておかないといけないみたい
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          githubのサードパーティサインインでアカウントを作ったら、あとはつなげたいマシンにソフトをいれて、そっちでもgithubでサインインするだけでセットアップは完了する
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/59cdaccc1c4dba14fbce1f7953700c6b/thumb/1000">
+        </amp-img></div>
+      
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Mac Studioにクライアントをいれて、iOSにもクライアントをインストールしておくとそれぞれVPNをenableにするだけでiOSで4G/5G回線に切り替えてもmacのマシンにアクセスすることができた
+          local の ISO Images にアップロードしておく
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そういうことなら最近構築したNanoPi R5Sに接続したいよね〜と調べてみると
+          Create VM から適当に設定をポチポチする
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
           
-            <a href="https://wifi-manual.net/openwrt-use-tailscale-vpn/" target="_blank" rel="noopener">
-              https://wifi-manual.net/openwrt-use-tailscale-vpn/
+            <a href="https://zenn.dev/northeggman/articles/d7b29c4e2cd7c7" target="_blank" rel="noopener">
+              https://zenn.dev/northeggman/articles/d7b29c4e2cd7c7
             </a>
+           を参考にした
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          GUI はいらないのでそのあたりは全部スキップ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/52c270f5c8601aeed47e57cae6ee62bf/thumb/1000">
+        </amp-img></div>
+      
         </div>
       
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          このWifiマニュアルさんのお陰で相当助かって欲しいいる………ありがてえ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ルータで
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <blockquote>tailscale up --advertise-routes=192.168.1.0/24 </blockquote>
-      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          こういう設定にしてみた
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          てなコマンドを打っておくと、tailscaleのWebのインターフェースからサブネットを登録的な導線がでるので、これを有効にしておく
+          メモリカツカツでも困るかなとおもって半分ぐらい割り当ててしまったけど減らしてもいいかも
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          そしたら Web の GUI から noVNC で接続できるので、Ubuntu のインストーラのガイドに従って設定をポチポチしていく
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          すると、いちいち家のマシン全てにtailscaleをいれておかなくても、接続するマシンでVPNを有効にすれば家のマシンのIPアドレスを直打ちするとアクセスできてしまう
+          むちゃくちゃ久しぶりに Ubuntu のインストールやったけど、最終セクションあたりで Docker とか名の知れてるミドルをインストールする導線があったので、とりあえず Docker はここでインストールした
         </div>
       
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          便利すぎか…？？？
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          再起動前後らへんでハードウェアのところからCDドライブに入ってることになっている Ubuntu のインストーラを排出しておく
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -297,32 +305,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005.html">
-                      20230216
+                    <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf.html">
+                      20230223
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04.html">
-                      0216
+                    <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65.html">
+                      0223
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5df82db2c0fe580017555f33.html">
-                      夢中になったり、やめたりしたもの - 練習
+                    <a href="https://amp.kbys.tk/63ebc6c0a55a8d001cd5ad60.html">
+                      ドンブラ 48話 感想 (ネタバレあり)
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ebfdaf7960946001e89c67c.html">
-                      般若 vs R-指定、エキシビジョンマッチみたいな試合
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd9.html">
+                      したはずだった - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/6347400c12c0fc0023d60d2b.html">
-                      F1 2022 日本GP raw その3
+                    <a href="https://amp.kbys.tk/5ee94244d0f17300241fe407.html">
+                      「目視可能な距離まで接近しました。あれが太陽系第三惑星、『地球』です」
                     </a>
                   </li>
                 

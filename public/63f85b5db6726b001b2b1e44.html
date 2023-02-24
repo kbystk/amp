@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63ef1c4c919b22001b39864e.html">
-        <meta property="og:title" content="Tailscale メッチャ便利 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63f85b5db6726b001b2b1e44.html">
+        <meta property="og:title" content="Proxmox の VM に xterm.js でアクセスする | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Tailscale メッチャ便利 | I am Electrical machine</title>
+        <title>Proxmox の VM に xterm.js でアクセスする | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,81 +209,53 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Tailscale メッチャ便利">
+            <a href="https://scrapbox.io/jigsaw/Proxmox の VM に xterm.js でアクセスする">
               スクボで読む
             </a>
           </div>
-          <h1>Tailscale メッチャ便利</h1>
+          <h1>Proxmox の VM に xterm.js でアクセスする</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005">20230216</a>
+              <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf">20230223</a>
              
-          <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04">#0216</a>
+          <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65">#0223</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Tailscale メッチャ便利
+          Proxmox の VM に xterm.js でアクセスする
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          VPNサービス...ってことでいいのかな？
+          noVNC だとコピペができなくて不便ということに気付いた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          他には SPICE ってやつもコンソールで使えるっぽいが、xterm.js 使えるならそれが手っ取り早そうだなと
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          クライアントからマシンを登録しておくと、登録しているマシン間で通信するのでゲートウェイが不要ということらしい
+          ハードウェアの Add からシリアルポートを追加する
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          WireGuard という仕組みにのっかっているそう
+          とりあえず 
+        <code>serial0</code>
+      
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          githubのサードパーティサインインでアカウントを作ったら、あとはつなげたいマシンにソフトをいれて、そっちでもgithubでサインインするだけでセットアップは完了する
+          そしたら noVNC で一旦入って、
+        <code>sudo systemctl enable serial-getty@ttyS0.service</code>
+      , 
+        <code>sudo systemctl start serial-getty@ttyS0.service</code>
+       てな感じで仮想シリアルポートを有効化しないといけないみたい
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Mac Studioにクライアントをいれて、iOSにもクライアントをインストールしておくとそれぞれVPNをenableにするだけでiOSで4G/5G回線に切り替えてもmacのマシンにアクセスすることができた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そういうことなら最近構築したNanoPi R5Sに接続したいよね〜と調べてみると
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-            <a href="https://wifi-manual.net/openwrt-use-tailscale-vpn/" target="_blank" rel="noopener">
-              https://wifi-manual.net/openwrt-use-tailscale-vpn/
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          このWifiマニュアルさんのお陰で相当助かって欲しいいる………ありがてえ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ルータで
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <blockquote>tailscale up --advertise-routes=192.168.1.0/24 </blockquote>
-      
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          てなコマンドを打っておくと、tailscaleのWebのインターフェースからサブネットを登録的な導線がでるので、これを有効にしておく
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          すると、いちいち家のマシン全てにtailscaleをいれておかなくても、接続するマシンでVPNを有効にすれば家のマシンのIPアドレスを直打ちするとアクセスできてしまう
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          便利すぎか…？？？
+          するとコンソールから xterm.js で接続できた
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -297,32 +269,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005.html">
-                      20230216
+                    <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf.html">
+                      20230223
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04.html">
-                      0216
+                    <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65.html">
+                      0223
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5df82db2c0fe580017555f33.html">
-                      夢中になったり、やめたりしたもの - 練習
+                    <a href="https://amp.kbys.tk/61c40962ba820a001dda5d2c.html">
+                      20211223
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ebfdaf7960946001e89c67c.html">
-                      般若 vs R-指定、エキシビジョンマッチみたいな試合
+                    <a href="https://amp.kbys.tk/618e36fd889425001dda70b3.html">
+                      【ネタバレ考察】『エターナルズ』MCUにおけるDCヒーローの存在とは | THE RIVER - Part 2
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/6347400c12c0fc0023d60d2b.html">
-                      F1 2022 日本GP raw その3
+                    <a href="https://amp.kbys.tk/5dc58b57689c3f001706473b.html">
+                      ボードゲームのバランス調整をどうやろうか考えていて、KaggleにドミニオンとかRFTGとかのデータ上がってたりしないかな？
                     </a>
                   </li>
                 
