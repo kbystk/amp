@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63e53f4e398d32001bf489c2.html">
-        <meta property="og:title" content="NanoPi R5S を docker のホストにする | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/63ff79c8b5ecec001c1e9f0e.html">
+        <meta property="og:title" content="20230301 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>NanoPi R5S を docker のホストにする | I am Electrical machine</title>
+        <title>20230301 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,90 +209,181 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/NanoPi R5S を docker のホストにする">
+            <a href="https://scrapbox.io/jigsaw/20230301">
               スクボで読む
             </a>
           </div>
-          <h1>NanoPi R5S を docker のホストにする</h1>
+          <h1>20230301</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          from 
-              <a href="https://amp.kbys.tk/63de13071fd8ef001ddc5ffb">20230204</a>
-             
-          <a href="https://amp.kbys.tk/5e38ab967d4c5d001777a405">#0204</a>
+          
+          <a href="https://amp.kbys.tk/5e5fa6cbb23f09001713c2b1">#0301</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          NanoPi R5S を docker のホストにする
+          
+                <br>
+              
         </div>
       
-        <div style="padding-left:1rem; overflow: scroll;">
-          <code>sh</code>
-          <pre><code>$ opkg install docker
-$ opkg install dockerd
-$ /etc/init.d/dockerd start</code></pre>
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえず Docker いれとけばそこそこクリーンに環境つくれるやろう、ということで
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          よくわからんけど 
-        <code>dockerd restart</code>
-       しないと socket につながらんぽい感じだった
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Proxmox にクラスターを作成
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <code>opkg install docker-compose</code>
-       で docker compose もいれておく
+            <a href="https://pve.proxmox.com/wiki/Cluster_Manager" target="_blank" rel="noopener">
+              https://pve.proxmox.com/wiki/Cluster_Manager
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          n度めの homebridge を docker 上にインストールした
+          Web の GUI から Datacenter =&gt; Cluster から Create Cluster をして、適当に作成したら Join Information ていうのが発行されるので、追加したい Web の GUI から Datacenter =&gt; Cluster から Join Cluster でコピーしたやつをペーストして、root のパスワードを入力したら双方が双方に表示されるようになった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          net=host とかでうまく動くのかなあ、とちょっと心配だったけど割と素直に動いた
+          簡単だ〜〜
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Join した時だけなんか認証のエラーがちょっと出るが、リロードしたら問題なく表示されるようになった
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ASRock Z790 + 13th Core i3 に Proxmox をインストール
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          plugin なんかいれよーとおもって、最近 Switchbot のオートメーションをトライしてたので調べてみたら公式で homebridge の plugin を公開してくれているという太っ腹ぶり
+          Herobox に Proxmox をインストールしたのに味をしめて、もうちょいイイマシンにもいれてみるか、ということで適当にパーツを選定した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          一応新しめのやつにしとこうかなあって感じで ASRock の Z790 チップセットのマザボに13世代の i3 をのっける構成にした
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          で、さらに調べてみると BLE でセンサやボットと接続できるらしくて、期待としては homebridge =&gt; hub mini =&gt; bot とか sensor =&gt; hub mini =&gt; home みたいな hub mini が hub になって BLE で通信してくれるーを期待してたけど、bluetooth 積んでるデバイスで homebridge が動いてたら BLE で通信できるよ〜ん的な話っぽかった
+          NAS を見越して HDD がいっぱい挿さるやつがいいかなあ、とおもって SATA のポートが多いやつを探していったら ASRock のこのマザボだと8発ついてたので採用した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          メモリは安かった Samsung の16GBにした
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          残念ながら NanoPi は bluetooth は積んでなさそう...
+          一旦1本挿しで、あと3枚挿せるので今後必要になったら足す
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          M.2 は ADATA の安いやつ1TBにした
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          USB のスロットは空いてるので M5StickCとかを挿したらイイ感じに BLE で通信できたりすんのかなあ...?
+          SSD 少なめでいいかな〜ともおもったが、そもそも SSD が4発挿さるので HDD にする前に M.2 を挿せるだけ挿すのもアリかなと
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          電源は COUGAR の750Wにした
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          これも安いやつでいいかなと考えてたが、プラグインがいいのと、SATA 8発供給できるケーブルがついてるのが良かった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ケースは Fractal Design の Define 7
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          これもストレージがたくさん入る構成にできるとのことだったので
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          パチパチ組んで、いざ USB 挿して起動したら思いの外ハマってしまった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          最初の画面は出てくるんだけど、
+        <code>Populating /dev...</code>
+       みたいなとこでフリーズしてしまう
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          エラーをたどっていくと、framebuffer のエラーがでてて、X11 が VGA のバスをつかめねえみたいな状態っぽかった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          スプラッシュスクリーンみたいな画面で 
+        <code>e</code>
+       を押すと起動オプションを設定できて、
+        <code>linux</code>
+       の項目で 
+        <code>nomodeset</code>
+       をつけて起動するとシェルの状態で起動して、X11 の設定をいじって再起動みたいなことができる
         </div>
       
         <div style="padding-left:3rem; margin-bottom: .5rem;">
-          Switchbot 自体は BLE で通信してみた系の記事は結構あるのでいけそうげではある
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          家のエアコンはダイキンなので、何度か試みているダイキンとの通信をまたやってみるかあとn回めのトライをして、そういえば 
-        <code>/skyfi...</code>
-       等々の API 叩く式のやつは先人たちのコードがあるんだけど、そういえば 
-        <code>/dsiot/multireq</code>
-       に複雑そうな json を渡す方式だったんだったわ....とゲンナリした
+          tty1, tty2, tty3 は ctrl + alt + F1/2/3 みたいな感じで切り替えられた
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一応 python の実装はみつけたんだけど、python 熟練度もひくくてよーわからん 
-            <a href="https://github.com/lltcggie/py-dsapi" target="_blank" rel="noopener">
-              https://github.com/lltcggie/py-dsapi
+          ...んだけど、全然良化しない
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          で、なんかさらに調べていくと i915 のドライバがどうこうみたいな話がでてきて、そのあたりも少し試したんだけど、そもそもなんで OS をインストールしたいだけなのに X11 が必要なんだーーとおもったら、Debian がインストールされていたら apt で Proxmox をインストールできるらしい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          いやじゃあそれでいいじゃん.....
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          というわけで Debian のUSBメモリをつくったらサクッと Debian はインストールできた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+            <a href="https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_11_Bullseye" target="_blank" rel="noopener">
+              https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_11_Bullseye
             </a>
           
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ここに手順がまとまってるので、この通りにやればいいんだけど、冒頭の hosts を書き換えるのをすっ飛ばしてしまい、後にハマる原因をつくってしまったりした
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>/etc/apt/sources.list</code>
+       に proxmox のサーバを追加して、update して 
+        <code>pve-kernel-5.19</code>
+       をインストールする
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          これも、最初、書いてあるまんま 
+        <code>pve-kernel-5.15</code>
+       をインストールしたら起動しなくなって焦った
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          grub で元のやつで起動して、5.19 にインストールし直したらうまくいった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+                <br>
+              
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -306,32 +397,32 @@ $ /etc/init.d/dockerd start</code></pre>
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63de13071fd8ef001ddc5ffb.html">
-                      20230204
+                    <a href="https://amp.kbys.tk/63b2648dbd1820001e71abde.html">
+                      2023
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e38ab967d4c5d001777a405.html">
-                      0204
+                    <a href="https://amp.kbys.tk/63ff799d78ed5c001b33be91.html">
+                      202303
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e030a76e0d2670017d97ea4.html">
-                      『スター・ウォーズ９/スカイウォーカーの夜明け』感想。愛する者を死から救うということ - 社会の独房から
+                    <a href="https://amp.kbys.tk/5e5fa6cbb23f09001713c2b1.html">
+                      0301
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e0bf.html">
-                      レスポンスの返し方 - e-jigsaw.blogspot.com
+                    <a href="https://amp.kbys.tk/5f6c3a9c614b7b00206c6112.html">
+                      （初心者編）VIAを使ってキーマップを書き換えよう - 自作キーボード温泉街の歩き方
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5fcb17273b0fda00362ebab2.html">
-                      june29: 継戦能力 by 和歌山県知事
+                    <a href="https://amp.kbys.tk/5d1b0c79e6a8aa00170cc738.html">
+                      201907
                     </a>
                   </li>
                 
