@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/621c38edccb020001d90e362.html">
-        <meta property="og:title" content="20220228 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6402fcb2b27546001c785afb.html">
+        <meta property="og:title" content="TrueNAS で作成したストレージを iSCSI 経由でマウントする | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>20220228 | I am Electrical machine</title>
+        <title>TrueNAS で作成したストレージを iSCSI 経由でマウントする | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,71 +209,159 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/20220228">
+            <a href="https://scrapbox.io/jigsaw/TrueNAS で作成したストレージを iSCSI 経由でマウントする">
               スクボで読む
             </a>
           </div>
-          <h1>20220228</h1>
+          <h1>TrueNAS で作成したストレージを iSCSI 経由でマウントする</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <a href="https://amp.kbys.tk/5e59050ff75e72001716d5b1">#0228</a>
+          from 
+              <a href="https://amp.kbys.tk/64018808dfd538001c107bf1">20230303</a>
+             
+          <a href="https://amp.kbys.tk/5e5fa7142062db0017166d26">#0303</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
+          TrueNAS で作成したストレージを iSCSI 経由でマウントする
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          情報系の出だけど、こういう話には全く疎くて調べ調べでようやっと Proxmox 上の Ubuntu の VM でマウントできた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          TrueNAS の Web GUI から Portals, Initiators Groups(これは一旦 Allow All Initiators), Targets, Extents, Associated Targets をそれぞれ適当に作成していく
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          VM で 
+        <code>iscsiadm</code>
+       を叩けばいいんだけど、
+        <code>/var/run/iscsi</code>
+       なんたらが root になってるのでいちいち sudo をつけないとパーミッションで弾かれる
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           
-                <br>
-              
+        <code>-m discovery -t sendtargets -p &lt;IP&gt;</code>
+       でディスカバリ
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          狂人がアポカリプスのスイッチを握っている
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          トランプ氏が大統領だった時もコイツが核のスイッチ握っとるんよなあ...と薄ら怖さみたいなのを感じてたけど、ロシアにずー－－－っと握り続けていた奴がいたのを忘れていた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          核をぶっ放すとしたら押されている？ハリコフやらキエフなんかにぶちこんできたりするんだろうか...?007ばりに発射直前でボンドが間一髪防いでくれてセーフ！みたいなぐらいで収まってほしいものだが....
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           
-                <br>
-              
+        <code>-m node -L all</code>
+       でログイン
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ポーランド国境の様子をみて、人間捨てたもんじゃないなと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ポーランド国境で炊き出ししてる様子とか、ボランティアでxxまで乗っけてったるでー！みたいなやつとかみて、ノーランのダンケルクを思い出して結構グッときてしまった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          しかもハリコフで勝利宣言でた...?さすがに核投下はないと信じたいが、信じたいとずっと思い続けて結果これなので、キエフにブチ込まれる想定をしておいた方がいいのかもしれない
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          世紀末愚連隊
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          進撃の巨人尻上がりにどんどん面白くて、ホンマによくここまで途切れずにアニメにしてくれて………と感慨深くなる
+        <code>-m session --op show</code>
+       を叩いてから 
+        <code>sudo dmesg</code>
+       で様子がわかる
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          全世界を駆逐せんとする、神にも近しい存在となったエレンをどうにかするため結成？された寄せ集めチームの布陣がなかなかたまらんものがあって、群像劇でここまで長くやってきたからこそよなあ、と
+          
+        <code>sudo fdisk -l /dev/&lt;name&gt;</code>
+       で様子を確認してから fdisk でパーティションを作る
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>sudo mkfs.ext4 /dev/&lt;name&gt;</code>
+       でフォーマット
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>sudo mount -t ext4 /dev/&lt;name&gt; /mnt/&lt;target&gt;</code>
+       でマウントできる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          マウントしたら 
+        <code>chown &lt;user&gt;:&lt;user&gt; /mnt/&lt;target&gt;</code>
+       で権限を変えておくと以降 sudo 不要にできる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          これで適当に当該ディレクトリに書き込んだりすると反映されるようになった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ただ、mac からだと iSCSI でマウントできない(プロプラのソフトでやる気がありそうなのはあるっぽいが...)っぽくて SMB でいいんじゃねって気もしなくもない
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Windows では iSCSI いけるようだが、今度は ext4 で困るになりそう
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          WSL で Ubuntu いれて、そこでマウントすればなんとかなったりするかな？
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ....といったとこまでやって、別のマシンでマウントしたらすげー勢いで IO error が発生した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          調べてみると論理ボリュームを作ってやらないといけないみたい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>sudo umount /dev/&lt;name&gt;</code>
+       でアンマウント
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>sudo fdisk /dev/&lt;name&gt;</code>
+       でパーティションを切り直す
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>sudo pvcreate /dev/&lt;name&gt;</code>
+       で物理ボリュームを作る
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>sudo vgcreate &lt;group_name&gt; /dev/&lt;name&gt;</code>
+       でボリュームグループ？を作る 
+        <code>vgdisplay</code>
+       で確認
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>sudo lvcreate -l &lt;n&gt; -n &lt;logic_name&gt; &lt;group_name&gt;</code>
+       で論理ボリューム？を作る
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          そうすると 
+        <code>/dev/&lt;group_name&gt;/&lt;logic_name&gt;</code>
+       ができるので、
+        <code>mkfs.ext4</code>
+       でフォーマット
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ........とおもったんだけど、そもそも iSCSI だとターゲットに対してイニシエータが対になってるから同時に複数のホストで接続しても先勝ちで接続されたホストの変更が優先されて、そいつがアンマウントしたら次のマウントした奴にその変更が反映される....的な感じみたい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          (何も調べずにやっていた人)
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          結論: SMB でよさそう
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -287,32 +375,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/61d4976e0bd3ef001f27ab71.html">
-                      2022
+                    <a href="https://amp.kbys.tk/64018808dfd538001c107bf1.html">
+                      20230303
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61f7602fca1055001da2dbad.html">
-                      202202
+                    <a href="https://amp.kbys.tk/6402e95a938540001ba41b8a.html">
+                      20230304
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e59050ff75e72001716d5b1.html">
-                      0228
+                    <a href="https://amp.kbys.tk/5e5fa7142062db0017166d26.html">
+                      0303
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/60893ce5000bd8001e3be766.html">
-                      いろいろな .config.js で型の補完を効かせる方法まとめ
+                    <a href="https://amp.kbys.tk/5c4658f6decd5d0017b43cb0.html">
+                      Google Chrome で特定の要素を Scrapbox の記法に変換する Extension - dev.to/jgs
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/62459ce81ab18c001d7ca690.html">
-                      HiFi スピーカー &amp; HiFi ヘッドフォン | 日本 Online Store | KEF 日本
+                    <a href="https://amp.kbys.tk/5d6178d45012e600178646a4.html">
+                      エビ中
                     </a>
                   </li>
                 
