@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63f63e98930235001b4893db.html">
-        <meta property="og:title" content="株式会社図書館流通センター（TRC） ||電子図書館サービス（図書館ツール） | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6403e708e42771001b3a5970.html">
+        <meta property="og:title" content="20230305 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/1f9ca4b58d5141b39af542ba58652a06/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>株式会社図書館流通センター（TRC） ||電子図書館サービス（図書館ツール） | I am Electrical machine</title>
+        <title>20230305 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,50 +209,16 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/株式会社図書館流通センター（TRC） ||電子図書館サービス（図書館ツール）">
+            <a href="https://scrapbox.io/jigsaw/20230305">
               スクボで読む
             </a>
           </div>
-          <h1>株式会社図書館流通センター（TRC） ||電子図書館サービス（図書館ツール）</h1>
+          <h1>20230305</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-            <a href="https://www.trc.co.jp/solution/trcdl.html" target="_blank" rel="noopener">
-              株式会社図書館流通センター（TRC） ||電子図書館サービス（図書館ツール）
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/1f9ca4b58d5141b39af542ba58652a06/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          電子図書館は嬉しいんだけど、んーなんか、そういうことでいいのかなーという気持ちになるなあ
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf">#20230223</a>
-         
-          <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65">#0223</a>
+          <a href="https://amp.kbys.tk/5e5fa79f39f64e0017b508e2">#0305</a>
         
         </div>
       
@@ -262,6 +226,144 @@ body {
           
                 <br>
               
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          うーんキングオージャー
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Pi-hole いれてしまった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          かつて広告に関わってきた身としても、今でもウェブサービスで食ってて収益源として広告ってのはデカいのを重々承知しているのでひじょ〜〜〜に気が引けるし、あとヘタに DNS に手を入れたくない(わかりにくいところで引っかかりたくない)な〜〜〜〜〜という気持ちもあったが、Pi-hole の存在を知ってかなり気になったので試してみることに
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Proxmox で CT つくって適当に立ち上げた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Pi-hole が port 53 が必要なんだけど、systemd-resolved が塞いでたので 
+        <code>/etc/systemd/resolved.conf</code>
+       の 
+        <code>DNSStubListener=no</code>
+       を no にして 
+        <code>service systemd-resolved restart</code>
+       したら立ち上がった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          管理画面みよーとおもって ip にアクセスしたら 403 で、あれー？とおもったら 
+        <code>&lt;ip&gt;/admin</code>
+       が正解だった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          管理画面のパスワードはコンソールで 
+        <code>pihole -a -p</code>
+       で指定できる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          適当に mac の DNS を変えてみて様子見
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          過去に「このページは広告だらけでガッタガタやったなあ」というページを適当に開いて、ひじょーに快適に開けてしまって声にならない声がでた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Android の端末でも設定してみるかぁ〜と設定画面を確認していたけど、どうやら And では Static にしないと DNS を変えられないみたい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          ぶっちゃけルーターの DNS を変えちゃえば家ネット全体をブロックできるので手っ取り早そうではあるが.....
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Proxmox の CT Template を作る
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ポコポコ CT つくってると、いちいち docker のインストールスクリプト叩いたり、ちょっと 
+              <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8">node</a>
+             のスクリプト動かしたい時に volta のインストールスクリプト叩いたりと若干手間
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          CT は CT Templates 内の zst から作るしかないっぽくて、どうにか zst を作れないかとおもったが、CT のメニューに More から Convert to Template てのがあって、これにしとくと Template の node のメニューから Clone できて、クローンするとテンプレート用に作成しておいた状態で CT が上がるようになって便利
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Proxmox の VM と CT
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          あんまりよくわかってなくて、とりあえず VM でつくってた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          CT はコンテナで、オーバーヘッドが VM に比べると小さいらしい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          まあそりゃそうか
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          CPU, メモリ, ディスクを稼働したまま変更できるらしくて便利そう
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Unprivileged container オプションをいれておけば CT 内で docker のコンテナを作れる
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          まあどうなんだろう？
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          docker compose 統合されていた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>docker-compose</code>
+       から docker のコマンドとして統合されたらしい 
+        <code>docker compose</code>
+      
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -275,32 +377,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65.html">
-                      0223
+                    <a href="https://amp.kbys.tk/63b2648dbd1820001e71abde.html">
+                      2023
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf.html">
-                      20230223
+                    <a href="https://amp.kbys.tk/63ff799d78ed5c001b33be91.html">
+                      202303
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cdb.html">
-                      昨日のコンテンツが今日には削除されているようなインターネットだからさ - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5e5fa79f39f64e0017b508e2.html">
+                      0305
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63843fd45dfaad002080996d.html">
-                      20221128
+                    <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8.html">
+                      node
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5df6a9da3dfc7f0017c3a8c0.html">
-                      アドベントカレンダーという型
+                    <a href="https://amp.kbys.tk/614746b7932e40002346bebd.html">
+                      20210919
                     </a>
                   </li>
                 
