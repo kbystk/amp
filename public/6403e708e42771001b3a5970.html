@@ -229,69 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          うーんキングオージャー
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Pi-hole いれてしまった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          かつて広告に関わってきた身としても、今でもウェブサービスで食ってて収益源として広告ってのはデカいのを重々承知しているのでひじょ〜〜〜に気が引けるし、あとヘタに DNS に手を入れたくない(わかりにくいところで引っかかりたくない)な〜〜〜〜〜という気持ちもあったが、Pi-hole の存在を知ってかなり気になったので試してみることに
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Proxmox で CT つくって適当に立ち上げた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Pi-hole が port 53 が必要なんだけど、systemd-resolved が塞いでたので 
-        <code>/etc/systemd/resolved.conf</code>
-       の 
-        <code>DNSStubListener=no</code>
-       を no にして 
-        <code>service systemd-resolved restart</code>
-       したら立ち上がった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          管理画面みよーとおもって ip にアクセスしたら 403 で、あれー？とおもったら 
-        <code>&lt;ip&gt;/admin</code>
-       が正解だった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          管理画面のパスワードはコンソールで 
-        <code>pihole -a -p</code>
-       で指定できる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          適当に mac の DNS を変えてみて様子見
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          過去に「このページは広告だらけでガッタガタやったなあ」というページを適当に開いて、ひじょーに快適に開けてしまって声にならない声がでた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Android の端末でも設定してみるかぁ〜と設定画面を確認していたけど、どうやら And では Static にしないと DNS を変えられないみたい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ぶっちゃけルーターの DNS を変えちゃえば家ネット全体をブロックできるので手っ取り早そうではあるが.....
+              <a href="https://amp.kbys.tk/64059405d08cda001c3e6d28">進撃の巨人 完結編 前編 感想(ネタバレあり)</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -301,17 +241,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox の CT Template を作る
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ポコポコ CT つくってると、いちいち docker のインストールスクリプト叩いたり、ちょっと 
-              <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8">node</a>
-             のスクリプト動かしたい時に volta のインストールスクリプト叩いたりと若干手間
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          CT は CT Templates 内の zst から作るしかないっぽくて、どうにか zst を作れないかとおもったが、CT のメニューに More から Convert to Template てのがあって、これにしとくと Template の node のメニューから Clone できて、クローンするとテンプレート用に作成しておいた状態で CT が上がるようになって便利
+          
+              <a href="https://amp.kbys.tk/64059413c915b0001bd3a460">うーんキングオージャー</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -321,31 +253,33 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox の VM と CT
+          
+              <a href="https://amp.kbys.tk/64059433b8b132001b781746">Pi-hole いれてしまった</a>
+            
         </div>
       
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あんまりよくわかってなくて、とりあえず VM でつくってた
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
         </div>
       
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          CT はコンテナで、オーバーヘッドが VM に比べると小さいらしい
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/640594411802f6001b16558e">Proxmox の CT Template を作る</a>
+            
         </div>
       
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          まあそりゃそうか
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
         </div>
       
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          CPU, メモリ, ディスクを稼働したまま変更できるらしくて便利そう
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Unprivileged container オプションをいれておけば CT 内で docker のコンテナを作れる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          まあどうなんだろう？
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/6405944dcf7793001b73ceef">Proxmox の VM と CT</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -389,20 +323,38 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/64059405d08cda001c3e6d28.html">
+                      進撃の巨人 完結編 前編 感想(ネタバレあり)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/64059413c915b0001bd3a460.html">
+                      うーんキングオージャー
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/64059433b8b132001b781746.html">
+                      Pi-hole いれてしまった
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/640594411802f6001b16558e.html">
+                      Proxmox の CT Template を作る
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/6405944dcf7793001b73ceef.html">
+                      Proxmox の VM と CT
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5e5fa79f39f64e0017b508e2.html">
                       0305
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8.html">
-                      node
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/614746b7932e40002346bebd.html">
-                      20210919
                     </a>
                   </li>
                 
