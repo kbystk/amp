@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63f7041a39f3c2001b843f5b.html">
-        <meta property="og:title" content="Herobox に Proxmox をインストールする | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6406f7de9fb71b001cae42a3.html">
+        <meta property="og:title" content="20230307 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/af350f1b4d16bcbf3fd84fe99a105789/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Herobox に Proxmox をインストールする | I am Electrical machine</title>
+        <title>20230307 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,159 +209,119 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Herobox に Proxmox をインストールする">
+            <a href="https://scrapbox.io/jigsaw/20230307">
               スクボで読む
             </a>
           </div>
-          <h1>Herobox に Proxmox をインストールする</h1>
+          <h1>20230307</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          from 
-              <a href="https://amp.kbys.tk/63f5814e7531ee001b3db1b8">20230222</a>
-             
-          <a href="https://amp.kbys.tk/5e505b0b47cc190017098528">#0222</a>
+          
+          <a href="https://amp.kbys.tk/5e638411a4d4e50017b05a20">#0307</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Herobox に Proxmox をインストールする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ルーターとして使っている NanoPi R5S に docker をいれて、いくつかコンテナを立ち上げてたら 
-        <code>docker: Error response from daemon: no space left on device.</code>
-       ってエラーが出てコンテナを起動できなくなってしまった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-        <code>docker system df</code>
-       をみてみると 
-        <code>RECLAIMABLE</code>
-       が0になっていた
+                <br>
+              
         </div>
       
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          よくよく考えてみると、このマシンはメモリ2GBのストレージ8GBの極限(まあHDDが256MB?ぐらいの時代に比べたら贅沢なものだが)環境なのであった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          なんかたまに fs? でつっかえるなとおもったこともあったんだけど、そりゃメモリ2GBじゃそうか〜と
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一応 M.2 の口があるみたいなのでストレージは増設できそうだけど、それにしてもメモリが限界すぎる
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          漫勉neo 水瀬藍
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Tailscale のお陰ですっかり selfhosted 沼に足を踏み入れつつあり、Proxmox という沼沢地を発見してしまった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          自宅にいろいろマシンは転がってるんだけど、常時起動しとくことも考えるとなるべく省電力なマシンの方がいいよなーという気持ちがあり、最初は M2 の Mac mini をクラスタリングできないかなーとおもったんだけどまあ Apple silicon がむずそうなのは容易に想像できるのでやめた
+          パンデミックを受けて、パラッと開いた時に楽しんでもらえるように....って話しながら、ものすごい工程をアナログで行っていて、プロすげえってグッときてしまった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Raspberry Pi は全然在庫が観測できなくて無理そうってなった
+          なんとなしの一コマでもそこにはものすごい労力がかかっているんだなと....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          スクリーントーン貼ったりするのも「たのし〜い」みたいなテンションだったので、自分も仕事ではある意味そういうテンションなので異業種の職人技をみると感動するみたいな話ではあるのかも
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Home Assistant on Herobox w/ Homekit
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          3Hスタックだ!(適当)
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Proxmox 上にインストールするにあたっては 
+            <a href="https://www.wundertech.net/how-to-set-up-home-assistant-on-proxmox/" target="_blank" rel="noopener">
+              https://www.wundertech.net/how-to-set-up-home-assistant-on-proxmox/
+            </a>
+           が大変参考になった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ディスクを一旦外しておいて、イメージから吸い出したディスクを挿すのがポイント
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Herobox はマザボに Bluetooth の機能がある雰囲気を漂わせていたが、Proxmox 経由で HAOS にパススルーしても Bluetooth として認識してくれなかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          いろいろ調べたんだけど、Bluetooth のドングルを買え！ってのが有力そうだったので 
+              <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50">Amazon</a>
+             で適当にTP-Link製の安いドングルを買った
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ドングル挿したら Proxmox の Hardware のところにも USB デバイスとしてドングルが表示されるようになったので HA にパススルーしてリブートした
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          そしたら Bluetooth の integration が勝手に認識して、Bluetooth の認証をアクティベーションしたら Bluetooth のスキャンも走って、家中飛びまくってる Bluetooth のデバイスをいろいろ認識してくれるようになった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          SONOS のスピーカーは勝手に追加されるようになってて便利だった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          とりあえず Homekit との連携を試してみるか〜と、Integrations から Homekit をアクティベーションしたら、Notifications のところに Bridge として接続する用のQRコードが出るので、それを Home App で読み取れば Home に Home Assistant のデバイスが追加される
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ここまでで SONOS のデバイスしか追加してなかったので、SONOS のデバイスだけ Home に追加されたんだが、これだけでも Play や Pause が仮想ボタンとして Home App に表示されるようになって既に便利さを感じはじめる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Bluetooth 開通すると Switchbot のデバイスが引けるようになるので適当にポチポチ登録していった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Automation を Switchbot 側でやってたけど、HA でも割と素直に動いて感動
         </div>
       
         <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ラズパイ用に Pimox ってやつがあって、それでクラスタリングできるみたい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一瞬ファンレスCPUのケースとか、ファンレスCPUクーラーとかに意識を奪われたんだけど、値段をみて冷静になった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          で、たどり着いたのがミニPCというジャンルで、DeskMini とか前から知ってたけど NUC もそこそこ値段するし、そういう話なら素直にパーツポチポチしてそれなりのスペックのマシン組むのが手っ取り早いのかなーとも考えた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          今回購入した Herobox は Celeron N5100 という CPU を積んでて、スペック的には6世代のi3ぐらいのものらしい(省電力ではあるみたい)
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          よくわからんけどまあ2万切る値段で、万が一全然使えないスペックだったとしても Proxmox ってやつならクラスタリングできるらしいじゃーん？ということで検証用に買った
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          AMD の CPU 何度も検討してきたけど、なんだかんだで linux で壁にぶち当たった時に自力で乗り越えられる気がしないので結局 Intel にしてしまう
+          ちょっと前に手で Bluetooth のコード書いてこりゃ大変だなとおもっただけに....
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/af350f1b4d16bcbf3fd84fe99a105789/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          適当に安いやつ買ったんだけど、Windows11 Home も入って2万はスゲーとおもう...
+          Nature Remo とのインテグレーションは 
+            <a href="https://github.com/calee0219/hass-nature-remo" target="_blank" rel="noopener">
+              https://github.com/calee0219/hass-nature-remo
+            </a>
+           が参考になった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          どうせ Proxmox いれてぶっとばしちゃうので OS いらんかったんだけど、まあ使うこともあるかなーと...
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          現代の Windows の認証方式がまるでよくわかってなくて、
-              <a href="https://amp.kbys.tk/5d63d70b6c257f00179cd184">MS</a>
-             のアカウントでログインしたらそのままライセンスの認証も通って普通に使える感じだった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          USBメモリを引っ張り出してきて、Proxmox VE 7 の ISO イメージをダウンロードして、mac で Balena Etcher という GUI の焼きツールで焼いた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          CHUWI の BIOS の入り方が全然わからなくて、調べたところに依るとロゴが表示されるところで ESC を押すだけで入れるそうなんだが.....イマイチ勘所がわからなくて何回か Windows の起動とシャットダウンを繰り返してたら、Windows の復旧モードに入ったので、チャンスとおもって UEFI に入れた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          USBからブートして、Proxmox VE をインストールした
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          マウス挿すの面倒すぎてキーボードだけでトライしたが、Tab だけでどうにかなった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <code>/etc/apt/sources.list</code>
-       に 
-        <code>deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription</code>
-       を追加して、
-        <code>/etc/apt/sources.list.d/pve-enterprise.list</code>
-       のエンプラ向けリポジトリをコメントアウトしておく
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <code>apt-get update &amp;&amp; apt-get -y upgrade &amp;&amp; apt-get -y dist-upgrad</code>
-       でいろいろ最新にしておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          これでブラウザで &lt;ip&gt;:8006 にアクセスすると Web の GUI が出るそうなんだが、レスポンスが返ってこなくてあれ〜とおもってたら 
-        <code>https://&lt;ip&gt;:8006</code>
-       でアクセスしないとダメだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          コンソールにも 
-        <code>https</code>
-       って書いてあったわ....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          オレオレ証明書にブラウザが怒ってくるのでLEあたりでマトモな証明書で返るようにしたいなー(課題)
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえず起動するとこまではいけたので満足
+          Supervisor で立ち上げてる時に config のディスクを触る方法がわからなくて、ファイルエディターのアドオンを入れてポチポチコピペして再起動したら動いた
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -377,20 +335,14 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63f5814e7531ee001b3db1b8.html">
-                      20230222
+                    <a href="https://amp.kbys.tk/63b2648dbd1820001e71abde.html">
+                      2023
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e505b0b47cc190017098528.html">
-                      0222
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5d63d70b6c257f00179cd184.html">
-                      MS
+                    <a href="https://amp.kbys.tk/63ff799d78ed5c001b33be91.html">
+                      202303
                     </a>
                   </li>
                 
@@ -401,8 +353,14 @@ body {
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e38ae71828a730017045e62.html">
-                      ナイブズ・アウト 感想
+                    <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50.html">
+                      Amazon
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/61a78004d8d366001d25f65d.html">
+                      20211201
                     </a>
                   </li>
                 
