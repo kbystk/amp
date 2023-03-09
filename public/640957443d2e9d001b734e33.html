@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63ef1bfd0b64ab001c683c37.html">
-        <meta property="og:title" content="Tailscale の DNS で https を使う | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/640957443d2e9d001b734e33.html">
+        <meta property="og:title" content="Uptime Kuma 導入 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/d375cb2440575cdec32e0b7eb4b37cb6/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Tailscale の DNS で https を使う | I am Electrical machine</title>
+        <title>Uptime Kuma 導入 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,71 +211,61 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Tailscale の DNS で https を使う">
+            <a href="https://scrapbox.io/jigsaw/Uptime Kuma 導入">
               スクボで読む
             </a>
           </div>
-          <h1>Tailscale の DNS で https を使う</h1>
+          <h1>Uptime Kuma 導入</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005">20230216</a>
+              <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1">20230308</a>
              
-          <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04">#0216</a>
+          <a href="https://amp.kbys.tk/5e63846b7814e700178963b0">#0308</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Tailscale の DNS で https を使う
+          Uptime Kuma 導入
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まだ beta らしいが
+          テキトーに組んでたサービスが500になってて、そこそこ死活監視しておくかーという気持ちになった
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          普段何気なく localhost で開発してるわけだが、tailscale ごしにアクセスすると localhost ではなくなってしまうので、いかに localhost が特権的な名前なのかをまざまざと知らされる
+          動画とかでよく見かける Uptime Kuma を CT にインストールしてみた
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          tailscale の DNS には LE の証明書のなんやかんやを肩代わりしてくれる仕組みがあって、これを試してみる
+          
+            <a href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">
+              https://github.com/louislam/uptime-kuma
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          元々 machine.tsnnnnnn.ts.net 的な感じでも各マシンにアクセスできるが、数字は覚えられないのでひとまずそれっぽい名前におきかえておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          それから https をWebのUIで有効にすると、cli で 
-        <code>tailscale cert machine...</code>
-       打つだけで crt と key を入手できる
+          せっかく CT だしネイティブにインストールするかーとおもってインストールスクリプト叩いたけど、
+              <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8">node</a>
+            /npm がない環境だとインストールスクリプトがうまく動かないみたい
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          mac では 
-        <code>/Applications/Tailscale.app/Contents/MacOS/Tailscale cert</code>
+          テキトーに Volta 経由で node いれて、pm2 をグローバルインストールしてスタートアップスクリプト叩いたらすっと動いた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/d375cb2440575cdec32e0b7eb4b37cb6/thumb/1000">
+        </amp-img></div>
       
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとはこの認証情報でもってサーバをたてればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は astro で検証していて、astro.config に vite の設定をそのまま渡せるフィールドがあるので、そいつに渡してやればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          macにそんな感じで https を受け付けられるようにしておいて、iOSでIP直打ちでなくURLでアクセスすると https でアクセスできた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これで無用な制限がなくウェブアプリを開発できるようになった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          StackBlitz の WebContainer が API 公開してて、Service Worker as Server として開発する方向もアツいかなとおもってたけど(開発環境のポータビリティとして)、こんだけ簡単にローカルの環境につながるなら適当なタブレットを VPN つないで VSC をサーバで接続するなり VNC で接続するなりでもよさそうとおもった
+          謎の満足感
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -287,32 +279,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005.html">
-                      20230216
+                    <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1.html">
+                      20230308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04.html">
-                      0216
+                    <a href="https://amp.kbys.tk/5e63846b7814e700178963b0.html">
+                      0308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
-                      Astro
+                    <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8.html">
+                      node
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63cf0000a48a60001de4b649.html">
-                      Swup - complete, flexible, extensible and easy to use page transition library.
+                    <a href="https://amp.kbys.tk/623c328be3e64e001ddd9088.html">
+                      好きなゲーム2018からの差分2022
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df5.html">
-                      踏み納め - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5e0349b2579a81001765994a.html">
+                      相談は踊る
                     </a>
                   </li>
                 

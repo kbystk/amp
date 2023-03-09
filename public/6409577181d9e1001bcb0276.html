@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63ef1bfd0b64ab001c683c37.html">
-        <meta property="og:title" content="Tailscale の DNS で https を使う | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6409577181d9e1001bcb0276.html">
+        <meta property="og:title" content="Proxmox の管理画面の証明書をちゃんとする | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Tailscale の DNS で https を使う | I am Electrical machine</title>
+        <title>Proxmox の管理画面の証明書をちゃんとする | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,71 +209,55 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Tailscale の DNS で https を使う">
+            <a href="https://scrapbox.io/jigsaw/Proxmox の管理画面の証明書をちゃんとする">
               スクボで読む
             </a>
           </div>
-          <h1>Tailscale の DNS で https を使う</h1>
+          <h1>Proxmox の管理画面の証明書をちゃんとする</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005">20230216</a>
+              <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1">20230308</a>
              
-          <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04">#0216</a>
+          <a href="https://amp.kbys.tk/5e63846b7814e700178963b0">#0308</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Tailscale の DNS で https を使う
+          Proxmox の管理画面の証明書をちゃんとする
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まだ beta らしいが
+          
+            <a href="https://www.smarthomebeginner.com/proxmox-ssl-certificate-with-letsencrypt/" target="_blank" rel="noopener">
+              https://www.smarthomebeginner.com/proxmox-ssl-certificate-with-letsencrypt/
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          普段何気なく localhost で開発してるわけだが、tailscale ごしにアクセスすると localhost ではなくなってしまうので、いかに localhost が特権的な名前なのかをまざまざと知らされる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          tailscale の DNS には LE の証明書のなんやかんやを肩代わりしてくれる仕組みがあって、これを試してみる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          元々 machine.tsnnnnnn.ts.net 的な感じでも各マシンにアクセスできるが、数字は覚えられないのでひとまずそれっぽい名前におきかえておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          それから https をWebのUIで有効にすると、cli で 
-        <code>tailscale cert machine...</code>
-       打つだけで crt と key を入手できる
+          Cloudflare DNS だと簡単にできそうだったので DNS を Cloudflare に移した
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          mac では 
-        <code>/Applications/Tailscale.app/Contents/MacOS/Tailscale cert</code>
-      
+          Zone ができたので Wildebeest が立ち上げられるかも
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとはこの認証情報でもってサーバをたてればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は astro で検証していて、astro.config に vite の設定をそのまま渡せるフィールドがあるので、そいつに渡してやればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          macにそんな感じで https を受け付けられるようにしておいて、iOSでIP直打ちでなくURLでアクセスすると https でアクセスできた
+          ↑のページに書いてある感じで Cloudflare のトークンやらなんやらを ACME の Plugin として登録して、node の System =&gt; Certificates から ACME を Add して、発行したいドメインを設定して、Order Certificates Now するとタスクが走って cert が出来上がった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これで無用な制限がなくウェブアプリを開発できるようになった
+          リロードしろと言われるので、リロードするついでに DNS で当該ドメインを IP に振るように設定を入れればよい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          ルーターの DNS まわりの機能で設定した
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          StackBlitz の WebContainer が API 公開してて、Service Worker as Server として開発する方向もアツいかなとおもってたけど(開発環境のポータビリティとして)、こんだけ簡単にローカルの環境につながるなら適当なタブレットを VPN つないで VSC をサーバで接続するなり VNC で接続するなりでもよさそうとおもった
+          ポートは相変わらず 8006 でアクセスすると、証明書で怒られることなく管理画面にアクセスできた
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -287,32 +271,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005.html">
-                      20230216
+                    <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1.html">
+                      20230308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04.html">
-                      0216
+                    <a href="https://amp.kbys.tk/5e63846b7814e700178963b0.html">
+                      0308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
-                      Astro
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82dd3.html">
+                      なんとなく - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63cf0000a48a60001de4b649.html">
-                      Swup - complete, flexible, extensible and easy to use page transition library.
+                    <a href="https://amp.kbys.tk/5f6c3a57504a1a001e15ae3e.html">
+                      丸山製麺 オンラインショップ
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df5.html">
-                      踏み納め - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d65.html">
+                      今日のDDR -diary.jgs.me
                     </a>
                   </li>
                 

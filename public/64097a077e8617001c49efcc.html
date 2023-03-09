@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63ef1bfd0b64ab001c683c37.html">
-        <meta property="og:title" content="Tailscale の DNS で https を使う | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/64097a077e8617001c49efcc.html">
+        <meta property="og:title" content="20230309 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Tailscale の DNS で https を使う | I am Electrical machine</title>
+        <title>20230309 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,71 +209,71 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Tailscale の DNS で https を使う">
+            <a href="https://scrapbox.io/jigsaw/20230309">
               スクボで読む
             </a>
           </div>
-          <h1>Tailscale の DNS で https を使う</h1>
+          <h1>20230309</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          from 
-              <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005">20230216</a>
-             
-          <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04">#0216</a>
+          
+          <a href="https://amp.kbys.tk/5e64cdc4dd1a070017fdaf5c">#0309</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Tailscale の DNS で https を使う
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          RSS を追加
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まだ beta らしいが
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          普段何気なく localhost で開発してるわけだが、tailscale ごしにアクセスすると localhost ではなくなってしまうので、いかに localhost が特権的な名前なのかをまざまざと知らされる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          tailscale の DNS には LE の証明書のなんやかんやを肩代わりしてくれる仕組みがあって、これを試してみる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          元々 machine.tsnnnnnn.ts.net 的な感じでも各マシンにアクセスできるが、数字は覚えられないのでひとまずそれっぽい名前におきかえておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          それから https をWebのUIで有効にすると、cli で 
-        <code>tailscale cert machine...</code>
-       打つだけで crt と key を入手できる
+          物好きな人がいるのかわからんが、出せるもんは出しとくかということで astro の rss plugin を挿して rss を出力した
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          mac では 
-        <code>/Applications/Tailscale.app/Contents/MacOS/Tailscale cert</code>
-      
+          
+            <a href="https://w.kbys.tk/rss.xml" target="_blank" rel="noopener">
+              https://w.kbys.tk/rss.xml
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとはこの認証情報でもってサーバをたてればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は astro で検証していて、astro.config に vite の設定をそのまま渡せるフィールドがあるので、そいつに渡してやればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          macにそんな感じで https を受け付けられるようにしておいて、iOSでIP直打ちでなくURLでアクセスすると https でアクセスできた
+          ドキュメントでは 
+        <code>context.site</code>
+       を 
+        <code>site</code>
+       に渡しているが、
+        <code>APIContext&lt;Record&lt;string, any&gt;&gt;.site</code>
+       は 
+        <code>URL | undefiend</code>
+       なのに対して 
+        <code>site</code>
+       は 
+        <code>string</code>
+       を要求してくるので困ったなと
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これで無用な制限がなくウェブアプリを開発できるようになった
+          
+        <code>context</code>
+       を参照するのをやめて、string でベタ書きした 
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          StackBlitz の WebContainer が API 公開してて、Service Worker as Server として開発する方向もアツいかなとおもってたけど(開発環境のポータビリティとして)、こんだけ簡単にローカルの環境につながるなら適当なタブレットを VPN つないで VSC をサーバで接続するなり VNC で接続するなりでもよさそうとおもった
+          astro では API っぽいエンドポイントを生やすのも簡単で、rails みたいに 
+        <code>name.ext.ts</code>
+       てなファイルを 
+        <code>pages</code>
+       に切って、
+        <code>get</code>
+       を export すればよい
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -287,32 +287,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005.html">
-                      20230216
+                    <a href="https://amp.kbys.tk/63b2648dbd1820001e71abde.html">
+                      2023
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04.html">
-                      0216
+                    <a href="https://amp.kbys.tk/63ff799d78ed5c001b33be91.html">
+                      202303
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/640956eabf94d2001bc2fe33.html">
+                      1Passwordを使って、ローカルにファイル(~/.configや.env)として置かれてる生のパスワードなどを削除した | Web Scratch
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5e64cdc4dd1a070017fdaf5c.html">
+                      0309
                     </a>
                   </li>
                 
                   <li>
                     <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
                       Astro
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/63cf0000a48a60001de4b649.html">
-                      Swup - complete, flexible, extensible and easy to use page transition library.
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df5.html">
-                      踏み納め - diary.jgs.me
                     </a>
                   </li>
                 

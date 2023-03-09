@@ -9,11 +9,9 @@
         <meta property="og:title" content="20230308 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/d375cb2440575cdec32e0b7eb4b37cb6/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -231,23 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox の unprivileged CT だと NFS/SMB マウントできないっぽい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          privileged だと features から NFS なり CIFS なりを有効化すれば通るらしい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          調べてみると apparmor 絡みで云々ということらしい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          apparmor の設定ファイルっぽいやつをいじるパターンも試してみたんだけどパーミッションが通らず
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          docker のコンテナをつくりたいかつマウントもしたいって時は素直に VM を選択した方がよさそう
+          
+              <a href="https://amp.kbys.tk/64095735ed973b001c15f7b4">Proxmox の unprivileged CT だと NFS/SMB マウントできないっぽい</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -257,45 +241,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Uptime Kuma 導入
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          テキトーに組んでたサービスが500になってて、そこそこ死活監視しておくかーという気持ちになった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          動画とかでよく見かける Uptime Kuma を CT にインストールしてみた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-            <a href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener">
-              https://github.com/louislam/uptime-kuma
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          せっかく CT だしネイティブにインストールするかーとおもってインストールスクリプト叩いたけど、
-              <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8">node</a>
-            /npm がない環境だとインストールスクリプトがうまく動かないみたい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          テキトーに Volta 経由で node いれて、pm2 をグローバルインストールしてスタートアップスクリプト叩いたらすっと動いた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/d375cb2440575cdec32e0b7eb4b37cb6/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          謎の満足感
+              <a href="https://amp.kbys.tk/640957443d2e9d001b734e33">Uptime Kuma 導入</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -305,23 +253,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Dashy 導入
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-            <a href="https://dashy.to/" target="_blank" rel="noopener">
-              https://dashy.to/
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          いわゆる管理画面の管理画面
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          早速あっちこっちに管理画面が発生してきてカオスになってきたので自分用の便利ブックマークみたいな感じでとりあえず導入
+              <a href="https://amp.kbys.tk/6409574f598cc3001b0ea79e">Dashy 導入</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -331,39 +265,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox の管理画面の証明書をちゃんとする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-            <a href="https://www.smarthomebeginner.com/proxmox-ssl-certificate-with-letsencrypt/" target="_blank" rel="noopener">
-              https://www.smarthomebeginner.com/proxmox-ssl-certificate-with-letsencrypt/
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Cloudflare DNS だと簡単にできそうだったので DNS を Cloudflare に移した
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Zone ができたので Wildebeest が立ち上げられるかも
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ↑のページに書いてある感じで Cloudflare のトークンやらなんやらを ACME の Plugin として登録して、node の System =&gt; Certificates から ACME を Add して、発行したいドメインを設定して、Order Certificates Now するとタスクが走って cert が出来上がった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          リロードしろと言われるので、リロードするついでに DNS で当該ドメインを IP に振るように設定を入れればよい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ルーターの DNS まわりの機能で設定した
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ポートは相変わらず 8006 でアクセスすると、証明書で怒られることなく管理画面にアクセスできた
+              <a href="https://amp.kbys.tk/6409577181d9e1001bcb0276">Proxmox の管理画面の証明書をちゃんとする</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -373,31 +277,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Home Assistant iOS App
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          アプリも存在していて、つながってるネットワーク上の Server みにいってくれて、ささっとセットアップしてくれるし、Apple Watch のアプリも存在しているので大変便利
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Watch から開いた画面には設定の Actions で設定している項目が表示されるようになっているっぽい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Action の設定のところで、適当に設定をするとサンプルになるトリガーが表示されるので、あとは HA の設定の Automation で Event Trigger を Trigger とする Automation をつくれば Watch からポンでなんでも動かせる
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          alexa_media_player をいれてあるので、試しにWatch タップすると Alexa が喋る Automation 作ってみたら、楽しすぎてサルみたいにはしゃいで連打してしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          欲をいえばイイ感じの UI をサクッと作れれば御の字だけど、ポンできるだけでまあ十分かな
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとは Watch の Complication も作れるみたいだけど、複雑そうだしそもそも Complication パンパンなので増やせん....
+          
+              <a href="https://amp.kbys.tk/64095786ac3469001b3d6446">Home Assistant iOS App</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -407,63 +289,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Home Assistant + alexa_media_player
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-            <a href="https://github.com/custom-components/alexa_media_player" target="_blank" rel="noopener">
-              https://github.com/custom-components/alexa_media_player
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Add-ons から Terminal &amp; SSH をインストールして、cli で入れるようにする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          HACS というコミュニティストアをインストールする
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-            <a href="https://hacs.xyz/" target="_blank" rel="noopener">
-              https://hacs.xyz/
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          reboot すると HACS の行が増えるので、HACS から alexa_media_player をインストールする
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50">Amazon</a>
-             の認証を通すと接続されている Alexa 関連のデバイスがデバイス一覧にリストされる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          アドオンの名前が微妙説が若干あるが、media player としての機能ももちろんあるものの、Alexa に向けてカスタムコマンドを発行できるので便利
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          action で call service, service は 
-        <code>media_player.play_media</code>
-       で targets に alexa の entity を指定して、
-        <code>data.media_content_id</code>
-       に実行したい(音声)コマンド、
-        <code>data.media_content_type</code>
-       は custom とすることで任意のコマンドを送りつけられた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          手弁当でホームデバイス系を叩く時にどうしても Alexa や Google Asisstant 向けの integration は生えてるけど、それ以外のルートが全然ねえやつがちょくちょくあって、そういうやつをどうにかするのに便利そう
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ただ、状態をもつやつとかは Alexa 側とステートを共有できるわけではなさそうなので、あくまでワンショットとして成立するやつに限られてしまうのかなー
+              <a href="https://amp.kbys.tk/6409579312e69e001b54740a">Home Assistant + alexa_media_player</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -495,20 +323,44 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/64095735ed973b001c15f7b4.html">
+                      Proxmox の unprivileged CT だと NFS/SMB マウントできないっぽい
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/640957443d2e9d001b734e33.html">
+                      Uptime Kuma 導入
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/6409574f598cc3001b0ea79e.html">
+                      Dashy 導入
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/6409577181d9e1001bcb0276.html">
+                      Proxmox の管理画面の証明書をちゃんとする
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/64095786ac3469001b3d6446.html">
+                      Home Assistant iOS App
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/6409579312e69e001b54740a.html">
+                      Home Assistant + alexa_media_player
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5e63846b7814e700178963b0.html">
                       0308
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50.html">
-                      Amazon
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5cd117bbcd58b3001766bfe8.html">
-                      node
                     </a>
                   </li>
                 

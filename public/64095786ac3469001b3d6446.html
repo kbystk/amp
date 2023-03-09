@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63ef1bfd0b64ab001c683c37.html">
-        <meta property="og:title" content="Tailscale の DNS で https を使う | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/64095786ac3469001b3d6446.html">
+        <meta property="og:title" content="Home Assistant iOS App | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Tailscale の DNS で https を使う | I am Electrical machine</title>
+        <title>Home Assistant iOS App | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,71 +209,47 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Tailscale の DNS で https を使う">
+            <a href="https://scrapbox.io/jigsaw/Home Assistant iOS App">
               スクボで読む
             </a>
           </div>
-          <h1>Tailscale の DNS で https を使う</h1>
+          <h1>Home Assistant iOS App</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005">20230216</a>
+              <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1">20230308</a>
              
-          <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04">#0216</a>
+          <a href="https://amp.kbys.tk/5e63846b7814e700178963b0">#0308</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Tailscale の DNS で https を使う
+          Home Assistant iOS App
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まだ beta らしいが
+          アプリも存在していて、つながってるネットワーク上の Server みにいってくれて、ささっとセットアップしてくれるし、Apple Watch のアプリも存在しているので大変便利
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          普段何気なく localhost で開発してるわけだが、tailscale ごしにアクセスすると localhost ではなくなってしまうので、いかに localhost が特権的な名前なのかをまざまざと知らされる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          tailscale の DNS には LE の証明書のなんやかんやを肩代わりしてくれる仕組みがあって、これを試してみる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          元々 machine.tsnnnnnn.ts.net 的な感じでも各マシンにアクセスできるが、数字は覚えられないのでひとまずそれっぽい名前におきかえておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          それから https をWebのUIで有効にすると、cli で 
-        <code>tailscale cert machine...</code>
-       打つだけで crt と key を入手できる
+          Watch から開いた画面には設定の Actions で設定している項目が表示されるようになっているっぽい
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          mac では 
-        <code>/Applications/Tailscale.app/Contents/MacOS/Tailscale cert</code>
-      
+          Action の設定のところで、適当に設定をするとサンプルになるトリガーが表示されるので、あとは HA の設定の Automation で Event Trigger を Trigger とする Automation をつくれば Watch からポンでなんでも動かせる
         </div>
       
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとはこの認証情報でもってサーバをたてればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は astro で検証していて、astro.config に vite の設定をそのまま渡せるフィールドがあるので、そいつに渡してやればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          macにそんな感じで https を受け付けられるようにしておいて、iOSでIP直打ちでなくURLでアクセスすると https でアクセスできた
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          alexa_media_player をいれてあるので、試しにWatch タップすると Alexa が喋る Automation 作ってみたら、楽しすぎてサルみたいにはしゃいで連打してしまった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これで無用な制限がなくウェブアプリを開発できるようになった
+          欲をいえばイイ感じの UI をサクッと作れれば御の字だけど、ポンできるだけでまあ十分かな
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          StackBlitz の WebContainer が API 公開してて、Service Worker as Server として開発する方向もアツいかなとおもってたけど(開発環境のポータビリティとして)、こんだけ簡単にローカルの環境につながるなら適当なタブレットを VPN つないで VSC をサーバで接続するなり VNC で接続するなりでもよさそうとおもった
+          あとは Watch の Complication も作れるみたいだけど、複雑そうだしそもそも Complication パンパンなので増やせん....
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -287,32 +263,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005.html">
-                      20230216
+                    <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1.html">
+                      20230308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04.html">
-                      0216
+                    <a href="https://amp.kbys.tk/5e63846b7814e700178963b0.html">
+                      0308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
-                      Astro
+                    <a href="https://amp.kbys.tk/630f15bf35d2f80020ed679d.html">
+                      sharkdp/hyperfine: A command-line benchmarking tool
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63cf0000a48a60001de4b649.html">
-                      Swup - complete, flexible, extensible and easy to use page transition library.
+                    <a href="https://amp.kbys.tk/639c5b73efad0f001da75af8.html">
+                      20221216
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df5.html">
-                      踏み納め - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5e6ac5edd40aa300179a2365.html">
+                      0314
                     </a>
                   </li>
                 

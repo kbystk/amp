@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63ef1bfd0b64ab001c683c37.html">
-        <meta property="og:title" content="Tailscale の DNS で https を使う | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6409579312e69e001b54740a.html">
+        <meta property="og:title" content="Home Assistant + alexa_media_player | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Tailscale の DNS で https を使う | I am Electrical machine</title>
+        <title>Home Assistant + alexa_media_player | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,71 +209,79 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Tailscale の DNS で https を使う">
+            <a href="https://scrapbox.io/jigsaw/Home Assistant + alexa_media_player">
               スクボで読む
             </a>
           </div>
-          <h1>Tailscale の DNS で https を使う</h1>
+          <h1>Home Assistant + alexa_media_player</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005">20230216</a>
+              <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1">20230308</a>
              
-          <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04">#0216</a>
+          <a href="https://amp.kbys.tk/5e63846b7814e700178963b0">#0308</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Tailscale の DNS で https を使う
+          Home Assistant + alexa_media_player
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          まだ beta らしいが
+          
+            <a href="https://github.com/custom-components/alexa_media_player" target="_blank" rel="noopener">
+              https://github.com/custom-components/alexa_media_player
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          普段何気なく localhost で開発してるわけだが、tailscale ごしにアクセスすると localhost ではなくなってしまうので、いかに localhost が特権的な名前なのかをまざまざと知らされる
+          Add-ons から Terminal &amp; SSH をインストールして、cli で入れるようにする
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          tailscale の DNS には LE の証明書のなんやかんやを肩代わりしてくれる仕組みがあって、これを試してみる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          元々 machine.tsnnnnnn.ts.net 的な感じでも各マシンにアクセスできるが、数字は覚えられないのでひとまずそれっぽい名前におきかえておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          それから https をWebのUIで有効にすると、cli で 
-        <code>tailscale cert machine...</code>
-       打つだけで crt と key を入手できる
+          HACS というコミュニティストアをインストールする
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          mac では 
-        <code>/Applications/Tailscale.app/Contents/MacOS/Tailscale cert</code>
-      
+          
+            <a href="https://hacs.xyz/" target="_blank" rel="noopener">
+              https://hacs.xyz/
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとはこの認証情報でもってサーバをたてればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は astro で検証していて、astro.config に vite の設定をそのまま渡せるフィールドがあるので、そいつに渡してやればよい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          macにそんな感じで https を受け付けられるようにしておいて、iOSでIP直打ちでなくURLでアクセスすると https でアクセスできた
+          reboot すると HACS の行が増えるので、HACS から alexa_media_player をインストールする
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これで無用な制限がなくウェブアプリを開発できるようになった
+          
+              <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50">Amazon</a>
+             の認証を通すと接続されている Alexa 関連のデバイスがデバイス一覧にリストされる
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          StackBlitz の WebContainer が API 公開してて、Service Worker as Server として開発する方向もアツいかなとおもってたけど(開発環境のポータビリティとして)、こんだけ簡単にローカルの環境につながるなら適当なタブレットを VPN つないで VSC をサーバで接続するなり VNC で接続するなりでもよさそうとおもった
+          アドオンの名前が微妙説が若干あるが、media player としての機能ももちろんあるものの、Alexa に向けてカスタムコマンドを発行できるので便利
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          action で call service, service は 
+        <code>media_player.play_media</code>
+       で targets に alexa の entity を指定して、
+        <code>data.media_content_id</code>
+       に実行したい(音声)コマンド、
+        <code>data.media_content_type</code>
+       は custom とすることで任意のコマンドを送りつけられた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          手弁当でホームデバイス系を叩く時にどうしても Alexa や Google Asisstant 向けの integration は生えてるけど、それ以外のルートが全然ねえやつがちょくちょくあって、そういうやつをどうにかするのに便利そう
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ただ、状態をもつやつとかは Alexa 側とステートを共有できるわけではなさそうなので、あくまでワンショットとして成立するやつに限られてしまうのかなー
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -287,32 +295,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63ee3cbdb00ea2001bd7d005.html">
-                      20230216
+                    <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1.html">
+                      20230308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e4a7e60b37f780017a3ac04.html">
-                      0216
+                    <a href="https://amp.kbys.tk/5e63846b7814e700178963b0.html">
+                      0308
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
-                      Astro
+                    <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50.html">
+                      Amazon
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63cf0000a48a60001de4b649.html">
-                      Swup - complete, flexible, extensible and easy to use page transition library.
+                    <a href="https://amp.kbys.tk/5f02ae98560ea0002405184c.html">
+                      都民1万人アンケート | NHK選挙WEB
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82df5.html">
-                      踏み納め - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5ebc9b13859313001ef8a10c.html">
+                      0514
                     </a>
                   </li>
                 
