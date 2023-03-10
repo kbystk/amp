@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/64095786ac3469001b3d6446.html">
-        <meta property="og:title" content="Home Assistant iOS App | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/640a9595ceaadc001c8dccb7.html">
+        <meta property="og:title" content="RSS を追加 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Home Assistant iOS App | I am Electrical machine</title>
+        <title>RSS を追加 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,47 +209,67 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Home Assistant iOS App">
+            <a href="https://scrapbox.io/jigsaw/RSS を追加">
               スクボで読む
             </a>
           </div>
-          <h1>Home Assistant iOS App</h1>
+          <h1>RSS を追加</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1">20230308</a>
+              <a href="https://amp.kbys.tk/64097a077e8617001c49efcc">20230309</a>
              
-          <a href="https://amp.kbys.tk/5e63846b7814e700178963b0">#0308</a>
+          <a href="https://amp.kbys.tk/5e64cdc4dd1a070017fdaf5c">#0309</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Home Assistant iOS App
+          RSS を追加
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          アプリも存在していて、つながってるネットワーク上の Server みにいってくれて、ささっとセットアップしてくれるし、Apple Watch のアプリも存在しているので大変便利
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Watch から開いた画面には設定の Actions で設定している項目が表示されるようになっているっぽい
+          物好きな人がいるのかわからんが、出せるもんは出しとくかということで astro の rss plugin を挿して rss を出力した
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Action の設定のところで、適当に設定をするとサンプルになるトリガーが表示されるので、あとは HA の設定の Automation で Event Trigger を Trigger とする Automation をつくれば Watch からポンでなんでも動かせる
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          alexa_media_player をいれてあるので、試しにWatch タップすると Alexa が喋る Automation 作ってみたら、楽しすぎてサルみたいにはしゃいで連打してしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          欲をいえばイイ感じの UI をサクッと作れれば御の字だけど、ポンできるだけでまあ十分かな
+          
+            <a href="https://w.kbys.tk/rss.xml" target="_blank" rel="noopener">
+              https://w.kbys.tk/rss.xml
+            </a>
+          
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとは Watch の Complication も作れるみたいだけど、複雑そうだしそもそも Complication パンパンなので増やせん....
+          ドキュメントでは 
+        <code>context.site</code>
+       を 
+        <code>site</code>
+       に渡しているが、
+        <code>APIContext&lt;Record&lt;string, any&gt;&gt;.site</code>
+       は 
+        <code>URL | undefiend</code>
+       なのに対して 
+        <code>site</code>
+       は 
+        <code>string</code>
+       を要求してくるので困ったなと
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>context</code>
+       を参照するのをやめて、string でベタ書きした 
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          astro では API っぽいエンドポイントを生やすのも簡単で、rails みたいに 
+        <code>name.ext.ts</code>
+       てなファイルを 
+        <code>pages</code>
+       に切って、
+        <code>get</code>
+       を export すればよい
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -263,32 +283,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1.html">
-                      20230308
+                    <a href="https://amp.kbys.tk/64097a077e8617001c49efcc.html">
+                      20230309
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e63846b7814e700178963b0.html">
-                      0308
+                    <a href="https://amp.kbys.tk/5e64cdc4dd1a070017fdaf5c.html">
+                      0309
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/6344d7a553bcfe001d139684.html">
-                      ランドスケープと夏の定理 Audible版 感想 (ネタバレあり)
+                    <a href="https://amp.kbys.tk/61dde7faa32bb90022fb589e.html">
+                      Astro
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5dcf5ef77684870017c1dc5c.html">
-                      ポケモン タイプ相性
+                    <a href="https://amp.kbys.tk/5cf0c21b4aa4940017d93561.html">
+                      Keyboard Checker | The best online keyboard tester
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82cfb.html">
-                      Avengers: Age of Ultron in Sydney LG Theatre ネタバレ感想 - diary.jgs.me
+                    <a href="https://amp.kbys.tk/614d1338c02c320021bfe05e.html">
+                      DEATHLOOP フィアの絵文字探し
                     </a>
                   </li>
                 
