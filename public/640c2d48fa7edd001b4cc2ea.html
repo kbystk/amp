@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63f85b5db6726b001b2b1e44.html">
-        <meta property="og:title" content="Proxmox の VM に xterm.js でアクセスする | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/640c2d48fa7edd001b4cc2ea.html">
+        <meta property="og:title" content="Home Assistant から http リクエストを送る | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Proxmox の VM に xterm.js でアクセスする | I am Electrical machine</title>
+        <title>Home Assistant から http リクエストを送る | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,53 +209,39 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Proxmox の VM に xterm.js でアクセスする">
+            <a href="https://scrapbox.io/jigsaw/Home Assistant から http リクエストを送る">
               スクボで読む
             </a>
           </div>
-          <h1>Proxmox の VM に xterm.js でアクセスする</h1>
+          <h1>Home Assistant から http リクエストを送る</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf">20230223</a>
+              <a href="https://amp.kbys.tk/640a88d53e194b001b70f3e4">20230310</a>
              
-          <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65">#0223</a>
+          <a href="https://amp.kbys.tk/5e664d05f8cf4a00177f8d3c">#0310</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox の VM に xterm.js でアクセスする
+          Home Assistant から http リクエストを送る
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          noVNC だとコピペができなくて不便ということに気付いた
+          基本的には configuration.yaml に shell_command に curl のコマンドを登録しておいて、トリガーなりなんなりで送る感じ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          shell_command は custom_component の中にスクリプトを放り込んでおけばいいんだけど、相変わらずうまい入れ方がわからんかったので File Editor でいれてしまった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          他には SPICE ってやつもコンソールで使えるっぽいが、xterm.js 使えるならそれが手っ取り早そうだなと
+          configuration も File Editor からいじるしかないっぽい
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ハードウェアの Add からシリアルポートを追加する
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          とりあえず 
-        <code>serial0</code>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そしたら noVNC で一旦入って、
-        <code>sudo systemctl enable serial-getty@ttyS0.service</code>
-      , 
-        <code>sudo systemctl start serial-getty@ttyS0.service</code>
-       てな感じで仮想シリアルポートを有効化しないといけないみたい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          するとコンソールから xterm.js で接続できた
+          config の reload で有効化されるかなとおもったけど、reboot しないと反映されないっぽかった
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -269,32 +255,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf.html">
-                      20230223
+                    <a href="https://amp.kbys.tk/640a88d53e194b001b70f3e4.html">
+                      20230310
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65.html">
-                      0223
+                    <a href="https://amp.kbys.tk/5e664d05f8cf4a00177f8d3c.html">
+                      0310
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63ab888af6bdb9001ec222e9.html">
-                      デパプリ 41話 感想 (ネタバレあり)
+                    <a href="https://amp.kbys.tk/5ce35a92110dd7001798886d.html">
+                      濱口秀司のコラボレーション実験 - 西尾泰和のScrapbox
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/630cb7ecc8c1840023936cd2.html">
-                      F1 2022 ベルギーGP 予選
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d6a.html">
+                      The power of higher-order reducers by omnidan - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/613c718a604fa500227807f7.html">
-                      仮面ライダーリバイス 1話 感想
+                    <a href="https://amp.kbys.tk/5dbde3481b8ef30017aa7cf2.html">
+                      1103
                     </a>
                   </li>
                 

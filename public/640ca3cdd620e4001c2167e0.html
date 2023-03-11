@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63f85b5db6726b001b2b1e44.html">
-        <meta property="og:title" content="Proxmox の VM に xterm.js でアクセスする | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/640ca3cdd620e4001c2167e0.html">
+        <meta property="og:title" content="20230311 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Proxmox の VM に xterm.js でアクセスする | I am Electrical machine</title>
+        <title>20230311 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,53 +209,129 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Proxmox の VM に xterm.js でアクセスする">
+            <a href="https://scrapbox.io/jigsaw/20230311">
               スクボで読む
             </a>
           </div>
-          <h1>Proxmox の VM に xterm.js でアクセスする</h1>
+          <h1>20230311</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          from 
-              <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf">20230223</a>
-             
-          <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65">#0223</a>
+          
+          <a href="https://amp.kbys.tk/5e6ac568bb7e1d00170c4c76">#0311</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox の VM に xterm.js でアクセスする
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Picsur ローカルで動かすまで
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          noVNC だとコピペができなくて不便ということに気付いた
+          Docker でぱっと動いたので、すっと立ち上がるかなとおもって試してみたが案外苦労したのでメモ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Angular のローカル開発
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          他には SPICE ってやつもコンソールで使えるっぽいが、xterm.js 使えるならそれが手っ取り早そうだなと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ハードウェアの Add からシリアルポートを追加する
+          ちょーーーー久しぶりでわけわかめだった
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          とりあえず 
-        <code>serial0</code>
+          
+        <code>ng build</code>
+       がビルドで、
+        <code>--watch</code>
+       で変更トリガーにリビルドが走る
+        </div>
       
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          コードベースがでかいのか、割り当ててるリソースが足りてないのか、そもそもホストのマシンが貧弱なのか、なんなのかわからんけど重い
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          build とは別に 
+        <code>ng serve</code>
+       で配信してやる必要がある
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          
+        <code>--host</code>
+       でホストを変更できる
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          Proxmox の VM で作業してる関係で VM のドメインでアクセスしたいため
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          よくわからんけど build が勝手に死んでたり、serve が勝手に死んでたりしててダルい
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そしたら noVNC で一旦入って、
-        <code>sudo systemctl enable serial-getty@ttyS0.service</code>
-      , 
-        <code>sudo systemctl start serial-getty@ttyS0.service</code>
-       てな感じで仮想シリアルポートを有効化しないといけないみたい
+          コードの書き換え
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>api.service.ts</code>
+       で axios でリクエストを API に送っているが、backend も同じエンドポイントで送る想定になっているらしく、url を API エンドポイントの 
+        <code>&lt;host&gt;:8080</code>
+       を足してやらないといけなかった
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          するとコンソールから xterm.js で接続できた
+          そしてどうせそんなことだろうとおもっていたが、CORS で弾かれるので、
+        <code>app.module.ts</code>
+       の 
+        <code>cors</code>
+       middleware の origin を 
+        <code>&lt;origin&gt;</code>
+       から 
+        <code>*</code>
+       に変えておく
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ひとまずこれで permission という API が取得できてログイン画面まで遷移することができた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          初期の Admin の pass は admin/picsur で入れる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          画像の配信も同一オリジンからやる想定になっているっぽいので、変えてやらないといけなそう
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          一応設定の画面に Override Host の設定があるんだが、微妙に override されないとこがぼちぼちあってフラグを渡してやらないといけない感じ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一方で Override されてしまうと 
+        <code>url</code>
+       にドメインが入っちゃって axios の 
+        <code>url</code>
+       に二重にドメインが入っちゃうので、適当に正規表現書いてお茶を濁した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          とりあえ〜〜〜ず動くとこまではきた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+                <br>
+              
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -269,32 +345,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf.html">
-                      20230223
+                    <a href="https://amp.kbys.tk/63b2648dbd1820001e71abde.html">
+                      2023
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65.html">
-                      0223
+                    <a href="https://amp.kbys.tk/63ff799d78ed5c001b33be91.html">
+                      202303
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63ab888af6bdb9001ec222e9.html">
-                      デパプリ 41話 感想 (ネタバレあり)
+                    <a href="https://amp.kbys.tk/5e6ac568bb7e1d00170c4c76.html">
+                      0311
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/630cb7ecc8c1840023936cd2.html">
-                      F1 2022 ベルギーGP 予選
+                    <a href="https://amp.kbys.tk/5e1ce2ef3e70cf0017dd191b.html">
+                      0114
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/613c718a604fa500227807f7.html">
-                      仮面ライダーリバイス 1話 感想
+                    <a href="https://amp.kbys.tk/5f73fb8b5e432c001e31b72a.html">
+                      20200930
                     </a>
                   </li>
                 
