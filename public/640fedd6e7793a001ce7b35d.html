@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/640956eabf94d2001bc2fe33.html">
-        <meta property="og:title" content="1Passwordを使って、ローカルにファイル(~/.configや.env)として置かれてる生のパスワードなどを削除した | Web Scratch | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/640fedd6e7793a001ce7b35d.html">
+        <meta property="og:title" content="Picsur ローカルで動かすまで | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/9f3dfb7f63bd1344d7ee8e36b7cf8cad/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>1Passwordを使って、ローカルにファイル(~/.configや.env)として置かれてる生のパスワードなどを削除した | Web Scratch | I am Electrical machine</title>
+        <title>Picsur ローカルで動かすまで | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,57 +209,119 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/1Passwordを使って、ローカルにファイル(~/.configや.env)として置かれてる生のパスワードなどを削除した | Web Scratch">
+            <a href="https://scrapbox.io/jigsaw/Picsur ローカルで動かすまで">
               スクボで読む
             </a>
           </div>
-          <h1>1Passwordを使って、ローカルにファイル(~/.configや.env)として置かれてる生のパスワードなどを削除した | Web Scratch</h1>
+          <h1>Picsur ローカルで動かすまで</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-            <a href="https://efcl.info/2023/01/31/remove-secret-from-local/" target="_blank" rel="noopener">
-              1Passwordを使って、ローカルにファイル(~/.configや.env)として置かれてる生のパスワードなどを削除した | Web Scratch
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/9f3dfb7f63bd1344d7ee8e36b7cf8cad/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          1Password には ssh のエージェントもあるらしい
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-          <a href="https://amp.kbys.tk/64097a077e8617001c49efcc">#20230309</a>
-         
-          <a href="https://amp.kbys.tk/5e64cdc4dd1a070017fdaf5c">#0309</a>
+          from 
+              <a href="https://amp.kbys.tk/640ca3cdd620e4001c2167e0">20230311</a>
+             
+          <a href="https://amp.kbys.tk/5e6ac568bb7e1d00170c4c76">#0311</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Picsur ローカルで動かすまで
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Docker でぱっと動いたので、すっと立ち上がるかなとおもって試してみたが案外苦労したのでメモ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Angular のローカル開発
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ちょーーーー久しぶりでわけわかめだった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
           
-                <br>
-              
+        <code>ng build</code>
+       がビルドで、
+        <code>--watch</code>
+       で変更トリガーにリビルドが走る
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          コードベースがでかいのか、割り当ててるリソースが足りてないのか、そもそもホストのマシンが貧弱なのか、なんなのかわからんけど重い
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          build とは別に 
+        <code>ng serve</code>
+       で配信してやる必要がある
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          
+        <code>--host</code>
+       でホストを変更できる
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          Proxmox の VM で作業してる関係で VM のドメインでアクセスしたいため
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          よくわからんけど build が勝手に死んでたり、serve が勝手に死んでたりしててダルい
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          コードの書き換え
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>api.service.ts</code>
+       で axios でリクエストを API に送っているが、backend も同じエンドポイントで送る想定になっているらしく、url を API エンドポイントの 
+        <code>&lt;host&gt;:8080</code>
+       を足してやらないといけなかった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          そしてどうせそんなことだろうとおもっていたが、CORS で弾かれるので、
+        <code>app.module.ts</code>
+       の 
+        <code>cors</code>
+       middleware の origin を 
+        <code>&lt;origin&gt;</code>
+       から 
+        <code>*</code>
+       に変えておく
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ひとまずこれで permission という API が取得できてログイン画面まで遷移することができた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          初期の Admin の pass は admin/picsur で入れる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          画像の配信も同一オリジンからやる想定になっているっぽいので、変えてやらないといけなそう
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          一応設定の画面に Override Host の設定があるんだが、微妙に override されないとこがぼちぼちあってフラグを渡してやらないといけない感じ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一方で Override されてしまうと 
+        <code>url</code>
+       にドメインが入っちゃって axios の 
+        <code>url</code>
+       に二重にドメインが入っちゃうので、適当に正規表現書いてお茶を濁した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          とりあえ〜〜〜ず動くとこまではきた
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -275,32 +335,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/5e64cdc4dd1a070017fdaf5c.html">
-                      0309
+                    <a href="https://amp.kbys.tk/640ca3cdd620e4001c2167e0.html">
+                      20230311
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/64097a077e8617001c49efcc.html">
-                      20230309
+                    <a href="https://amp.kbys.tk/5e6ac568bb7e1d00170c4c76.html">
+                      0311
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82e1b.html">
-                      日本的な文化とフラットデザイン - diary.jgs.me
+                    <a href="https://amp.kbys.tk/5c6a3348595ea90017209cf3.html">
+                      ドキュメント作成時のあるあるアンチパターン20 - Qiita - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e47.html">
-                      coffee-script を 1.7 にしたら mocha が死ぬときの対応 - dev.jgs.me
+                    <a href="https://amp.kbys.tk/5c4658f6decd5d0017b43cac.html">
+                      2017年振り返り - dev.to/jgs
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e41a4d4838aac0017146d1e.html">
-                      0210
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dde.html">
+                      FRESH! Web パフォーマンス改善 〜クライアントサイド編〜 | CyberAgent Developers Blog | サイバーエージェント デベロッパーズブログ - github.com/e-jigsaw/web
                     </a>
                   </li>
                 

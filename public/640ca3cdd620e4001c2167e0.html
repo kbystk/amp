@@ -229,103 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Picsur ローカルで動かすまで
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Docker でぱっと動いたので、すっと立ち上がるかなとおもって試してみたが案外苦労したのでメモ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Angular のローカル開発
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ちょーーーー久しぶりでわけわかめだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
           
-        <code>ng build</code>
-       がビルドで、
-        <code>--watch</code>
-       で変更トリガーにリビルドが走る
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          コードベースがでかいのか、割り当ててるリソースが足りてないのか、そもそもホストのマシンが貧弱なのか、なんなのかわからんけど重い
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          build とは別に 
-        <code>ng serve</code>
-       で配信してやる必要がある
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          
-        <code>--host</code>
-       でホストを変更できる
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          Proxmox の VM で作業してる関係で VM のドメインでアクセスしたいため
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          よくわからんけど build が勝手に死んでたり、serve が勝手に死んでたりしててダルい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          コードの書き換え
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <code>api.service.ts</code>
-       で axios でリクエストを API に送っているが、backend も同じエンドポイントで送る想定になっているらしく、url を API エンドポイントの 
-        <code>&lt;host&gt;:8080</code>
-       を足してやらないといけなかった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そしてどうせそんなことだろうとおもっていたが、CORS で弾かれるので、
-        <code>app.module.ts</code>
-       の 
-        <code>cors</code>
-       middleware の origin を 
-        <code>&lt;origin&gt;</code>
-       から 
-        <code>*</code>
-       に変えておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ひとまずこれで permission という API が取得できてログイン画面まで遷移することができた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          初期の Admin の pass は admin/picsur で入れる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          画像の配信も同一オリジンからやる想定になっているっぽいので、変えてやらないといけなそう
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          一応設定の画面に Override Host の設定があるんだが、微妙に override されないとこがぼちぼちあってフラグを渡してやらないといけない感じ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一方で Override されてしまうと 
-        <code>url</code>
-       にドメインが入っちゃって axios の 
-        <code>url</code>
-       に二重にドメインが入っちゃうので、適当に正規表現書いてお茶を濁した
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえ〜〜〜ず動くとこまではきた
+              <a href="https://amp.kbys.tk/640fedd6e7793a001ce7b35d">Picsur ローカルで動かすまで</a>
+            
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
@@ -357,20 +263,20 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/640fedd6e7793a001ce7b35d.html">
+                      Picsur ローカルで動かすまで
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5e6ac568bb7e1d00170c4c76.html">
                       0311
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d7237735f547a0017c0f4f9.html">
-                      ゲーセン
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/625197310eda3f001d4fa023.html">
-                      How I Made this Website Hella Fast Without Overcomplicating Things
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dee.html">
+                      Ubuntu, SUSE Linux, and Fedora are all coming to the Windows Store - The Verge - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
