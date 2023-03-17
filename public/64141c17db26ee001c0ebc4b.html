@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/63f85b6a76e486001b48fa31.html">
-        <meta property="og:title" content="Proxmox に Ubuntu の VM をつくる | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/64141c17db26ee001c0ebc4b.html">
+        <meta property="og:title" content="atproto 様子見 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/59cdaccc1c4dba14fbce1f7953700c6b/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Proxmox に Ubuntu の VM をつくる | I am Electrical machine</title>
+        <title>atproto 様子見 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,87 +209,43 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Proxmox に Ubuntu の VM をつくる">
+            <a href="https://scrapbox.io/jigsaw/atproto 様子見">
               スクボで読む
             </a>
           </div>
-          <h1>Proxmox に Ubuntu の VM をつくる</h1>
+          <h1>atproto 様子見</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf">20230223</a>
+              <a href="https://amp.kbys.tk/64108aeb972131001b045d04">20230314</a>
              
-          <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65">#0223</a>
+          <a href="https://amp.kbys.tk/5e6ac5edd40aa300179a2365">#0314</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox に Ubuntu の VM をつくる
+          atproto 様子見
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Ubuntu のダウンロードページから Server の LTS の ISO をダウンロードする
+          Nostr の様子はこの前みたんだが、ん〜〜〜〜〜〜みたいな
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ISO はホストにアップロードしておかないといけないみたい
+          Mastdon 方式はしっくりきてなくて、Misskey にも似た気持ちをおぼえている
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/59cdaccc1c4dba14fbce1f7953700c6b/thumb/1000">
-        </amp-img></div>
-      
+          そこへ出てきた BlueSky と AT Protocol だけど、大言壮語の割には実装がまだイマイチピンとこないのと、なんとも言えないクローズド感がなあ....という気持ちに
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          local の ISO Images にアップロードしておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Create VM から適当に設定をポチポチする
+          Twitter が出てきた時はちょー簡単そうなシステムだな〜と呑気に考えてたけど、これはめちゃくちゃ難しいとおもうわ
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-            <a href="https://zenn.dev/northeggman/articles/d7b29c4e2cd7c7" target="_blank" rel="noopener">
-              https://zenn.dev/northeggman/articles/d7b29c4e2cd7c7
-            </a>
-           を参考にした
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          GUI はいらないのでそのあたりは全部スキップ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/52c270f5c8601aeed47e57cae6ee62bf/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          こういう設定にしてみた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          メモリカツカツでも困るかなとおもって半分ぐらい割り当ててしまったけど減らしてもいいかも
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そしたら Web の GUI から noVNC で接続できるので、Ubuntu のインストーラのガイドに従って設定をポチポチしていく
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          むちゃくちゃ久しぶりに Ubuntu のインストールやったけど、最終セクションあたりで Docker とか名の知れてるミドルをインストールする導線があったので、とりあえず Docker はここでインストールした
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          再起動前後らへんでハードウェアのところからCDドライブに入ってることになっている Ubuntu のインストーラを排出しておく
+          ActivityPub や DID などパーツはちびちびある感じはするが.....
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -305,32 +259,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/63f7046e628864001c5d1cbf.html">
-                      20230223
+                    <a href="https://amp.kbys.tk/64108aeb972131001b045d04.html">
+                      20230314
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5595183f56d200178b1b65.html">
-                      0223
+                    <a href="https://amp.kbys.tk/5e6ac5edd40aa300179a2365.html">
+                      0314
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/628666d9ae59d8001d62ebbf.html">
-                      20220519
+                    <a href="https://amp.kbys.tk/5d29f0d727e6c100178aac11.html">
+                      フォールス・エコノミー - hub
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c310e75b8f83c0017d0e09c.html">
-                      唐揚げと映画の会inマッドハウス - e-jigsaw.blogspot.com
+                    <a href="https://amp.kbys.tk/5db1f6aea580410017f85bc8.html">
+                      1003
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d617b2fccac950017c4f958.html">
-                      asonas
+                    <a href="https://amp.kbys.tk/5ee047dd0d3b0300235b3369.html">
+                      いややねん人種主義
                     </a>
                   </li>
                 
