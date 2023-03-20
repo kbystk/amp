@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/6401c04b7f08a7001c172504.html">
-        <meta property="og:title" content="Proxmox に TrueNAS の VM をつくった | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/641870ce1b971d001c3a3a7d.html">
+        <meta property="og:title" content="20230320 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/b58d5b9d5da59dde4dd05763d6965816/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Proxmox に TrueNAS の VM をつくった | I am Electrical machine</title>
+        <title>20230320 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,35 +211,121 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Proxmox に TrueNAS の VM をつくった">
+            <a href="https://scrapbox.io/jigsaw/20230320">
               スクボで読む
             </a>
           </div>
-          <h1>Proxmox に TrueNAS の VM をつくった</h1>
+          <h1>20230320</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          from 
-              <a href="https://amp.kbys.tk/64003e3644065d001c84c957">20230302</a>
-             
-          <a href="https://amp.kbys.tk/5e5fa6f76f3dfd0017ea4168">#0302</a>
+          
+          <a href="https://amp.kbys.tk/5e7476762225dd00178426ea">#0320</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox に TrueNAS の VM をつくった
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          宅電子書籍サーバ比較
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          TrueNAS Scale の ISO をダウンロードしてきて、Proxmox にアップロードして、VM の作成画面からポチポチすると起動した
+          セルホスウェーブの一環で DRM Free の書籍たちをなんとかしようかなと
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Storage を作成するのに別のディスクが刺さってる必要があったので、Hardware から適当なサイズのディスクを作って追加してやれば Storage が作成できて、Storage &gt; Datasets と作成できて、Datasets を smb で共有できる
+          本命は Kavita だったんだけど、Scan のクセがありすぎて、かなりフォルダ名やディレクトリ構造を強制されるので困ったなと
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Shares から SMB の共有を有効化して、ユーザの権限を適当に設定した
+          ビュワー部分なんかは悪くはないが、OPDS(Open Publication Distribution System) という仕組みがあるそうで、このフォーマットで喋れるサーバだったらビュワー部分はどうにでもなるらしい
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          その後 Komga というJava製のシステムを試してみたが、こいつは cbz...? みたいなフォーマットで投げ込んでおけ！みたいなテンションでちょっと違うなと
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Calibre は老舗っぽい感じだけど、さすがに古そうすぎて動かす気にはならず...
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Calibre Web ってのもあるみたいだけど.....HTML5!Bootstrap! って叫ばれてもなあ....みたいな
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Tanoshi ってやつはインストールがうまくいかなかった、どうやっても OpenSSL まわりで失敗する
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一体いつまで OpenSSL には苦しめられるんだ...
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          同じく Rust ベースの Stump ってやつも試して、こっちは UI も洗練されててかなり良かったんだけど結局ディレクトリ構造のウマが合わず
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          これビルドするために rust 入れたり node いれたり moon いれたりがんばったんだけど.....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          そうして流れ着いたのがCrystal製の Mango ってやつ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Crystal で書かれてるって時点で避けてたんだけど、どいつもこいつもディレクトリ構造のウマが合わないから....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Mango はシングルバイナリなので 
+        <code>wget</code>
+       でダウンロードして、適当に service を書くだけで動いた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>.config/mango/config.yml</code>
+       に適当に設定を書いとくだけ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          んで、ディレクトリ構造もウマが合って、ディレクトリの配置を素直に読んでくれて助かった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ただ、他のソフトは Author とか(たぶんアメコミ想定で Inker とかも)メタデータを書き込めるようになっているのに対して、tag しかないというアグレッシブな姿勢で困った
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          tag で 
+        <code>author:hoge</code>
+       みたいな感じで管理しろってことなんだろうか....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          なんとなくメンテナの Ling さんが飽きてる気もする
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/b58d5b9d5da59dde4dd05763d6965816/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Crystal だと fork してもまともに手を入れられるイメージ湧かないなあ....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          一応 API はあるのでラップしてメタデータ用の DB を別建てしてクライアントも自前で作るとかしたらいいのかなあ....
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -251,32 +339,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/64003e3644065d001c84c957.html">
-                      20230302
+                    <a href="https://amp.kbys.tk/63b2648dbd1820001e71abde.html">
+                      2023
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5fa6f76f3dfd0017ea4168.html">
-                      0302
+                    <a href="https://amp.kbys.tk/63ff799d78ed5c001b33be91.html">
+                      202303
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/628f79af2cd49400236dc6d5.html">
-                      20220526
+                    <a href="https://amp.kbys.tk/5e7476762225dd00178426ea.html">
+                      0320
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63baba4f835979001ec962a9.html">
-                      20230108
+                    <a href="https://amp.kbys.tk/61dbb3f1cf6315001ddbef6f.html">
+                      水上高原スキーリゾート＜公式＞家族で楽しめる群馬のスキー場
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e3dcfe2d5d2bc0017c37d8b.html">
-                      20200208
+                    <a href="https://amp.kbys.tk/622e9392869afa001d089815.html">
+                      breejs/bree: The best job scheduler for Node.js and JavaScript with cron, dates, ms, later, and human-friendly support. Works in Node v12.11.0+, uses worker threads to spawn sandboxed processes, and supports async/await, retries, throttling
                     </a>
                   </li>
                 

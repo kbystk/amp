@@ -9,11 +9,9 @@
         <meta property="og:title" content="20230319 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/9abaef2e344808feaa2b168aba332743/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -231,57 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Supabase の RLS ハマりポイントやっと解決
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          冬の LaunchWeek で pg_crdt が紹介されてから、yjs と Supabase Realtime のつなぎこみを思い出しては試行錯誤していた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          せっかくなので RLS(Row Level Security) を有効にしたいよねってことで試してた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          プロジェクトがあって、メンバーがいて、ページがいて...みたいな DB スキーマで、RLS のサンプルでも多対多の中間テーブルを作成して、RLS の 
-        <code>USING</code>
-       句の中で中間テーブルと 
-        <code>auth.uid()</code>
-       を突き合わせて認証状態を検証する....ということにトライしてたんだが、サンプル相当の SQL を書いても406が返ってきて困った
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ここで完全に盲点だったのは、この中間テーブル自体の RLS の状態で、ページの RLS 単体をいじってても中間テーブルの RLS が有効になっていて、ポリシーがない状態(これがデフォルトになっちゃうのでハマっていた)だとページの RLS で中間テーブルの RLS が突合できなくてダメだったっぽい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          よくよーくドキュメントを読むと
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
           
-        <blockquote>Note: If RLS is also enabled for members, the user must also have read (select) access to members. Otherwise the joined query will not yield any results.</blockquote>
-      
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          て書いてあって膝を打った
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/9abaef2e344808feaa2b168aba332743/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          なんかキャレットの追従があやしかったり、日本語を入力する時に確定前のワードが投入されてたりいささか怪しい部分はあるけど Supabase をバックエンドに Realtime で複数クライアントで共同編集できるモノが動いた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Prosemirror ベースの TipTap に Collaboration ext をカマして動かしている
+              <a href="https://amp.kbys.tk/6417ad64b3f133001c43b571">Supabase の RLS ハマりポイントやっと解決</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -292,34 +242,8 @@ body {
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/5cd117a89f582d001734d73e">Node.js</a>
-             の 
-        <code>events</code>
-       の 
-        <code>EventEmitter</code>
-       alt には 
-        <code>eventemitter3</code>
-       でよさそう
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          vite で 
-        <code>events</code>
-       を import しているコードをバンドルしようとして詰まった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          webpack だとよしなに polyfill してくれんだったっけ....
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          EventEmitter の実装はめちゃたくさんあって、困ったんだけどダウンロード数とかインターフェースとか考慮すると 
-        <code>eventemitter3</code>
-       なのかなと....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          3て....という気持ちはなくもないが......
+              <a href="https://amp.kbys.tk/6417ad8d14507a001b2460db">Node.js の events の EventEmitter alt には eventemitter3 でよさそう</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -329,41 +253,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ArchiveBox を構築
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-            <a href="https://github.com/ArchiveBox/ArchiveBox" target="_blank" rel="noopener">
-              https://github.com/ArchiveBox/ArchiveBox
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/6416b683386982001b1ae182">“タイパ”と真逆　ゆっくり会計できる「スローレジ」が支持される理由：思いがけない効果も（1/2 ページ） - ITmedia ビジネスオンライン</a>
-             こういうページでサムネにもなるしなーと、記録としていちいちページのスクショをキャプチャしてたのだが本質的にはアーカイブしておきたいという気持ち
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          インターネットでは
-            <a href="https://scrapbox.io/hub/コピーの数だけが正義" target="_blank" rel="noopener">
-              /hub/コピーの数だけが正義
-            </a>
-          という話があるし、Kopimistsamfundet において神聖な行いとしてコピーを保存する
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/af370e3f2781d0293f9ef7c166292cd1/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          イイ感じ
+              <a href="https://amp.kbys.tk/6417ad9bdbf947001c4cb185">ArchiveBox を構築</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -399,83 +291,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          世界の解像度と価値
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今日は畑の雑草を抜きまくってきた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          自分にとってはただの雑草でも植物が好きな人からしてみればいちいち名前があって、なぜそこに繁茂しているのか、みたいなところまで想像力を働かせることができるんだよなあとおもった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          TTHW の最新話は澤部渡だった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          自分にとってはどのギターの旋律もカッコよくてイイジャン感あったけど、ずっと「これじゃないなあ、これじゃない」ってテイクを重ねていってて、それは音に対する解像度が違うんだなあと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          神田伯山はアニメの収録で監督に何回もテイク重ねることを要求されたという話をしていた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          これもアニメ監督にとっての台詞への解像度が高いということなんだろうなと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          桑田佳祐が清少納言っぽいっていとうせいこうは言ってた(全くわからない)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          言葉？詞？に対して解像度が違うのだろうと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Surface Laptop Studio に対して「え、これ Mac じゃないんだ」っていう人にこの前遭遇した
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          パソコン一般がパソコンだとおもう人からしてみたら Windows なのか mac なのかはどうでもいいことなのだ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          妻や妹は車に興味が皆無で、妹に至っては小さいかずんぐりか、あと色、ぐらいの違いしかないそうで
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          「おやあれはアストンマーチンじゃないですか、この前(だいぶ前)ダニエル・クレイグが乗ってたやつ！」ってなるのはやっぱり世界に対する解像度の違いなんだとおもった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          プーチンに対して ICC が逮捕状を出したことにメドベージェフは便所の紙にしたるわい的なことを言っているらしい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          価値の根源とは、ヒトとヒトとのこうした世界に対する解像度のズレから生じるものなんじゃないかとおもった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          280円の価値があると感じるためには、まずその解像度が必要なのかなと
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          世間ですごいすごいと言われている羽生善治や藤井聡太のすごさを真に理解するためには、やっぱりある程度将棋のリテラシーが必要なんだろうとおもう
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          自分は幼少期の時点で TCP/IP によるネットワーク網の中で育って、当たり前のように GUI のコンピュータと暮らしてきたけど、後年になってたくさんの人の尽力の先に全て成り立っているんだと知った時はクラクラした
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          けど、世の中の大半の人は別にそれを意に介することもなく生きているわけで
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          アニメ版のスラムダンクを「ふーん(号泣)」てみてきたけど、バスケの解像度高い人とか、アニメの解像度高い人からしてみたら全然違ったみえ方をするんだろうなとか
+          
+              <a href="https://amp.kbys.tk/6417adb07ec7e7001b3f58f7">世界の解像度と価値</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -513,14 +331,32 @@ body {
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e7382036683fb0017b1c785.html">
-                      0319
+                    <a href="https://amp.kbys.tk/6417ad64b3f133001c43b571.html">
+                      Supabase の RLS ハマりポイントやっと解決
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5cd117a89f582d001734d73e.html">
-                      Node.js
+                    <a href="https://amp.kbys.tk/6417ad8d14507a001b2460db.html">
+                      Node.js の events の EventEmitter alt には eventemitter3 でよさそう
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/6417ad9bdbf947001c4cb185.html">
+                      ArchiveBox を構築
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/6417adb07ec7e7001b3f58f7.html">
+                      世界の解像度と価値
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/5e7382036683fb0017b1c785.html">
+                      0319
                     </a>
                   </li>
                 

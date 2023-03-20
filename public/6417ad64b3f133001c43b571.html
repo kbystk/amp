@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/6401c04b7f08a7001c172504.html">
-        <meta property="og:title" content="Proxmox に TrueNAS の VM をつくった | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6417ad64b3f133001c43b571.html">
+        <meta property="og:title" content="Supabase の RLS ハマりポイントやっと解決 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/9abaef2e344808feaa2b168aba332743/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Proxmox に TrueNAS の VM をつくった | I am Electrical machine</title>
+        <title>Supabase の RLS ハマりポイントやっと解決 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,35 +211,73 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Proxmox に TrueNAS の VM をつくった">
+            <a href="https://scrapbox.io/jigsaw/Supabase の RLS ハマりポイントやっと解決">
               スクボで読む
             </a>
           </div>
-          <h1>Proxmox に TrueNAS の VM をつくった</h1>
+          <h1>Supabase の RLS ハマりポイントやっと解決</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/64003e3644065d001c84c957">20230302</a>
+              <a href="https://amp.kbys.tk/64169842bba5ef001b9f9a65">20230319</a>
              
-          <a href="https://amp.kbys.tk/5e5fa6f76f3dfd0017ea4168">#0302</a>
+          <a href="https://amp.kbys.tk/5e7382036683fb0017b1c785">#0319</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox に TrueNAS の VM をつくった
+          Supabase の RLS ハマりポイントやっと解決
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          TrueNAS Scale の ISO をダウンロードしてきて、Proxmox にアップロードして、VM の作成画面からポチポチすると起動した
+          冬の LaunchWeek で pg_crdt が紹介されてから、yjs と Supabase Realtime のつなぎこみを思い出しては試行錯誤していた
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Storage を作成するのに別のディスクが刺さってる必要があったので、Hardware から適当なサイズのディスクを作って追加してやれば Storage が作成できて、Storage &gt; Datasets と作成できて、Datasets を smb で共有できる
+          せっかくなので RLS(Row Level Security) を有効にしたいよねってことで試してた
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Shares から SMB の共有を有効化して、ユーザの権限を適当に設定した
+          プロジェクトがあって、メンバーがいて、ページがいて...みたいな DB スキーマで、RLS のサンプルでも多対多の中間テーブルを作成して、RLS の 
+        <code>USING</code>
+       句の中で中間テーブルと 
+        <code>auth.uid()</code>
+       を突き合わせて認証状態を検証する....ということにトライしてたんだが、サンプル相当の SQL を書いても406が返ってきて困った
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ここで完全に盲点だったのは、この中間テーブル自体の RLS の状態で、ページの RLS 単体をいじってても中間テーブルの RLS が有効になっていて、ポリシーがない状態(これがデフォルトになっちゃうのでハマっていた)だとページの RLS で中間テーブルの RLS が突合できなくてダメだったっぽい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          よくよーくドキュメントを読むと
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          
+        <blockquote>Note: If RLS is also enabled for members, the user must also have read (select) access to members. Otherwise the joined query will not yield any results.</blockquote>
+      
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          て書いてあって膝を打った
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/9abaef2e344808feaa2b168aba332743/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          なんかキャレットの追従があやしかったり、日本語を入力する時に確定前のワードが投入されてたりいささか怪しい部分はあるけど Supabase をバックエンドに Realtime で複数クライアントで共同編集できるモノが動いた
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Prosemirror ベースの TipTap に Collaboration ext をカマして動かしている
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -251,32 +291,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/64003e3644065d001c84c957.html">
-                      20230302
+                    <a href="https://amp.kbys.tk/64169842bba5ef001b9f9a65.html">
+                      20230319
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e5fa6f76f3dfd0017ea4168.html">
-                      0302
+                    <a href="https://amp.kbys.tk/5e7382036683fb0017b1c785.html">
+                      0319
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/628f79af2cd49400236dc6d5.html">
-                      20220526
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d52.html">
+                      リンカーン - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/63baba4f835979001ec962a9.html">
-                      20230108
+                    <a href="https://amp.kbys.tk/5df7e6823c17410017e928e3.html">
+                      20191217
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e3dcfe2d5d2bc0017c37d8b.html">
-                      20200208
+                    <a href="https://amp.kbys.tk/5db30c61d5831000172620aa.html">
+                      OnetapInc/chromy: Chromy is a library for operating headless chrome. 🍺🍺🍺
                     </a>
                   </li>
                 
