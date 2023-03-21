@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/6407e2197c5aa6001c94332e.html">
-        <meta property="og:title" content="Home Assistant on Herobox w/ Homekit | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6419b6a9c51ff2001ba4e1aa.html">
+        <meta property="og:title" content="宅電子書籍サーバ比較 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/b58d5b9d5da59dde4dd05763d6965816/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Home Assistant on Herobox w/ Homekit | I am Electrical machine</title>
+        <title>宅電子書籍サーバ比較 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,93 +211,117 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Home Assistant on Herobox w/ Homekit">
+            <a href="https://scrapbox.io/jigsaw/宅電子書籍サーバ比較">
               スクボで読む
             </a>
           </div>
-          <h1>Home Assistant on Herobox w/ Homekit</h1>
+          <h1>宅電子書籍サーバ比較</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/6406f7de9fb71b001cae42a3">20230307</a>
+              <a href="https://amp.kbys.tk/641870ce1b971d001c3a3a7d">20230320</a>
              
-          <a href="https://amp.kbys.tk/5e638411a4d4e50017b05a20">#0307</a>
+          <a href="https://amp.kbys.tk/5e7476762225dd00178426ea">#0320</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Home Assistant on Herobox w/ Homekit
+          宅電子書籍サーバ比較
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          3Hスタックだ!(適当)
+          セルホスウェーブの一環で DRM Free の書籍たちをなんとかしようかなと
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Proxmox 上にインストールするにあたっては 
-            <a href="https://www.wundertech.net/how-to-set-up-home-assistant-on-proxmox/" target="_blank" rel="noopener">
-              https://www.wundertech.net/how-to-set-up-home-assistant-on-proxmox/
-            </a>
-           が大変参考になった
+          本命は Kavita だったんだけど、Scan のクセがありすぎて、かなりフォルダ名やディレクトリ構造を強制されるので困ったなと
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ディスクを一旦外しておいて、イメージから吸い出したディスクを挿すのがポイント
+          ビュワー部分なんかは悪くはないが、OPDS(Open Publication Distribution System) という仕組みがあるそうで、このフォーマットで喋れるサーバだったらビュワー部分はどうにでもなるらしい
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Herobox はマザボに Bluetooth の機能がある雰囲気を漂わせていたが、Proxmox 経由で HAOS にパススルーしても Bluetooth として認識してくれなかった
+          その後 Komga というJava製のシステムを試してみたが、こいつは cbz...? みたいなフォーマットで投げ込んでおけ！みたいなテンションでちょっと違うなと
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          いろいろ調べたんだけど、Bluetooth のドングルを買え！ってのが有力そうだったので 
-              <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50">Amazon</a>
-             で適当にTP-Link製の安いドングルを買った
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ドングル挿したら Proxmox の Hardware のところにも USB デバイスとしてドングルが表示されるようになったので HA にパススルーしてリブートした
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そしたら Bluetooth の integration が勝手に認識して、Bluetooth の認証をアクティベーションしたら Bluetooth のスキャンも走って、家中飛びまくってる Bluetooth のデバイスをいろいろ認識してくれるようになった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          SONOS のスピーカーは勝手に追加されるようになってて便利だった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえず Homekit との連携を試してみるか〜と、Integrations から Homekit をアクティベーションしたら、Notifications のところに Bridge として接続する用のQRコードが出るので、それを Home App で読み取れば Home に Home Assistant のデバイスが追加される
+          Calibre は老舗っぽい感じだけど、さすがに古そうすぎて動かす気にはならず...
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ここまでで SONOS のデバイスしか追加してなかったので、SONOS のデバイスだけ Home に追加されたんだが、これだけでも Play や Pause が仮想ボタンとして Home App に表示されるようになって既に便利さを感じはじめる
+          Calibre Web ってのもあるみたいだけど.....HTML5!Bootstrap! って叫ばれてもなあ....みたいな
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Bluetooth 開通すると Switchbot のデバイスが引けるようになるので適当にポチポチ登録していった
+          Tanoshi ってやつはインストールがうまくいかなかった、どうやっても OpenSSL まわりで失敗する
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Automation を Switchbot 側でやってたけど、HA でも割と素直に動いて感動
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ちょっと前に手で Bluetooth のコード書いてこりゃ大変だなとおもっただけに....
+          一体いつまで OpenSSL には苦しめられるんだ...
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Nature Remo とのインテグレーションは 
-            <a href="https://github.com/calee0219/hass-nature-remo" target="_blank" rel="noopener">
-              https://github.com/calee0219/hass-nature-remo
-            </a>
-           が参考になった
+          同じく Rust ベースの Stump ってやつも試して、こっちは UI も洗練されててかなり良かったんだけど結局ディレクトリ構造のウマが合わず
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Supervisor で立ち上げてる時に config のディスクを触る方法がわからなくて、ファイルエディターのアドオンを入れてポチポチコピペして再起動したら動いた
+          これビルドするために rust 入れたり node いれたり moon いれたりがんばったんだけど.....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          そうして流れ着いたのがCrystal製の Mango ってやつ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          Crystal で書かれてるって時点で避けてたんだけど、どいつもこいつもディレクトリ構造のウマが合わないから....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Mango はシングルバイナリなので 
+        <code>wget</code>
+       でダウンロードして、適当に service を書くだけで動いた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <code>.config/mango/config.yml</code>
+       に適当に設定を書いとくだけ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          んで、ディレクトリ構造もウマが合って、ディレクトリの配置を素直に読んでくれて助かった
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ただ、他のソフトは Author とか(たぶんアメコミ想定で Inker とかも)メタデータを書き込めるようになっているのに対して、tag しかないというアグレッシブな姿勢で困った
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          tag で 
+        <code>author:hoge</code>
+       みたいな感じで管理しろってことなんだろうか....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          なんとなくメンテナの Ling さんが飽きてる気もする
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/b58d5b9d5da59dde4dd05763d6965816/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Crystal だと fork してもまともに手を入れられるイメージ湧かないなあ....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          一応 API はあるのでラップしてメタデータ用の DB を別建てしてクライアントも自前で作るとかしたらいいのかなあ....
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -309,32 +335,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/6406f7de9fb71b001cae42a3.html">
-                      20230307
+                    <a href="https://amp.kbys.tk/641870ce1b971d001c3a3a7d.html">
+                      20230320
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e638411a4d4e50017b05a20.html">
-                      0307
+                    <a href="https://amp.kbys.tk/5e7476762225dd00178426ea.html">
+                      0320
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5d6af48f2f0b19001740bc50.html">
-                      Amazon
+                    <a href="https://amp.kbys.tk/5e271f4fe002bf00175d942d.html">
+                      20200122
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61c00e98278470001d252970.html">
-                      20211220
+                    <a href="https://amp.kbys.tk/622ec2afd898fd001e3e394c.html">
+                      20220314
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c4658f7decd5d0017b43cb4.html">
-                      dig コマンドで TXT レコードを引いてくる - dev.to/jgs
+                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e521.html">
+                      Windows8/WindowsRT向けTumblrクライアント「Reblog Monster」をリリースしました - blog.jgs.me
                     </a>
                   </li>
                 
