@@ -229,139 +229,21 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Proxmox で VM に Disk を挿すめも
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          node の Disks から Create Thinpool で LVM-Thin を作るのがよさそう
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は SSD の種類が若干違ってて、微妙にケツらへんのサイズが違うっぽかった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そのまま VM に渡すと、若干容量の違うディスクになってしまう
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Thinpool だとサイズ固定して？追加できるのでよさそうという感じがした
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          再 M.2 SSD 増やしたら LAN が光らなくなる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/641c04b1f882a3001be40f92">M.2 SSD 増設したら LAN ポートが光らなくなった</a>
+              <a href="https://amp.kbys.tk/641d01f2718d0c001bcd4549">Proxmox で VM に Disk を挿すめも</a>
             
         </div>
       
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          前回は1枚SSDを認識してなかったやつを取り除いたら動くようになった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          サポートに問い合わせたら初期不良っぽいので回収します、とのことだったので追加で M.2 SSD を買った
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は慎重を期して、UEFI でも SSD を認識しているのを確認した
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          これで安泰ですわいと OS 起動したらまたしても LAN が光らなくなっている....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          メーカー混載状態になったので、なんかそういう相性問題とかあんのか？？？とスロットに1枚ずつ挿して動作確認することに
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          2枚でこのメーカーの順だとうまくいくなー、みたいなシチュになってしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          また OS 起動の様子をみているとブート中は LAN がピカピカしていて、ログインシェルがでてくるあたりでスン....てなっちゃってることに気付いた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          てーことはなんかソフト的な不具合なのかなー？とおもい NIC らへんのコマンドを調べて実行していった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-        <code>ip a</code>
-       でインターフェースの一覧が出せる
+                <br>
+              
         </div>
       
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          成功している時はステータスが UP になっていることを確認した
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          また、
-        <code>enp2s0</code>
-       てやつが物理で 
-        <code>vmbr0</code>
-       が仮想？
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          で、うまくいってないパターンの時をみてみると、
-        <code>ip a</code>
-       で 
-        <code>enp2s0</code>
-       だったところが 
-        <code>enp3s0</code>
-       になっていることに気付いた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          なんかおぼろげな記憶では、物理のポートって 
-        <code>eth0</code>
-       のイメージだったんだけど、なにやらカブらないように？動的に変更するような仕組みになっているらしい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          これを 
-        <code>eth0</code>
-       に固定する方向で考えてたんだけど、なんか面倒そうだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-        <code>/etc/network/interfaces</code>
-       をみると 
-        <code>auto enp2s0</code>
-       で 
-        <code>vmbr0</code>
-       の 
-        <code>bridge-ports enp2s0</code>
-       になっていて、なんでここで不整合が起きてんだろう？ということに
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          書かれている Proxmox のコメントによれば、マニュアルでイジるな、と力強く書かれてるんだが、ものは試しってことで 
-        <code>enp2s0</code>
-       になってる部分を 
-        <code>enp3s0</code>
-       に書き換えて再起動してみることに
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          なんかこれでうまくいったので、SSD を1枚ずつ増やしていったけど SSD 全挿し状態でもうまく動くようになった
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          やったぜ..................
+              <a href="https://amp.kbys.tk/641d01feaf3caa001b1af80b">再 M.2 SSD 増やしたら LAN が光らなくなる</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -371,179 +253,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          シン・仮面ライダー 感想 (ネタバレあり)
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ゴジラは本多猪四郎版をシン製作が決まる前から既にみていたし、ウルトラマンも昭和ウルトラを VHS で散々みてきて、ティガ直撃世代なのでちゃんとターゲットの客層として劇場へ行ったのだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一方ライダーは、クウガ世代でアギト、龍騎、555、W、ドライブらへんの平成ライダーはモロなんだけど、実は昭和ライダーは全く知らなくて、馬鹿力で「アーーーーマーーーーゾ〜〜〜〜〜〜ン！！！」だけ知ってる、みたいな、そういう温度感で
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          付け焼き刃でオリジナルみとこうかなあ、とおもったけど、シリーズ長いし直撃の諸先輩方には到底敵わないので、丸腰で行ってどうみえるかってのをやるか〜と
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          全体の印象としては、前半と後半で感じ方がかなり違う映画だった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          前半はもう浜辺美波大先生のルリコさんが全てで、予告でもハマり役感を確信していたが、
-              <a href="https://amp.kbys.tk/5d7238d1dba9be001751784b">シンゴジ</a>
-            の石原さとみ、シンウルトラの長澤まさみに通づるイイバディ感があった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ところで、エンドロールみて長澤まさみ出てたの....?え....?もしかしてサソリオーグ...??っておもってたらそうだったのでいい人だなあと...
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          はっちゃけてて楽しそうだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          西野七瀬のハチオーグも結構よかった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          「アララ...」
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          相変わらず博士をやってくれる塚本晋也、またしても登場する竹野内豊、しかも斎藤工もここのレギュラーに入ってて笑ったし、市川実日子も続投で笑ってしまう
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          キャラ造形がありがち(それこそ綾波レイみたいな)だけど、浜辺美波パワーで形になってる!!みたいな
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          シンウルトラにつづいて、また匂いフェチシーンあったけど、なんなの！？！？
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/5d7238d1dba9be001751784b">シンゴジ</a>
-            はマクガフィンが
-              <a href="https://amp.kbys.tk/5d7238d58221b200170d0063">ゴジラ</a>
-            だけで(正確には終盤に列車爆弾みたいなバカっぽいのもあるけど)、ストレートなディザスタームービーとして作れたのに対して、シンウルトラでごちゃごちゃ設定が多すぎてわかりにくかったのと同じく、本作でもショッカーの組織像や、プラーナ？などごちゃごちゃしててわかりにくい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          それに加えてオリジナルがシリーズものなので、どうしてもそれらの素材を活かそうとするとまとまりがない感じがしてしまうとおもった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          シンウルトラはいろいろどうしようもない(元ネタもわかるだけに)とおもうけど、本作はキル・ビルぽいつくりだったらもっと面白かっただろうなーと帰り道に考えた
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          のっけからスラッシャー映画もびっくりなぐらい血糊がブシャー！ドバー！！で、なるほどこれでPG12なんだなと(おもわず苦笑)
-        </div>
-      
-        <div style="padding-left:5rem; margin-bottom: .5rem;">
-          確かに、ウルトラマンは肉弾戦をしていてもあんまり血反吐を吐きながら戦うイメージは湧かないけど、仮面ライダーって等身大のヒトがマスクをかぶってるだけなんだったらそういうバイオレントな表現も合うなあと
-        </div>
-      
-        <div style="padding-left:6rem; margin-bottom: .5rem;">
-          だから、前半はそういう暴力の痛々しさみたいなのが伝わるバイオレントぶりでよかっただけに、蝶オーグ戦の前にCGのにせ仮面ライダー軍団とのチープな戦いはとても残念だった
-        </div>
-      
-        <div style="padding-left:7rem; margin-bottom: .5rem;">
-          西野七瀬はかつての栗山千明みたいに肉弾戦仕掛けてきてほしかったなあ
-        </div>
-      
-        <div style="padding-left:6rem; margin-bottom: .5rem;">
-          あと、2号との戦いもCGファイトになっちゃったのがなあ...
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          幹部たちを倒していくっていう流れもまた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          肉体的にボロボロになりながら蝶オーグのとこまで行って五点掌爆心拳....じゃなかった、ライダーキックでさあ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          中盤で2号が登場してきて、うっすら知識で2号ってのがいるらしいってのは知ってたので、んーなんかそういうオリジナルへのリスペクトのために登場人物を増やさなくても.....と微妙な気分になったんだが、終盤で本郷猛に何かを託されて受け継いでいくっていう展開にもってこられて、メタ的に仮面ライダーっていうシリーズが脈々とセンパイたちから受け継いできたことへの讃歌なのかなと受け取った
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ただまあ、冷静に考えると緑川博士の狂気に巻き込まれて肉体を(おそらく同意もなく)改造された本郷猛って不憫すぎるし、それは一文字隼人もそうなんだよな....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          尺に余裕がなかったのかわからんが、この一文字というキャラクターはそもそも劇中での掘り下げがイマイチで、ジャーナリストらしく政府機関とはつるみませんよとすごんでみせる割には、ラストでちゃっかり政府機関のエージェントとしてカルト集団に鉄拳制裁をしますよってオチになってて、それでよかったのか？と
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          竹野内豊率いる政府機関の能力もよくわかんなくて、独力でサソリオーグを倒して、しかもそっからちゃっかりと武器製造までこぎつけてるわけで、そこまでできるんだったらわざわざ民間の協力を仰がなくても事が済むのでは....?とか
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ヘルメットが1+2号になってたのは
-              <a href="https://amp.kbys.tk/5d7238cd33bbfb001756b03c">エヴァ</a>
-            の2+8号機をモロに連想したが
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ぶっちゃけ全部緑川家の家族喧嘩に巻き込まれただけ、みたいな
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          父と子の喧嘩であり、兄妹の喧嘩でもあり
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          父子喧嘩に全世界が巻き込まれるって構造はエヴァと一緒だよなあ
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          自分が本郷猛の立場だったらとてもルリコのために親身を尽くそう！なんて気持ちにはなれねーよ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          後半はなんかずっと画面が暗くて予算尽きたんかな...みたいな....
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          イマイチ設定を飲み込めてはないんだけど、ショッカーという組織を描く時に単に悪の組織っていうか、世界征服を目論んでいて...みたいな組織じゃなくて、みんなを幸福にしたいんだと、どこぞかのカルトじみた教義になってたのは俊逸だったかなあ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          2号を洗脳するに際しても、不幸な記憶を封じることで幸福になるんだ、と
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          幸と辛は線1本の差しかないんだ、ということは何度も語られる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          洗脳を解くということは、現実を受け入れるということで、それは苦しいことなんだと
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          全体善として？社会的善として？公の幸福を最大化しようってタスクじゃなくて、すげー苦しい人を救済することが善なのだ、みたいな、そういうこと？(わかってない)
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          あと、IとJとKのくだりも結局最後の最後まで特段なんの解決もなくて、単に続編へつなげたいというスケベ心だったのか、オチをつけられなくなってしまったのか、よくわからないけど....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          まあ、お陰でのみこみにくくはなってしまっているのだが......
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとは本郷父が力を行使できるのにしなかったのは覚悟が云々というのも、結局身を挺して何かをするということが覚悟を持った人間であるって着地だったのかなあ？
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          さもいいことげに父は最期まで人質と犯人のことを気にして...みたいに言われてたけど、じゃあ残された家族は？って話は蝶オーグの問いかけにつながってくるんだとおもう
+              <a href="https://amp.kbys.tk/641d0291717644001c575cdd">シン・仮面ライダー 感想 (ネタバレあり)</a>
+            
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
@@ -575,32 +287,26 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/641d01f2718d0c001bcd4549.html">
+                      Proxmox で VM に Disk を挿すめも
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/641d01feaf3caa001b1af80b.html">
+                      再 M.2 SSD 増やしたら LAN が光らなくなる
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="https://amp.kbys.tk/641d0291717644001c575cdd.html">
+                      シン・仮面ライダー 感想 (ネタバレあり)
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5e77a90406bcda0017a7bacc.html">
                       0323
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/641c04b1f882a3001be40f92.html">
-                      M.2 SSD 増設したら LAN ポートが光らなくなった
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5d7238cd33bbfb001756b03c.html">
-                      エヴァ
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5d7238d58221b200170d0063.html">
-                      ゴジラ
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5d7238d1dba9be001751784b.html">
-                      シンゴジ
                     </a>
                   </li>
                 
