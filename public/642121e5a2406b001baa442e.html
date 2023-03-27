@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/64095786ac3469001b3d6446.html">
-        <meta property="og:title" content="Home Assistant iOS App | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/642121e5a2406b001baa442e.html">
+        <meta property="og:title" content="Next.js + Prisma + next-auth | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Home Assistant iOS App | I am Electrical machine</title>
+        <title>Next.js + Prisma + next-auth | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,47 +209,97 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Home Assistant iOS App">
+            <a href="https://scrapbox.io/jigsaw/Next.js + Prisma + next-auth">
               スクボで読む
             </a>
           </div>
-          <h1>Home Assistant iOS App</h1>
+          <h1>Next.js + Prisma + next-auth</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1">20230308</a>
+              <a href="https://amp.kbys.tk/641fd0ee81df78001c41626b">20230326</a>
              
-          <a href="https://amp.kbys.tk/5e63846b7814e700178963b0">#0308</a>
+          <a href="https://amp.kbys.tk/5e85acd513d5970017432cb5">#0326</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Home Assistant iOS App
+          Next.js + Prisma + next-auth
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          アプリも存在していて、つながってるネットワーク上の Server みにいってくれて、ささっとセットアップしてくれるし、Apple Watch のアプリも存在しているので大変便利
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Watch から開いた画面には設定の Actions で設定している項目が表示されるようになっているっぽい
+          next-auth は Auth.js として next 以外の FW でも使えるようにしていく計画らしい
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Action の設定のところで、適当に設定をするとサンプルになるトリガーが表示されるので、あとは HA の設定の Automation で Event Trigger を Trigger とする Automation をつくれば Watch からポンでなんでも動かせる
+          react-query も抽象化していったしこういうライブラリ系はマルチFWが基本になってくのかな
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ともかく、今のところは next-auth として使う
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Prisma は久しぶりなので思い出しながら...
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          DB は postgresql をローカルに建てる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Prisma には 
+            <a href="https://authjs.dev/reference/adapter/prisma#create-the-prisma-schema-from-scratch" target="_blank" rel="noopener">
+              https://authjs.dev/reference/adapter/prisma#create-the-prisma-schema-from-scratch
+            </a>
+           にあるスキーマを流し込んでおく
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+        <code>prisma migrate dev</code>
+       でマイグレーション
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          next-auth がいろいろハンドリングしてくれるそうなので 
+        <code>pages/api/auth/[...nextauth].ts</code>
+       てファイルをつくって、
+        <code>NextAuth</code>
+       のインスタンスを渡しておく
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          サインインは 
+        <code>next-auth/react</code>
+       から 
+        <code>signIn</code>
+       を import して、適当に 
+        <code>onClick</code>
+       に渡してやるだけでよい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ここで少々ハマって、Proxmox の CT 上で開発してるので 
+        <code>localhost</code>
+       ではないドメインで動かしていたのだが、なぜかリダイレクト先が 
+        <code>localhost</code>
+       になってしまう
         </div>
       
         <div style="padding-left:3rem; margin-bottom: .5rem;">
-          alexa_media_player をいれてあるので、試しにWatch タップすると Alexa が喋る Automation 作ってみたら、楽しすぎてサルみたいにはしゃいで連打してしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          欲をいえばイイ感じの UI をサクッと作れれば御の字だけど、ポンできるだけでまあ十分かな
+          これは 
+        <code>NEXT_AUTH_URL</code>
+       を環境変数として渡してやるとオーバーライドできるようだった
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あとは Watch の Complication も作れるみたいだけど、複雑そうだしそもそも Complication パンパンなので増やせん....
+          ユーザの情報を引く時は 
+        <code>SessionProvider</code>
+       をツリーの高めにいれておいて 
+        <code>useSession</code>
+       で引いてこれる
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -263,32 +313,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/6407dca14adb29001dddf9b1.html">
-                      20230308
+                    <a href="https://amp.kbys.tk/641fd0ee81df78001c41626b.html">
+                      20230326
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e63846b7814e700178963b0.html">
-                      0308
+                    <a href="https://amp.kbys.tk/5e85acd513d5970017432cb5.html">
+                      0326
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ddff34568881a0017b19016.html">
-                      1128
+                    <a href="https://amp.kbys.tk/63ab9e3f53dc99001dc9d8ed.html">
+                      2022年と、AI戦争の歴史
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/6040ab7d7968b5001ce7b93f.html">
-                      PoE 3.13 その9
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dc8.html">
+                      SpeedCurve: Monitor front-end performance - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5f08daf94e5141001eb5c674.html">
-                      元10段アイドルによるただのbeatmaniaIIDX - YouTube
+                    <a href="https://amp.kbys.tk/5d6176e98709b60017242813.html">
+                      テクノポップ
                     </a>
                   </li>
                 
