@@ -5,8 +5,8 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/641d01feaf3caa001b1af80b.html">
-        <meta property="og:title" content="再 M.2 SSD 増やしたら LAN が光らなくなる | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/6451ff5a40c50e8396aeabf0.html">
+        <meta property="og:title" content="ガーディアンズ・オブ・ザ・ギャラクシー Vol.3 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
                 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>再 M.2 SSD 増やしたら LAN が光らなくなる | I am Electrical machine</title>
+        <title>ガーディアンズ・オブ・ザ・ギャラクシー Vol.3 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,129 +209,25 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/再 M.2 SSD 増やしたら LAN が光らなくなる">
+            <a href="https://scrapbox.io/jigsaw/ガーディアンズ・オブ・ザ・ギャラクシー Vol.3">
               スクボで読む
             </a>
           </div>
-          <h1>再 M.2 SSD 増やしたら LAN が光らなくなる</h1>
+          <h1>ガーディアンズ・オブ・ザ・ギャラクシー Vol.3</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          from 
-              <a href="https://amp.kbys.tk/641bf6b5dd72fc001cf0c1d9">20230323</a>
-             
-          <a href="https://amp.kbys.tk/5e77a90406bcda0017a7bacc">#0323</a>
-        
+          シリーズ: ガーディアンズ・オブ・ザ・ギャラクシー
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          再 M.2 SSD 増やしたら LAN が光らなくなる
+          前作: ガーディアンズ・オブ・ザ・ギャラクシー Vol.2
         </div>
       
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-              <a href="https://amp.kbys.tk/641c04b1f882a3001be40f92">M.2 SSD 増設したら LAN ポートが光らなくなった</a>
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          ユニバース: 
+              <a href="https://amp.kbys.tk/5cc9a30e78d619001737df5d">MCU</a>
             
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          前回は1枚SSDを認識してなかったやつを取り除いたら動くようになった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          サポートに問い合わせたら初期不良っぽいので回収します、とのことだったので追加で M.2 SSD を買った
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は慎重を期して、UEFI でも SSD を認識しているのを確認した
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          これで安泰ですわいと OS 起動したらまたしても LAN が光らなくなっている....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          メーカー混載状態になったので、なんかそういう相性問題とかあんのか？？？とスロットに1枚ずつ挿して動作確認することに
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          2枚でこのメーカーの順だとうまくいくなー、みたいなシチュになってしまった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          また OS 起動の様子をみているとブート中は LAN がピカピカしていて、ログインシェルがでてくるあたりでスン....てなっちゃってることに気付いた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          てーことはなんかソフト的な不具合なのかなー？とおもい NIC らへんのコマンドを調べて実行していった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <code>ip a</code>
-       でインターフェースの一覧が出せる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          成功している時はステータスが UP になっていることを確認した
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          また、
-        <code>enp2s0</code>
-       てやつが物理で 
-        <code>vmbr0</code>
-       が仮想？
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          で、うまくいってないパターンの時をみてみると、
-        <code>ip a</code>
-       で 
-        <code>enp2s0</code>
-       だったところが 
-        <code>enp3s0</code>
-       になっていることに気付いた
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          なんかおぼろげな記憶では、物理のポートって 
-        <code>eth0</code>
-       のイメージだったんだけど、なにやらカブらないように？動的に変更するような仕組みになっているらしい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          これを 
-        <code>eth0</code>
-       に固定する方向で考えてたんだけど、なんか面倒そうだった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          
-        <code>/etc/network/interfaces</code>
-       をみると 
-        <code>auto enp2s0</code>
-       で 
-        <code>vmbr0</code>
-       の 
-        <code>bridge-ports enp2s0</code>
-       になっていて、なんでここで不整合が起きてんだろう？ということに
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          書かれている Proxmox のコメントによれば、マニュアルでイジるな、と力強く書かれてるんだが、ものは試しってことで 
-        <code>enp2s0</code>
-       になってる部分を 
-        <code>enp3s0</code>
-       に書き換えて再起動してみることに
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          なんかこれでうまくいったので、SSD を1枚ずつ増やしていったけど SSD 全挿し状態でもうまく動くようになった
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          やったぜ..................
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -345,32 +241,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/641bf6b5dd72fc001cf0c1d9.html">
-                      20230323
+                    <a href="https://amp.kbys.tk/6451c611118b406ff5f91f21.html">
+                      20230503
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5e77a90406bcda0017a7bacc.html">
-                      0323
+                    <a href="https://amp.kbys.tk/5cc9a30e78d619001737df5d.html">
+                      MCU
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/641c04b1f882a3001be40f92.html">
-                      M.2 SSD 増設したら LAN ポートが光らなくなった
+                    <a href="https://amp.kbys.tk/62724051744081001fb88e1b.html">
+                      202205
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5f6c0bad114555001e2e34cd.html">
-                      北陸先端科学技術大学院大学 東京サテライト
+                    <a href="https://amp.kbys.tk/6386f51ccf86d0001deb784f.html">
+                      Crop Video Files Online for Free - FreeConvert.com
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5f20ae0ebfe2c100382a4f59.html">
-                      0729
+                    <a href="https://amp.kbys.tk/5c2b9af85513850017f82d6f.html">
+                      アイドルの売り方その2 - diary.jgs.me
                     </a>
                   </li>
                 
