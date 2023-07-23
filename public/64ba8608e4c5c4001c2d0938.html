@@ -229,127 +229,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          仕事場10G計画 その1
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          定期的に宅内有線ネットワークを10Gbpsにしたい欲求に駆られる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          しかし、どうせインターネットが1Gbpsだし、そもそも1Gbps(実際は600Mbpsぐらい)でてもサーバの方がスループット遅くて返ってこないみたいな感じ(たぶん)だから別にいいかなーと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          某チャンネルでインターネットまで10Gにして予算10万ぐらいでしたと聞いてマジ〜？ってなった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          こういう稼業だけど低レイヤというかネットワークみたいなのはからきしなのでいろいろ調べつつ進めてみようという気持ちになってきた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          10GってSFP?にしないといけないんだと思い込んでたがRJ45でもいけるらしい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          CAT6だと55m制限があるそうだが、CAT6aだと100mらしい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          マザボにも10Gの口が載りはじめてて、Marvell(ややこしい名前だ)ってとこのチップが載ってるみたい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          これも、SFP の NIC を買わないといけないのかなとおもってたが案外クリアできる予感がしてくる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          メインマシンのマザボの Z390 はさすがに積んでなかった
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ぼちぼちマザボから全取っ替えしてもいいかもなあ....
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ASUS で調べてみると LGA1700 だと EATX か ATX のボードしかなくて、メインマシンのケースは Mini-ITX サイズなのでケースごといかないといけなくなるので、そうなってくるともはや新造レベルである....
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          CPUの簡易水冷が LGA1700 にも対応してるといいけど、してないと CPU ファンも買い替えになってしまい、メモリはどうせ DDR5 になりそうなのでメモリも取っ替え....ってなるとマトモに流用できるのは電源とグラボぐらいである
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          つれぇ〜...
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          あんまり考えたことなかったんだけど、Wi-Fi 6(11ax?)って理論値9.6Gbpsらしくて、もはや無線の方が速いぐらいの領域なのでは？とおもった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Wi-Fi 7 は46Gbpsらしくてもはや想像もつかない領域だ
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          理想環境ならフルプライスのゲームのロードが1秒で終わるってコト....?
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          速度の計測は iperf てコマンドでやるらしい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          待ち受ける側で 
-        <code>iperf -s</code>
-       で待機しているところに、送る側で 
-        <code>iperf -c &lt;address&gt;</code>
-       でテストできる
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          試しに作業用の Mac からルーターに対してやってみると、Bitrate で 940-970 Mbps ぐらい出る
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          MacStudio の LAN ポートは10GB送受信できるらしい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ルーターの NanoPi R5S は 2.5G だったはず
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          mac からルーターの間には2つスイッチングハブがあって、こいつらはギガビットなのでこいつらがネックになっていそうな予感はする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ちなみに、経路上ボトルネックがない場合どういう転送速度がでるのかなー...ということで、Proxmox の CT から CT へ計測してみると 13Gbps でるのでさすがだなと
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          なんとなくルータの口の速度でハードリミットあるのかなとおもってたけど、経路間にボトルネックがなければそれなりの速度がでるってことなのかもしれない
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          一応 Wi-Fi 6 でつながっている端末で計測してみたが、大して速度は出なかった
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          端末 &lt;-&gt; 無線AP &lt;-&gt; ルータ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          てな経路だけど、無線AP &lt;-&gt; ルータは2.5Gでてる...と信じたいのだが、まあ無線だと実測の乖離は大きいのかも
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ひとまずこれらの経路を10Gにするとして、結構いろいろ機器がぶら下がってる関係で、8ポートの10Gスイッチングハブを探したんだけど、爆熱か爆音(ファンがついてるみたい)の2択らしくて困ったなと
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          とりあえず5ポート(爆熱らしいけど)のやつを試しに買ってみた
+          
+              <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d">仕事場10G計画 その1</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -375,20 +257,20 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d.html">
+                      仕事場10G計画 その1
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5f1901070d1f6b001fbeab7c.html">
                       0721
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c3c04e0be23a10017086e53.html">
-                      zsh のキーバインドを変える - dev.jgs.me
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209d7f.html">
-                      The New Norm of The Web - github.com/e-jigsaw/web
+                    <a href="https://amp.kbys.tk/62aac74467f1d70023e3f0d6.html">
+                      ピースメーカーロス
                     </a>
                   </li>
                 
