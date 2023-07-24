@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/649a7ecc33f8b7001ba7bf71.html">
-        <meta property="og:title" content="Home Assistant に SwitchBot のセンサーを追加するのに失敗 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/64bdd9eca3353b001c62749b.html">
+        <meta property="og:title" content="仕事場10G計画 その2 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/90cb611eba535f3a113338e3689076ab/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>Home Assistant に SwitchBot のセンサーを追加するのに失敗 | I am Electrical machine</title>
+        <title>仕事場10G計画 その2 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,49 +211,83 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/Home Assistant に SwitchBot のセンサーを追加するのに失敗">
+            <a href="https://scrapbox.io/jigsaw/仕事場10G計画 その2">
               スクボで読む
             </a>
           </div>
-          <h1>Home Assistant に SwitchBot のセンサーを追加するのに失敗</h1>
+          <h1>仕事場10G計画 その2</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/6498005c8dae40001c4383ea">20230625</a>
+              <a href="https://amp.kbys.tk/64bcebc7f40248001cdb5e2a">20230723</a>
              
-          <a href="https://amp.kbys.tk/5ef75718fdd1f2002429d158">#0625</a>
+          <a href="https://amp.kbys.tk/5f190219406720001ed0f8d1">#0723</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Home Assistant に SwitchBot のセンサーを追加するのに失敗
+          仕事場10G計画 その2
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          最近発売された防水センサーを買ってみたので、Home Assistant に追加してみたら、なぜか Bot として認識されてしまっていた
+          10Gbps 5ポートのスイッチが届いた
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          調べてみると、integration に最近対応コードが追加されてたので core をアップデートしてみた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          一旦 device を消して、再度追加すればいいかーとおもったんだけど、device を delete したせいか integration 一覧に現れなくなってしまった...
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <code>.storage</code>
-       にそれっぽい設定ファイルがあったので、適当に書き換えて再起動してみたら案の定死んだ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          仕方ないので3日前のバックアップを proxmox から引っ張り出してきて、core のアップデートをし直して....とやってみたのだけど、結局現れないままになってしまった....カナシス
+          macOS で Ethernet のリンクスピードはシステム環境設定の Ethernet &gt; Hardware から確認できる
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          なんかハード的にうまくいかない的な状態になってしまったのかなあ
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/90cb611eba535f3a113338e3689076ab/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          こんな感じで速度が 10Gbase-T になっている
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/4bd4981a79c46e6a1d4f9a47a178eeba/thumb/1000">
+        </amp-img></div>
+      
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          もう1台同じスイッチに接続した mac も 10Gbase-T になっている
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          スイッチ側も10G接続か2.5G接続かでLED点灯が変わるようになってて、そっちでも10Gで接続されていることはわかる
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          この状態で iperf で転送速度の検証をしてみると、mac1 &lt;=&gt; mac2 の通信は9.41G/sくらいで安定して、10Gでるのはわかった
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          熱はどんなもんかなあ...と触ってみると、スイッチにしては(別にそんなスイッチを触ったことがたくさんあるわけではないけど)ほんのり暖かいなあ....といった感じ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          1G 16ポートのスイッチもそこそこホカホカではあるが、それよりは接続台数少なくてこのあったかさかーという感じ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          一応確認としてルータに iperf で検証してみると、ここはやっぱり940M/sくらい
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          mac &lt;=&gt; 10G SW &lt;=&gt; (家の配管) &lt;=&gt; 1G SW &lt;=&gt; NanoPi R5S
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          てな経路なので、次はルータの手前にいる 1G SW を10Gにしてみる
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -265,32 +301,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/6498005c8dae40001c4383ea.html">
-                      20230625
+                    <a href="https://amp.kbys.tk/64bcebc7f40248001cdb5e2a.html">
+                      20230723
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/64aab5a2b31a61001bc4517f.html">
-                      SwitchBot の防水温湿度計の値が Home Assistant で収集できるようになった
+                    <a href="https://amp.kbys.tk/5f190219406720001ed0f8d1.html">
+                      0723
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5ef75718fdd1f2002429d158.html">
-                      0625
+                    <a href="https://amp.kbys.tk/5c2b9af65513850017f82d03.html">
+                      近況 - diary.jgs.me
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/634ba8feb666df001d2b6e0e.html">
-                      Next.js Conf - My Ticket
+                    <a href="https://amp.kbys.tk/5d57fbdd3481a7001775dad3.html">
+                      HoI
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c3c04e2be23a10017086e95.html">
-                      require.resolve で npm3 に耐える - dev.jgs.me
+                    <a href="https://amp.kbys.tk/5c6a3349595ea90017209dbf.html">
+                      Polyfill のあり方と Web の進化と協調するためのガイドライン | blog.jxck.io - github.com/e-jigsaw/web
                     </a>
                   </li>
                 
