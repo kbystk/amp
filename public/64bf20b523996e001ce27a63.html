@@ -5,13 +5,15 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/64a6ab389ccfe4001ce09c67.html">
-        <meta property="og:title" content="20230706 | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/64bf20b523996e001ce27a63.html">
+        <meta property="og:title" content="20230725 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary">
+                <meta name="twitter:card" content="summary_large_image">
               
         
+                <meta property="og:image" content="https://gyazo.com/c01c27edddae8202f843508d2f2c93aa/raw">
+              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -181,7 +183,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>20230706 | I am Electrical machine</title>
+        <title>20230725 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -209,16 +211,16 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/20230706">
+            <a href="https://scrapbox.io/jigsaw/20230725">
               スクボで読む
             </a>
           </div>
-          <h1>20230706</h1>
+          <h1>20230725</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-          <a href="https://amp.kbys.tk/5f086691714c1a0038998a83">#0706</a>
+          <a href="https://amp.kbys.tk/5f1b4ade8ded3400212ce970">#0725</a>
         
         </div>
       
@@ -229,23 +231,145 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ラタトゥイユ
+          仕事場10G計画 その3
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ルータ側のスイッチを足そうとしたら電源が足りなかったので口の多いタップに換装
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          再掲
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          before
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          mac &lt;=&gt; 10Gスイッチ &lt;=&gt; (壁の中のCAT6ケーブル) &lt;=&gt; 1Gスイッチ &lt;=&gt; ルータ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          after
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          mac &lt;=&gt; 10Gスイッチ &lt;=&gt; (壁の中のCAT6ケーブル) &lt;=&gt; 10Gスイッチ &lt;=&gt; ルータ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          CAT6 だったか CAT6a だったか忘れてたんだけど、線抜き差ししてる間によくみたらケーブルに CAT6 って書いてあったのでたぶん CAT6 なんだとおもう
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          55m との戦いになるのかなあ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          ルータとして使っている NanoPi R5S は 2.5G の口しか積んでないので、2G ぐらいでれば御の字だな〜....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          というわけで iperf で確認してみるとだいたい 2.15G/s くらいで安定した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          温度もちゃんと測りたい気持ちはあるが、相変わらず結構ホカホカ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          次の作業としては、Proxmox のクラスタ群が動いてる手前にいるスイッチの交換かなあ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一番マトモなマシンのスペックをよくよくみてみるとマザボに 2.5G の口がついてるのでわざわざ 10G の NIC を足すこともないのかもしれんが、そこはまあ10G出したいじゃんね、ということで
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          そして難関はメインの Windows マシンをどうするかと、ルータをどうするかだなあ...
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          なまじ Mini-ITX のマザボにしてしまったので PCIe の NIC が刺さるわけでもなく、USB-C のポートもギュウギュウで入る余地がない
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d">仕事場10G計画 その1</a>
+            でも書いたようにほぼ新造の予感がする
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ルータは引っ越す前は ONU とルータが合体してるタイプで、たまにまとめて死ぬことはあったんだけど、そこそこ安定して運用できていたのが、引っ越してから ONU 単体に分離したのでいろいろルータを買ったのだけど、とにかく既製品の管理画面みたいなやつが全然言うことを聞いてくれなくて、最終的に OpenWRT に落ち着いた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ...ので、できれば OpenWRT が動いて 10G の口がついてるファンレスのマシンがあると嬉しいんだけど全く見当たらない
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          ZimaBoard ってのが PCIe スロットついてて NIC が刺さりそうなんだけど、10G が2発ついてるやつは発熱大丈夫なのかなあ？
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          ファンついてるやつもあって、ファンかあ.....ってなる
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          R86S っていう SBC は SFP の口が 10G らしい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          こいつにする場合は SFP ついてるスイッチを増やさないといけなくなるが....(それはいっぱいあるので別にいいか)
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          SFP のコトなにもわからんだったのだが、SFP ってのは結局差込口だけあるって感じらしく、そこへモジュールを挿して、ケーブルを挿してってことらしい
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          そして光ファイバがマストではないらしい
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          RJ45 の SFP のモジュールがあって、CAT6a でつながるらしい
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          まあせっかくなので新しい技術に触れてみたい気持ちもある
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          メインロゴなんかに似てるなあとおもったらアサクリだ
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-            <a href="https://park.ajinomoto.co.jp/recipe/card/705931/" target="_blank" rel="noopener">
-              https://park.ajinomoto.co.jp/recipe/card/705931/
-            </a>
-          
+        <div class="imgContainer-0-0-3">
+          <amp-img class="contain" layout="fill" src="https://gyazo.com/c01c27edddae8202f843508d2f2c93aa/thumb/1000">
+        </amp-img></div>
+      
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          うまそう
+          なんかシンジケートっぽいロゴだな
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          トマト なす 玉ねぎ
+          去年はインターステラーの STAY がリバイバルしてるんだなあ(ビッグルーム系をあんまり聴かない)っておもったけど、今年は 
+              <a href="https://amp.kbys.tk/6033d6c96d4db5001ca439b9">Daft Punk</a>
+             の One More Time だ(ちょくちょくかかる)
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Tomorrowland 2023
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -256,26 +380,26 @@ body {
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/64a761ea5e1d12001c3b3ea5">頭痛膏</a>
+                <br>
+              
+        </div>
+      
+        <div style="padding-left:0rem; margin-bottom: .5rem;">
+          Warrior Workout Q-dance
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          
+              <amp-youtube data-videoid="mo7bYZEgFKg" layout="responsive" width="480" height="270"></amp-youtube>
             
         </div>
       
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-                <br>
-              
-        </div>
-      
-        <div style="padding-left:0rem; margin-bottom: .5rem;">
-          
-            <a href="https://www.codux.com/" target="_blank" rel="noopener">
-              https://www.codux.com/
-            </a>
-          
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          Tomorrowland 2023 でみんなでやってて楽しそうだった
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          Reactのビジュアルエディタらしい
+          ガバで身体動かさせてくるの殺しにきてる
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -301,20 +425,20 @@ body {
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/64a761ea5e1d12001c3b3ea5.html">
-                      頭痛膏
+                    <a href="https://amp.kbys.tk/5f1b4ade8ded3400212ce970.html">
+                      0725
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5f086691714c1a0038998a83.html">
-                      0706
+                    <a href="https://amp.kbys.tk/6033d6c96d4db5001ca439b9.html">
+                      Daft Punk
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5c2b8f409f8f4c001703e543.html">
-                      【CA14 Advent Calendarおかわり】小説 仮面ライダークウガ - blog.jgs.me
+                    <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d.html">
+                      仕事場10G計画 その1
                     </a>
                   </li>
                 
