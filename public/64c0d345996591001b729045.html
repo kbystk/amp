@@ -5,15 +5,13 @@
         <script async="" custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://amp.kbys.tk/64bf6542e3a520001c317921.html">
-        <meta property="og:title" content="ネットワークドライブの方が外付けハードディスクよりも速い | I am Electrical machine">
+        <meta property="og:url" content="https://amp.kbys.tk/64c0d345996591001b729045.html">
+        <meta property="og:title" content="仕事場10G計画 その3 | I am Electrical machine">
         <meta property="og:site_name" content="I am Electrical machine">
         
-                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:card" content="summary">
               
         
-                <meta property="og:image" content="https://gyazo.com/e3ac0f49dacae109b9b56a7add10bd80/raw">
-              
         <style amp-boilerplate="">
           body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -183,7 +181,7 @@ body {
   border-radius: 2rem;
 }
         </style>
-        <title>ネットワークドライブの方が外付けハードディスクよりも速い | I am Electrical machine</title>
+        <title>仕事場10G計画 その3 | I am Electrical machine</title>
       </head>
       <body>
         <amp-analytics type="gtag" data-credentials="include">
@@ -211,63 +209,129 @@ body {
             </a>
           </div>
           <div class="sbLink-0-0-4">
-            <a href="https://scrapbox.io/jigsaw/ネットワークドライブの方が外付けハードディスクよりも速い">
+            <a href="https://scrapbox.io/jigsaw/仕事場10G計画 その3">
               スクボで読む
             </a>
           </div>
-          <h1>ネットワークドライブの方が外付けハードディスクよりも速い</h1>
+          <h1>仕事場10G計画 その3</h1>
           <div>
             
         <div style="padding-left:0rem; margin-bottom: .5rem;">
           from 
-              <a href="https://amp.kbys.tk/64bcebc7f40248001cdb5e2a">20230723</a>
+              <a href="https://amp.kbys.tk/64bf20b523996e001ce27a63">20230725</a>
              
-          <a href="https://amp.kbys.tk/5f190219406720001ed0f8d1">#0723</a>
+          <a href="https://amp.kbys.tk/5f1b4ade8ded3400212ce970">#0725</a>
         
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          ネットワークドライブの方が外付けハードディスクよりも速い
+          仕事場10G計画 その3
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/e3ac0f49dacae109b9b56a7add10bd80/thumb/1000">
-        </amp-img></div>
-      
+          ルータ側のスイッチを足そうとしたら電源が足りなかったので口の多いタップに換装
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ネットワークドライブという存在をすっかりと忘れていたが、そもそも 1Gbps でるなら USB よりも速いのか...?とおもい、試してみる
+          再掲
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ↑がネットワークドライブとしてマウントした TrueNAS
+          before
         </div>
       
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-        <div class="imgContainer-0-0-3">
-          <amp-img class="contain" layout="fill" src="https://gyazo.com/bf6556f21bbde20428a1ab8928e57293/thumb/1000">
-        </amp-img></div>
-      
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ↑8Tの外付けHDD
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          mac &lt;=&gt; 10Gスイッチ &lt;=&gt; (壁の中のCAT6ケーブル) &lt;=&gt; 1Gスイッチ &lt;=&gt; ルータ
         </div>
       
         <div style="padding-left:2rem; margin-bottom: .5rem;">
-          おせえ！！
+          after
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          mac &lt;=&gt; 10Gスイッチ &lt;=&gt; (壁の中のCAT6ケーブル) &lt;=&gt; 10Gスイッチ &lt;=&gt; ルータ
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          10Gbps になったらどーなっちゃうの～～！
+          CAT6 だったか CAT6a だったか忘れてたんだけど、線抜き差ししてる間によくみたらケーブルに CAT6 って書いてあったのでたぶん CAT6 なんだとおもう
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          55m との戦いになるのかなあ
         </div>
       
         <div style="padding-left:1rem; margin-bottom: .5rem;">
-          つづく
+          ルータとして使っている NanoPi R5S は 2.5G の口しか積んでないので、2G ぐらいでれば御の字だな〜....
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          というわけで iperf で確認してみるとだいたい 2.15G/s くらいで安定した
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          温度もちゃんと測りたい気持ちはあるが、相変わらず結構ホカホカ
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          次の作業としては、Proxmox のクラスタ群が動いてる手前にいるスイッチの交換かなあ
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          一番マトモなマシンのスペックをよくよくみてみるとマザボに 2.5G の口がついてるのでわざわざ 10G の NIC を足すこともないのかもしれんが、そこはまあ10G出したいじゃんね、ということで
+        </div>
+      
+        <div style="padding-left:1rem; margin-bottom: .5rem;">
+          そして難関はメインの Windows マシンをどうするかと、ルータをどうするかだなあ...
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          なまじ Mini-ITX のマザボにしてしまったので PCIe の NIC が刺さるわけでもなく、USB-C のポートもギュウギュウで入る余地がない
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          
+              <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d">仕事場10G計画 その1</a>
+            でも書いたようにほぼ新造の予感がする
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ルータは引っ越す前は ONU とルータが合体してるタイプで、たまにまとめて死ぬことはあったんだけど、そこそこ安定して運用できていたのが、引っ越してから ONU 単体に分離したのでいろいろルータを買ったのだけど、とにかく既製品の管理画面みたいなやつが全然言うことを聞いてくれなくて、最終的に OpenWRT に落ち着いた
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          ...ので、できれば OpenWRT が動いて 10G の口がついてるファンレスのマシンがあると嬉しいんだけど全く見当たらない
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          ZimaBoard ってのが PCIe スロットついてて NIC が刺さりそうなんだけど、10G が2発ついてるやつは発熱大丈夫なのかなあ？
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          ファンついてるやつもあって、ファンかあ.....ってなる
+        </div>
+      
+        <div style="padding-left:2rem; margin-bottom: .5rem;">
+          R86S っていう SBC は SFP の口が 10G らしい
+        </div>
+      
+        <div style="padding-left:3rem; margin-bottom: .5rem;">
+          こいつにする場合は SFP ついてるスイッチを増やさないといけなくなるが....(それはいっぱいあるので別にいいか)
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          SFP のコトなにもわからんだったのだが、SFP ってのは結局差込口だけあるって感じらしく、そこへモジュールを挿して、ケーブルを挿してってことらしい
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          そして光ファイバがマストではないらしい
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          RJ45 の SFP のモジュールがあって、CAT6a でつながるらしい
+        </div>
+      
+        <div style="padding-left:4rem; margin-bottom: .5rem;">
+          まあせっかくなので新しい技術に触れてみたい気持ちもある
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -281,32 +345,32 @@ body {
           <ul>
             
                   <li>
-                    <a href="https://amp.kbys.tk/64bcebc7f40248001cdb5e2a.html">
-                      20230723
+                    <a href="https://amp.kbys.tk/64bf20b523996e001ce27a63.html">
+                      20230725
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5f190219406720001ed0f8d1.html">
-                      0723
+                    <a href="https://amp.kbys.tk/64c0d3cfbd7ee2001ba991a8.html">
+                      20230726
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5db1f4af84f6370017f89236.html">
-                      周年日記
+                    <a href="https://amp.kbys.tk/5f1b4ade8ded3400212ce970.html">
+                      0725
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/618e7d1b63c3e0001d1d87ea.html">
-                      衆院選2021
+                    <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d.html">
+                      仕事場10G計画 その1
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/61b49df4994255001d7fdf88.html">
-                      denosaurs/denon: 👀 Monitor any changes in your Deno application and automatically restart.
+                    <a href="https://amp.kbys.tk/5c2b9afa5513850017f82db7.html">
+                      設計 - diary.jgs.me
                     </a>
                   </li>
                 

@@ -231,113 +231,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          仕事場10G計画 その3
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ルータ側のスイッチを足そうとしたら電源が足りなかったので口の多いタップに換装
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          再掲
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          before
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          mac &lt;=&gt; 10Gスイッチ &lt;=&gt; (壁の中のCAT6ケーブル) &lt;=&gt; 1Gスイッチ &lt;=&gt; ルータ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          after
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          mac &lt;=&gt; 10Gスイッチ &lt;=&gt; (壁の中のCAT6ケーブル) &lt;=&gt; 10Gスイッチ &lt;=&gt; ルータ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          CAT6 だったか CAT6a だったか忘れてたんだけど、線抜き差ししてる間によくみたらケーブルに CAT6 って書いてあったのでたぶん CAT6 なんだとおもう
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          55m との戦いになるのかなあ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ルータとして使っている NanoPi R5S は 2.5G の口しか積んでないので、2G ぐらいでれば御の字だな〜....
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          というわけで iperf で確認してみるとだいたい 2.15G/s くらいで安定した
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          温度もちゃんと測りたい気持ちはあるが、相変わらず結構ホカホカ
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          次の作業としては、Proxmox のクラスタ群が動いてる手前にいるスイッチの交換かなあ
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          一番マトモなマシンのスペックをよくよくみてみるとマザボに 2.5G の口がついてるのでわざわざ 10G の NIC を足すこともないのかもしれんが、そこはまあ10G出したいじゃんね、ということで
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          そして難関はメインの Windows マシンをどうするかと、ルータをどうするかだなあ...
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          なまじ Mini-ITX のマザボにしてしまったので PCIe の NIC が刺さるわけでもなく、USB-C のポートもギュウギュウで入る余地がない
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d">仕事場10G計画 その1</a>
-            でも書いたようにほぼ新造の予感がする
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ルータは引っ越す前は ONU とルータが合体してるタイプで、たまにまとめて死ぬことはあったんだけど、そこそこ安定して運用できていたのが、引っ越してから ONU 単体に分離したのでいろいろルータを買ったのだけど、とにかく既製品の管理画面みたいなやつが全然言うことを聞いてくれなくて、最終的に OpenWRT に落ち着いた
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          ...ので、できれば OpenWRT が動いて 10G の口がついてるファンレスのマシンがあると嬉しいんだけど全く見当たらない
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          ZimaBoard ってのが PCIe スロットついてて NIC が刺さりそうなんだけど、10G が2発ついてるやつは発熱大丈夫なのかなあ？
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          ファンついてるやつもあって、ファンかあ.....ってなる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          R86S っていう SBC は SFP の口が 10G らしい
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          こいつにする場合は SFP ついてるスイッチを増やさないといけなくなるが....(それはいっぱいあるので別にいいか)
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          SFP のコトなにもわからんだったのだが、SFP ってのは結局差込口だけあるって感じらしく、そこへモジュールを挿して、ケーブルを挿してってことらしい
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          そして光ファイバがマストではないらしい
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          RJ45 の SFP のモジュールがあって、CAT6a でつながるらしい
-        </div>
-      
-        <div style="padding-left:4rem; margin-bottom: .5rem;">
-          まあせっかくなので新しい技術に触れてみたい気持ちもある
+              <a href="https://amp.kbys.tk/64c0d345996591001b729045">仕事場10G計画 その3</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -425,6 +321,12 @@ body {
                   </li>
                 
                   <li>
+                    <a href="https://amp.kbys.tk/64c0d345996591001b729045.html">
+                      仕事場10G計画 その3
+                    </a>
+                  </li>
+                
+                  <li>
                     <a href="https://amp.kbys.tk/5f1b4ade8ded3400212ce970.html">
                       0725
                     </a>
@@ -433,12 +335,6 @@ body {
                   <li>
                     <a href="https://amp.kbys.tk/6033d6c96d4db5001ca439b9.html">
                       Daft Punk
-                    </a>
-                  </li>
-                
-                  <li>
-                    <a href="https://amp.kbys.tk/64bce9026e5cda001bd98d9d.html">
-                      仕事場10G計画 その1
                     </a>
                   </li>
                 
