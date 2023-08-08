@@ -287,101 +287,9 @@ body {
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
-          Cloudflare Zero Trust で外から家のサーバにアクセスする
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
           
-              <a href="https://amp.kbys.tk/64cc4eabb37936001c543eb8">Nebula をみっけた</a>
-            で Cloudflare の Zero Trust の機運を感じたので試してみた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-            <a href="https://www.notr.app/posts/2023/01/28/" target="_blank" rel="noopener">
-              https://www.notr.app/posts/2023/01/28/
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          が参考になった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          今回は宅のルータに 
-        <code>cloudflared</code>
-       をいれて、tunnel を create した
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          GitHub からバイナリをダウンロードした
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          arm コアなのはわかってたんだけど、32bit なのか 64bit なのかわからんかったが 
-        <code>uname -m</code>
-       で64っぽかったので64bitにした
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          tunnel を create して yaml の config を用意して立ち上げる
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Private network に宅の CIDR を設定
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          画面の設定が結構散らばってて(高機能だから仕方ないのかもしれんが)わかりにくい
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Settings =&gt; WARP client から Device の enrollment permission を設定しないとアプリの WARP から Zero Trust に入れないので設定しておく
-        </div>
-      
-        <div style="padding-left:3rem; margin-bottom: .5rem;">
-          とりあえずメアド認証で
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Access =&gt; Applications から Application を作って Destination IP を指定しておく
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          Settings =&gt; WARP client =&gt; Device settings =&gt; Profile settings =&gt; Split tunnels でローカルっぽい IP が Exclude されてしまっているので Include に変更して宅の CIDR を設定しておく
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          ...というような流れで、外から WARP で VPN 接続している状態で家サーバにアクセスできた
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          いちいち IP でアクセスするのは面倒なので、なんらか DNS をカマしたい
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          
-            <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/private-net/private-hostnames-ips/" target="_blank" rel="noopener">
-              https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/private-net/private-hostnames-ips/
-            </a>
-          
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          によると Local domain fallback でいけそう
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          これも画面が深くて↑の Profile settings =&gt; Local domain fallback から設定する
-        </div>
-      
-        <div style="padding-left:2rem; margin-bottom: .5rem;">
-          家に Pi-hole が建ってるので、自前ドメインは Pi-hole の IP で解決するってしたら無事にドメインからアクセスできるようになった
-        </div>
-      
-        <div style="padding-left:1rem; margin-bottom: .5rem;">
-          一応まあここら辺までは Tailscale でもできてたことなので特にまあって感じではあるが、特定のなんかを一時的にインターネットで受けたい時に tunnel で public にすればいいだけのはずなので、こっちに寄せるでよいかもしれない
+              <a href="https://amp.kbys.tk/64d1a436297725001b0425a7">Cloudflare Zero Trust で外から家のサーバにアクセスする</a>
+            
         </div>
       
         <div style="padding-left:0rem; margin-bottom: .5rem;">
@@ -407,14 +315,14 @@ body {
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/5f2b437a2a5789001ef82b42.html">
-                      0804
+                    <a href="https://amp.kbys.tk/64d1a436297725001b0425a7.html">
+                      Cloudflare Zero Trust で外から家のサーバにアクセスする
                     </a>
                   </li>
                 
                   <li>
-                    <a href="https://amp.kbys.tk/64cc4eabb37936001c543eb8.html">
-                      Nebula をみっけた
+                    <a href="https://amp.kbys.tk/5f2b437a2a5789001ef82b42.html">
+                      0804
                     </a>
                   </li>
                 
