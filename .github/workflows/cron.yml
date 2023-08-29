@@ -16,7 +16,7 @@ jobs:
           PIXE_LA_TOKEN: ${{ secrets.PIXE_LA_TOKEN }}
         run: |
           npm install
-          npm run start
+          npm run prepare_
           npm run views
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
